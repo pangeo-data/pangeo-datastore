@@ -1,6 +1,18 @@
-# Pangeo STAC
+# Pangeo STAC Repository
 
-First steps towards pangeo cloud datastore.
+The Pangeo project has demonstrated the value of placing datasets in cloud
+storage, where they are broadly available and directly accessible to scalable
+cloud computing.
+Xarray, dask, and zarr work very well together in this context.
+
+The next step is to facilitate the creation of cloud-based data repositories.
+Such a repository would have the following elements:
+- A consistent, searchable master database of all the datasets under its control
+- Some sort of ingest mechanism, such as a staging bucket that people can upload
+  to, separate from the production bucket
+- Basic validation of uploaded datasets
+- A web interface to browse the data available
+- A mechanism to assign DOIs
 
 ### Useful Repo Links
 
