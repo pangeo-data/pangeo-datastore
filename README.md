@@ -21,6 +21,7 @@ I made this flow chart to explain how a datastore service might work.
 
 ![schematic diagram](pangeo-stac-schematic.svg)
 
+(Source: [lucidchart](https://www.lucidchart.com/invitations/accept/03c7e060-8db0-4600-a4d9-7160030fb254))
 
 ### STAC Examples
 
