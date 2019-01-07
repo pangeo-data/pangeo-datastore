@@ -1,0 +1,9 @@
+{
+  "stac_version": "0.6.0",
+  "id": "pangeo-gcs-master",
+  "description": "Master Pangeo Google Cloud Storage Catalog",
+  "links": [
+    { "rel": "self", "href": "https://storage.googleapis.com/pangeo-stac/test/example-catalog.json" },
+    { "rel": "item", "href": "https://storage.googleapis.com/pangeo-stac/test/example-item.json" }
+  ]
+}

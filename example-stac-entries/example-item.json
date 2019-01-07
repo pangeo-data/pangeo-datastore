@@ -1,0 +1,32 @@
+{
+  "type": "Feature",
+  "id": "dataset-duacs-rep-global-merged-allsat-phy-l4-v3-alt",
+  "bbox": [-180, -90, 180, 90],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [[-180, -90], [-180, 90], [180, 90], [180, -90],[-180, -90]]
+    ]
+  },
+  "properties":{
+    "datetime":"1993-01-01T00:00:00Z",
+    "dtr:start_datetime":"1993-01-01T00:00:00Z",
+    "dtr:end_datetime":"2017-05-15T00:00:00Z"
+  },
+  "links": [
+    {
+      "rel": "self",
+      "href": "https://storage.googleapis.com/pangeo-stac/test/example-item.json"
+    },
+    {
+      "rel": "parent",
+      "href": "https://storage.googleapis.com/pangeo-stac/test/example-catalog.json"
+    }
+  ],
+  "assets": {
+    "zarr": {
+      "href": "https://storage.googleapis.com/pangeo-data/dataset-duacs-rep-global-merged-allsat-phy-l4-v3-alt/.zmetadata",
+      "title": "Zarr consolidated metadata"
+    }
+  }
+}
