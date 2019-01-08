@@ -1,4 +1,4 @@
-# Pangeo STAC Repository
+# Pangeo Cloud Datastore
 
 The Pangeo project has demonstrated the value of placing datasets in cloud
 storage, where they are broadly available and directly accessible to scalable
