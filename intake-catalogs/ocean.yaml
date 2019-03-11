@@ -1,0 +1,229 @@
+plugins:
+  source:
+    - module: intake_xarray
+
+sources:
+
+  sea_surface_height:
+    description: sea-surface altimetry data from The Copernicus Marine Environment
+    metadata:
+      url: 'http://marine.copernicus.eu/services-portfolio/access-to-products/?option=com_csw&view=details&product_id=SEALEVEL_GLO_PHY_L4_REP_OBSERVATIONS_008_047'
+      tags:
+        - ocean
+        - satellite
+    driver: zarr
+    args:
+      urlpath: gcs://pangeo-data/dataset-duacs-rep-global-merged-allsat-phy-l4-v3-alt
+      storage_options:
+        token: anon
+      consolidated: True
+
+  ECCOv4r3:
+    description: Estimating the Circulation and Climate of the Ocean (ECCO) State Estimate Version 4 Release 3
+    metadata:
+      url: 'https://ecco-v4-python-tutorial.readthedocs.io/intro.html'
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      urlpath: 'gcs://pangeo-data/ecco/eccov4r3'
+      storage_options:
+        token: anon
+      consolidated: True
+
+  SOSE:
+    description: Southern Ocean State Estimate
+    metadata:
+      url: 'http://sose.ucsd.edu/'
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      urlpath: 'gcs://pangeo-data/SOSE'
+      storage_options:
+        token: anon
+      consolidated: True
+
+  LLC4320_grid:
+    description: MITgcm LLC4320 Ocean Simulation Grid
+    metadata:
+      url: 'http://online.kitp.ucsb.edu/online/blayers18/menemenlis/'
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      urlpath: 'gcs://pangeo-data/llc4320_surface/grid'
+      storage_options:
+        token: anon
+      consolidated: True
+
+  LLC4320_SST:
+    description: MITgcm LLC4320 Ocean Simulation Sea Surface Temperature
+    metadata:
+      url: 'http://online.kitp.ucsb.edu/online/blayers18/menemenlis/'
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      urlpath: 'gcs://pangeo-data/llc4320_surface/SST'
+      storage_options:
+        token: anon
+      consolidated: True
+
+  LLC4320_SSS:
+    description: MITgcm LLC4320 Ocean Simulation Sea Surface Salinity
+    metadata:
+      url: 'http://online.kitp.ucsb.edu/online/blayers18/menemenlis/'
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      urlpath: 'gcs://pangeo-data/llc4320_surface/SSS'
+      storage_options:
+        token: anon
+      consolidated: True
+
+  LLC4320_SSH:
+    description: MITgcm LLC4320 Ocean Simulation Sea Surface Height
+    metadata:
+      url: 'http://online.kitp.ucsb.edu/online/blayers18/menemenlis/'
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      urlpath: 'gcs://pangeo-data/llc4320_surface/Eta'
+      storage_options:
+        token: anon
+      consolidated: True
+
+  LLC4320_SSU:
+    description: MITgcm LLC4320 Ocean Simulation Sea Surface Zonal Velocity
+    metadata:
+      url: 'http://online.kitp.ucsb.edu/online/blayers18/menemenlis/'
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      urlpath: 'gcs://pangeo-data/llc4320_surface/U'
+      storage_options:
+        token: anon
+      consolidated: True
+
+  LLC4320_SSV:
+    description: MITgcm LLC4320 Ocean Simulation Sea Surface Meridional Velocity
+    metadata:
+      url: 'http://online.kitp.ucsb.edu/online/blayers18/menemenlis/'
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      urlpath: 'gcs://pangeo-data/llc4320_surface/V'
+      storage_options:
+        token: anon
+      consolidated: True
+
+  CESM_POP_hires_control:
+    description: NCAR CESM POP model run hybrid_v5_rel04_BC5_ne120_t12_pop62
+    metadata:
+      time_period: perpetual 2000
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      urlpath: 'gcs://pangeo-data/cesm/hybrid_v5_rel04_BC5_ne120_t12_pop62'
+      storage_options:
+        token: anon
+      consolidated: True
+
+  CESM_POP_hires_RCP8_5:
+    description: NCAR CESM POP model run BRCP85C5CN_ne120_t12_pop62.c13b17.asdphys.001
+    metadata:
+      time_period: "2000-2050"
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      urlpath: 'gcs://pangeo-data/cesm/BRCP85C5CN_ne120_t12_pop62.c13b17.asdphys.001'
+      storage_options:
+        token: anon
+      consolidated: True
+
+  GFDL_CM2_6_control_ocean_surface:
+    description: "GFDL CM2.6 climate model control run daily ocean surface fields"
+    metadata:
+      url: 'https://www.gfdl.noaa.gov/cm2-6/'
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      urlpath: 'gcs://pangeo-data/cm2.6/control/surface_daily'
+      storage_options:
+        token: anon
+      consolidated: True
+
+  GFDL_CM2_6_control_ocean_3D:
+    description: "GFDL CM2.6 climate model control run 5-day-average 3D ocean fields"
+    metadata:
+      url: 'https://www.gfdl.noaa.gov/cm2-6/'
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      urlpath: 'gcs://pangeo-data/cm2.6/control/temp_salt_u_v-5day_avg'
+      storage_options:
+        token: anon
+      consolidated: True
+
+  GFDL_CM2_6_one_percent_ocean_surface:
+    description: "GFDL CM2.6 climate model one-percent CO2 increase ocean surface fields"
+    metadata:
+      url: 'https://www.gfdl.noaa.gov/cm2-6/'
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      urlpath: 'gcs://pangeo-data/cm2.6/one_percent/surface_daily'
+      storage_options:
+        token: anon
+      consolidated: True
+
+  GFDL_CM2_6_one_percent_ocean_3D:
+    description: "GFDL CM2.6 climate model one-percent CO2 increase run 5-day-average 3D ocean fields"
+    metadata:
+      url: 'https://www.gfdl.noaa.gov/cm2-6/'
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      urlpath: 'gcs://pangeo-data/cm2.6/control/temp_salt_u_v-5day_avg'
+      storage_options:
+        token: anon
+      consolidated: True
+
+  GFDL_CM2_6_grid:
+    description: "GFDL CM2.6 climate model ocean grid"
+    metadata:
+      url: 'https://www.gfdl.noaa.gov/cm2-6/'
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      urlpath: 'gcs://pangeo-data/cm2.6/grid'
+      storage_options:
+        token: anon
+      consolidated: True
