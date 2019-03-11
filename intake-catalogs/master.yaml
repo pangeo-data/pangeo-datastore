@@ -2,21 +2,21 @@ sources:
 
   ocean:
     args:
-      path: ocean.yaml
+      path: "{{CATALOG_DIR}}/ocean.yaml"
     description: 'Pangeo Oceanography Dataset Catalog'
     driver: intake.catalog.local.YAMLFileCatalog
     metadata: {}
 
   atmosphere:
     args:
-      path: atmosphere.yaml
+      path: "{{CATALOG_DIR}}/ocean.yaml"
     description: 'Pangeo Atmospheric Science Dataset Catalog'
     driver: intake.catalog.local.YAMLFileCatalog
     metadata: {}
 
   hydro:
     args:
-      path: hydro.yaml
+      path: "{{CATALOG_DIR}}/ocean.yaml"
     description: 'Pangeo Hydrology Dataset Catalog'
     driver: intake.catalog.local.YAMLFileCatalog
     metadata: {}
