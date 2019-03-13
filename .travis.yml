@@ -10,9 +10,11 @@ env:
 before_install:
 - docker pull $DOCKER_IMAGE
 - docker run -d --name pangeo $DOCKER_IMAGE
-- docker cp . pangeo:/home/jovyan/
-- docker ps -a
 - docker exec pangeo bash -c "pip install pytest"
+- docker ps -a
+
+install:
+- docker cp . pangeo:/home/jovyan/
 
 script:
-- docker exec pangeo env TERM=xterm script bash -c "py.test --durations=9999 -v tests/validate_datasets.py; exit $?"
+- docker exec -it pangeo env TERM=xterm script bash -c "py.test --durations=9999 -v tests/validate_datasets.py"
