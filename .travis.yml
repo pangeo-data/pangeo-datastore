@@ -19,4 +19,4 @@ install:
 script:
 - >
    docker exec -it pangeo bash -c
-   'py.test --durations=9999 -v tests/validate_datasets.py'
+   'py.test --durations=9999 -v tests/*.py'
