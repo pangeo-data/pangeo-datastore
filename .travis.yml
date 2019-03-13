@@ -15,4 +15,6 @@ before_install:
 - docker exec pangeo bash -c "pip install pytest"
 
 script:
-- docker exec pangeo env TERM=xterm script bash -c " py.test --durations=9999 -v tests/validate_datasets.py"
+->
+  docker exec pangeo env TERM=xterm script bash -c
+  "py.test --durations=9999 -v tests/validate_datasets.py; exit $?"
