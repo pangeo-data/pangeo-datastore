@@ -1,5 +1,7 @@
 # Pangeo Cloud Datastore
 
+[![Build Status](https://travis-ci.org/pangeo-data/pangeo-datastore.svg?branch=master)](https://travis-ci.org/pangeo-data/pangeo-datastore)
+
 The Pangeo project has demonstrated the value of placing datasets in cloud
 storage, where they are broadly available and directly accessible to scalable
 cloud computing.
