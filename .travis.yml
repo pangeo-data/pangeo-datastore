@@ -1,5 +1,3 @@
-docker cp intake-catalogs df96aed57e2e:/home/jovyan/
-
 language: python
 
 services:
