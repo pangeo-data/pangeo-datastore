@@ -21,5 +21,5 @@ script:
    docker exec pangeo env TERM=xterm script bash -c
    "py.test --durations=9999 -v tests/validate_datasets.py;
    EXIT_CODE=$?;
-   echo $EXIT_CODE;
+   echo EXIT_CODE=$EXIT_CODE;
    exit $EXIT_CODE"
