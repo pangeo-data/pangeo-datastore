@@ -47,3 +47,17 @@ sources:
       urlpath: 'gcs://pangeo-data/SAM/NG_5120x2560x34_4km_10s_QOBS_EQX/3d.zarr'
       storage_options:
         token: anon
+
+  gpcp_cdr_daily_v1_3:
+    description: 3D fields from a near-global Aquaplanet Simulation with the System for Atmospheric Modeling
+    metadata:
+      title: "Global Precipitation Climatatology Project (GPCP) Climate Data Record (CDR), Daily V1.3"
+      url: "https://climatedataguide.ucar.edu/climate-data/gpcp-daily-global-precipitation-climatology-project"
+      tags:
+        - atmosphere
+        - model
+    driver: zarr
+    args:
+      urlpath: 'gcs://pangeo-data/GPCP_CDR_Daily_V1.3'
+      storage_options:
+        token: anon
