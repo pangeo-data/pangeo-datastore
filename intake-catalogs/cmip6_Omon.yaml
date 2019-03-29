@@ -1,0 +1,1867 @@
+plugins:
+  source:
+    - module: intake_xarray
+sources:
+
+  BCC-CSM2-MR.historical.r1i1p1f1.sos:
+    description: CMIP6 monthly Sea Surface Salinity for BCC-CSM2-MR historical scenario r1i1p1f1
+    metadata:
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      storage_options:
+        token: anon
+        access: read_only
+      consolidated: True
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/BCC/BCC-CSM2-MR/historical/r1i1p1f1/v20181126/sos/'
+
+  BCC-CSM2-MR.historical.r1i1p1f1.tos:
+    description: CMIP6 monthly Sea Surface Temperature for BCC-CSM2-MR historical scenario r1i1p1f1
+    metadata:
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      storage_options:
+        token: anon
+        access: read_only
+      consolidated: True
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/BCC/BCC-CSM2-MR/historical/r1i1p1f1/v20181126/tos/'
+
+  BCC-CSM2-MR.historical.r1i1p1f1.zos:
+    description: CMIP6 monthly Sea Surface Height Above Geoid for BCC-CSM2-MR historical scenario r1i1p1f1
+    metadata:
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      storage_options:
+        token: anon
+        access: read_only
+      consolidated: True
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/BCC/BCC-CSM2-MR/historical/r1i1p1f1/v20181126/zos/'
+
+  BCC-CSM2-MR.historical.r1i1p1f1.thetao:
+    description: CMIP6 monthly Sea Water Potential Temperature for BCC-CSM2-MR scenario r1i1p1f1
+    metadata:
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      storage_options:
+        token: anon
+        access: read_only
+      consolidated: True
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/BCC/BCC-CSM2-MR/historical/r1i1p1f1/v20181126/thetao/'
+
+  BCC-CSM2-MR.historical.r1i1p1f1.so:
+    description: CMIP6 monthly Sea Water Salinity for BCC-CSM2-MR scenario r1i1p1f1
+    metadata:
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      storage_options:
+        token: anon
+        access: read_only
+      consolidated: True
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/BCC/BCC-CSM2-MR/historical/r1i1p1f1/v20181126/so/'
+
+  BCC-CSM2-MR.historical.r1i1p1f1.uo:
+    description: CMIP6 monthly Sea Water X Velocity for BCC-CSM2-MR historical scenario r1i1p1f1
+    metadata:
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      storage_options:
+        token: anon
+        access: read_only
+      consolidated: True
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/BCC/BCC-CSM2-MR/historical/r1i1p1f1/v20181126/uo/'
+
+  BCC-CSM2-MR.historical.r1i1p1f1.vo:
+    description: CMIP6 monthly Sea Water Y Velocity for BCC-CSM2-MR scenario r1i1p1f1
+    metadata:
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      storage_options:
+        token: anon
+        access: read_only
+      consolidated: True
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/BCC/BCC-CSM2-MR/historical/r1i1p1f1/v20181126/vo/'
+
+  BCC-CSM2-MR.historical.r2i1p1f1.sos:
+    description: CMIP6 monthly Sea Surface Salinity for BCC-CSM2-MR historical scenario r2i1p1f1
+    metadata:
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      storage_options:
+        token: anon
+        access: read_only
+      consolidated: True
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/BCC/BCC-CSM2-MR/historical/r2i1p1f1/v20181031/sos/'
+
+  BCC-CSM2-MR.historical.r2i1p1f1.tos:
+    description: CMIP6 monthly Sea Surface Temperature for BCC-CSM2-MR historical scenario r2i1p1f1
+    metadata:
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      storage_options:
+        token: anon
+        access: read_only
+      consolidated: True
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/BCC/BCC-CSM2-MR/historical/r2i1p1f1/v20181031/tos/'
+
+  BCC-CSM2-MR.historical.r2i1p1f1.zos:
+    description: CMIP6 monthly Sea Surface Height Above Geoid for BCC-CSM2-MR historical scenario r2i1p1f1
+    metadata:
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      storage_options:
+        token: anon
+        access: read_only
+      consolidated: True
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/BCC/BCC-CSM2-MR/historical/r2i1p1f1/v20181031/zos/'
+
+  BCC-CSM2-MR.historical.r2i1p1f1.thetao:
+    description: CMIP6 monthly Sea Water Potential Temperature for BCC-CSM2-MR scenario r2i1p1f1
+    metadata:
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      storage_options:
+        token: anon
+        access: read_only
+      consolidated: True
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/BCC/BCC-CSM2-MR/historical/r2i1p1f1/v20181031/thetao/'
+
+  BCC-CSM2-MR.historical.r2i1p1f1.so:
+    description: CMIP6 monthly Sea Water Salinity for BCC-CSM2-MR scenario r2i1p1f1
+    metadata:
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      storage_options:
+        token: anon
+        access: read_only
+      consolidated: True
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/BCC/BCC-CSM2-MR/historical/r2i1p1f1/v20181031/so/'
+
+  BCC-CSM2-MR.historical.r2i1p1f1.uo:
+    description: CMIP6 monthly Sea Water X Velocity for BCC-CSM2-MR historical scenario r2i1p1f1
+    metadata:
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      storage_options:
+        token: anon
+        access: read_only
+      consolidated: True
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/BCC/BCC-CSM2-MR/historical/r2i1p1f1/v20181031/uo/'
+
+  BCC-CSM2-MR.historical.r2i1p1f1.vo:
+    description: CMIP6 monthly Sea Water Y Velocity for BCC-CSM2-MR scenario r2i1p1f1
+    metadata:
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      storage_options:
+        token: anon
+        access: read_only
+      consolidated: True
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/BCC/BCC-CSM2-MR/historical/r2i1p1f1/v20181031/vo/'
+
+  BCC-CSM2-MR.historical.r3i1p1f1.sos:
+    description: CMIP6 monthly Sea Surface Salinity for BCC-CSM2-MR historical scenario r3i1p1f1
+    metadata:
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      storage_options:
+        token: anon
+        access: read_only
+      consolidated: True
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/BCC/BCC-CSM2-MR/historical/r3i1p1f1/v20181102/sos/'
+
+  BCC-CSM2-MR.historical.r3i1p1f1.tos:
+    description: CMIP6 monthly Sea Surface Temperature for BCC-CSM2-MR historical scenario r3i1p1f1
+    metadata:
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      storage_options:
+        token: anon
+        access: read_only
+      consolidated: True
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/BCC/BCC-CSM2-MR/historical/r3i1p1f1/v20181102/tos/'
+
+  BCC-CSM2-MR.historical.r3i1p1f1.zos:
+    description: CMIP6 monthly Sea Surface Height Above Geoid for BCC-CSM2-MR historical scenario r3i1p1f1
+    metadata:
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      storage_options:
+        token: anon
+        access: read_only
+      consolidated: True
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/BCC/BCC-CSM2-MR/historical/r3i1p1f1/v20181102/zos/'
+
+  BCC-CSM2-MR.historical.r3i1p1f1.thetao:
+    description: CMIP6 monthly Sea Water Potential Temperature for BCC-CSM2-MR scenario r3i1p1f1
+    metadata:
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      storage_options:
+        token: anon
+        access: read_only
+      consolidated: True
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/BCC/BCC-CSM2-MR/historical/r3i1p1f1/v20181102/thetao/'
+
+  BCC-CSM2-MR.historical.r3i1p1f1.so:
+    description: CMIP6 monthly Sea Water Salinity for BCC-CSM2-MR scenario r3i1p1f1
+    metadata:
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      storage_options:
+        token: anon
+        access: read_only
+      consolidated: True
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/BCC/BCC-CSM2-MR/historical/r3i1p1f1/v20181102/so/'
+
+  BCC-CSM2-MR.historical.r3i1p1f1.uo:
+    description: CMIP6 monthly Sea Water X Velocity for BCC-CSM2-MR historical scenario r3i1p1f1
+    metadata:
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      storage_options:
+        token: anon
+        access: read_only
+      consolidated: True
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/BCC/BCC-CSM2-MR/historical/r3i1p1f1/v20181102/uo/'
+
+  BCC-CSM2-MR.historical.r3i1p1f1.vo:
+    description: CMIP6 monthly Sea Water Y Velocity for BCC-CSM2-MR scenario r3i1p1f1
+    metadata:
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      storage_options:
+        token: anon
+        access: read_only
+      consolidated: True
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/BCC/BCC-CSM2-MR/historical/r3i1p1f1/v20181102/vo/'
+
+  BCC-ESM1.historical.r1i1p1f1.sos:
+    description: CMIP6 monthly Sea Surface Salinity for BCC-ESM1 historical scenario r1i1p1f1
+    metadata:
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      storage_options:
+        token: anon
+        access: read_only
+      consolidated: True
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/BCC/BCC-ESM1/historical/r1i1p1f1/v20181129/sos/'
+
+  BCC-ESM1.historical.r1i1p1f1.tos:
+    description: CMIP6 monthly Sea Surface Temperature for BCC-ESM1 historical scenario r1i1p1f1
+    metadata:
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      storage_options:
+        token: anon
+        access: read_only
+      consolidated: True
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/BCC/BCC-ESM1/historical/r1i1p1f1/v20181129/tos/'
+
+  BCC-ESM1.historical.r1i1p1f1.zos:
+    description: CMIP6 monthly Sea Surface Height Above Geoid for BCC-ESM1 historical scenario r1i1p1f1
+    metadata:
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      storage_options:
+        token: anon
+        access: read_only
+      consolidated: True
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/BCC/BCC-ESM1/historical/r1i1p1f1/v20181129/zos/'
+
+  BCC-ESM1.historical.r1i1p1f1.thetao:
+    description: CMIP6 monthly Sea Water Potential Temperature for BCC-ESM1 scenario r1i1p1f1
+    metadata:
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      storage_options:
+        token: anon
+        access: read_only
+      consolidated: True
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/BCC/BCC-ESM1/historical/r1i1p1f1/v20181129/thetao/'
+
+  BCC-ESM1.historical.r1i1p1f1.so:
+    description: CMIP6 monthly Sea Water Salinity for BCC-ESM1 scenario r1i1p1f1
+    metadata:
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      storage_options:
+        token: anon
+        access: read_only
+      consolidated: True
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/BCC/BCC-ESM1/historical/r1i1p1f1/v20181129/so/'
+
+  BCC-ESM1.historical.r1i1p1f1.uo:
+    description: CMIP6 monthly Sea Water X Velocity for BCC-ESM1 historical scenario r1i1p1f1
+    metadata:
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      storage_options:
+        token: anon
+        access: read_only
+      consolidated: True
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/BCC/BCC-ESM1/historical/r1i1p1f1/v20181129/uo/'
+
+  BCC-ESM1.historical.r1i1p1f1.vo:
+    description: CMIP6 monthly Sea Water Y Velocity for BCC-ESM1 scenario r1i1p1f1
+    metadata:
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      storage_options:
+        token: anon
+        access: read_only
+      consolidated: True
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/BCC/BCC-ESM1/historical/r1i1p1f1/v20181129/vo/'
+
+  BCC-ESM1.historical.r2i1p1f1.sos:
+    description: CMIP6 monthly Sea Surface Salinity for BCC-ESM1 historical scenario r2i1p1f1
+    metadata:
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      storage_options:
+        token: anon
+        access: read_only
+      consolidated: True
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/BCC/BCC-ESM1/historical/r2i1p1f1/v20181218/sos/'
+
+  BCC-ESM1.historical.r2i1p1f1.tos:
+    description: CMIP6 monthly Sea Surface Temperature for BCC-ESM1 historical scenario r2i1p1f1
+    metadata:
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      storage_options:
+        token: anon
+        access: read_only
+      consolidated: True
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/BCC/BCC-ESM1/historical/r2i1p1f1/v20181218/tos/'
+
+  BCC-ESM1.historical.r2i1p1f1.zos:
+    description: CMIP6 monthly Sea Surface Height Above Geoid for BCC-ESM1 historical scenario r2i1p1f1
+    metadata:
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      storage_options:
+        token: anon
+        access: read_only
+      consolidated: True
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/BCC/BCC-ESM1/historical/r2i1p1f1/v20181218/zos/'
+
+  BCC-ESM1.historical.r2i1p1f1.thetao:
+    description: CMIP6 monthly Sea Water Potential Temperature for BCC-ESM1 scenario r2i1p1f1
+    metadata:
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      storage_options:
+        token: anon
+        access: read_only
+      consolidated: True
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/BCC/BCC-ESM1/historical/r2i1p1f1/v20181218/thetao/'
+
+  BCC-ESM1.historical.r2i1p1f1.so:
+    description: CMIP6 monthly Sea Water Salinity for BCC-ESM1 scenario r2i1p1f1
+    metadata:
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      storage_options:
+        token: anon
+        access: read_only
+      consolidated: True
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/BCC/BCC-ESM1/historical/r2i1p1f1/v20181218/so/'
+
+  BCC-ESM1.historical.r2i1p1f1.uo:
+    description: CMIP6 monthly Sea Water X Velocity for BCC-ESM1 historical scenario r2i1p1f1
+    metadata:
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      storage_options:
+        token: anon
+        access: read_only
+      consolidated: True
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/BCC/BCC-ESM1/historical/r2i1p1f1/v20181218/uo/'
+
+  BCC-ESM1.historical.r2i1p1f1.vo:
+    description: CMIP6 monthly Sea Water Y Velocity for BCC-ESM1 scenario r2i1p1f1
+    metadata:
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      storage_options:
+        token: anon
+        access: read_only
+      consolidated: True
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/BCC/BCC-ESM1/historical/r2i1p1f1/v20181218/vo/'
+
+  BCC-ESM1.historical.r3i1p1f1.sos:
+    description: CMIP6 monthly Sea Surface Salinity for BCC-ESM1 historical scenario r3i1p1f1
+    metadata:
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      storage_options:
+        token: anon
+        access: read_only
+      consolidated: True
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/BCC/BCC-ESM1/historical/r3i1p1f1/v20181218/sos/'
+
+  BCC-ESM1.historical.r3i1p1f1.tos:
+    description: CMIP6 monthly Sea Surface Temperature for BCC-ESM1 historical scenario r3i1p1f1
+    metadata:
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      storage_options:
+        token: anon
+        access: read_only
+      consolidated: True
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/BCC/BCC-ESM1/historical/r3i1p1f1/v20181218/tos/'
+
+  BCC-ESM1.historical.r3i1p1f1.zos:
+    description: CMIP6 monthly Sea Surface Height Above Geoid for BCC-ESM1 historical scenario r3i1p1f1
+    metadata:
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      storage_options:
+        token: anon
+        access: read_only
+      consolidated: True
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/BCC/BCC-ESM1/historical/r3i1p1f1/v20181218/zos/'
+
+  BCC-ESM1.historical.r3i1p1f1.thetao:
+    description: CMIP6 monthly Sea Water Potential Temperature for BCC-ESM1 scenario r3i1p1f1
+    metadata:
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      storage_options:
+        token: anon
+        access: read_only
+      consolidated: True
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/BCC/BCC-ESM1/historical/r3i1p1f1/v20181218/thetao/'
+
+  BCC-ESM1.historical.r3i1p1f1.so:
+    description: CMIP6 monthly Sea Water Salinity for BCC-ESM1 scenario r3i1p1f1
+    metadata:
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      storage_options:
+        token: anon
+        access: read_only
+      consolidated: True
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/BCC/BCC-ESM1/historical/r3i1p1f1/v20181218/so/'
+
+  BCC-ESM1.historical.r3i1p1f1.uo:
+    description: CMIP6 monthly Sea Water X Velocity for BCC-ESM1 historical scenario r3i1p1f1
+    metadata:
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      storage_options:
+        token: anon
+        access: read_only
+      consolidated: True
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/BCC/BCC-ESM1/historical/r3i1p1f1/v20181218/uo/'
+
+  BCC-ESM1.historical.r3i1p1f1.vo:
+    description: CMIP6 monthly Sea Water Y Velocity for BCC-ESM1 scenario r3i1p1f1
+    metadata:
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      storage_options:
+        token: anon
+        access: read_only
+      consolidated: True
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/BCC/BCC-ESM1/historical/r3i1p1f1/v20181218/vo/'
+
+  CNRM-CM6-1.historical.r1i1p1f2.sos:
+    description: CMIP6 monthly Sea Surface Salinity for CNRM-CM6-1 historical scenario r1i1p1f2
+    metadata:
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      storage_options:
+        token: anon
+        access: read_only
+      consolidated: True
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/CNRM-CERFACS/CNRM-CM6-1/historical/r1i1p1f2/v20180917/sos/'
+
+  CNRM-CM6-1.historical.r1i1p1f2.tos:
+    description: CMIP6 monthly Sea Surface Temperature for CNRM-CM6-1 historical scenario r1i1p1f2
+    metadata:
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      storage_options:
+        token: anon
+        access: read_only
+      consolidated: True
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/CNRM-CERFACS/CNRM-CM6-1/historical/r1i1p1f2/v20180917/tos/'
+
+  CNRM-CM6-1.historical.r1i1p1f2.zos:
+    description: CMIP6 monthly Sea Surface Height Above Geoid for CNRM-CM6-1 historical scenario r1i1p1f2
+    metadata:
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      storage_options:
+        token: anon
+        access: read_only
+      consolidated: True
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/CNRM-CERFACS/CNRM-CM6-1/historical/r1i1p1f2/v20180917/zos/'
+
+  CNRM-CM6-1.historical.r1i1p1f2.thetao:
+    description: CMIP6 monthly Sea Water Potential Temperature for CNRM-CM6-1 scenario r1i1p1f2
+    metadata:
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      storage_options:
+        token: anon
+        access: read_only
+      consolidated: True
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/CNRM-CERFACS/CNRM-CM6-1/historical/r1i1p1f2/v20180917/thetao/'
+
+  CNRM-CM6-1.historical.r1i1p1f2.so:
+    description: CMIP6 monthly Sea Water Salinity for CNRM-CM6-1 scenario r1i1p1f2
+    metadata:
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      storage_options:
+        token: anon
+        access: read_only
+      consolidated: True
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/CNRM-CERFACS/CNRM-CM6-1/historical/r1i1p1f2/v20180917/so/'
+
+  CNRM-CM6-1.historical.r1i1p1f2.uo:
+    description: CMIP6 monthly Sea Water X Velocity for CNRM-CM6-1 historical scenario r1i1p1f2
+    metadata:
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      storage_options:
+        token: anon
+        access: read_only
+      consolidated: True
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/CNRM-CERFACS/CNRM-CM6-1/historical/r1i1p1f2/v20180917/uo/'
+
+  CNRM-CM6-1.historical.r1i1p1f2.vo:
+    description: CMIP6 monthly Sea Water Y Velocity for CNRM-CM6-1 scenario r1i1p1f2
+    metadata:
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      storage_options:
+        token: anon
+        access: read_only
+      consolidated: True
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/CNRM-CERFACS/CNRM-CM6-1/historical/r1i1p1f2/v20180917/vo/'
+
+  CNRM-CM6-1.historical.r1i1p1f2.wo:
+    description: CMIP6 monthly Sea Water X Velocity for CNRM-CM6-1 scenario r1i1p1f2
+    metadata:
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      storage_options:
+        token: anon
+        access: read_only
+      consolidated: True
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/CNRM-CERFACS/CNRM-CM6-1/historical/r1i1p1f2/v20180917/wo/'
+
+  CNRM-CM6-1.historical.r2i1p1f2.sos:
+    description: CMIP6 monthly Sea Surface Salinity for CNRM-CM6-1 historical scenario r2i1p1f2
+    metadata:
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      storage_options:
+        token: anon
+        access: read_only
+      consolidated: True
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/CNRM-CERFACS/CNRM-CM6-1/historical/r2i1p1f2/v20181126/sos/'
+
+  CNRM-CM6-1.historical.r2i1p1f2.tos:
+    description: CMIP6 monthly Sea Surface Temperature for CNRM-CM6-1 historical scenario r2i1p1f2
+    metadata:
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      storage_options:
+        token: anon
+        access: read_only
+      consolidated: True
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/CNRM-CERFACS/CNRM-CM6-1/historical/r2i1p1f2/v20181126/tos/'
+
+  CNRM-CM6-1.historical.r2i1p1f2.zos:
+    description: CMIP6 monthly Sea Surface Height Above Geoid for CNRM-CM6-1 historical scenario r2i1p1f2
+    metadata:
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      storage_options:
+        token: anon
+        access: read_only
+      consolidated: True
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/CNRM-CERFACS/CNRM-CM6-1/historical/r2i1p1f2/v20181126/zos/'
+
+  CNRM-CM6-1.historical.r2i1p1f2.thetao:
+    description: CMIP6 monthly Sea Water Potential Temperature for CNRM-CM6-1 scenario r2i1p1f2
+    metadata:
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      storage_options:
+        token: anon
+        access: read_only
+      consolidated: True
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/CNRM-CERFACS/CNRM-CM6-1/historical/r2i1p1f2/v20181126/thetao/'
+
+  CNRM-CM6-1.historical.r2i1p1f2.so:
+    description: CMIP6 monthly Sea Water Salinity for CNRM-CM6-1 scenario r2i1p1f2
+    metadata:
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      storage_options:
+        token: anon
+        access: read_only
+      consolidated: True
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/CNRM-CERFACS/CNRM-CM6-1/historical/r2i1p1f2/v20181126/so/'
+
+  CNRM-CM6-1.historical.r2i1p1f2.uo:
+    description: CMIP6 monthly Sea Water X Velocity for CNRM-CM6-1 historical scenario r2i1p1f2
+    metadata:
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      storage_options:
+        token: anon
+        access: read_only
+      consolidated: True
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/CNRM-CERFACS/CNRM-CM6-1/historical/r2i1p1f2/v20181126/uo/'
+
+  CNRM-CM6-1.historical.r2i1p1f2.vo:
+    description: CMIP6 monthly Sea Water Y Velocity for CNRM-CM6-1 scenario r2i1p1f2
+    metadata:
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      storage_options:
+        token: anon
+        access: read_only
+      consolidated: True
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/CNRM-CERFACS/CNRM-CM6-1/historical/r2i1p1f2/v20181126/vo/'
+
+  CNRM-CM6-1.historical.r2i1p1f2.wo:
+    description: CMIP6 monthly Sea Water X Velocity for CNRM-CM6-1 scenario r2i1p1f2
+    metadata:
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      storage_options:
+        token: anon
+        access: read_only
+      consolidated: True
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/CNRM-CERFACS/CNRM-CM6-1/historical/r2i1p1f2/v20181126/wo/'
+
+  CNRM-ESM2-1.historical.r1i1p1f2.sos:
+    description: CMIP6 monthly Sea Surface Salinity for CNRM-ESM2-1 historical scenario r1i1p1f2
+    metadata:
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      storage_options:
+        token: anon
+        access: read_only
+      consolidated: True
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/CNRM-CERFACS/CNRM-ESM2-1/historical/r1i1p1f2/v20181206/sos/'
+
+  CNRM-ESM2-1.historical.r1i1p1f2.tos:
+    description: CMIP6 monthly Sea Surface Temperature for CNRM-ESM2-1 historical scenario r1i1p1f2
+    metadata:
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      storage_options:
+        token: anon
+        access: read_only
+      consolidated: True
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/CNRM-CERFACS/CNRM-ESM2-1/historical/r1i1p1f2/v20181206/tos/'
+
+  CNRM-ESM2-1.historical.r1i1p1f2.zos:
+    description: CMIP6 monthly Sea Surface Height Above Geoid for CNRM-ESM2-1 historical scenario r1i1p1f2
+    metadata:
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      storage_options:
+        token: anon
+        access: read_only
+      consolidated: True
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/CNRM-CERFACS/CNRM-ESM2-1/historical/r1i1p1f2/v20181206/zos/'
+
+  CNRM-ESM2-1.historical.r1i1p1f2.thetao:
+    description: CMIP6 monthly Sea Water Potential Temperature for CNRM-ESM2-1 scenario r1i1p1f2
+    metadata:
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      storage_options:
+        token: anon
+        access: read_only
+      consolidated: True
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/CNRM-CERFACS/CNRM-ESM2-1/historical/r1i1p1f2/v20181206/thetao/'
+
+  CNRM-ESM2-1.historical.r1i1p1f2.uo:
+    description: CMIP6 monthly Sea Water X Velocity for CNRM-ESM2-1 historical scenario r1i1p1f2
+    metadata:
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      storage_options:
+        token: anon
+        access: read_only
+      consolidated: True
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/CNRM-CERFACS/CNRM-ESM2-1/historical/r1i1p1f2/v20181206/uo/'
+
+  CNRM-ESM2-1.historical.r1i1p1f2.vo:
+    description: CMIP6 monthly Sea Water Y Velocity for CNRM-ESM2-1 scenario r1i1p1f2
+    metadata:
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      storage_options:
+        token: anon
+        access: read_only
+      consolidated: True
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/CNRM-CERFACS/CNRM-ESM2-1/historical/r1i1p1f2/v20181206/vo/'
+
+  CNRM-ESM2-1.historical.r1i1p1f2.wo:
+    description: CMIP6 monthly Sea Water X Velocity for CNRM-ESM2-1 scenario r1i1p1f2
+    metadata:
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      storage_options:
+        token: anon
+        access: read_only
+      consolidated: True
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/CNRM-CERFACS/CNRM-ESM2-1/historical/r1i1p1f2/v20181206/wo/'
+
+  CNRM-ESM2-1.historical.r2i1p1f2.sos:
+    description: CMIP6 monthly Sea Surface Salinity for CNRM-ESM2-1 historical scenario r2i1p1f2
+    metadata:
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      storage_options:
+        token: anon
+        access: read_only
+      consolidated: True
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/CNRM-CERFACS/CNRM-ESM2-1/historical/r2i1p1f2/v20190125/sos/'
+
+  CNRM-ESM2-1.historical.r2i1p1f2.tos:
+    description: CMIP6 monthly Sea Surface Temperature for CNRM-ESM2-1 historical scenario r2i1p1f2
+    metadata:
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      storage_options:
+        token: anon
+        access: read_only
+      consolidated: True
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/CNRM-CERFACS/CNRM-ESM2-1/historical/r2i1p1f2/v20190125/tos/'
+
+  CNRM-ESM2-1.historical.r2i1p1f2.zos:
+    description: CMIP6 monthly Sea Surface Height Above Geoid for CNRM-ESM2-1 historical scenario r2i1p1f2
+    metadata:
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      storage_options:
+        token: anon
+        access: read_only
+      consolidated: True
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/CNRM-CERFACS/CNRM-ESM2-1/historical/r2i1p1f2/v20190125/zos/'
+
+  CNRM-ESM2-1.historical.r2i1p1f2.thetao:
+    description: CMIP6 monthly Sea Water Potential Temperature for CNRM-ESM2-1 scenario r2i1p1f2
+    metadata:
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      storage_options:
+        token: anon
+        access: read_only
+      consolidated: True
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/CNRM-CERFACS/CNRM-ESM2-1/historical/r2i1p1f2/v20190125/thetao/'
+
+  CNRM-ESM2-1.historical.r2i1p1f2.uo:
+    description: CMIP6 monthly Sea Water X Velocity for CNRM-ESM2-1 historical scenario r2i1p1f2
+    metadata:
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      storage_options:
+        token: anon
+        access: read_only
+      consolidated: True
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/CNRM-CERFACS/CNRM-ESM2-1/historical/r2i1p1f2/v20190125/uo/'
+
+  CNRM-ESM2-1.historical.r2i1p1f2.vo:
+    description: CMIP6 monthly Sea Water Y Velocity for CNRM-ESM2-1 scenario r2i1p1f2
+    metadata:
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      storage_options:
+        token: anon
+        access: read_only
+      consolidated: True
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/CNRM-CERFACS/CNRM-ESM2-1/historical/r2i1p1f2/v20190125/vo/'
+
+  CNRM-ESM2-1.historical.r2i1p1f2.wo:
+    description: CMIP6 monthly Sea Water X Velocity for CNRM-ESM2-1 scenario r2i1p1f2
+    metadata:
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      storage_options:
+        token: anon
+        access: read_only
+      consolidated: True
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/CNRM-CERFACS/CNRM-ESM2-1/historical/r2i1p1f2/v20190125/wo/'
+
+  CNRM-ESM2-1.historical.r3i1p1f2.sos:
+    description: CMIP6 monthly Sea Surface Salinity for CNRM-ESM2-1 historical scenario r3i1p1f2
+    metadata:
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      storage_options:
+        token: anon
+        access: read_only
+      consolidated: True
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/CNRM-CERFACS/CNRM-ESM2-1/historical/r3i1p1f2/v20190125/sos/'
+
+  CNRM-ESM2-1.historical.r3i1p1f2.tos:
+    description: CMIP6 monthly Sea Surface Temperature for CNRM-ESM2-1 historical scenario r3i1p1f2
+    metadata:
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      storage_options:
+        token: anon
+        access: read_only
+      consolidated: True
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/CNRM-CERFACS/CNRM-ESM2-1/historical/r3i1p1f2/v20190125/tos/'
+
+  CNRM-ESM2-1.historical.r3i1p1f2.zos:
+    description: CMIP6 monthly Sea Surface Height Above Geoid for CNRM-ESM2-1 historical scenario r3i1p1f2
+    metadata:
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      storage_options:
+        token: anon
+        access: read_only
+      consolidated: True
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/CNRM-CERFACS/CNRM-ESM2-1/historical/r3i1p1f2/v20190125/zos/'
+
+  CNRM-ESM2-1.historical.r3i1p1f2.thetao:
+    description: CMIP6 monthly Sea Water Potential Temperature for CNRM-ESM2-1 scenario r3i1p1f2
+    metadata:
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      storage_options:
+        token: anon
+        access: read_only
+      consolidated: True
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/CNRM-CERFACS/CNRM-ESM2-1/historical/r3i1p1f2/v20190125/thetao/'
+
+  CNRM-ESM2-1.historical.r3i1p1f2.uo:
+    description: CMIP6 monthly Sea Water X Velocity for CNRM-ESM2-1 historical scenario r3i1p1f2
+    metadata:
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      storage_options:
+        token: anon
+        access: read_only
+      consolidated: True
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/CNRM-CERFACS/CNRM-ESM2-1/historical/r3i1p1f2/v20190125/uo/'
+
+  CNRM-ESM2-1.historical.r3i1p1f2.vo:
+    description: CMIP6 monthly Sea Water Y Velocity for CNRM-ESM2-1 scenario r3i1p1f2
+    metadata:
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      storage_options:
+        token: anon
+        access: read_only
+      consolidated: True
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/CNRM-CERFACS/CNRM-ESM2-1/historical/r3i1p1f2/v20190125/vo/'
+
+  CNRM-ESM2-1.historical.r3i1p1f2.wo:
+    description: CMIP6 monthly Sea Water X Velocity for CNRM-ESM2-1 scenario r3i1p1f2
+    metadata:
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      storage_options:
+        token: anon
+        access: read_only
+      consolidated: True
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/CNRM-CERFACS/CNRM-ESM2-1/historical/r3i1p1f2/v20190125/wo/'
+
+  CNRM-ESM2-1.historical.r4i1p1f2.sos:
+    description: CMIP6 monthly Sea Surface Salinity for CNRM-ESM2-1 historical scenario r4i1p1f2
+    metadata:
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      storage_options:
+        token: anon
+        access: read_only
+      consolidated: True
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/CNRM-CERFACS/CNRM-ESM2-1/historical/r4i1p1f2/v20190125/sos/'
+
+  CNRM-ESM2-1.historical.r4i1p1f2.tos:
+    description: CMIP6 monthly Sea Surface Temperature for CNRM-ESM2-1 historical scenario r4i1p1f2
+    metadata:
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      storage_options:
+        token: anon
+        access: read_only
+      consolidated: True
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/CNRM-CERFACS/CNRM-ESM2-1/historical/r4i1p1f2/v20190125/tos/'
+
+  CNRM-ESM2-1.historical.r4i1p1f2.zos:
+    description: CMIP6 monthly Sea Surface Height Above Geoid for CNRM-ESM2-1 historical scenario r4i1p1f2
+    metadata:
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      storage_options:
+        token: anon
+        access: read_only
+      consolidated: True
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/CNRM-CERFACS/CNRM-ESM2-1/historical/r4i1p1f2/v20190125/zos/'
+
+  CNRM-ESM2-1.historical.r4i1p1f2.thetao:
+    description: CMIP6 monthly Sea Water Potential Temperature for CNRM-ESM2-1 scenario r4i1p1f2
+    metadata:
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      storage_options:
+        token: anon
+        access: read_only
+      consolidated: True
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/CNRM-CERFACS/CNRM-ESM2-1/historical/r4i1p1f2/v20190125/thetao/'
+
+  CNRM-ESM2-1.historical.r4i1p1f2.uo:
+    description: CMIP6 monthly Sea Water X Velocity for CNRM-ESM2-1 historical scenario r4i1p1f2
+    metadata:
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      storage_options:
+        token: anon
+        access: read_only
+      consolidated: True
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/CNRM-CERFACS/CNRM-ESM2-1/historical/r4i1p1f2/v20190125/uo/'
+
+  CNRM-ESM2-1.historical.r4i1p1f2.vo:
+    description: CMIP6 monthly Sea Water Y Velocity for CNRM-ESM2-1 scenario r4i1p1f2
+    metadata:
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      storage_options:
+        token: anon
+        access: read_only
+      consolidated: True
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/CNRM-CERFACS/CNRM-ESM2-1/historical/r4i1p1f2/v20190125/vo/'
+
+  CNRM-ESM2-1.historical.r4i1p1f2.wo:
+    description: CMIP6 monthly Sea Water X Velocity for CNRM-ESM2-1 scenario r4i1p1f2
+    metadata:
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      storage_options:
+        token: anon
+        access: read_only
+      consolidated: True
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/CNRM-CERFACS/CNRM-ESM2-1/historical/r4i1p1f2/v20190125/wo/'
+
+  CNRM-ESM2-1.historical.r5i1p1f2.sos:
+    description: CMIP6 monthly Sea Surface Salinity for CNRM-ESM2-1 historical scenario r5i1p1f2
+    metadata:
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      storage_options:
+        token: anon
+        access: read_only
+      consolidated: True
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/CNRM-CERFACS/CNRM-ESM2-1/historical/r5i1p1f2/v20190125/sos/'
+
+  CNRM-ESM2-1.historical.r5i1p1f2.tos:
+    description: CMIP6 monthly Sea Surface Temperature for CNRM-ESM2-1 historical scenario r5i1p1f2
+    metadata:
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      storage_options:
+        token: anon
+        access: read_only
+      consolidated: True
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/CNRM-CERFACS/CNRM-ESM2-1/historical/r5i1p1f2/v20190125/tos/'
+
+  CNRM-ESM2-1.historical.r5i1p1f2.zos:
+    description: CMIP6 monthly Sea Surface Height Above Geoid for CNRM-ESM2-1 historical scenario r5i1p1f2
+    metadata:
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      storage_options:
+        token: anon
+        access: read_only
+      consolidated: True
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/CNRM-CERFACS/CNRM-ESM2-1/historical/r5i1p1f2/v20190125/zos/'
+
+  CNRM-ESM2-1.historical.r5i1p1f2.thetao:
+    description: CMIP6 monthly Sea Water Potential Temperature for CNRM-ESM2-1 scenario r5i1p1f2
+    metadata:
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      storage_options:
+        token: anon
+        access: read_only
+      consolidated: True
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/CNRM-CERFACS/CNRM-ESM2-1/historical/r5i1p1f2/v20190125/thetao/'
+
+  CNRM-ESM2-1.historical.r5i1p1f2.uo:
+    description: CMIP6 monthly Sea Water X Velocity for CNRM-ESM2-1 historical scenario r5i1p1f2
+    metadata:
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      storage_options:
+        token: anon
+        access: read_only
+      consolidated: True
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/CNRM-CERFACS/CNRM-ESM2-1/historical/r5i1p1f2/v20190125/uo/'
+
+  CNRM-ESM2-1.historical.r5i1p1f2.vo:
+    description: CMIP6 monthly Sea Water Y Velocity for CNRM-ESM2-1 scenario r5i1p1f2
+    metadata:
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      storage_options:
+        token: anon
+        access: read_only
+      consolidated: True
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/CNRM-CERFACS/CNRM-ESM2-1/historical/r5i1p1f2/v20190125/vo/'
+
+  CNRM-ESM2-1.historical.r5i1p1f2.wo:
+    description: CMIP6 monthly Sea Water X Velocity for CNRM-ESM2-1 scenario r5i1p1f2
+    metadata:
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      storage_options:
+        token: anon
+        access: read_only
+      consolidated: True
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/CNRM-CERFACS/CNRM-ESM2-1/historical/r5i1p1f2/v20190125/wo/'
+
+  IPSL-CM6A-LR.historical.r1i1p1f1.sos:
+    description: CMIP6 monthly Sea Surface Salinity for IPSL-CM6A-LR historical scenario r1i1p1f1
+    metadata:
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      storage_options:
+        token: anon
+        access: read_only
+      consolidated: True
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/IPSL/IPSL-CM6A-LR/historical/r1i1p1f1/v20180803/sos/'
+
+  IPSL-CM6A-LR.historical.r1i1p1f1.tos:
+    description: CMIP6 monthly Sea Surface Temperature for IPSL-CM6A-LR historical scenario r1i1p1f1
+    metadata:
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      storage_options:
+        token: anon
+        access: read_only
+      consolidated: True
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/IPSL/IPSL-CM6A-LR/historical/r1i1p1f1/v20180803/tos/'
+
+  IPSL-CM6A-LR.historical.r1i1p1f1.zos:
+    description: CMIP6 monthly Sea Surface Height Above Geoid for IPSL-CM6A-LR historical scenario r1i1p1f1
+    metadata:
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      storage_options:
+        token: anon
+        access: read_only
+      consolidated: True
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/IPSL/IPSL-CM6A-LR/historical/r1i1p1f1/v20180803/zos/'
+
+  IPSL-CM6A-LR.historical.r1i1p1f1.thetao:
+    description: CMIP6 monthly Sea Water Potential Temperature for IPSL-CM6A-LR scenario r1i1p1f1
+    metadata:
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      storage_options:
+        token: anon
+        access: read_only
+      consolidated: True
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/IPSL/IPSL-CM6A-LR/historical/r1i1p1f1/v20180803/thetao/'
+
+  IPSL-CM6A-LR.historical.r1i1p1f1.so:
+    description: CMIP6 monthly Sea Water Salinity for IPSL-CM6A-LR scenario r1i1p1f1
+    metadata:
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      storage_options:
+        token: anon
+        access: read_only
+      consolidated: True
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/IPSL/IPSL-CM6A-LR/historical/r1i1p1f1/v20180803/so/'
+
+  IPSL-CM6A-LR.historical.r1i1p1f1.uo:
+    description: CMIP6 monthly Sea Water X Velocity for IPSL-CM6A-LR historical scenario r1i1p1f1
+    metadata:
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      storage_options:
+        token: anon
+        access: read_only
+      consolidated: True
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/IPSL/IPSL-CM6A-LR/historical/r1i1p1f1/v20180803/uo/'
+
+  IPSL-CM6A-LR.historical.r1i1p1f1.vo:
+    description: CMIP6 monthly Sea Water Y Velocity for IPSL-CM6A-LR scenario r1i1p1f1
+    metadata:
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      storage_options:
+        token: anon
+        access: read_only
+      consolidated: True
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/IPSL/IPSL-CM6A-LR/historical/r1i1p1f1/v20180803/vo/'
+
+  IPSL-CM6A-LR.historical.r1i1p1f1.wo:
+    description: CMIP6 monthly Sea Water X Velocity for IPSL-CM6A-LR scenario r1i1p1f1
+    metadata:
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      storage_options:
+        token: anon
+        access: read_only
+      consolidated: True
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/IPSL/IPSL-CM6A-LR/historical/r1i1p1f1/v20180803/wo/'
+
+  IPSL-CM6A-LR.historical.r2i1p1f1.sos:
+    description: CMIP6 monthly Sea Surface Salinity for IPSL-CM6A-LR historical scenario r2i1p1f1
+    metadata:
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      storage_options:
+        token: anon
+        access: read_only
+      consolidated: True
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/IPSL/IPSL-CM6A-LR/historical/r2i1p1f1/v20180803/sos/'
+
+  IPSL-CM6A-LR.historical.r2i1p1f1.tos:
+    description: CMIP6 monthly Sea Surface Temperature for IPSL-CM6A-LR historical scenario r2i1p1f1
+    metadata:
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      storage_options:
+        token: anon
+        access: read_only
+      consolidated: True
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/IPSL/IPSL-CM6A-LR/historical/r2i1p1f1/v20180803/tos/'
+
+  IPSL-CM6A-LR.historical.r2i1p1f1.zos:
+    description: CMIP6 monthly Sea Surface Height Above Geoid for IPSL-CM6A-LR historical scenario r2i1p1f1
+    metadata:
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      storage_options:
+        token: anon
+        access: read_only
+      consolidated: True
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/IPSL/IPSL-CM6A-LR/historical/r2i1p1f1/v20180803/zos/'
+
+  IPSL-CM6A-LR.historical.r2i1p1f1.thetao:
+    description: CMIP6 monthly Sea Water Potential Temperature for IPSL-CM6A-LR scenario r2i1p1f1
+    metadata:
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      storage_options:
+        token: anon
+        access: read_only
+      consolidated: True
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/IPSL/IPSL-CM6A-LR/historical/r2i1p1f1/v20180803/thetao/'
+
+  IPSL-CM6A-LR.historical.r2i1p1f1.so:
+    description: CMIP6 monthly Sea Water Salinity for IPSL-CM6A-LR scenario r2i1p1f1
+    metadata:
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      storage_options:
+        token: anon
+        access: read_only
+      consolidated: True
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/IPSL/IPSL-CM6A-LR/historical/r2i1p1f1/v20180803/so/'
+
+  IPSL-CM6A-LR.historical.r2i1p1f1.uo:
+    description: CMIP6 monthly Sea Water X Velocity for IPSL-CM6A-LR historical scenario r2i1p1f1
+    metadata:
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      storage_options:
+        token: anon
+        access: read_only
+      consolidated: True
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/IPSL/IPSL-CM6A-LR/historical/r2i1p1f1/v20180803/uo/'
+
+  IPSL-CM6A-LR.historical.r2i1p1f1.vo:
+    description: CMIP6 monthly Sea Water Y Velocity for IPSL-CM6A-LR scenario r2i1p1f1
+    metadata:
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      storage_options:
+        token: anon
+        access: read_only
+      consolidated: True
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/IPSL/IPSL-CM6A-LR/historical/r2i1p1f1/v20180803/vo/'
+
+  IPSL-CM6A-LR.historical.r2i1p1f1.wo:
+    description: CMIP6 monthly Sea Water X Velocity for IPSL-CM6A-LR scenario r2i1p1f1
+    metadata:
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      storage_options:
+        token: anon
+        access: read_only
+      consolidated: True
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/IPSL/IPSL-CM6A-LR/historical/r2i1p1f1/v20180803/wo/'
+
+  IPSL-CM6A-LR.historical.r3i1p1f1.sos:
+    description: CMIP6 monthly Sea Surface Salinity for IPSL-CM6A-LR historical scenario r3i1p1f1
+    metadata:
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      storage_options:
+        token: anon
+        access: read_only
+      consolidated: True
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/IPSL/IPSL-CM6A-LR/historical/r3i1p1f1/v20180803/sos/'
+
+  IPSL-CM6A-LR.historical.r3i1p1f1.tos:
+    description: CMIP6 monthly Sea Surface Temperature for IPSL-CM6A-LR historical scenario r3i1p1f1
+    metadata:
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      storage_options:
+        token: anon
+        access: read_only
+      consolidated: True
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/IPSL/IPSL-CM6A-LR/historical/r3i1p1f1/v20180803/tos/'
+
+  IPSL-CM6A-LR.historical.r3i1p1f1.zos:
+    description: CMIP6 monthly Sea Surface Height Above Geoid for IPSL-CM6A-LR historical scenario r3i1p1f1
+    metadata:
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      storage_options:
+        token: anon
+        access: read_only
+      consolidated: True
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/IPSL/IPSL-CM6A-LR/historical/r3i1p1f1/v20180803/zos/'
+
+  IPSL-CM6A-LR.historical.r3i1p1f1.thetao:
+    description: CMIP6 monthly Sea Water Potential Temperature for IPSL-CM6A-LR scenario r3i1p1f1
+    metadata:
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      storage_options:
+        token: anon
+        access: read_only
+      consolidated: True
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/IPSL/IPSL-CM6A-LR/historical/r3i1p1f1/v20180803/thetao/'
+
+  IPSL-CM6A-LR.historical.r3i1p1f1.so:
+    description: CMIP6 monthly Sea Water Salinity for IPSL-CM6A-LR scenario r3i1p1f1
+    metadata:
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      storage_options:
+        token: anon
+        access: read_only
+      consolidated: True
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/IPSL/IPSL-CM6A-LR/historical/r3i1p1f1/v20180803/so/'
+
+  IPSL-CM6A-LR.historical.r3i1p1f1.uo:
+    description: CMIP6 monthly Sea Water X Velocity for IPSL-CM6A-LR historical scenario r3i1p1f1
+    metadata:
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      storage_options:
+        token: anon
+        access: read_only
+      consolidated: True
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/IPSL/IPSL-CM6A-LR/historical/r3i1p1f1/v20180803/uo/'
+
+  IPSL-CM6A-LR.historical.r3i1p1f1.vo:
+    description: CMIP6 monthly Sea Water Y Velocity for IPSL-CM6A-LR scenario r3i1p1f1
+    metadata:
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      storage_options:
+        token: anon
+        access: read_only
+      consolidated: True
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/IPSL/IPSL-CM6A-LR/historical/r3i1p1f1/v20180803/vo/'
+
+  IPSL-CM6A-LR.historical.r3i1p1f1.wo:
+    description: CMIP6 monthly Sea Water X Velocity for IPSL-CM6A-LR scenario r3i1p1f1
+    metadata:
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      storage_options:
+        token: anon
+        access: read_only
+      consolidated: True
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/IPSL/IPSL-CM6A-LR/historical/r3i1p1f1/v20180803/wo/'
+
+  IPSL-CM6A-LR.historical.r4i1p1f1.sos:
+    description: CMIP6 monthly Sea Surface Salinity for IPSL-CM6A-LR historical scenario r4i1p1f1
+    metadata:
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      storage_options:
+        token: anon
+        access: read_only
+      consolidated: True
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/IPSL/IPSL-CM6A-LR/historical/r4i1p1f1/v20180803/sos/'
+
+  IPSL-CM6A-LR.historical.r4i1p1f1.tos:
+    description: CMIP6 monthly Sea Surface Temperature for IPSL-CM6A-LR historical scenario r4i1p1f1
+    metadata:
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      storage_options:
+        token: anon
+        access: read_only
+      consolidated: True
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/IPSL/IPSL-CM6A-LR/historical/r4i1p1f1/v20180803/tos/'
+
+  IPSL-CM6A-LR.historical.r4i1p1f1.zos:
+    description: CMIP6 monthly Sea Surface Height Above Geoid for IPSL-CM6A-LR historical scenario r4i1p1f1
+    metadata:
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      storage_options:
+        token: anon
+        access: read_only
+      consolidated: True
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/IPSL/IPSL-CM6A-LR/historical/r4i1p1f1/v20180803/zos/'
+
+  IPSL-CM6A-LR.historical.r4i1p1f1.thetao:
+    description: CMIP6 monthly Sea Water Potential Temperature for IPSL-CM6A-LR scenario r4i1p1f1
+    metadata:
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      storage_options:
+        token: anon
+        access: read_only
+      consolidated: True
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/IPSL/IPSL-CM6A-LR/historical/r4i1p1f1/v20180803/thetao/'
+
+  IPSL-CM6A-LR.historical.r4i1p1f1.so:
+    description: CMIP6 monthly Sea Water Salinity for IPSL-CM6A-LR scenario r4i1p1f1
+    metadata:
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      storage_options:
+        token: anon
+        access: read_only
+      consolidated: True
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/IPSL/IPSL-CM6A-LR/historical/r4i1p1f1/v20180803/so/'
+
+  IPSL-CM6A-LR.historical.r4i1p1f1.uo:
+    description: CMIP6 monthly Sea Water X Velocity for IPSL-CM6A-LR historical scenario r4i1p1f1
+    metadata:
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      storage_options:
+        token: anon
+        access: read_only
+      consolidated: True
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/IPSL/IPSL-CM6A-LR/historical/r4i1p1f1/v20180803/uo/'
+
+  IPSL-CM6A-LR.historical.r4i1p1f1.vo:
+    description: CMIP6 monthly Sea Water Y Velocity for IPSL-CM6A-LR scenario r4i1p1f1
+    metadata:
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      storage_options:
+        token: anon
+        access: read_only
+      consolidated: True
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/IPSL/IPSL-CM6A-LR/historical/r4i1p1f1/v20180803/vo/'
+
+  IPSL-CM6A-LR.historical.r4i1p1f1.wo:
+    description: CMIP6 monthly Sea Water X Velocity for IPSL-CM6A-LR scenario r4i1p1f1
+    metadata:
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      storage_options:
+        token: anon
+        access: read_only
+      consolidated: True
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/IPSL/IPSL-CM6A-LR/historical/r4i1p1f1/v20180803/wo/'
+
+  GISS-E2-1-G.historical.r1i1p1f1.sos:
+    description: CMIP6 monthly Sea Surface Salinity for GISS-E2-1-G historical scenario r1i1p1f1
+    metadata:
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      storage_options:
+        token: anon
+        access: read_only
+      consolidated: True
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/NASA-GISS/GISS-E2-1-G/historical/r1i1p1f1/v20180827/sos/'
+
+  GISS-E2-1-G.historical.r1i1p1f1.tos:
+    description: CMIP6 monthly Sea Surface Temperature for GISS-E2-1-G historical scenario r1i1p1f1
+    metadata:
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      storage_options:
+        token: anon
+        access: read_only
+      consolidated: True
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/NASA-GISS/GISS-E2-1-G/historical/r1i1p1f1/v20180827/tos/'
+
+  GISS-E2-1-G.historical.r1i1p1f1.zos:
+    description: CMIP6 monthly Sea Surface Height Above Geoid for GISS-E2-1-G historical scenario r1i1p1f1
+    metadata:
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      storage_options:
+        token: anon
+        access: read_only
+      consolidated: True
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/NASA-GISS/GISS-E2-1-G/historical/r1i1p1f1/v20180827/zos/'
+
+  GISS-E2-1-G.historical.r1i1p1f1.thetao:
+    description: CMIP6 monthly Sea Water Potential Temperature for GISS-E2-1-G scenario r1i1p1f1
+    metadata:
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      storage_options:
+        token: anon
+        access: read_only
+      consolidated: True
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/NASA-GISS/GISS-E2-1-G/historical/r1i1p1f1/v20180827/thetao/'
+
+  GISS-E2-1-G.historical.r1i1p1f1.so:
+    description: CMIP6 monthly Sea Water Salinity for GISS-E2-1-G scenario r1i1p1f1
+    metadata:
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      storage_options:
+        token: anon
+        access: read_only
+      consolidated: True
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/NASA-GISS/GISS-E2-1-G/historical/r1i1p1f1/v20180827/so/'
+
+  GISS-E2-1-G.historical.r1i1p1f1.uo:
+    description: CMIP6 monthly Sea Water X Velocity for GISS-E2-1-G historical scenario r1i1p1f1
+    metadata:
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      storage_options:
+        token: anon
+        access: read_only
+      consolidated: True
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/NASA-GISS/GISS-E2-1-G/historical/r1i1p1f1/v20180827/uo/'
+
+  GISS-E2-1-G.historical.r1i1p1f1.vo:
+    description: CMIP6 monthly Sea Water Y Velocity for GISS-E2-1-G scenario r1i1p1f1
+    metadata:
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      storage_options:
+        token: anon
+        access: read_only
+      consolidated: True
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/NASA-GISS/GISS-E2-1-G/historical/r1i1p1f1/v20180827/vo/'
+
+  GISS-E2-1-G.historical.r1i1p1f1.wo:
+    description: CMIP6 monthly Sea Water X Velocity for GISS-E2-1-G scenario r1i1p1f1
+    metadata:
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      storage_options:
+        token: anon
+        access: read_only
+      consolidated: True
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/NASA-GISS/GISS-E2-1-G/historical/r1i1p1f1/v20180827/wo/'
+
