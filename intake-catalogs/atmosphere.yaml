@@ -3,16 +3,6 @@ plugins:
     - module: intake_xarray
 sources:
 
-  newmann_zarr:
-    description: Newman met ensemble in zarr format (9 ens members)
-    driver: zarr
-    args:
-      storage_options:
-        project: 'pangeo-181919'
-        token: anon
-        access: read_only
-      urlpath: 'gcs://pangeo-data/newman-met-ensemble'
-
   gmet_v1:
     description: Full GMET version 1 (Newman) met ensemble in zarr format
     driver: zarr
