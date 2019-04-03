@@ -15,7 +15,7 @@ def catalog(request):
 def test_open_master_catalog(catalog):
     pass
 
-ALL_ENTRIES = list(get_master_catalog().walk())
+ALL_ENTRIES = list(get_master_catalog().walk(depth=10))
 print(ALL_ENTRIES)
 
 @pytest.fixture(scope="module", params=ALL_ENTRIES, ids=ALL_ENTRIES)
