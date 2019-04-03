@@ -1,26 +1,10 @@
 plugins:
   source:
     - module: intake_xarray
-
 sources:
-  BCC_CSM2_MR.historical.r1i1p1f1.pr:
-    description: CMIP6 3-hourly precipitation for BCC-CSM2-MR historical r1i1p1f1
-    metadata:
-      uploader_github: naomi-henderson
-      uploader_email: nhn2@columbia.edu
-      tags:
-        - ocean
-        - model
-    driver: zarr
-    args:
-      storage_options:
-        token: anon
-        access: read_only
-      consolidated: True
-      urlpath: 'gcs://pangeo-data/CMIP6_3hr/BCC-CSM2-MR/historical/r1i1p1f1/pr/'
 
-  CNRM_CM6_1.historical.r1i1p1f2.huss:
-    description: CMIP6 3-hourly near surface specific humidity for CNRM-CM6-1 historical r1i1p1f2
+  BCC_CSM2_MR.historical.r1i1p1f1.sos:
+    description: CMIP6 monthly Sea Surface Salinity for BCC-CSM2-MR historical r1i1p1f1
     metadata:
       uploader_github: naomi-henderson
       uploader_email: nhn2@columbia.edu
@@ -33,10 +17,10 @@ sources:
         token: anon
         access: read_only
       consolidated: True
-      urlpath: 'gcs://pangeo-data/CMIP6_3hr/CNRM-CM6-1/historical/r1i1p1f2/huss/'
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/BCC/BCC-CSM2-MR/historical/r1i1p1f1/v20181126/sos/'
 
-  CNRM_CM6_1.historical.r1i1p1f2.pr:
-    description: CMIP6 3-hourly precipitation for CNRM-CM6-1 historical r1i1p1f2
+  BCC_CSM2_MR.historical.r1i1p1f1.tos:
+    description: CMIP6 monthly Sea Surface Temperature for BCC-CSM2-MR historical r1i1p1f1
     metadata:
       uploader_github: naomi-henderson
       uploader_email: nhn2@columbia.edu
@@ -49,10 +33,10 @@ sources:
         token: anon
         access: read_only
       consolidated: True
-      urlpath: 'gcs://pangeo-data/CMIP6_3hr/CNRM-CM6-1/historical/r1i1p1f2/pr/'
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/BCC/BCC-CSM2-MR/historical/r1i1p1f1/v20181126/tos/'
 
-  CNRM_CM6_1.historical.r1i1p1f2.tas:
-    description: CMIP6 3-hourly near surface temperature for CNRM-CM6-1 historical r1i1p1f2
+  BCC_CSM2_MR.historical.r1i1p1f1.zos:
+    description: CMIP6 monthly Sea Surface Height Above Geoid for BCC-CSM2-MR historical r1i1p1f1
     metadata:
       uploader_github: naomi-henderson
       uploader_email: nhn2@columbia.edu
@@ -65,10 +49,10 @@ sources:
         token: anon
         access: read_only
       consolidated: True
-      urlpath: 'gcs://pangeo-data/CMIP6_3hr/CNRM-CM6-1/historical/r1i1p1f2/tas/'
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/BCC/BCC-CSM2-MR/historical/r1i1p1f1/v20181126/zos/'
 
-  CNRM_CM6_1.historical.r2i1p1f2.huss:
-    description: CMIP6 3-hourly near surface specific humidity for CNRM-CM6-1 historical r2i1p1f2
+  BCC_CSM2_MR.historical.r1i1p1f1.thetao:
+    description: CMIP6 monthly Sea Water Potential Temperature for BCC-CSM2-MR r1i1p1f1
     metadata:
       uploader_github: naomi-henderson
       uploader_email: nhn2@columbia.edu
@@ -81,10 +65,10 @@ sources:
         token: anon
         access: read_only
       consolidated: True
-      urlpath: 'gcs://pangeo-data/CMIP6_3hr/CNRM-CM6-1/historical/r2i1p1f2/huss/'
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/BCC/BCC-CSM2-MR/historical/r1i1p1f1/v20181126/thetao/'
 
-  CNRM_CM6_1.historical.r2i1p1f2.pr:
-    description: CMIP6 3-hourly precipitation for CNRM-CM6-1 historical r2i1p1f2
+  BCC_CSM2_MR.historical.r1i1p1f1.so:
+    description: CMIP6 monthly Sea Water Salinity for BCC-CSM2-MR r1i1p1f1
     metadata:
       uploader_github: naomi-henderson
       uploader_email: nhn2@columbia.edu
@@ -97,10 +81,10 @@ sources:
         token: anon
         access: read_only
       consolidated: True
-      urlpath: 'gcs://pangeo-data/CMIP6_3hr/CNRM-CM6-1/historical/r2i1p1f2/pr/'
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/BCC/BCC-CSM2-MR/historical/r1i1p1f1/v20181126/so/'
 
-  CNRM_CM6_1.historical.r2i1p1f2.tas:
-    description: CMIP6 3-hourly near surface temperature for CNRM-CM6-1 historical r2i1p1f2
+  BCC_CSM2_MR.historical.r1i1p1f1.uo:
+    description: CMIP6 monthly Sea Water X Velocity for BCC-CSM2-MR historical r1i1p1f1
     metadata:
       uploader_github: naomi-henderson
       uploader_email: nhn2@columbia.edu
@@ -113,10 +97,10 @@ sources:
         token: anon
         access: read_only
       consolidated: True
-      urlpath: 'gcs://pangeo-data/CMIP6_3hr/CNRM-CM6-1/historical/r2i1p1f2/tas/'
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/BCC/BCC-CSM2-MR/historical/r1i1p1f1/v20181126/uo/'
 
-  CNRM_ESM2_1.historical.r1i1p1f2.huss:
-    description: CMIP6 3-hourly near surface specific humidity for CNRM-ESM2-1 historical r1i1p1f2
+  BCC_CSM2_MR.historical.r1i1p1f1.vo:
+    description: CMIP6 monthly Sea Water Y Velocity for BCC-CSM2-MR r1i1p1f1
     metadata:
       uploader_github: naomi-henderson
       uploader_email: nhn2@columbia.edu
@@ -129,10 +113,10 @@ sources:
         token: anon
         access: read_only
       consolidated: True
-      urlpath: 'gcs://pangeo-data/CMIP6_3hr/CNRM-ESM2-1/historical/r1i1p1f2/huss/'
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/BCC/BCC-CSM2-MR/historical/r1i1p1f1/v20181126/vo/'
 
-  CNRM_ESM2_1.historical.r1i1p1f2.pr:
-    description: CMIP6 3-hourly precipitation for CNRM-ESM2-1 historical r1i1p1f2
+  BCC_CSM2_MR.historical.r2i1p1f1.sos:
+    description: CMIP6 monthly Sea Surface Salinity for BCC-CSM2-MR historical r2i1p1f1
     metadata:
       uploader_github: naomi-henderson
       uploader_email: nhn2@columbia.edu
@@ -145,10 +129,10 @@ sources:
         token: anon
         access: read_only
       consolidated: True
-      urlpath: 'gcs://pangeo-data/CMIP6_3hr/CNRM-ESM2-1/historical/r1i1p1f2/pr/'
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/BCC/BCC-CSM2-MR/historical/r2i1p1f1/v20181031/sos/'
 
-  CNRM_ESM2_1.historical.r1i1p1f2.tas:
-    description: CMIP6 3-hourly near surface temperature for CNRM-ESM2-1 historical r1i1p1f2
+  BCC_CSM2_MR.historical.r2i1p1f1.tos:
+    description: CMIP6 monthly Sea Surface Temperature for BCC-CSM2-MR historical r2i1p1f1
     metadata:
       uploader_github: naomi-henderson
       uploader_email: nhn2@columbia.edu
@@ -161,10 +145,10 @@ sources:
         token: anon
         access: read_only
       consolidated: True
-      urlpath: 'gcs://pangeo-data/CMIP6_3hr/CNRM-ESM2-1/historical/r1i1p1f2/tas/'
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/BCC/BCC-CSM2-MR/historical/r2i1p1f1/v20181031/tos/'
 
-  GISS_E2_1_G.historical.r1i1p1f1.huss:
-    description: CMIP6 3-hourly near surface specific humidity for GISS-E2-1-G historical r1i1p1f1
+  BCC_CSM2_MR.historical.r2i1p1f1.zos:
+    description: CMIP6 monthly Sea Surface Height Above Geoid for BCC-CSM2-MR historical r2i1p1f1
     metadata:
       uploader_github: naomi-henderson
       uploader_email: nhn2@columbia.edu
@@ -177,10 +161,10 @@ sources:
         token: anon
         access: read_only
       consolidated: True
-      urlpath: 'gcs://pangeo-data/CMIP6_3hr/GISS-E2-1-G/historical/r1i1p1f1/huss/'
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/BCC/BCC-CSM2-MR/historical/r2i1p1f1/v20181031/zos/'
 
-  GISS_E2_1_G.historical.r1i1p1f1.pr:
-    description: CMIP6 3-hourly precipitation for GISS-E2-1-G historical r1i1p1f1
+  BCC_CSM2_MR.historical.r2i1p1f1.thetao:
+    description: CMIP6 monthly Sea Water Potential Temperature for BCC-CSM2-MR r2i1p1f1
     metadata:
       uploader_github: naomi-henderson
       uploader_email: nhn2@columbia.edu
@@ -193,10 +177,10 @@ sources:
         token: anon
         access: read_only
       consolidated: True
-      urlpath: 'gcs://pangeo-data/CMIP6_3hr/GISS-E2-1-G/historical/r1i1p1f1/pr/'
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/BCC/BCC-CSM2-MR/historical/r2i1p1f1/v20181031/thetao/'
 
-  GISS_E2_1_G.historical.r1i1p1f1.tas:
-    description: CMIP6 3-hourly near surface temperature for GISS-E2-1-G historical r1i1p1f1
+  BCC_CSM2_MR.historical.r2i1p1f1.so:
+    description: CMIP6 monthly Sea Water Salinity for BCC-CSM2-MR r2i1p1f1
     metadata:
       uploader_github: naomi-henderson
       uploader_email: nhn2@columbia.edu
@@ -209,10 +193,10 @@ sources:
         token: anon
         access: read_only
       consolidated: True
-      urlpath: 'gcs://pangeo-data/CMIP6_3hr/GISS-E2-1-G/historical/r1i1p1f1/tas/'
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/BCC/BCC-CSM2-MR/historical/r2i1p1f1/v20181031/so/'
 
-  IPSL_CM6A_LR.historical.r1i1p1f1.huss:
-    description: CMIP6 3-hourly near surface specific humidity for IPSL-CM6A-LR historical r1i1p1f1
+  BCC_CSM2_MR.historical.r2i1p1f1.uo:
+    description: CMIP6 monthly Sea Water X Velocity for BCC-CSM2-MR historical r2i1p1f1
     metadata:
       uploader_github: naomi-henderson
       uploader_email: nhn2@columbia.edu
@@ -225,10 +209,10 @@ sources:
         token: anon
         access: read_only
       consolidated: True
-      urlpath: 'gcs://pangeo-data/CMIP6_3hr/IPSL-CM6A-LR/historical/r1i1p1f1/huss/'
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/BCC/BCC-CSM2-MR/historical/r2i1p1f1/v20181031/uo/'
 
-  IPSL_CM6A_LR.historical.r1i1p1f1.pr:
-    description: CMIP6 3-hourly precipitation for IPSL-CM6A-LR historical r1i1p1f1
+  BCC_CSM2_MR.historical.r2i1p1f1.vo:
+    description: CMIP6 monthly Sea Water Y Velocity for BCC-CSM2-MR r2i1p1f1
     metadata:
       uploader_github: naomi-henderson
       uploader_email: nhn2@columbia.edu
@@ -241,10 +225,10 @@ sources:
         token: anon
         access: read_only
       consolidated: True
-      urlpath: 'gcs://pangeo-data/CMIP6_3hr/IPSL-CM6A-LR/historical/r1i1p1f1/pr/'
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/BCC/BCC-CSM2-MR/historical/r2i1p1f1/v20181031/vo/'
 
-  IPSL_CM6A_LR.historical.r1i1p1f1.tas:
-    description: CMIP6 3-hourly near surface temperature for IPSL-CM6A-LR historical r1i1p1f1
+  BCC_CSM2_MR.historical.r3i1p1f1.sos:
+    description: CMIP6 monthly Sea Surface Salinity for BCC-CSM2-MR historical r3i1p1f1
     metadata:
       uploader_github: naomi-henderson
       uploader_email: nhn2@columbia.edu
@@ -257,10 +241,10 @@ sources:
         token: anon
         access: read_only
       consolidated: True
-      urlpath: 'gcs://pangeo-data/CMIP6_3hr/IPSL-CM6A-LR/historical/r1i1p1f1/tas/'
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/BCC/BCC-CSM2-MR/historical/r3i1p1f1/v20181102/sos/'
 
-  IPSL_CM6A_LR.historical.r2i1p1f1.huss:
-    description: CMIP6 3-hourly near surface specific humidity for IPSL-CM6A-LR historical r2i1p1f1
+  BCC_CSM2_MR.historical.r3i1p1f1.tos:
+    description: CMIP6 monthly Sea Surface Temperature for BCC-CSM2-MR historical r3i1p1f1
     metadata:
       uploader_github: naomi-henderson
       uploader_email: nhn2@columbia.edu
@@ -273,10 +257,10 @@ sources:
         token: anon
         access: read_only
       consolidated: True
-      urlpath: 'gcs://pangeo-data/CMIP6_3hr/IPSL-CM6A-LR/historical/r2i1p1f1/huss/'
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/BCC/BCC-CSM2-MR/historical/r3i1p1f1/v20181102/tos/'
 
-  IPSL_CM6A_LR.historical.r2i1p1f1.pr:
-    description: CMIP6 3-hourly precipitation for IPSL-CM6A-LR historical r2i1p1f1
+  BCC_CSM2_MR.historical.r3i1p1f1.zos:
+    description: CMIP6 monthly Sea Surface Height Above Geoid for BCC-CSM2-MR historical r3i1p1f1
     metadata:
       uploader_github: naomi-henderson
       uploader_email: nhn2@columbia.edu
@@ -289,10 +273,10 @@ sources:
         token: anon
         access: read_only
       consolidated: True
-      urlpath: 'gcs://pangeo-data/CMIP6_3hr/IPSL-CM6A-LR/historical/r2i1p1f1/pr/'
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/BCC/BCC-CSM2-MR/historical/r3i1p1f1/v20181102/zos/'
 
-  IPSL_CM6A_LR.historical.r2i1p1f1.tas:
-    description: CMIP6 3-hourly near surface temperature for IPSL-CM6A-LR historical r2i1p1f1
+  BCC_CSM2_MR.historical.r3i1p1f1.thetao:
+    description: CMIP6 monthly Sea Water Potential Temperature for BCC-CSM2-MR r3i1p1f1
     metadata:
       uploader_github: naomi-henderson
       uploader_email: nhn2@columbia.edu
@@ -305,10 +289,10 @@ sources:
         token: anon
         access: read_only
       consolidated: True
-      urlpath: 'gcs://pangeo-data/CMIP6_3hr/IPSL-CM6A-LR/historical/r2i1p1f1/tas/'
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/BCC/BCC-CSM2-MR/historical/r3i1p1f1/v20181102/thetao/'
 
-  IPSL_CM6A_LR.historical.r3i1p1f1.huss:
-    description: CMIP6 3-hourly near surface specific humidity for IPSL-CM6A-LR historical r3i1p1f1
+  BCC_CSM2_MR.historical.r3i1p1f1.so:
+    description: CMIP6 monthly Sea Water Salinity for BCC-CSM2-MR r3i1p1f1
     metadata:
       uploader_github: naomi-henderson
       uploader_email: nhn2@columbia.edu
@@ -321,10 +305,10 @@ sources:
         token: anon
         access: read_only
       consolidated: True
-      urlpath: 'gcs://pangeo-data/CMIP6_3hr/IPSL-CM6A-LR/historical/r3i1p1f1/huss/'
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/BCC/BCC-CSM2-MR/historical/r3i1p1f1/v20181102/so/'
 
-  IPSL_CM6A_LR.historical.r3i1p1f1.pr:
-    description: CMIP6 3-hourly precipitation for IPSL-CM6A-LR historical r3i1p1f1
+  BCC_CSM2_MR.historical.r3i1p1f1.uo:
+    description: CMIP6 monthly Sea Water X Velocity for BCC-CSM2-MR historical r3i1p1f1
     metadata:
       uploader_github: naomi-henderson
       uploader_email: nhn2@columbia.edu
@@ -337,10 +321,10 @@ sources:
         token: anon
         access: read_only
       consolidated: True
-      urlpath: 'gcs://pangeo-data/CMIP6_3hr/IPSL-CM6A-LR/historical/r3i1p1f1/pr/'
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/BCC/BCC-CSM2-MR/historical/r3i1p1f1/v20181102/uo/'
 
-  IPSL_CM6A_LR.historical.r3i1p1f1.tas:
-    description: CMIP6 3-hourly near surface temperature for IPSL-CM6A-LR historical r3i1p1f1
+  BCC_CSM2_MR.historical.r3i1p1f1.vo:
+    description: CMIP6 monthly Sea Water Y Velocity for BCC-CSM2-MR r3i1p1f1
     metadata:
       uploader_github: naomi-henderson
       uploader_email: nhn2@columbia.edu
@@ -353,10 +337,10 @@ sources:
         token: anon
         access: read_only
       consolidated: True
-      urlpath: 'gcs://pangeo-data/CMIP6_3hr/IPSL-CM6A-LR/historical/r3i1p1f1/tas/'
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/BCC/BCC-CSM2-MR/historical/r3i1p1f1/v20181102/vo/'
 
-  IPSL_CM6A_LR.historical.r4i1p1f1.huss:
-    description: CMIP6 3-hourly near surface specific humidity for IPSL-CM6A-LR historical r4i1p1f1
+  BCC_ESM1.historical.r1i1p1f1.sos:
+    description: CMIP6 monthly Sea Surface Salinity for BCC-ESM1 historical r1i1p1f1
     metadata:
       uploader_github: naomi-henderson
       uploader_email: nhn2@columbia.edu
@@ -369,10 +353,10 @@ sources:
         token: anon
         access: read_only
       consolidated: True
-      urlpath: 'gcs://pangeo-data/CMIP6_3hr/IPSL-CM6A-LR/historical/r4i1p1f1/huss/'
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/BCC/BCC-ESM1/historical/r1i1p1f1/v20181129/sos/'
 
-  IPSL_CM6A_LR.historical.r4i1p1f1.pr:
-    description: CMIP6 3-hourly precipitation for IPSL-CM6A-LR historical r4i1p1f1
+  BCC_ESM1.historical.r1i1p1f1.tos:
+    description: CMIP6 monthly Sea Surface Temperature for BCC-ESM1 historical r1i1p1f1
     metadata:
       uploader_github: naomi-henderson
       uploader_email: nhn2@columbia.edu
@@ -385,10 +369,10 @@ sources:
         token: anon
         access: read_only
       consolidated: True
-      urlpath: 'gcs://pangeo-data/CMIP6_3hr/IPSL-CM6A-LR/historical/r4i1p1f1/pr/'
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/BCC/BCC-ESM1/historical/r1i1p1f1/v20181129/tos/'
 
-  IPSL_CM6A_LR.historical.r4i1p1f1.tas:
-    description: CMIP6 3-hourly near surface temperature for IPSL-CM6A-LR historical r4i1p1f1
+  BCC_ESM1.historical.r1i1p1f1.zos:
+    description: CMIP6 monthly Sea Surface Height Above Geoid for BCC-ESM1 historical r1i1p1f1
     metadata:
       uploader_github: naomi-henderson
       uploader_email: nhn2@columbia.edu
@@ -401,10 +385,10 @@ sources:
         token: anon
         access: read_only
       consolidated: True
-      urlpath: 'gcs://pangeo-data/CMIP6_3hr/IPSL-CM6A-LR/historical/r4i1p1f1/tas/'
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/BCC/BCC-ESM1/historical/r1i1p1f1/v20181129/zos/'
 
-  IPSL_CM6A_LR.historical.r5i1p1f1.huss:
-    description: CMIP6 3-hourly near surface specific humidity for IPSL-CM6A-LR historical r5i1p1f1
+  BCC_ESM1.historical.r1i1p1f1.thetao:
+    description: CMIP6 monthly Sea Water Potential Temperature for BCC-ESM1 r1i1p1f1
     metadata:
       uploader_github: naomi-henderson
       uploader_email: nhn2@columbia.edu
@@ -417,10 +401,10 @@ sources:
         token: anon
         access: read_only
       consolidated: True
-      urlpath: 'gcs://pangeo-data/CMIP6_3hr/IPSL-CM6A-LR/historical/r5i1p1f1/huss/'
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/BCC/BCC-ESM1/historical/r1i1p1f1/v20181129/thetao/'
 
-  IPSL_CM6A_LR.historical.r5i1p1f1.pr:
-    description: CMIP6 3-hourly precipitation for IPSL-CM6A-LR historical r5i1p1f1
+  BCC_ESM1.historical.r1i1p1f1.so:
+    description: CMIP6 monthly Sea Water Salinity for BCC-ESM1 r1i1p1f1
     metadata:
       uploader_github: naomi-henderson
       uploader_email: nhn2@columbia.edu
@@ -433,10 +417,10 @@ sources:
         token: anon
         access: read_only
       consolidated: True
-      urlpath: 'gcs://pangeo-data/CMIP6_3hr/IPSL-CM6A-LR/historical/r5i1p1f1/pr/'
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/BCC/BCC-ESM1/historical/r1i1p1f1/v20181129/so/'
 
-  IPSL_CM6A_LR.historical.r5i1p1f1.tas:
-    description: CMIP6 3-hourly near surface temperature for IPSL-CM6A-LR historical r5i1p1f1
+  BCC_ESM1.historical.r1i1p1f1.uo:
+    description: CMIP6 monthly Sea Water X Velocity for BCC-ESM1 historical r1i1p1f1
     metadata:
       uploader_github: naomi-henderson
       uploader_email: nhn2@columbia.edu
@@ -449,10 +433,10 @@ sources:
         token: anon
         access: read_only
       consolidated: True
-      urlpath: 'gcs://pangeo-data/CMIP6_3hr/IPSL-CM6A-LR/historical/r5i1p1f1/tas/'
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/BCC/BCC-ESM1/historical/r1i1p1f1/v20181129/uo/'
 
-  IPSL_CM6A_LR.historical.r6i1p1f1.huss:
-    description: CMIP6 3-hourly near surface specific humidity for IPSL-CM6A-LR historical r6i1p1f1
+  BCC_ESM1.historical.r1i1p1f1.vo:
+    description: CMIP6 monthly Sea Water Y Velocity for BCC-ESM1 r1i1p1f1
     metadata:
       uploader_github: naomi-henderson
       uploader_email: nhn2@columbia.edu
@@ -465,10 +449,10 @@ sources:
         token: anon
         access: read_only
       consolidated: True
-      urlpath: 'gcs://pangeo-data/CMIP6_3hr/IPSL-CM6A-LR/historical/r6i1p1f1/huss/'
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/BCC/BCC-ESM1/historical/r1i1p1f1/v20181129/vo/'
 
-  IPSL_CM6A_LR.historical.r6i1p1f1.pr:
-    description: CMIP6 3-hourly precipitation for IPSL-CM6A-LR historical r6i1p1f1
+  BCC_ESM1.historical.r2i1p1f1.sos:
+    description: CMIP6 monthly Sea Surface Salinity for BCC-ESM1 historical r2i1p1f1
     metadata:
       uploader_github: naomi-henderson
       uploader_email: nhn2@columbia.edu
@@ -481,10 +465,10 @@ sources:
         token: anon
         access: read_only
       consolidated: True
-      urlpath: 'gcs://pangeo-data/CMIP6_3hr/IPSL-CM6A-LR/historical/r6i1p1f1/pr/'
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/BCC/BCC-ESM1/historical/r2i1p1f1/v20181218/sos/'
 
-  IPSL_CM6A_LR.historical.r6i1p1f1.tas:
-    description: CMIP6 3-hourly near surface temperature for IPSL-CM6A-LR historical r6i1p1f1
+  BCC_ESM1.historical.r2i1p1f1.tos:
+    description: CMIP6 monthly Sea Surface Temperature for BCC-ESM1 historical r2i1p1f1
     metadata:
       uploader_github: naomi-henderson
       uploader_email: nhn2@columbia.edu
@@ -497,10 +481,10 @@ sources:
         token: anon
         access: read_only
       consolidated: True
-      urlpath: 'gcs://pangeo-data/CMIP6_3hr/IPSL-CM6A-LR/historical/r6i1p1f1/tas/'
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/BCC/BCC-ESM1/historical/r2i1p1f1/v20181218/tos/'
 
-  IPSL_CM6A_LR.historical.r7i1p1f1.huss:
-    description: CMIP6 3-hourly near surface specific humidity for IPSL-CM6A-LR historical r7i1p1f1
+  BCC_ESM1.historical.r2i1p1f1.zos:
+    description: CMIP6 monthly Sea Surface Height Above Geoid for BCC-ESM1 historical r2i1p1f1
     metadata:
       uploader_github: naomi-henderson
       uploader_email: nhn2@columbia.edu
@@ -513,10 +497,10 @@ sources:
         token: anon
         access: read_only
       consolidated: True
-      urlpath: 'gcs://pangeo-data/CMIP6_3hr/IPSL-CM6A-LR/historical/r7i1p1f1/huss/'
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/BCC/BCC-ESM1/historical/r2i1p1f1/v20181218/zos/'
 
-  IPSL_CM6A_LR.historical.r7i1p1f1.pr:
-    description: CMIP6 3-hourly precipitation for IPSL-CM6A-LR historical r7i1p1f1
+  BCC_ESM1.historical.r2i1p1f1.thetao:
+    description: CMIP6 monthly Sea Water Potential Temperature for BCC-ESM1 r2i1p1f1
     metadata:
       uploader_github: naomi-henderson
       uploader_email: nhn2@columbia.edu
@@ -529,10 +513,10 @@ sources:
         token: anon
         access: read_only
       consolidated: True
-      urlpath: 'gcs://pangeo-data/CMIP6_3hr/IPSL-CM6A-LR/historical/r7i1p1f1/pr/'
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/BCC/BCC-ESM1/historical/r2i1p1f1/v20181218/thetao/'
 
-  IPSL_CM6A_LR.historical.r7i1p1f1.tas:
-    description: CMIP6 3-hourly near surface temperature for IPSL-CM6A-LR historical r7i1p1f1
+  BCC_ESM1.historical.r2i1p1f1.so:
+    description: CMIP6 monthly Sea Water Salinity for BCC-ESM1 r2i1p1f1
     metadata:
       uploader_github: naomi-henderson
       uploader_email: nhn2@columbia.edu
@@ -545,5 +529,1605 @@ sources:
         token: anon
         access: read_only
       consolidated: True
-      urlpath: 'gcs://pangeo-data/CMIP6_3hr/IPSL-CM6A-LR/historical/r7i1p1f1/tas/'
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/BCC/BCC-ESM1/historical/r2i1p1f1/v20181218/so/'
+
+  BCC_ESM1.historical.r2i1p1f1.uo:
+    description: CMIP6 monthly Sea Water X Velocity for BCC-ESM1 historical r2i1p1f1
+    metadata:
+      uploader_github: naomi-henderson
+      uploader_email: nhn2@columbia.edu
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      storage_options:
+        token: anon
+        access: read_only
+      consolidated: True
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/BCC/BCC-ESM1/historical/r2i1p1f1/v20181218/uo/'
+
+  BCC_ESM1.historical.r2i1p1f1.vo:
+    description: CMIP6 monthly Sea Water Y Velocity for BCC-ESM1 r2i1p1f1
+    metadata:
+      uploader_github: naomi-henderson
+      uploader_email: nhn2@columbia.edu
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      storage_options:
+        token: anon
+        access: read_only
+      consolidated: True
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/BCC/BCC-ESM1/historical/r2i1p1f1/v20181218/vo/'
+
+  BCC_ESM1.historical.r3i1p1f1.sos:
+    description: CMIP6 monthly Sea Surface Salinity for BCC-ESM1 historical r3i1p1f1
+    metadata:
+      uploader_github: naomi-henderson
+      uploader_email: nhn2@columbia.edu
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      storage_options:
+        token: anon
+        access: read_only
+      consolidated: True
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/BCC/BCC-ESM1/historical/r3i1p1f1/v20181218/sos/'
+
+  BCC_ESM1.historical.r3i1p1f1.tos:
+    description: CMIP6 monthly Sea Surface Temperature for BCC-ESM1 historical r3i1p1f1
+    metadata:
+      uploader_github: naomi-henderson
+      uploader_email: nhn2@columbia.edu
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      storage_options:
+        token: anon
+        access: read_only
+      consolidated: True
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/BCC/BCC-ESM1/historical/r3i1p1f1/v20181218/tos/'
+
+  BCC_ESM1.historical.r3i1p1f1.zos:
+    description: CMIP6 monthly Sea Surface Height Above Geoid for BCC-ESM1 historical r3i1p1f1
+    metadata:
+      uploader_github: naomi-henderson
+      uploader_email: nhn2@columbia.edu
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      storage_options:
+        token: anon
+        access: read_only
+      consolidated: True
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/BCC/BCC-ESM1/historical/r3i1p1f1/v20181218/zos/'
+
+  BCC_ESM1.historical.r3i1p1f1.thetao:
+    description: CMIP6 monthly Sea Water Potential Temperature for BCC-ESM1 r3i1p1f1
+    metadata:
+      uploader_github: naomi-henderson
+      uploader_email: nhn2@columbia.edu
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      storage_options:
+        token: anon
+        access: read_only
+      consolidated: True
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/BCC/BCC-ESM1/historical/r3i1p1f1/v20181218/thetao/'
+
+  BCC_ESM1.historical.r3i1p1f1.so:
+    description: CMIP6 monthly Sea Water Salinity for BCC-ESM1 r3i1p1f1
+    metadata:
+      uploader_github: naomi-henderson
+      uploader_email: nhn2@columbia.edu
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      storage_options:
+        token: anon
+        access: read_only
+      consolidated: True
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/BCC/BCC-ESM1/historical/r3i1p1f1/v20181218/so/'
+
+  BCC_ESM1.historical.r3i1p1f1.uo:
+    description: CMIP6 monthly Sea Water X Velocity for BCC-ESM1 historical r3i1p1f1
+    metadata:
+      uploader_github: naomi-henderson
+      uploader_email: nhn2@columbia.edu
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      storage_options:
+        token: anon
+        access: read_only
+      consolidated: True
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/BCC/BCC-ESM1/historical/r3i1p1f1/v20181218/uo/'
+
+  BCC_ESM1.historical.r3i1p1f1.vo:
+    description: CMIP6 monthly Sea Water Y Velocity for BCC-ESM1 r3i1p1f1
+    metadata:
+      uploader_github: naomi-henderson
+      uploader_email: nhn2@columbia.edu
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      storage_options:
+        token: anon
+        access: read_only
+      consolidated: True
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/BCC/BCC-ESM1/historical/r3i1p1f1/v20181218/vo/'
+
+  CNRM_CM6_1.historical.r1i1p1f2.sos:
+    description: CMIP6 monthly Sea Surface Salinity for CNRM-CM6-1 historical r1i1p1f2
+    metadata:
+      uploader_github: naomi-henderson
+      uploader_email: nhn2@columbia.edu
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      storage_options:
+        token: anon
+        access: read_only
+      consolidated: True
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/CNRM-CERFACS/CNRM-CM6-1/historical/r1i1p1f2/v20180917/sos/'
+
+  CNRM_CM6_1.historical.r1i1p1f2.tos:
+    description: CMIP6 monthly Sea Surface Temperature for CNRM-CM6-1 historical r1i1p1f2
+    metadata:
+      uploader_github: naomi-henderson
+      uploader_email: nhn2@columbia.edu
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      storage_options:
+        token: anon
+        access: read_only
+      consolidated: True
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/CNRM-CERFACS/CNRM-CM6-1/historical/r1i1p1f2/v20180917/tos/'
+
+  CNRM_CM6_1.historical.r1i1p1f2.zos:
+    description: CMIP6 monthly Sea Surface Height Above Geoid for CNRM-CM6-1 historical r1i1p1f2
+    metadata:
+      uploader_github: naomi-henderson
+      uploader_email: nhn2@columbia.edu
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      storage_options:
+        token: anon
+        access: read_only
+      consolidated: True
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/CNRM-CERFACS/CNRM-CM6-1/historical/r1i1p1f2/v20180917/zos/'
+
+  CNRM_CM6_1.historical.r1i1p1f2.thetao:
+    description: CMIP6 monthly Sea Water Potential Temperature for CNRM-CM6-1 r1i1p1f2
+    metadata:
+      uploader_github: naomi-henderson
+      uploader_email: nhn2@columbia.edu
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      storage_options:
+        token: anon
+        access: read_only
+      consolidated: True
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/CNRM-CERFACS/CNRM-CM6-1/historical/r1i1p1f2/v20180917/thetao/'
+
+  CNRM_CM6_1.historical.r1i1p1f2.so:
+    description: CMIP6 monthly Sea Water Salinity for CNRM-CM6-1 r1i1p1f2
+    metadata:
+      uploader_github: naomi-henderson
+      uploader_email: nhn2@columbia.edu
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      storage_options:
+        token: anon
+        access: read_only
+      consolidated: True
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/CNRM-CERFACS/CNRM-CM6-1/historical/r1i1p1f2/v20180917/so/'
+
+  CNRM_CM6_1.historical.r1i1p1f2.uo:
+    description: CMIP6 monthly Sea Water X Velocity for CNRM-CM6-1 historical r1i1p1f2
+    metadata:
+      uploader_github: naomi-henderson
+      uploader_email: nhn2@columbia.edu
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      storage_options:
+        token: anon
+        access: read_only
+      consolidated: True
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/CNRM-CERFACS/CNRM-CM6-1/historical/r1i1p1f2/v20180917/uo/'
+
+  CNRM_CM6_1.historical.r1i1p1f2.vo:
+    description: CMIP6 monthly Sea Water Y Velocity for CNRM-CM6-1 r1i1p1f2
+    metadata:
+      uploader_github: naomi-henderson
+      uploader_email: nhn2@columbia.edu
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      storage_options:
+        token: anon
+        access: read_only
+      consolidated: True
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/CNRM-CERFACS/CNRM-CM6-1/historical/r1i1p1f2/v20180917/vo/'
+
+  CNRM_CM6_1.historical.r1i1p1f2.wo:
+    description: CMIP6 monthly Sea Water X Velocity for CNRM-CM6-1 r1i1p1f2
+    metadata:
+      uploader_github: naomi-henderson
+      uploader_email: nhn2@columbia.edu
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      storage_options:
+        token: anon
+        access: read_only
+      consolidated: True
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/CNRM-CERFACS/CNRM-CM6-1/historical/r1i1p1f2/v20180917/wo/'
+
+  CNRM_CM6_1.historical.r2i1p1f2.sos:
+    description: CMIP6 monthly Sea Surface Salinity for CNRM-CM6-1 historical r2i1p1f2
+    metadata:
+      uploader_github: naomi-henderson
+      uploader_email: nhn2@columbia.edu
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      storage_options:
+        token: anon
+        access: read_only
+      consolidated: True
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/CNRM-CERFACS/CNRM-CM6-1/historical/r2i1p1f2/v20181126/sos/'
+
+  CNRM_CM6_1.historical.r2i1p1f2.tos:
+    description: CMIP6 monthly Sea Surface Temperature for CNRM-CM6-1 historical r2i1p1f2
+    metadata:
+      uploader_github: naomi-henderson
+      uploader_email: nhn2@columbia.edu
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      storage_options:
+        token: anon
+        access: read_only
+      consolidated: True
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/CNRM-CERFACS/CNRM-CM6-1/historical/r2i1p1f2/v20181126/tos/'
+
+  CNRM_CM6_1.historical.r2i1p1f2.zos:
+    description: CMIP6 monthly Sea Surface Height Above Geoid for CNRM-CM6-1 historical r2i1p1f2
+    metadata:
+      uploader_github: naomi-henderson
+      uploader_email: nhn2@columbia.edu
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      storage_options:
+        token: anon
+        access: read_only
+      consolidated: True
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/CNRM-CERFACS/CNRM-CM6-1/historical/r2i1p1f2/v20181126/zos/'
+
+  CNRM_CM6_1.historical.r2i1p1f2.thetao:
+    description: CMIP6 monthly Sea Water Potential Temperature for CNRM-CM6-1 r2i1p1f2
+    metadata:
+      uploader_github: naomi-henderson
+      uploader_email: nhn2@columbia.edu
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      storage_options:
+        token: anon
+        access: read_only
+      consolidated: True
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/CNRM-CERFACS/CNRM-CM6-1/historical/r2i1p1f2/v20181126/thetao/'
+
+  CNRM_CM6_1.historical.r2i1p1f2.so:
+    description: CMIP6 monthly Sea Water Salinity for CNRM-CM6-1 r2i1p1f2
+    metadata:
+      uploader_github: naomi-henderson
+      uploader_email: nhn2@columbia.edu
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      storage_options:
+        token: anon
+        access: read_only
+      consolidated: True
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/CNRM-CERFACS/CNRM-CM6-1/historical/r2i1p1f2/v20181126/so/'
+
+  CNRM_CM6_1.historical.r2i1p1f2.uo:
+    description: CMIP6 monthly Sea Water X Velocity for CNRM-CM6-1 historical r2i1p1f2
+    metadata:
+      uploader_github: naomi-henderson
+      uploader_email: nhn2@columbia.edu
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      storage_options:
+        token: anon
+        access: read_only
+      consolidated: True
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/CNRM-CERFACS/CNRM-CM6-1/historical/r2i1p1f2/v20181126/uo/'
+
+  CNRM_CM6_1.historical.r2i1p1f2.vo:
+    description: CMIP6 monthly Sea Water Y Velocity for CNRM-CM6-1 r2i1p1f2
+    metadata:
+      uploader_github: naomi-henderson
+      uploader_email: nhn2@columbia.edu
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      storage_options:
+        token: anon
+        access: read_only
+      consolidated: True
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/CNRM-CERFACS/CNRM-CM6-1/historical/r2i1p1f2/v20181126/vo/'
+
+  CNRM_CM6_1.historical.r2i1p1f2.wo:
+    description: CMIP6 monthly Sea Water X Velocity for CNRM-CM6-1 r2i1p1f2
+    metadata:
+      uploader_github: naomi-henderson
+      uploader_email: nhn2@columbia.edu
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      storage_options:
+        token: anon
+        access: read_only
+      consolidated: True
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/CNRM-CERFACS/CNRM-CM6-1/historical/r2i1p1f2/v20181126/wo/'
+
+  CNRM_ESM2_1.historical.r1i1p1f2.sos:
+    description: CMIP6 monthly Sea Surface Salinity for CNRM-ESM2-1 historical r1i1p1f2
+    metadata:
+      uploader_github: naomi-henderson
+      uploader_email: nhn2@columbia.edu
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      storage_options:
+        token: anon
+        access: read_only
+      consolidated: True
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/CNRM-CERFACS/CNRM-ESM2-1/historical/r1i1p1f2/v20181206/sos/'
+
+  CNRM_ESM2_1.historical.r1i1p1f2.tos:
+    description: CMIP6 monthly Sea Surface Temperature for CNRM-ESM2-1 historical r1i1p1f2
+    metadata:
+      uploader_github: naomi-henderson
+      uploader_email: nhn2@columbia.edu
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      storage_options:
+        token: anon
+        access: read_only
+      consolidated: True
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/CNRM-CERFACS/CNRM-ESM2-1/historical/r1i1p1f2/v20181206/tos/'
+
+  CNRM_ESM2_1.historical.r1i1p1f2.zos:
+    description: CMIP6 monthly Sea Surface Height Above Geoid for CNRM-ESM2-1 historical r1i1p1f2
+    metadata:
+      uploader_github: naomi-henderson
+      uploader_email: nhn2@columbia.edu
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      storage_options:
+        token: anon
+        access: read_only
+      consolidated: True
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/CNRM-CERFACS/CNRM-ESM2-1/historical/r1i1p1f2/v20181206/zos/'
+
+  CNRM_ESM2_1.historical.r1i1p1f2.thetao:
+    description: CMIP6 monthly Sea Water Potential Temperature for CNRM-ESM2-1 r1i1p1f2
+    metadata:
+      uploader_github: naomi-henderson
+      uploader_email: nhn2@columbia.edu
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      storage_options:
+        token: anon
+        access: read_only
+      consolidated: True
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/CNRM-CERFACS/CNRM-ESM2-1/historical/r1i1p1f2/v20181206/thetao/'
+
+  CNRM_ESM2_1.historical.r1i1p1f2.uo:
+    description: CMIP6 monthly Sea Water X Velocity for CNRM-ESM2-1 historical r1i1p1f2
+    metadata:
+      uploader_github: naomi-henderson
+      uploader_email: nhn2@columbia.edu
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      storage_options:
+        token: anon
+        access: read_only
+      consolidated: True
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/CNRM-CERFACS/CNRM-ESM2-1/historical/r1i1p1f2/v20181206/uo/'
+
+  CNRM_ESM2_1.historical.r1i1p1f2.vo:
+    description: CMIP6 monthly Sea Water Y Velocity for CNRM-ESM2-1 r1i1p1f2
+    metadata:
+      uploader_github: naomi-henderson
+      uploader_email: nhn2@columbia.edu
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      storage_options:
+        token: anon
+        access: read_only
+      consolidated: True
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/CNRM-CERFACS/CNRM-ESM2-1/historical/r1i1p1f2/v20181206/vo/'
+
+  CNRM_ESM2_1.historical.r1i1p1f2.wo:
+    description: CMIP6 monthly Sea Water X Velocity for CNRM-ESM2-1 r1i1p1f2
+    metadata:
+      uploader_github: naomi-henderson
+      uploader_email: nhn2@columbia.edu
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      storage_options:
+        token: anon
+        access: read_only
+      consolidated: True
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/CNRM-CERFACS/CNRM-ESM2-1/historical/r1i1p1f2/v20181206/wo/'
+
+  CNRM_ESM2_1.historical.r2i1p1f2.sos:
+    description: CMIP6 monthly Sea Surface Salinity for CNRM-ESM2-1 historical r2i1p1f2
+    metadata:
+      uploader_github: naomi-henderson
+      uploader_email: nhn2@columbia.edu
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      storage_options:
+        token: anon
+        access: read_only
+      consolidated: True
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/CNRM-CERFACS/CNRM-ESM2-1/historical/r2i1p1f2/v20190125/sos/'
+
+  CNRM_ESM2_1.historical.r2i1p1f2.tos:
+    description: CMIP6 monthly Sea Surface Temperature for CNRM-ESM2-1 historical r2i1p1f2
+    metadata:
+      uploader_github: naomi-henderson
+      uploader_email: nhn2@columbia.edu
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      storage_options:
+        token: anon
+        access: read_only
+      consolidated: True
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/CNRM-CERFACS/CNRM-ESM2-1/historical/r2i1p1f2/v20190125/tos/'
+
+  CNRM_ESM2_1.historical.r2i1p1f2.zos:
+    description: CMIP6 monthly Sea Surface Height Above Geoid for CNRM-ESM2-1 historical r2i1p1f2
+    metadata:
+      uploader_github: naomi-henderson
+      uploader_email: nhn2@columbia.edu
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      storage_options:
+        token: anon
+        access: read_only
+      consolidated: True
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/CNRM-CERFACS/CNRM-ESM2-1/historical/r2i1p1f2/v20190125/zos/'
+
+  CNRM_ESM2_1.historical.r2i1p1f2.thetao:
+    description: CMIP6 monthly Sea Water Potential Temperature for CNRM-ESM2-1 r2i1p1f2
+    metadata:
+      uploader_github: naomi-henderson
+      uploader_email: nhn2@columbia.edu
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      storage_options:
+        token: anon
+        access: read_only
+      consolidated: True
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/CNRM-CERFACS/CNRM-ESM2-1/historical/r2i1p1f2/v20190125/thetao/'
+
+  CNRM_ESM2_1.historical.r2i1p1f2.uo:
+    description: CMIP6 monthly Sea Water X Velocity for CNRM-ESM2-1 historical r2i1p1f2
+    metadata:
+      uploader_github: naomi-henderson
+      uploader_email: nhn2@columbia.edu
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      storage_options:
+        token: anon
+        access: read_only
+      consolidated: True
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/CNRM-CERFACS/CNRM-ESM2-1/historical/r2i1p1f2/v20190125/uo/'
+
+  CNRM_ESM2_1.historical.r2i1p1f2.vo:
+    description: CMIP6 monthly Sea Water Y Velocity for CNRM-ESM2-1 r2i1p1f2
+    metadata:
+      uploader_github: naomi-henderson
+      uploader_email: nhn2@columbia.edu
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      storage_options:
+        token: anon
+        access: read_only
+      consolidated: True
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/CNRM-CERFACS/CNRM-ESM2-1/historical/r2i1p1f2/v20190125/vo/'
+
+  CNRM_ESM2_1.historical.r2i1p1f2.wo:
+    description: CMIP6 monthly Sea Water X Velocity for CNRM-ESM2-1 r2i1p1f2
+    metadata:
+      uploader_github: naomi-henderson
+      uploader_email: nhn2@columbia.edu
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      storage_options:
+        token: anon
+        access: read_only
+      consolidated: True
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/CNRM-CERFACS/CNRM-ESM2-1/historical/r2i1p1f2/v20190125/wo/'
+
+  CNRM_ESM2_1.historical.r3i1p1f2.sos:
+    description: CMIP6 monthly Sea Surface Salinity for CNRM-ESM2-1 historical r3i1p1f2
+    metadata:
+      uploader_github: naomi-henderson
+      uploader_email: nhn2@columbia.edu
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      storage_options:
+        token: anon
+        access: read_only
+      consolidated: True
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/CNRM-CERFACS/CNRM-ESM2-1/historical/r3i1p1f2/v20190125/sos/'
+
+  CNRM_ESM2_1.historical.r3i1p1f2.tos:
+    description: CMIP6 monthly Sea Surface Temperature for CNRM-ESM2-1 historical r3i1p1f2
+    metadata:
+      uploader_github: naomi-henderson
+      uploader_email: nhn2@columbia.edu
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      storage_options:
+        token: anon
+        access: read_only
+      consolidated: True
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/CNRM-CERFACS/CNRM-ESM2-1/historical/r3i1p1f2/v20190125/tos/'
+
+  CNRM_ESM2_1.historical.r3i1p1f2.zos:
+    description: CMIP6 monthly Sea Surface Height Above Geoid for CNRM-ESM2-1 historical r3i1p1f2
+    metadata:
+      uploader_github: naomi-henderson
+      uploader_email: nhn2@columbia.edu
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      storage_options:
+        token: anon
+        access: read_only
+      consolidated: True
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/CNRM-CERFACS/CNRM-ESM2-1/historical/r3i1p1f2/v20190125/zos/'
+
+  CNRM_ESM2_1.historical.r3i1p1f2.thetao:
+    description: CMIP6 monthly Sea Water Potential Temperature for CNRM-ESM2-1 r3i1p1f2
+    metadata:
+      uploader_github: naomi-henderson
+      uploader_email: nhn2@columbia.edu
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      storage_options:
+        token: anon
+        access: read_only
+      consolidated: True
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/CNRM-CERFACS/CNRM-ESM2-1/historical/r3i1p1f2/v20190125/thetao/'
+
+  CNRM_ESM2_1.historical.r3i1p1f2.uo:
+    description: CMIP6 monthly Sea Water X Velocity for CNRM-ESM2-1 historical r3i1p1f2
+    metadata:
+      uploader_github: naomi-henderson
+      uploader_email: nhn2@columbia.edu
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      storage_options:
+        token: anon
+        access: read_only
+      consolidated: True
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/CNRM-CERFACS/CNRM-ESM2-1/historical/r3i1p1f2/v20190125/uo/'
+
+  CNRM_ESM2_1.historical.r3i1p1f2.vo:
+    description: CMIP6 monthly Sea Water Y Velocity for CNRM-ESM2-1 r3i1p1f2
+    metadata:
+      uploader_github: naomi-henderson
+      uploader_email: nhn2@columbia.edu
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      storage_options:
+        token: anon
+        access: read_only
+      consolidated: True
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/CNRM-CERFACS/CNRM-ESM2-1/historical/r3i1p1f2/v20190125/vo/'
+
+  CNRM_ESM2_1.historical.r3i1p1f2.wo:
+    description: CMIP6 monthly Sea Water X Velocity for CNRM-ESM2-1 r3i1p1f2
+    metadata:
+      uploader_github: naomi-henderson
+      uploader_email: nhn2@columbia.edu
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      storage_options:
+        token: anon
+        access: read_only
+      consolidated: True
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/CNRM-CERFACS/CNRM-ESM2-1/historical/r3i1p1f2/v20190125/wo/'
+
+  CNRM_ESM2_1.historical.r4i1p1f2.sos:
+    description: CMIP6 monthly Sea Surface Salinity for CNRM-ESM2-1 historical r4i1p1f2
+    metadata:
+      uploader_github: naomi-henderson
+      uploader_email: nhn2@columbia.edu
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      storage_options:
+        token: anon
+        access: read_only
+      consolidated: True
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/CNRM-CERFACS/CNRM-ESM2-1/historical/r4i1p1f2/v20190125/sos/'
+
+  CNRM_ESM2_1.historical.r4i1p1f2.tos:
+    description: CMIP6 monthly Sea Surface Temperature for CNRM-ESM2-1 historical r4i1p1f2
+    metadata:
+      uploader_github: naomi-henderson
+      uploader_email: nhn2@columbia.edu
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      storage_options:
+        token: anon
+        access: read_only
+      consolidated: True
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/CNRM-CERFACS/CNRM-ESM2-1/historical/r4i1p1f2/v20190125/tos/'
+
+  CNRM_ESM2_1.historical.r4i1p1f2.zos:
+    description: CMIP6 monthly Sea Surface Height Above Geoid for CNRM-ESM2-1 historical r4i1p1f2
+    metadata:
+      uploader_github: naomi-henderson
+      uploader_email: nhn2@columbia.edu
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      storage_options:
+        token: anon
+        access: read_only
+      consolidated: True
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/CNRM-CERFACS/CNRM-ESM2-1/historical/r4i1p1f2/v20190125/zos/'
+
+  CNRM_ESM2_1.historical.r4i1p1f2.thetao:
+    description: CMIP6 monthly Sea Water Potential Temperature for CNRM-ESM2-1 r4i1p1f2
+    metadata:
+      uploader_github: naomi-henderson
+      uploader_email: nhn2@columbia.edu
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      storage_options:
+        token: anon
+        access: read_only
+      consolidated: True
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/CNRM-CERFACS/CNRM-ESM2-1/historical/r4i1p1f2/v20190125/thetao/'
+
+  CNRM_ESM2_1.historical.r4i1p1f2.uo:
+    description: CMIP6 monthly Sea Water X Velocity for CNRM-ESM2-1 historical r4i1p1f2
+    metadata:
+      uploader_github: naomi-henderson
+      uploader_email: nhn2@columbia.edu
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      storage_options:
+        token: anon
+        access: read_only
+      consolidated: True
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/CNRM-CERFACS/CNRM-ESM2-1/historical/r4i1p1f2/v20190125/uo/'
+
+  CNRM_ESM2_1.historical.r4i1p1f2.vo:
+    description: CMIP6 monthly Sea Water Y Velocity for CNRM-ESM2-1 r4i1p1f2
+    metadata:
+      uploader_github: naomi-henderson
+      uploader_email: nhn2@columbia.edu
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      storage_options:
+        token: anon
+        access: read_only
+      consolidated: True
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/CNRM-CERFACS/CNRM-ESM2-1/historical/r4i1p1f2/v20190125/vo/'
+
+  CNRM_ESM2_1.historical.r4i1p1f2.wo:
+    description: CMIP6 monthly Sea Water X Velocity for CNRM-ESM2-1 r4i1p1f2
+    metadata:
+      uploader_github: naomi-henderson
+      uploader_email: nhn2@columbia.edu
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      storage_options:
+        token: anon
+        access: read_only
+      consolidated: True
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/CNRM-CERFACS/CNRM-ESM2-1/historical/r4i1p1f2/v20190125/wo/'
+
+  CNRM_ESM2_1.historical.r5i1p1f2.sos:
+    description: CMIP6 monthly Sea Surface Salinity for CNRM-ESM2-1 historical r5i1p1f2
+    metadata:
+      uploader_github: naomi-henderson
+      uploader_email: nhn2@columbia.edu
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      storage_options:
+        token: anon
+        access: read_only
+      consolidated: True
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/CNRM-CERFACS/CNRM-ESM2-1/historical/r5i1p1f2/v20190125/sos/'
+
+  CNRM_ESM2_1.historical.r5i1p1f2.tos:
+    description: CMIP6 monthly Sea Surface Temperature for CNRM-ESM2-1 historical r5i1p1f2
+    metadata:
+      uploader_github: naomi-henderson
+      uploader_email: nhn2@columbia.edu
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      storage_options:
+        token: anon
+        access: read_only
+      consolidated: True
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/CNRM-CERFACS/CNRM-ESM2-1/historical/r5i1p1f2/v20190125/tos/'
+
+  CNRM_ESM2_1.historical.r5i1p1f2.zos:
+    description: CMIP6 monthly Sea Surface Height Above Geoid for CNRM-ESM2-1 historical r5i1p1f2
+    metadata:
+      uploader_github: naomi-henderson
+      uploader_email: nhn2@columbia.edu
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      storage_options:
+        token: anon
+        access: read_only
+      consolidated: True
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/CNRM-CERFACS/CNRM-ESM2-1/historical/r5i1p1f2/v20190125/zos/'
+
+  CNRM_ESM2_1.historical.r5i1p1f2.thetao:
+    description: CMIP6 monthly Sea Water Potential Temperature for CNRM-ESM2-1 r5i1p1f2
+    metadata:
+      uploader_github: naomi-henderson
+      uploader_email: nhn2@columbia.edu
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      storage_options:
+        token: anon
+        access: read_only
+      consolidated: True
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/CNRM-CERFACS/CNRM-ESM2-1/historical/r5i1p1f2/v20190125/thetao/'
+
+  CNRM_ESM2_1.historical.r5i1p1f2.uo:
+    description: CMIP6 monthly Sea Water X Velocity for CNRM-ESM2-1 historical r5i1p1f2
+    metadata:
+      uploader_github: naomi-henderson
+      uploader_email: nhn2@columbia.edu
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      storage_options:
+        token: anon
+        access: read_only
+      consolidated: True
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/CNRM-CERFACS/CNRM-ESM2-1/historical/r5i1p1f2/v20190125/uo/'
+
+  CNRM_ESM2_1.historical.r5i1p1f2.vo:
+    description: CMIP6 monthly Sea Water Y Velocity for CNRM-ESM2-1 r5i1p1f2
+    metadata:
+      uploader_github: naomi-henderson
+      uploader_email: nhn2@columbia.edu
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      storage_options:
+        token: anon
+        access: read_only
+      consolidated: True
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/CNRM-CERFACS/CNRM-ESM2-1/historical/r5i1p1f2/v20190125/vo/'
+
+  CNRM_ESM2_1.historical.r5i1p1f2.wo:
+    description: CMIP6 monthly Sea Water X Velocity for CNRM-ESM2-1 r5i1p1f2
+    metadata:
+      uploader_github: naomi-henderson
+      uploader_email: nhn2@columbia.edu
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      storage_options:
+        token: anon
+        access: read_only
+      consolidated: True
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/CNRM-CERFACS/CNRM-ESM2-1/historical/r5i1p1f2/v20190125/wo/'
+
+  IPSL_CM6A_LR.historical.r1i1p1f1.sos:
+    description: CMIP6 monthly Sea Surface Salinity for IPSL-CM6A-LR historical r1i1p1f1
+    metadata:
+      uploader_github: naomi-henderson
+      uploader_email: nhn2@columbia.edu
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      storage_options:
+        token: anon
+        access: read_only
+      consolidated: True
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/IPSL/IPSL-CM6A-LR/historical/r1i1p1f1/v20180803/sos/'
+
+  IPSL_CM6A_LR.historical.r1i1p1f1.tos:
+    description: CMIP6 monthly Sea Surface Temperature for IPSL-CM6A-LR historical r1i1p1f1
+    metadata:
+      uploader_github: naomi-henderson
+      uploader_email: nhn2@columbia.edu
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      storage_options:
+        token: anon
+        access: read_only
+      consolidated: True
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/IPSL/IPSL-CM6A-LR/historical/r1i1p1f1/v20180803/tos/'
+
+  IPSL_CM6A_LR.historical.r1i1p1f1.zos:
+    description: CMIP6 monthly Sea Surface Height Above Geoid for IPSL-CM6A-LR historical r1i1p1f1
+    metadata:
+      uploader_github: naomi-henderson
+      uploader_email: nhn2@columbia.edu
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      storage_options:
+        token: anon
+        access: read_only
+      consolidated: True
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/IPSL/IPSL-CM6A-LR/historical/r1i1p1f1/v20180803/zos/'
+
+  IPSL_CM6A_LR.historical.r1i1p1f1.thetao:
+    description: CMIP6 monthly Sea Water Potential Temperature for IPSL-CM6A-LR r1i1p1f1
+    metadata:
+      uploader_github: naomi-henderson
+      uploader_email: nhn2@columbia.edu
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      storage_options:
+        token: anon
+        access: read_only
+      consolidated: True
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/IPSL/IPSL-CM6A-LR/historical/r1i1p1f1/v20180803/thetao/'
+
+  IPSL_CM6A_LR.historical.r1i1p1f1.so:
+    description: CMIP6 monthly Sea Water Salinity for IPSL-CM6A-LR r1i1p1f1
+    metadata:
+      uploader_github: naomi-henderson
+      uploader_email: nhn2@columbia.edu
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      storage_options:
+        token: anon
+        access: read_only
+      consolidated: True
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/IPSL/IPSL-CM6A-LR/historical/r1i1p1f1/v20180803/so/'
+
+  IPSL_CM6A_LR.historical.r1i1p1f1.uo:
+    description: CMIP6 monthly Sea Water X Velocity for IPSL-CM6A-LR historical r1i1p1f1
+    metadata:
+      uploader_github: naomi-henderson
+      uploader_email: nhn2@columbia.edu
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      storage_options:
+        token: anon
+        access: read_only
+      consolidated: True
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/IPSL/IPSL-CM6A-LR/historical/r1i1p1f1/v20180803/uo/'
+
+  IPSL_CM6A_LR.historical.r1i1p1f1.vo:
+    description: CMIP6 monthly Sea Water Y Velocity for IPSL-CM6A-LR r1i1p1f1
+    metadata:
+      uploader_github: naomi-henderson
+      uploader_email: nhn2@columbia.edu
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      storage_options:
+        token: anon
+        access: read_only
+      consolidated: True
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/IPSL/IPSL-CM6A-LR/historical/r1i1p1f1/v20180803/vo/'
+
+  IPSL_CM6A_LR.historical.r1i1p1f1.wo:
+    description: CMIP6 monthly Sea Water X Velocity for IPSL-CM6A-LR r1i1p1f1
+    metadata:
+      uploader_github: naomi-henderson
+      uploader_email: nhn2@columbia.edu
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      storage_options:
+        token: anon
+        access: read_only
+      consolidated: True
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/IPSL/IPSL-CM6A-LR/historical/r1i1p1f1/v20180803/wo/'
+
+  IPSL_CM6A_LR.historical.r2i1p1f1.sos:
+    description: CMIP6 monthly Sea Surface Salinity for IPSL-CM6A-LR historical r2i1p1f1
+    metadata:
+      uploader_github: naomi-henderson
+      uploader_email: nhn2@columbia.edu
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      storage_options:
+        token: anon
+        access: read_only
+      consolidated: True
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/IPSL/IPSL-CM6A-LR/historical/r2i1p1f1/v20180803/sos/'
+
+  IPSL_CM6A_LR.historical.r2i1p1f1.tos:
+    description: CMIP6 monthly Sea Surface Temperature for IPSL-CM6A-LR historical r2i1p1f1
+    metadata:
+      uploader_github: naomi-henderson
+      uploader_email: nhn2@columbia.edu
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      storage_options:
+        token: anon
+        access: read_only
+      consolidated: True
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/IPSL/IPSL-CM6A-LR/historical/r2i1p1f1/v20180803/tos/'
+
+  IPSL_CM6A_LR.historical.r2i1p1f1.zos:
+    description: CMIP6 monthly Sea Surface Height Above Geoid for IPSL-CM6A-LR historical r2i1p1f1
+    metadata:
+      uploader_github: naomi-henderson
+      uploader_email: nhn2@columbia.edu
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      storage_options:
+        token: anon
+        access: read_only
+      consolidated: True
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/IPSL/IPSL-CM6A-LR/historical/r2i1p1f1/v20180803/zos/'
+
+  IPSL_CM6A_LR.historical.r2i1p1f1.thetao:
+    description: CMIP6 monthly Sea Water Potential Temperature for IPSL-CM6A-LR r2i1p1f1
+    metadata:
+      uploader_github: naomi-henderson
+      uploader_email: nhn2@columbia.edu
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      storage_options:
+        token: anon
+        access: read_only
+      consolidated: True
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/IPSL/IPSL-CM6A-LR/historical/r2i1p1f1/v20180803/thetao/'
+
+  IPSL_CM6A_LR.historical.r2i1p1f1.so:
+    description: CMIP6 monthly Sea Water Salinity for IPSL-CM6A-LR r2i1p1f1
+    metadata:
+      uploader_github: naomi-henderson
+      uploader_email: nhn2@columbia.edu
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      storage_options:
+        token: anon
+        access: read_only
+      consolidated: True
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/IPSL/IPSL-CM6A-LR/historical/r2i1p1f1/v20180803/so/'
+
+  IPSL_CM6A_LR.historical.r2i1p1f1.uo:
+    description: CMIP6 monthly Sea Water X Velocity for IPSL-CM6A-LR historical r2i1p1f1
+    metadata:
+      uploader_github: naomi-henderson
+      uploader_email: nhn2@columbia.edu
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      storage_options:
+        token: anon
+        access: read_only
+      consolidated: True
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/IPSL/IPSL-CM6A-LR/historical/r2i1p1f1/v20180803/uo/'
+
+  IPSL_CM6A_LR.historical.r2i1p1f1.vo:
+    description: CMIP6 monthly Sea Water Y Velocity for IPSL-CM6A-LR r2i1p1f1
+    metadata:
+      uploader_github: naomi-henderson
+      uploader_email: nhn2@columbia.edu
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      storage_options:
+        token: anon
+        access: read_only
+      consolidated: True
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/IPSL/IPSL-CM6A-LR/historical/r2i1p1f1/v20180803/vo/'
+
+  IPSL_CM6A_LR.historical.r2i1p1f1.wo:
+    description: CMIP6 monthly Sea Water X Velocity for IPSL-CM6A-LR r2i1p1f1
+    metadata:
+      uploader_github: naomi-henderson
+      uploader_email: nhn2@columbia.edu
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      storage_options:
+        token: anon
+        access: read_only
+      consolidated: True
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/IPSL/IPSL-CM6A-LR/historical/r2i1p1f1/v20180803/wo/'
+
+  IPSL_CM6A_LR.historical.r3i1p1f1.sos:
+    description: CMIP6 monthly Sea Surface Salinity for IPSL-CM6A-LR historical r3i1p1f1
+    metadata:
+      uploader_github: naomi-henderson
+      uploader_email: nhn2@columbia.edu
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      storage_options:
+        token: anon
+        access: read_only
+      consolidated: True
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/IPSL/IPSL-CM6A-LR/historical/r3i1p1f1/v20180803/sos/'
+
+  IPSL_CM6A_LR.historical.r3i1p1f1.tos:
+    description: CMIP6 monthly Sea Surface Temperature for IPSL-CM6A-LR historical r3i1p1f1
+    metadata:
+      uploader_github: naomi-henderson
+      uploader_email: nhn2@columbia.edu
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      storage_options:
+        token: anon
+        access: read_only
+      consolidated: True
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/IPSL/IPSL-CM6A-LR/historical/r3i1p1f1/v20180803/tos/'
+
+  IPSL_CM6A_LR.historical.r3i1p1f1.zos:
+    description: CMIP6 monthly Sea Surface Height Above Geoid for IPSL-CM6A-LR historical r3i1p1f1
+    metadata:
+      uploader_github: naomi-henderson
+      uploader_email: nhn2@columbia.edu
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      storage_options:
+        token: anon
+        access: read_only
+      consolidated: True
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/IPSL/IPSL-CM6A-LR/historical/r3i1p1f1/v20180803/zos/'
+
+  IPSL_CM6A_LR.historical.r3i1p1f1.thetao:
+    description: CMIP6 monthly Sea Water Potential Temperature for IPSL-CM6A-LR r3i1p1f1
+    metadata:
+      uploader_github: naomi-henderson
+      uploader_email: nhn2@columbia.edu
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      storage_options:
+        token: anon
+        access: read_only
+      consolidated: True
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/IPSL/IPSL-CM6A-LR/historical/r3i1p1f1/v20180803/thetao/'
+
+  IPSL_CM6A_LR.historical.r3i1p1f1.so:
+    description: CMIP6 monthly Sea Water Salinity for IPSL-CM6A-LR r3i1p1f1
+    metadata:
+      uploader_github: naomi-henderson
+      uploader_email: nhn2@columbia.edu
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      storage_options:
+        token: anon
+        access: read_only
+      consolidated: True
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/IPSL/IPSL-CM6A-LR/historical/r3i1p1f1/v20180803/so/'
+
+  IPSL_CM6A_LR.historical.r3i1p1f1.uo:
+    description: CMIP6 monthly Sea Water X Velocity for IPSL-CM6A-LR historical r3i1p1f1
+    metadata:
+      uploader_github: naomi-henderson
+      uploader_email: nhn2@columbia.edu
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      storage_options:
+        token: anon
+        access: read_only
+      consolidated: True
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/IPSL/IPSL-CM6A-LR/historical/r3i1p1f1/v20180803/uo/'
+
+  IPSL_CM6A_LR.historical.r3i1p1f1.vo:
+    description: CMIP6 monthly Sea Water Y Velocity for IPSL-CM6A-LR r3i1p1f1
+    metadata:
+      uploader_github: naomi-henderson
+      uploader_email: nhn2@columbia.edu
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      storage_options:
+        token: anon
+        access: read_only
+      consolidated: True
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/IPSL/IPSL-CM6A-LR/historical/r3i1p1f1/v20180803/vo/'
+
+  IPSL_CM6A_LR.historical.r3i1p1f1.wo:
+    description: CMIP6 monthly Sea Water X Velocity for IPSL-CM6A-LR r3i1p1f1
+    metadata:
+      uploader_github: naomi-henderson
+      uploader_email: nhn2@columbia.edu
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      storage_options:
+        token: anon
+        access: read_only
+      consolidated: True
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/IPSL/IPSL-CM6A-LR/historical/r3i1p1f1/v20180803/wo/'
+
+  IPSL_CM6A_LR.historical.r4i1p1f1.sos:
+    description: CMIP6 monthly Sea Surface Salinity for IPSL-CM6A-LR historical r4i1p1f1
+    metadata:
+      uploader_github: naomi-henderson
+      uploader_email: nhn2@columbia.edu
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      storage_options:
+        token: anon
+        access: read_only
+      consolidated: True
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/IPSL/IPSL-CM6A-LR/historical/r4i1p1f1/v20180803/sos/'
+
+  IPSL_CM6A_LR.historical.r4i1p1f1.tos:
+    description: CMIP6 monthly Sea Surface Temperature for IPSL-CM6A-LR historical r4i1p1f1
+    metadata:
+      uploader_github: naomi-henderson
+      uploader_email: nhn2@columbia.edu
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      storage_options:
+        token: anon
+        access: read_only
+      consolidated: True
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/IPSL/IPSL-CM6A-LR/historical/r4i1p1f1/v20180803/tos/'
+
+  IPSL_CM6A_LR.historical.r4i1p1f1.zos:
+    description: CMIP6 monthly Sea Surface Height Above Geoid for IPSL-CM6A-LR historical r4i1p1f1
+    metadata:
+      uploader_github: naomi-henderson
+      uploader_email: nhn2@columbia.edu
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      storage_options:
+        token: anon
+        access: read_only
+      consolidated: True
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/IPSL/IPSL-CM6A-LR/historical/r4i1p1f1/v20180803/zos/'
+
+  IPSL_CM6A_LR.historical.r4i1p1f1.thetao:
+    description: CMIP6 monthly Sea Water Potential Temperature for IPSL-CM6A-LR r4i1p1f1
+    metadata:
+      uploader_github: naomi-henderson
+      uploader_email: nhn2@columbia.edu
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      storage_options:
+        token: anon
+        access: read_only
+      consolidated: True
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/IPSL/IPSL-CM6A-LR/historical/r4i1p1f1/v20180803/thetao/'
+
+  IPSL_CM6A_LR.historical.r4i1p1f1.so:
+    description: CMIP6 monthly Sea Water Salinity for IPSL-CM6A-LR r4i1p1f1
+    metadata:
+      uploader_github: naomi-henderson
+      uploader_email: nhn2@columbia.edu
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      storage_options:
+        token: anon
+        access: read_only
+      consolidated: True
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/IPSL/IPSL-CM6A-LR/historical/r4i1p1f1/v20180803/so/'
+
+  IPSL_CM6A_LR.historical.r4i1p1f1.uo:
+    description: CMIP6 monthly Sea Water X Velocity for IPSL-CM6A-LR historical r4i1p1f1
+    metadata:
+      uploader_github: naomi-henderson
+      uploader_email: nhn2@columbia.edu
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      storage_options:
+        token: anon
+        access: read_only
+      consolidated: True
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/IPSL/IPSL-CM6A-LR/historical/r4i1p1f1/v20180803/uo/'
+
+  IPSL_CM6A_LR.historical.r4i1p1f1.vo:
+    description: CMIP6 monthly Sea Water Y Velocity for IPSL-CM6A-LR r4i1p1f1
+    metadata:
+      uploader_github: naomi-henderson
+      uploader_email: nhn2@columbia.edu
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      storage_options:
+        token: anon
+        access: read_only
+      consolidated: True
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/IPSL/IPSL-CM6A-LR/historical/r4i1p1f1/v20180803/vo/'
+
+  IPSL_CM6A_LR.historical.r4i1p1f1.wo:
+    description: CMIP6 monthly Sea Water X Velocity for IPSL-CM6A-LR r4i1p1f1
+    metadata:
+      uploader_github: naomi-henderson
+      uploader_email: nhn2@columbia.edu
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      storage_options:
+        token: anon
+        access: read_only
+      consolidated: True
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/IPSL/IPSL-CM6A-LR/historical/r4i1p1f1/v20180803/wo/'
+
+  GISS_E2_1_G.historical.r1i1p1f1.sos:
+    description: CMIP6 monthly Sea Surface Salinity for GISS-E2-1-G historical r1i1p1f1
+    metadata:
+      uploader_github: naomi-henderson
+      uploader_email: nhn2@columbia.edu
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      storage_options:
+        token: anon
+        access: read_only
+      consolidated: True
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/NASA-GISS/GISS-E2-1-G/historical/r1i1p1f1/v20180827/sos/'
+
+  GISS_E2_1_G.historical.r1i1p1f1.tos:
+    description: CMIP6 monthly Sea Surface Temperature for GISS-E2-1-G historical r1i1p1f1
+    metadata:
+      uploader_github: naomi-henderson
+      uploader_email: nhn2@columbia.edu
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      storage_options:
+        token: anon
+        access: read_only
+      consolidated: True
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/NASA-GISS/GISS-E2-1-G/historical/r1i1p1f1/v20180827/tos/'
+
+  GISS_E2_1_G.historical.r1i1p1f1.zos:
+    description: CMIP6 monthly Sea Surface Height Above Geoid for GISS-E2-1-G historical r1i1p1f1
+    metadata:
+      uploader_github: naomi-henderson
+      uploader_email: nhn2@columbia.edu
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      storage_options:
+        token: anon
+        access: read_only
+      consolidated: True
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/NASA-GISS/GISS-E2-1-G/historical/r1i1p1f1/v20180827/zos/'
+
+  GISS_E2_1_G.historical.r1i1p1f1.thetao:
+    description: CMIP6 monthly Sea Water Potential Temperature for GISS-E2-1-G r1i1p1f1
+    metadata:
+      uploader_github: naomi-henderson
+      uploader_email: nhn2@columbia.edu
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      storage_options:
+        token: anon
+        access: read_only
+      consolidated: True
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/NASA-GISS/GISS-E2-1-G/historical/r1i1p1f1/v20180827/thetao/'
+
+  GISS_E2_1_G.historical.r1i1p1f1.so:
+    description: CMIP6 monthly Sea Water Salinity for GISS-E2-1-G r1i1p1f1
+    metadata:
+      uploader_github: naomi-henderson
+      uploader_email: nhn2@columbia.edu
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      storage_options:
+        token: anon
+        access: read_only
+      consolidated: True
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/NASA-GISS/GISS-E2-1-G/historical/r1i1p1f1/v20180827/so/'
+
+  GISS_E2_1_G.historical.r1i1p1f1.uo:
+    description: CMIP6 monthly Sea Water X Velocity for GISS-E2-1-G historical r1i1p1f1
+    metadata:
+      uploader_github: naomi-henderson
+      uploader_email: nhn2@columbia.edu
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      storage_options:
+        token: anon
+        access: read_only
+      consolidated: True
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/NASA-GISS/GISS-E2-1-G/historical/r1i1p1f1/v20180827/uo/'
+
+  GISS_E2_1_G.historical.r1i1p1f1.vo:
+    description: CMIP6 monthly Sea Water Y Velocity for GISS-E2-1-G r1i1p1f1
+    metadata:
+      uploader_github: naomi-henderson
+      uploader_email: nhn2@columbia.edu
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      storage_options:
+        token: anon
+        access: read_only
+      consolidated: True
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/NASA-GISS/GISS-E2-1-G/historical/r1i1p1f1/v20180827/vo/'
+
+  GISS_E2_1_G.historical.r1i1p1f1.wo:
+    description: CMIP6 monthly Sea Water X Velocity for GISS-E2-1-G r1i1p1f1
+    metadata:
+      uploader_github: naomi-henderson
+      uploader_email: nhn2@columbia.edu
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      storage_options:
+        token: anon
+        access: read_only
+      consolidated: True
+      urlpath: 'gcs://pangeo-data/CMIP6_Omon/CMIP/NASA-GISS/GISS-E2-1-G/historical/r1i1p1f1/v20180827/wo/'
 
