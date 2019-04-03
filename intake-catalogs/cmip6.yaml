@@ -13,15 +13,10 @@ sources:
         - historical
     args:
       path: "{{CATALOG_DIR}}/cmip6_Omon.yaml"
-    description: 'Pangeo CMIP6 Ocean Dataset Catalog'
     driver: intake.catalog.local.YAMLFileCatalog
-    metadata: {}
 
   A3hr:
     description: Pangeo CMIP6 Dataset Catalog - historical 3hourly atmosphere data
-    args:
-      path: "{{CATALOG_DIR}}/cmip6_A3hr.yaml"
-    driver: intake.catalog.local.YAMLFileCatalog
     metadata:
       origin_url: https://esgf-node.llnl.gov/projects/cmip6/
       uploader_github: naomi-henderson
@@ -31,3 +26,6 @@ sources:
         - model
         - 3hourly
         - historical
+    args:
+      path: "{{CATALOG_DIR}}/cmip6_A3hr.yaml"
+    driver: intake.catalog.local.YAMLFileCatalog
