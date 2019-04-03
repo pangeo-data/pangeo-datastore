@@ -12,6 +12,7 @@ sources:
         token: anon
         access: read_only
       urlpath: 'gcs://pangeo-data/gmet_v1.zarr'
+      consolidated: True
 
   trmm_3b42rt:
     description: Near real time rainfall estimates from NASA's Tropical Rainfall Measuring Mission
