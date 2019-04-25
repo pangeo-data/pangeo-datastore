@@ -227,3 +227,10 @@ sources:
       storage_options:
         token: anon
       consolidated: True
+
+  channel:
+    args:
+      path: "{{CATALOG_DIR}}/ocean/channel.yaml"
+    description: 'MITgcm High Resolution Channel Simulations'
+    driver: intake.catalog.local.YAMLFileCatalog
+    metadata: {}

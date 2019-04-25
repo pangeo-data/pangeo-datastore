@@ -1,0 +1,39 @@
+plugins:
+  source:
+    - module: intake_xarray
+
+sources:
+
+  MITgcm_channel_flatbottom_02km_run01_phys-mon:
+    description: >
+      MITgcm channel simulations with flat bottom at 2km resolution
+      physics field monthly mean climatology
+    metadata:
+      uploader_github: roxyboy
+      uploader_email: takaya@ldeo.columbia.edu
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      urlpath: 'gcs://pangeo-data/takaya/MITgcm-channel-flatbottom-02km-run01/phys-mon'
+      storage_options:
+        token: anon
+      consolidated: True
+
+  MITgcm_channel_flatbottom_02km_run01:
+    description: >
+      MITgcm channel simulations with flat bottom at 2km resolution
+      physics field snapshots every 15 days
+    metadata:
+      uploader_github: roxyboy
+      uploader_email: takaya@ldeo.columbia.edu
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      urlpath: 'gcs://pangeo-data/takaya/MITgcm-channel-flatbottom-02km-run01/phys-snap15D'
+      storage_options:
+        token: anon
+      consolidated: True
