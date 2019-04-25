@@ -21,7 +21,7 @@ sources:
         token: anon
       consolidated: True
 
-  MITgcm_channel_flatbottom_02km_run01:
+  MITgcm_channel_flatbottom_02km_run01_phys_snap15D:
     description: >
       MITgcm channel simulations with flat bottom at 2km resolution
       physics field snapshots every 15 days
