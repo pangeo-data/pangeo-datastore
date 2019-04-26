@@ -4,13 +4,13 @@ services:
   - docker
 
 env:
-  - DOCKER_IMAGE=pangeo/pangeo-notebook:2019.04.01 
+  - DOCKER_IMAGE=pangeo/pangeo-notebook:2019.04.19
 
 before_install:
 - docker pull $DOCKER_IMAGE
 - docker run -d --name pangeo $DOCKER_IMAGE
-- docker exec pangeo bash -c "pip install pytest"
 - docker ps -a
+- docker exec pangeo bash -c "pip install pytest"
 
 install:
 - docker cp . pangeo:/home/jovyan/
