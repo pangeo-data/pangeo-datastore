@@ -2,17 +2,12 @@
 
 **Catalog Status**: [![Build Status](https://travis-ci.org/pangeo-data/pangeo-datastore.svg?branch=master)](https://travis-ci.org/pangeo-data/pangeo-datastore) 
 
-----
-
 This repository is where Pangeo's official cloud data catalog lives.
 This catalog is an [Intake](https://github.com/ContinuumIO/intake) catalog.
 Most of the data is stored in [Zarr](https://github.com/zarr-developers/zarr) format
-and meant to be opened with [Xarray](http://xarray.pydata.org/en/latest/)
-
-#.
+and meant to be opened with [Xarray](http://xarray.pydata.org/en/latest/).
 
 The master intake catalog URL is
-
 ```
 https://github.com/pangeo-data/pangeo-datastore/raw/master/intake-catalogs/master.yaml
 ```
