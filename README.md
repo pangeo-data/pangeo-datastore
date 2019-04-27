@@ -39,4 +39,4 @@ cat.walk(depth=5)
 
 ### Adding Datasets
 
-To suggest adding a new dataset, please [open an issue](https://github.com/pangeo-data/pangeo-datastore/issues),
+To suggest adding a new dataset, please [open an issue](https://github.com/pangeo-data/pangeo-datastore/issues).
