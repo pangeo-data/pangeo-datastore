@@ -31,7 +31,7 @@ script:
 - >
    docker exec -it pangeo bash -c
    'python build_catalog_rst.py'
-- docker cp pangeo:/home/jovyan/catalog-docs/* docs/
+- docker cp pangeo:/home/jovyan/catalog-docs/. docs/
 - set -e
 - cd docs && make html && cd ..
 - doctr deploy . --built-docs docs/_build/html
