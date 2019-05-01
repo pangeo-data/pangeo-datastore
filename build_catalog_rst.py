@@ -197,10 +197,10 @@ class CatalogRSTBuilder:
 
 def main():
     master_catalog = './intake-catalogs/master.yaml'
-    output_rst_dir = 'docs'
+    output_rst_dir = 'catalog-docs'
     remote_url_base = 'https://raw.githubusercontent.com/pangeo-data/pangeo-datastore/master/intake-catalogs'
     builder = CatalogRSTBuilder(master_catalog, output_rst_dir, remote_url_base,
-                                actually_load=False)
+                                actually_load=True)
     builder.build()
 
 
