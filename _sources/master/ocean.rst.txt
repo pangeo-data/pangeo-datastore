@@ -1,0 +1,1650 @@
+=====
+ocean
+=====
+
+Pangeo Oceanography Dataset Catalog
+-----------------------------------
+
+Catalog URL:
+
+.. code-block:: html
+
+   https://raw.githubusercontent.com/pangeo-data/pangeo-datastore/master/intake-catalogs/ocean.yaml
+
+Parent Catalogs
+---------------
+
+:doc:`master <../master>`
+
+Child Catalogs
+--------------
+
+.. toctree::
+   :glob: 
+   :maxdepth: 1
+
+   ocean/*
+Datasets
+--------
+
+sea_surface_height
+~~~~~~~~~~~~~~~~~~
+
+sea-surface altimetry data from The Copernicus Marine Environment
+
+.. raw:: html
+
+       <div class="panel-group" id="accordion-sea_surface_height">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h4 class="panel-title">
+            <a data-toggle="collapse" data-parent="#accordion-sea_surface_height" href="#collapse1-sea_surface_height">
+            load in python
+            </a>
+          </h4>
+        </div>
+        <div id="collapse1-sea_surface_height" class="panel-collapse collapse">
+          <div class="panel-body">
+          <pre>import intake
+    cat = intake.Catalog(&#34;https://raw.githubusercontent.com/pangeo-data/pangeo-datastore/master/intake-catalogs/ocean.yaml&#34;)
+    ds = cat[&#34;sea_surface_height&#34;].to_dask()</pre>
+          </div>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h4 class="panel-title">
+            <a data-toggle="collapse" data-parent="#accordion-sea_surface_height" href="#collapse2-sea_surface_height">
+             metadata</a>
+          </h4>
+        </div>
+        <div id="collapse2-sea_surface_height" class="panel-collapse collapse">
+          <div class="panel-body">
+           <table class="table table-condensed table-hover">
+            <tbody>
+           
+             <tr><td>url</td><td>http://marine.copernicus.eu/services-portfolio/access-to-products/?option=com_csw&amp;view=details&amp;product_id=SEALEVEL_GLO_PHY_L4_REP_OBSERVATIONS_008_047</td></tr>
+           
+             <tr><td>tags</td><td>[&#39;ocean&#39;, &#39;satellite&#39;]</td></tr>
+           
+             <tr><td>catalog_dir</td><td>/home/jovyan/./intake-catalogs/</td></tr>
+           
+            </tbody>
+           </table>
+          </div>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h4 class="panel-title">
+            <a data-toggle="collapse" data-parent="#accordion-sea_surface_height" href="#collapse3-sea_surface_height">
+            xarray preview</a>
+          </h4>
+        </div>
+        <div id="collapse3-sea_surface_height" class="panel-collapse collapse">
+          <div class="panel-body">
+          <pre>&lt;xarray.Dataset&gt;
+    Dimensions:    (latitude: 720, longitude: 1440, nv: 2, time: 8901)
+    Coordinates:
+        crs        int32 ...
+        lat_bnds   (time, latitude, nv) float32 dask.array&lt;shape=(8901, 720, 2), chunksize=(5, 720, 2)&gt;
+      * latitude   (latitude) float32 -89.875 -89.625 -89.375 ... 89.625 89.875
+        lon_bnds   (longitude, nv) float32 dask.array&lt;shape=(1440, 2), chunksize=(1440, 2)&gt;
+      * longitude  (longitude) float32 0.125 0.375 0.625 ... 359.375 359.625 359.875
+      * nv         (nv) int32 0 1
+      * time       (time) datetime64[ns] 1993-01-01 1993-01-02 ... 2017-05-15
+    Data variables:
+        adt        (time, latitude, longitude) float64 dask.array&lt;shape=(8901, 720, 1440), chunksize=(5, 720, 1440)&gt;
+        err        (time, latitude, longitude) float64 dask.array&lt;shape=(8901, 720, 1440), chunksize=(5, 720, 1440)&gt;
+        sla        (time, latitude, longitude) float64 dask.array&lt;shape=(8901, 720, 1440), chunksize=(5, 720, 1440)&gt;
+        ugos       (time, latitude, longitude) float64 dask.array&lt;shape=(8901, 720, 1440), chunksize=(5, 720, 1440)&gt;
+        ugosa      (time, latitude, longitude) float64 dask.array&lt;shape=(8901, 720, 1440), chunksize=(5, 720, 1440)&gt;
+        vgos       (time, latitude, longitude) float64 dask.array&lt;shape=(8901, 720, 1440), chunksize=(5, 720, 1440)&gt;
+        vgosa      (time, latitude, longitude) float64 dask.array&lt;shape=(8901, 720, 1440), chunksize=(5, 720, 1440)&gt;
+    Attributes:
+        Conventions:                     CF-1.6
+        Metadata_Conventions:            Unidata Dataset Discovery v1.0
+        cdm_data_type:                   Grid
+        comment:                         Sea Surface Height measured by Altimetry...
+        contact:                         servicedesk.cmems@mercator-ocean.eu
+        creator_email:                   servicedesk.cmems@mercator-ocean.eu
+        creator_name:                    CMEMS - Sea Level Thematic Assembly Center
+        creator_url:                     http://marine.copernicus.eu
+        date_created:                    2014-02-26T16:09:13Z
+        date_issued:                     2014-01-06T00:00:00Z
+        date_modified:                   2015-11-10T19:42:51Z
+        geospatial_lat_max:              89.875
+        geospatial_lat_min:              -89.875
+        geospatial_lat_resolution:       0.25
+        geospatial_lat_units:            degrees_north
+        geospatial_lon_max:              359.875
+        geospatial_lon_min:              0.125
+        geospatial_lon_resolution:       0.25
+        geospatial_lon_units:            degrees_east
+        geospatial_vertical_max:         0.0
+        geospatial_vertical_min:         0.0
+        geospatial_vertical_positive:    down
+        geospatial_vertical_resolution:  point
+        geospatial_vertical_units:       m
+        history:                         2014-02-26T16:09:13Z: created by DUACS D...
+        institution:                     CLS, CNES
+        keywords:                        Oceans &gt; Ocean Topography &gt; Sea Surface ...
+        keywords_vocabulary:             NetCDF COARDS Climate and Forecast Stand...
+        license:                         http://marine.copernicus.eu/web/27-servi...
+        platform:                        ERS-1, Topex/Poseidon
+        processing_level:                L4
+        product_version:                 5.0
+        project:                         COPERNICUS MARINE ENVIRONMENT MONITORING...
+        references:                      http://marine.copernicus.eu
+        source:                          Altimetry measurements
+        ssalto_duacs_comment:            The reference mission used for the altim...
+        standard_name_vocabulary:        NetCDF Climate and Forecast (CF) Metadat...
+        summary:                         SSALTO/DUACS Delayed-Time Level-4 sea su...
+        time_coverage_duration:          P1D
+        time_coverage_end:               1993-01-01T12:00:00Z
+        time_coverage_resolution:        P1D
+        time_coverage_start:             1992-12-31T12:00:00Z
+        title:                           DT merged all satellites Global Ocean Gr...</pre>
+          </div>
+        </div>
+      </div>
+    </div>
+
+ECCOv4r3
+~~~~~~~~
+
+Estimating the Circulation and Climate of the Ocean (ECCO) State
+Estimate Version 4 Release 3
+
+.. raw:: html
+
+       <div class="panel-group" id="accordion-ECCOv4r3">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h4 class="panel-title">
+            <a data-toggle="collapse" data-parent="#accordion-ECCOv4r3" href="#collapse1-ECCOv4r3">
+            load in python
+            </a>
+          </h4>
+        </div>
+        <div id="collapse1-ECCOv4r3" class="panel-collapse collapse">
+          <div class="panel-body">
+          <pre>import intake
+    cat = intake.Catalog(&#34;https://raw.githubusercontent.com/pangeo-data/pangeo-datastore/master/intake-catalogs/ocean.yaml&#34;)
+    ds = cat[&#34;ECCOv4r3&#34;].to_dask()</pre>
+          </div>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h4 class="panel-title">
+            <a data-toggle="collapse" data-parent="#accordion-ECCOv4r3" href="#collapse2-ECCOv4r3">
+             metadata</a>
+          </h4>
+        </div>
+        <div id="collapse2-ECCOv4r3" class="panel-collapse collapse">
+          <div class="panel-body">
+           <table class="table table-condensed table-hover">
+            <tbody>
+           
+             <tr><td>url</td><td>https://ecco-v4-python-tutorial.readthedocs.io/intro.html</td></tr>
+           
+             <tr><td>tags</td><td>[&#39;ocean&#39;, &#39;model&#39;]</td></tr>
+           
+             <tr><td>catalog_dir</td><td>/home/jovyan/./intake-catalogs/</td></tr>
+           
+            </tbody>
+           </table>
+          </div>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h4 class="panel-title">
+            <a data-toggle="collapse" data-parent="#accordion-ECCOv4r3" href="#collapse3-ECCOv4r3">
+            xarray preview</a>
+          </h4>
+        </div>
+        <div id="collapse3-ECCOv4r3" class="panel-collapse collapse">
+          <div class="panel-body">
+          <pre>&lt;xarray.Dataset&gt;
+    Dimensions:    (face: 13, i: 90, i_g: 90, j: 90, j_g: 90, k: 50, k_l: 50, k_p1: 51, k_u: 50, time: 288, time_snp: 287)
+    Coordinates:
+        Depth      (face, j, i) float32 dask.array&lt;shape=(13, 90, 90), chunksize=(13, 90, 90)&gt;
+        PHrefC     (k) float32 dask.array&lt;shape=(50,), chunksize=(50,)&gt;
+        PHrefF     (k_p1) float32 dask.array&lt;shape=(51,), chunksize=(51,)&gt;
+        XC         (face, j, i) float32 dask.array&lt;shape=(13, 90, 90), chunksize=(13, 90, 90)&gt;
+        XG         (face, j_g, i_g) float32 dask.array&lt;shape=(13, 90, 90), chunksize=(13, 90, 90)&gt;
+        YC         (face, j, i) float32 dask.array&lt;shape=(13, 90, 90), chunksize=(13, 90, 90)&gt;
+        YG         (face, j_g, i_g) float32 dask.array&lt;shape=(13, 90, 90), chunksize=(13, 90, 90)&gt;
+        Z          (k) float32 dask.array&lt;shape=(50,), chunksize=(50,)&gt;
+        Zl         (k_l) float32 dask.array&lt;shape=(50,), chunksize=(50,)&gt;
+        Zp1        (k_p1) float32 dask.array&lt;shape=(51,), chunksize=(51,)&gt;
+        Zu         (k_u) float32 dask.array&lt;shape=(50,), chunksize=(50,)&gt;
+        drC        (k_p1) float32 dask.array&lt;shape=(51,), chunksize=(51,)&gt;
+        drF        (k) float32 dask.array&lt;shape=(50,), chunksize=(50,)&gt;
+        dxC        (face, j, i_g) float32 dask.array&lt;shape=(13, 90, 90), chunksize=(13, 90, 90)&gt;
+        dxG        (face, j_g, i) float32 dask.array&lt;shape=(13, 90, 90), chunksize=(13, 90, 90)&gt;
+        dyC        (face, j_g, i) float32 dask.array&lt;shape=(13, 90, 90), chunksize=(13, 90, 90)&gt;
+        dyG        (face, j, i_g) float32 dask.array&lt;shape=(13, 90, 90), chunksize=(13, 90, 90)&gt;
+      * face       (face) int64 0 1 2 3 4 5 6 7 8 9 10 11 12
+        hFacC      (k, face, j, i) float32 dask.array&lt;shape=(50, 13, 90, 90), chunksize=(50, 13, 90, 90)&gt;
+        hFacS      (k, face, j_g, i) float32 dask.array&lt;shape=(50, 13, 90, 90), chunksize=(50, 13, 90, 90)&gt;
+        hFacW      (k, face, j, i_g) float32 dask.array&lt;shape=(50, 13, 90, 90), chunksize=(50, 13, 90, 90)&gt;
+      * i          (i) int64 0 1 2 3 4 5 6 7 8 9 ... 80 81 82 83 84 85 86 87 88 89
+      * i_g        (i_g) int64 0 1 2 3 4 5 6 7 8 9 ... 80 81 82 83 84 85 86 87 88 89
+        iter       (time) int64 dask.array&lt;shape=(288,), chunksize=(1,)&gt;
+        iter_snp   (time_snp) int64 dask.array&lt;shape=(287,), chunksize=(1,)&gt;
+      * j          (j) int64 0 1 2 3 4 5 6 7 8 9 ... 80 81 82 83 84 85 86 87 88 89
+      * j_g        (j_g) int64 0 1 2 3 4 5 6 7 8 9 ... 80 81 82 83 84 85 86 87 88 89
+      * k          (k) int64 0 1 2 3 4 5 6 7 8 9 ... 40 41 42 43 44 45 46 47 48 49
+      * k_l        (k_l) int64 0 1 2 3 4 5 6 7 8 9 ... 40 41 42 43 44 45 46 47 48 49
+      * k_p1       (k_p1) int64 0 1 2 3 4 5 6 7 8 9 ... 42 43 44 45 46 47 48 49 50
+      * k_u        (k_u) int64 0 1 2 3 4 5 6 7 8 9 ... 40 41 42 43 44 45 46 47 48 49
+        rA         (face, j, i) float32 dask.array&lt;shape=(13, 90, 90), chunksize=(13, 90, 90)&gt;
+        rAs        (face, j_g, i) float32 dask.array&lt;shape=(13, 90, 90), chunksize=(13, 90, 90)&gt;
+        rAw        (face, j, i_g) float32 dask.array&lt;shape=(13, 90, 90), chunksize=(13, 90, 90)&gt;
+        rAz        (face, j_g, i_g) float32 dask.array&lt;shape=(13, 90, 90), chunksize=(13, 90, 90)&gt;
+      * time       (time) datetime64[ns] 1992-01-15 1992-02-13 ... 2015-12-14
+      * time_snp   (time_snp) datetime64[ns] 1992-02-01 1992-03-01 ... 2015-12-01
+    Data variables:
+        ADVr_SLT   (time, k_l, face, j, i) float32 dask.array&lt;shape=(288, 50, 13, 90, 90), chunksize=(1, 50, 13, 90, 90)&gt;
+        ADVr_TH    (time, k_l, face, j, i) float32 dask.array&lt;shape=(288, 50, 13, 90, 90), chunksize=(1, 50, 13, 90, 90)&gt;
+        ADVx_SLT   (time, k, face, j, i_g) float32 dask.array&lt;shape=(288, 50, 13, 90, 90), chunksize=(1, 50, 13, 90, 90)&gt;
+        ADVx_TH    (time, k, face, j, i_g) float32 dask.array&lt;shape=(288, 50, 13, 90, 90), chunksize=(1, 50, 13, 90, 90)&gt;
+        ADVy_SLT   (time, k, face, j_g, i) float32 dask.array&lt;shape=(288, 50, 13, 90, 90), chunksize=(1, 50, 13, 90, 90)&gt;
+        ADVy_TH    (time, k, face, j_g, i) float32 dask.array&lt;shape=(288, 50, 13, 90, 90), chunksize=(1, 50, 13, 90, 90)&gt;
+        DFrE_SLT   (time, k_l, face, j, i) float32 dask.array&lt;shape=(288, 50, 13, 90, 90), chunksize=(1, 50, 13, 90, 90)&gt;
+        DFrE_TH    (time, k_l, face, j, i) float32 dask.array&lt;shape=(288, 50, 13, 90, 90), chunksize=(1, 50, 13, 90, 90)&gt;
+        DFrI_SLT   (time, k_l, face, j, i) float32 dask.array&lt;shape=(288, 50, 13, 90, 90), chunksize=(1, 50, 13, 90, 90)&gt;
+        DFrI_TH    (time, k_l, face, j, i) float32 dask.array&lt;shape=(288, 50, 13, 90, 90), chunksize=(1, 50, 13, 90, 90)&gt;
+        DFxE_SLT   (time, k, face, j, i_g) float32 dask.array&lt;shape=(288, 50, 13, 90, 90), chunksize=(1, 50, 13, 90, 90)&gt;
+        DFxE_TH    (time, k, face, j, i_g) float32 dask.array&lt;shape=(288, 50, 13, 90, 90), chunksize=(1, 50, 13, 90, 90)&gt;
+        DFyE_SLT   (time, k, face, j_g, i) float32 dask.array&lt;shape=(288, 50, 13, 90, 90), chunksize=(1, 50, 13, 90, 90)&gt;
+        DFyE_TH    (time, k, face, j_g, i) float32 dask.array&lt;shape=(288, 50, 13, 90, 90), chunksize=(1, 50, 13, 90, 90)&gt;
+        ETAN       (time, face, j, i) float32 dask.array&lt;shape=(288, 13, 90, 90), chunksize=(1, 13, 90, 90)&gt;
+        ETAN_snp   (time_snp, face, j, i) float32 dask.array&lt;shape=(287, 13, 90, 90), chunksize=(1, 13, 90, 90)&gt;
+        GEOFLX     (face, j, i) float32 dask.array&lt;shape=(13, 90, 90), chunksize=(7, 90, 90)&gt;
+        SALT       (time, k, face, j, i) float32 dask.array&lt;shape=(288, 50, 13, 90, 90), chunksize=(1, 50, 13, 90, 90)&gt;
+        SALT_snp   (time_snp, k, face, j, i) float32 dask.array&lt;shape=(287, 50, 13, 90, 90), chunksize=(1, 50, 13, 90, 90)&gt;
+        SFLUX      (time, face, j, i) float32 dask.array&lt;shape=(288, 13, 90, 90), chunksize=(1, 13, 90, 90)&gt;
+        TFLUX      (time, face, j, i) float32 dask.array&lt;shape=(288, 13, 90, 90), chunksize=(1, 13, 90, 90)&gt;
+        THETA      (time, k, face, j, i) float32 dask.array&lt;shape=(288, 50, 13, 90, 90), chunksize=(1, 50, 13, 90, 90)&gt;
+        THETA_snp  (time_snp, k, face, j, i) float32 dask.array&lt;shape=(287, 50, 13, 90, 90), chunksize=(1, 50, 13, 90, 90)&gt;
+        UVELMASS   (time, k, face, j, i_g) float32 dask.array&lt;shape=(288, 50, 13, 90, 90), chunksize=(1, 50, 13, 90, 90)&gt;
+        VVELMASS   (time, k, face, j_g, i) float32 dask.array&lt;shape=(288, 50, 13, 90, 90), chunksize=(1, 50, 13, 90, 90)&gt;
+        WVELMASS   (time, k_l, face, j, i) float32 dask.array&lt;shape=(288, 50, 13, 90, 90), chunksize=(1, 50, 13, 90, 90)&gt;
+        oceFWflx   (time, face, j, i) float32 dask.array&lt;shape=(288, 13, 90, 90), chunksize=(1, 13, 90, 90)&gt;
+        oceQsw     (time, face, j, i) float32 dask.array&lt;shape=(288, 13, 90, 90), chunksize=(1, 13, 90, 90)&gt;
+        oceSPtnd   (time, k, face, j, i) float32 dask.array&lt;shape=(288, 50, 13, 90, 90), chunksize=(1, 50, 13, 90, 90)&gt;</pre>
+          </div>
+        </div>
+      </div>
+    </div>
+
+SOSE
+~~~~
+
+Southern Ocean State Estimate
+
+.. raw:: html
+
+       <div class="panel-group" id="accordion-SOSE">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h4 class="panel-title">
+            <a data-toggle="collapse" data-parent="#accordion-SOSE" href="#collapse1-SOSE">
+            load in python
+            </a>
+          </h4>
+        </div>
+        <div id="collapse1-SOSE" class="panel-collapse collapse">
+          <div class="panel-body">
+          <pre>import intake
+    cat = intake.Catalog(&#34;https://raw.githubusercontent.com/pangeo-data/pangeo-datastore/master/intake-catalogs/ocean.yaml&#34;)
+    ds = cat[&#34;SOSE&#34;].to_dask()</pre>
+          </div>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h4 class="panel-title">
+            <a data-toggle="collapse" data-parent="#accordion-SOSE" href="#collapse2-SOSE">
+             metadata</a>
+          </h4>
+        </div>
+        <div id="collapse2-SOSE" class="panel-collapse collapse">
+          <div class="panel-body">
+           <table class="table table-condensed table-hover">
+            <tbody>
+           
+             <tr><td>url</td><td>http://sose.ucsd.edu/</td></tr>
+           
+             <tr><td>tags</td><td>[&#39;ocean&#39;, &#39;model&#39;]</td></tr>
+           
+             <tr><td>catalog_dir</td><td>/home/jovyan/./intake-catalogs/</td></tr>
+           
+            </tbody>
+           </table>
+          </div>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h4 class="panel-title">
+            <a data-toggle="collapse" data-parent="#accordion-SOSE" href="#collapse3-SOSE">
+            xarray preview</a>
+          </h4>
+        </div>
+        <div id="collapse3-SOSE" class="panel-collapse collapse">
+          <div class="panel-body">
+          <pre>&lt;xarray.Dataset&gt;
+    Dimensions:   (XC: 2160, XG: 2160, YC: 320, YG: 320, Z: 42, Zl: 42, Zp1: 43, Zu: 42, time: 438)
+    Coordinates:
+        Depth     (YC, XC) float32 dask.array&lt;shape=(320, 2160), chunksize=(320, 2160)&gt;
+        PHrefC    (Z) float32 dask.array&lt;shape=(42,), chunksize=(42,)&gt;
+        PHrefF    (Zp1) float32 dask.array&lt;shape=(43,), chunksize=(43,)&gt;
+      * XC        (XC) float32 0.083333336 0.25 0.4166667 ... 359.75 359.9167
+      * XG        (XG) float32 5.551115e-17 0.16666667 ... 359.6667 359.83334
+      * YC        (YC) float32 -77.87497 -77.7083 -77.54163 ... -24.874966 -24.7083
+      * YG        (YG) float32 -77.9583 -77.79163 -77.62497 ... -24.9583 -24.791632
+      * Z         (Z) float32 -5.0 -15.5 -27.0 -39.5 ... -5075.0 -5325.0 -5575.0
+      * Zl        (Zl) float32 0.0 -10.0 -21.0 -33.0 ... -4950.0 -5200.0 -5450.0
+      * Zp1       (Zp1) float32 0.0 -10.0 -21.0 -33.0 ... -5200.0 -5450.0 -5700.0
+      * Zu        (Zu) float32 -10.0 -21.0 -33.0 -46.0 ... -5200.0 -5450.0 -5700.0
+        drC       (Zp1) float32 dask.array&lt;shape=(43,), chunksize=(43,)&gt;
+        drF       (Z) float32 dask.array&lt;shape=(42,), chunksize=(42,)&gt;
+        dxC       (YC, XG) float32 dask.array&lt;shape=(320, 2160), chunksize=(320, 2160)&gt;
+        dxG       (YG, XC) float32 dask.array&lt;shape=(320, 2160), chunksize=(320, 2160)&gt;
+        dyC       (YG, XC) float32 dask.array&lt;shape=(320, 2160), chunksize=(320, 2160)&gt;
+        dyG       (YC, XG) float32 dask.array&lt;shape=(320, 2160), chunksize=(320, 2160)&gt;
+        hFacC     (Z, YC, XC) float32 dask.array&lt;shape=(42, 320, 2160), chunksize=(42, 320, 2160)&gt;
+        hFacS     (Z, YG, XC) float32 dask.array&lt;shape=(42, 320, 2160), chunksize=(42, 320, 2160)&gt;
+        hFacW     (Z, YC, XG) float32 dask.array&lt;shape=(42, 320, 2160), chunksize=(42, 320, 2160)&gt;
+        iter      (time) int64 dask.array&lt;shape=(438,), chunksize=(438,)&gt;
+        rA        (YC, XC) float32 dask.array&lt;shape=(320, 2160), chunksize=(320, 2160)&gt;
+        rAs       (YG, XC) float32 dask.array&lt;shape=(320, 2160), chunksize=(320, 2160)&gt;
+        rAw       (YC, XG) float32 dask.array&lt;shape=(320, 2160), chunksize=(320, 2160)&gt;
+        rAz       (YG, XG) float32 dask.array&lt;shape=(320, 2160), chunksize=(320, 2160)&gt;
+      * time      (time) datetime64[ns] 2005-01-06 2005-01-11 ... 2010-12-31
+    Data variables:
+        ADVr_SLT  (time, Zl, YC, XC) float32 dask.array&lt;shape=(438, 42, 320, 2160), chunksize=(1, 42, 320, 2160)&gt;
+        ADVr_TH   (time, Zl, YC, XC) float32 dask.array&lt;shape=(438, 42, 320, 2160), chunksize=(1, 42, 320, 2160)&gt;
+        ADVx_SLT  (time, Z, YC, XG) float32 dask.array&lt;shape=(438, 42, 320, 2160), chunksize=(1, 42, 320, 2160)&gt;
+        ADVx_TH   (time, Z, YC, XG) float32 dask.array&lt;shape=(438, 42, 320, 2160), chunksize=(1, 42, 320, 2160)&gt;
+        ADVy_SLT  (time, Z, YG, XC) float32 dask.array&lt;shape=(438, 42, 320, 2160), chunksize=(1, 42, 320, 2160)&gt;
+        ADVy_TH   (time, Z, YG, XC) float32 dask.array&lt;shape=(438, 42, 320, 2160), chunksize=(1, 42, 320, 2160)&gt;
+        DFrE_SLT  (time, Zl, YC, XC) float32 dask.array&lt;shape=(438, 42, 320, 2160), chunksize=(1, 42, 320, 2160)&gt;
+        DFrE_TH   (time, Zl, YC, XC) float32 dask.array&lt;shape=(438, 42, 320, 2160), chunksize=(1, 42, 320, 2160)&gt;
+        DFrI_SLT  (time, Zl, YC, XC) float32 dask.array&lt;shape=(438, 42, 320, 2160), chunksize=(1, 42, 320, 2160)&gt;
+        DFrI_TH   (time, Zl, YC, XC) float32 dask.array&lt;shape=(438, 42, 320, 2160), chunksize=(1, 42, 320, 2160)&gt;
+        DFxE_SLT  (time, Z, YC, XG) float32 dask.array&lt;shape=(438, 42, 320, 2160), chunksize=(1, 42, 320, 2160)&gt;
+        DFxE_TH   (time, Z, YC, XG) float32 dask.array&lt;shape=(438, 42, 320, 2160), chunksize=(1, 42, 320, 2160)&gt;
+        DFyE_SLT  (time, Z, YG, XC) float32 dask.array&lt;shape=(438, 42, 320, 2160), chunksize=(1, 42, 320, 2160)&gt;
+        DFyE_TH   (time, Z, YG, XC) float32 dask.array&lt;shape=(438, 42, 320, 2160), chunksize=(1, 42, 320, 2160)&gt;
+        DRHODR    (time, Zl, YC, XC) float32 dask.array&lt;shape=(438, 42, 320, 2160), chunksize=(1, 42, 320, 2160)&gt;
+        ETAN      (time, YC, XC) float32 dask.array&lt;shape=(438, 320, 2160), chunksize=(1, 320, 2160)&gt;
+        EXFswnet  (time, YC, XC) float32 dask.array&lt;shape=(438, 320, 2160), chunksize=(1, 320, 2160)&gt;
+        KPPg_SLT  (time, Zl, YC, XC) float32 dask.array&lt;shape=(438, 42, 320, 2160), chunksize=(1, 42, 320, 2160)&gt;
+        KPPg_TH   (time, Zl, YC, XC) float32 dask.array&lt;shape=(438, 42, 320, 2160), chunksize=(1, 42, 320, 2160)&gt;
+        PHIHYD    (time, Z, YC, XC) float32 dask.array&lt;shape=(438, 42, 320, 2160), chunksize=(1, 42, 320, 2160)&gt;
+        SALT      (time, Z, YC, XC) float32 dask.array&lt;shape=(438, 42, 320, 2160), chunksize=(1, 42, 320, 2160)&gt;
+        SFLUX     (time, YC, XC) float32 dask.array&lt;shape=(438, 320, 2160), chunksize=(1, 320, 2160)&gt;
+        SIarea    (time, YC, XC) float32 dask.array&lt;shape=(438, 320, 2160), chunksize=(1, 320, 2160)&gt;
+        SIatmFW   (time, YC, XC) float32 dask.array&lt;shape=(438, 320, 2160), chunksize=(1, 320, 2160)&gt;
+        SIatmQnt  (time, YC, XC) float32 dask.array&lt;shape=(438, 320, 2160), chunksize=(1, 320, 2160)&gt;
+        SIdHbATC  (time, YC, XC) float32 dask.array&lt;shape=(438, 320, 2160), chunksize=(1, 320, 2160)&gt;
+        SIdHbATO  (time, YC, XC) float32 dask.array&lt;shape=(438, 320, 2160), chunksize=(1, 320, 2160)&gt;
+        SIdHbOCN  (time, YC, XC) float32 dask.array&lt;shape=(438, 320, 2160), chunksize=(1, 320, 2160)&gt;
+        SIdSbATC  (time, YC, XC) float32 dask.array&lt;shape=(438, 320, 2160), chunksize=(1, 320, 2160)&gt;
+        SIdSbOCN  (time, YC, XC) float32 dask.array&lt;shape=(438, 320, 2160), chunksize=(1, 320, 2160)&gt;
+        SIempmr   (time, YC, XC) float32 dask.array&lt;shape=(438, 320, 2160), chunksize=(1, 320, 2160)&gt;
+        SIfu      (time, YC, XG) float32 dask.array&lt;shape=(438, 320, 2160), chunksize=(1, 320, 2160)&gt;
+        SIfv      (time, YG, XC) float32 dask.array&lt;shape=(438, 320, 2160), chunksize=(1, 320, 2160)&gt;
+        SIheff    (time, YC, XC) float32 dask.array&lt;shape=(438, 320, 2160), chunksize=(1, 320, 2160)&gt;
+        SIhsnow   (time, YC, XC) float32 dask.array&lt;shape=(438, 320, 2160), chunksize=(1, 320, 2160)&gt;
+        SIsnPrcp  (time, YC, XC) float32 dask.array&lt;shape=(438, 320, 2160), chunksize=(1, 320, 2160)&gt;
+        SItflux   (time, YC, XC) float32 dask.array&lt;shape=(438, 320, 2160), chunksize=(1, 320, 2160)&gt;
+        SIuheff   (time, YC, XG) float32 dask.array&lt;shape=(438, 320, 2160), chunksize=(1, 320, 2160)&gt;
+        SIuice    (time, YC, XG) float32 dask.array&lt;shape=(438, 320, 2160), chunksize=(1, 320, 2160)&gt;
+        SIvheff   (time, YG, XC) float32 dask.array&lt;shape=(438, 320, 2160), chunksize=(1, 320, 2160)&gt;
+        SIvice    (time, YG, XC) float32 dask.array&lt;shape=(438, 320, 2160), chunksize=(1, 320, 2160)&gt;
+        TFLUX     (time, YC, XC) float32 dask.array&lt;shape=(438, 320, 2160), chunksize=(1, 320, 2160)&gt;
+        THETA     (time, Z, YC, XC) float32 dask.array&lt;shape=(438, 42, 320, 2160), chunksize=(1, 42, 320, 2160)&gt;
+        TOTSTEND  (time, Z, YC, XC) float32 dask.array&lt;shape=(438, 42, 320, 2160), chunksize=(1, 42, 320, 2160)&gt;
+        TOTTTEND  (time, Z, YC, XC) float32 dask.array&lt;shape=(438, 42, 320, 2160), chunksize=(1, 42, 320, 2160)&gt;
+        UVEL      (time, Z, YC, XG) float32 dask.array&lt;shape=(438, 42, 320, 2160), chunksize=(1, 42, 320, 2160)&gt;
+        VVEL      (time, Z, YG, XC) float32 dask.array&lt;shape=(438, 42, 320, 2160), chunksize=(1, 42, 320, 2160)&gt;
+        WSLTMASS  (time, Zl, YC, XC) float32 dask.array&lt;shape=(438, 42, 320, 2160), chunksize=(1, 42, 320, 2160)&gt;
+        WTHMASS   (time, Zl, YC, XC) float32 dask.array&lt;shape=(438, 42, 320, 2160), chunksize=(1, 42, 320, 2160)&gt;
+        WVEL      (time, Zl, YC, XC) float32 dask.array&lt;shape=(438, 42, 320, 2160), chunksize=(1, 42, 320, 2160)&gt;
+        oceFreez  (time, YC, XC) float32 dask.array&lt;shape=(438, 320, 2160), chunksize=(1, 320, 2160)&gt;
+        oceQsw    (time, YC, XC) float32 dask.array&lt;shape=(438, 320, 2160), chunksize=(1, 320, 2160)&gt;
+        oceTAUX   (time, YC, XG) float32 dask.array&lt;shape=(438, 320, 2160), chunksize=(1, 320, 2160)&gt;
+        oceTAUY   (time, YG, XC) float32 dask.array&lt;shape=(438, 320, 2160), chunksize=(1, 320, 2160)&gt;
+        surForcS  (time, YC, XC) float32 dask.array&lt;shape=(438, 320, 2160), chunksize=(1, 320, 2160)&gt;
+        surForcT  (time, YC, XC) float32 dask.array&lt;shape=(438, 320, 2160), chunksize=(1, 320, 2160)&gt;</pre>
+          </div>
+        </div>
+      </div>
+    </div>
+
+LLC4320_grid
+~~~~~~~~~~~~
+
+MITgcm LLC4320 Ocean Simulation Grid
+
+.. raw:: html
+
+       <div class="panel-group" id="accordion-LLC4320_grid">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h4 class="panel-title">
+            <a data-toggle="collapse" data-parent="#accordion-LLC4320_grid" href="#collapse1-LLC4320_grid">
+            load in python
+            </a>
+          </h4>
+        </div>
+        <div id="collapse1-LLC4320_grid" class="panel-collapse collapse">
+          <div class="panel-body">
+          <pre>import intake
+    cat = intake.Catalog(&#34;https://raw.githubusercontent.com/pangeo-data/pangeo-datastore/master/intake-catalogs/ocean.yaml&#34;)
+    ds = cat[&#34;LLC4320_grid&#34;].to_dask()</pre>
+          </div>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h4 class="panel-title">
+            <a data-toggle="collapse" data-parent="#accordion-LLC4320_grid" href="#collapse2-LLC4320_grid">
+             metadata</a>
+          </h4>
+        </div>
+        <div id="collapse2-LLC4320_grid" class="panel-collapse collapse">
+          <div class="panel-body">
+           <table class="table table-condensed table-hover">
+            <tbody>
+           
+             <tr><td>url</td><td>http://online.kitp.ucsb.edu/online/blayers18/menemenlis/</td></tr>
+           
+             <tr><td>tags</td><td>[&#39;ocean&#39;, &#39;model&#39;]</td></tr>
+           
+             <tr><td>catalog_dir</td><td>/home/jovyan/./intake-catalogs/</td></tr>
+           
+            </tbody>
+           </table>
+          </div>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h4 class="panel-title">
+            <a data-toggle="collapse" data-parent="#accordion-LLC4320_grid" href="#collapse3-LLC4320_grid">
+            xarray preview</a>
+          </h4>
+        </div>
+        <div id="collapse3-LLC4320_grid" class="panel-collapse collapse">
+          <div class="panel-body">
+          <pre>&lt;xarray.Dataset&gt;
+    Dimensions:  (face: 13, i: 4320, i_g: 4320, j: 4320, j_g: 4320, k_p1: 2, time: 9030)
+    Coordinates:
+        CS       (face, j, i) float32 dask.array&lt;shape=(13, 4320, 4320), chunksize=(1, 4320, 4320)&gt;
+        Depth    (face, j, i) float32 dask.array&lt;shape=(13, 4320, 4320), chunksize=(1, 4320, 4320)&gt;
+        PHrefC   float32 ...
+        PHrefF   (k_p1) float32 dask.array&lt;shape=(2,), chunksize=(2,)&gt;
+        SN       (face, j, i) float32 dask.array&lt;shape=(13, 4320, 4320), chunksize=(1, 4320, 4320)&gt;
+        XC       (face, j, i) float32 dask.array&lt;shape=(13, 4320, 4320), chunksize=(1, 4320, 4320)&gt;
+        XG       (face, j_g, i_g) float32 dask.array&lt;shape=(13, 4320, 4320), chunksize=(1, 4320, 4320)&gt;
+        YC       (face, j, i) float32 dask.array&lt;shape=(13, 4320, 4320), chunksize=(1, 4320, 4320)&gt;
+        YG       (face, j_g, i_g) float32 dask.array&lt;shape=(13, 4320, 4320), chunksize=(1, 4320, 4320)&gt;
+        Z        float32 ...
+        Zl       float32 ...
+        Zp1      (k_p1) float32 dask.array&lt;shape=(2,), chunksize=(2,)&gt;
+        Zu       float32 ...
+        drC      (k_p1) float32 dask.array&lt;shape=(2,), chunksize=(2,)&gt;
+        drF      float32 ...
+        dxC      (face, j, i_g) float32 dask.array&lt;shape=(13, 4320, 4320), chunksize=(1, 4320, 4320)&gt;
+        dxG      (face, j_g, i) float32 dask.array&lt;shape=(13, 4320, 4320), chunksize=(1, 4320, 4320)&gt;
+        dyC      (face, j_g, i) float32 dask.array&lt;shape=(13, 4320, 4320), chunksize=(1, 4320, 4320)&gt;
+        dyG      (face, j, i_g) float32 dask.array&lt;shape=(13, 4320, 4320), chunksize=(1, 4320, 4320)&gt;
+      * face     (face) int64 0 1 2 3 4 5 6 7 8 9 10 11 12
+        hFacC    (face, j, i) float32 dask.array&lt;shape=(13, 4320, 4320), chunksize=(1, 4320, 4320)&gt;
+        hFacS    (face, j_g, i) float32 dask.array&lt;shape=(13, 4320, 4320), chunksize=(1, 4320, 4320)&gt;
+        hFacW    (face, j, i_g) float32 dask.array&lt;shape=(13, 4320, 4320), chunksize=(1, 4320, 4320)&gt;
+      * i        (i) int64 0 1 2 3 4 5 6 7 ... 4313 4314 4315 4316 4317 4318 4319
+      * i_g      (i_g) int64 0 1 2 3 4 5 6 7 ... 4313 4314 4315 4316 4317 4318 4319
+        iter     (time) int64 dask.array&lt;shape=(9030,), chunksize=(9030,)&gt;
+      * j        (j) int64 0 1 2 3 4 5 6 7 ... 4313 4314 4315 4316 4317 4318 4319
+      * j_g      (j_g) int64 0 1 2 3 4 5 6 7 ... 4313 4314 4315 4316 4317 4318 4319
+        k        int64 ...
+        k_l      int64 ...
+      * k_p1     (k_p1) int64 0 1
+        k_u      int64 ...
+        rA       (face, j, i) float32 dask.array&lt;shape=(13, 4320, 4320), chunksize=(1, 4320, 4320)&gt;
+        rAs      (face, j_g, i) float32 dask.array&lt;shape=(13, 4320, 4320), chunksize=(1, 4320, 4320)&gt;
+        rAw      (face, j, i_g) float32 dask.array&lt;shape=(13, 4320, 4320), chunksize=(1, 4320, 4320)&gt;
+        rAz      (face, j_g, i_g) float32 dask.array&lt;shape=(13, 4320, 4320), chunksize=(1, 4320, 4320)&gt;
+      * time     (time) datetime64[ns] 2011-09-13 ... 2012-09-23T05:00:00
+    Data variables:
+        *empty*
+    Attributes:
+        Conventions:  CF-1.6
+        history:      Created by calling `open_mdsdataset(llc_method=&#39;smallchunks...
+        source:       MITgcm
+        title:        netCDF wrapper of MITgcm MDS binary data</pre>
+          </div>
+        </div>
+      </div>
+    </div>
+
+LLC4320_SST
+~~~~~~~~~~~
+
+MITgcm LLC4320 Ocean Simulation Sea Surface Temperature
+
+.. raw:: html
+
+       <div class="panel-group" id="accordion-LLC4320_SST">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h4 class="panel-title">
+            <a data-toggle="collapse" data-parent="#accordion-LLC4320_SST" href="#collapse1-LLC4320_SST">
+            load in python
+            </a>
+          </h4>
+        </div>
+        <div id="collapse1-LLC4320_SST" class="panel-collapse collapse">
+          <div class="panel-body">
+          <pre>import intake
+    cat = intake.Catalog(&#34;https://raw.githubusercontent.com/pangeo-data/pangeo-datastore/master/intake-catalogs/ocean.yaml&#34;)
+    ds = cat[&#34;LLC4320_SST&#34;].to_dask()</pre>
+          </div>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h4 class="panel-title">
+            <a data-toggle="collapse" data-parent="#accordion-LLC4320_SST" href="#collapse2-LLC4320_SST">
+             metadata</a>
+          </h4>
+        </div>
+        <div id="collapse2-LLC4320_SST" class="panel-collapse collapse">
+          <div class="panel-body">
+           <table class="table table-condensed table-hover">
+            <tbody>
+           
+             <tr><td>url</td><td>http://online.kitp.ucsb.edu/online/blayers18/menemenlis/</td></tr>
+           
+             <tr><td>tags</td><td>[&#39;ocean&#39;, &#39;model&#39;]</td></tr>
+           
+             <tr><td>catalog_dir</td><td>/home/jovyan/./intake-catalogs/</td></tr>
+           
+            </tbody>
+           </table>
+          </div>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h4 class="panel-title">
+            <a data-toggle="collapse" data-parent="#accordion-LLC4320_SST" href="#collapse3-LLC4320_SST">
+            xarray preview</a>
+          </h4>
+        </div>
+        <div id="collapse3-LLC4320_SST" class="panel-collapse collapse">
+          <div class="panel-body">
+          <pre>&lt;xarray.Dataset&gt;
+    Dimensions:  (face: 13, i: 4320, j: 4320, time: 9030)
+    Coordinates:
+      * face     (face) int64 0 1 2 3 4 5 6 7 8 9 10 11 12
+      * i        (i) int64 0 1 2 3 4 5 6 7 ... 4313 4314 4315 4316 4317 4318 4319
+      * j        (j) int64 0 1 2 3 4 5 6 7 ... 4313 4314 4315 4316 4317 4318 4319
+      * time     (time) datetime64[ns] 2011-09-13 ... 2012-09-23T05:00:00
+    Data variables:
+        SST      (time, face, j, i) float32 dask.array&lt;shape=(9030, 13, 4320, 4320), chunksize=(1, 1, 4320, 4320)&gt;
+    Attributes:
+        Conventions:  CF-1.6
+        history:      Created by calling `open_mdsdataset(llc_method=&#39;smallchunks...
+        source:       MITgcm
+        title:        netCDF wrapper of MITgcm MDS binary data</pre>
+          </div>
+        </div>
+      </div>
+    </div>
+
+LLC4320_SSS
+~~~~~~~~~~~
+
+MITgcm LLC4320 Ocean Simulation Sea Surface Salinity
+
+.. raw:: html
+
+       <div class="panel-group" id="accordion-LLC4320_SSS">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h4 class="panel-title">
+            <a data-toggle="collapse" data-parent="#accordion-LLC4320_SSS" href="#collapse1-LLC4320_SSS">
+            load in python
+            </a>
+          </h4>
+        </div>
+        <div id="collapse1-LLC4320_SSS" class="panel-collapse collapse">
+          <div class="panel-body">
+          <pre>import intake
+    cat = intake.Catalog(&#34;https://raw.githubusercontent.com/pangeo-data/pangeo-datastore/master/intake-catalogs/ocean.yaml&#34;)
+    ds = cat[&#34;LLC4320_SSS&#34;].to_dask()</pre>
+          </div>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h4 class="panel-title">
+            <a data-toggle="collapse" data-parent="#accordion-LLC4320_SSS" href="#collapse2-LLC4320_SSS">
+             metadata</a>
+          </h4>
+        </div>
+        <div id="collapse2-LLC4320_SSS" class="panel-collapse collapse">
+          <div class="panel-body">
+           <table class="table table-condensed table-hover">
+            <tbody>
+           
+             <tr><td>url</td><td>http://online.kitp.ucsb.edu/online/blayers18/menemenlis/</td></tr>
+           
+             <tr><td>tags</td><td>[&#39;ocean&#39;, &#39;model&#39;]</td></tr>
+           
+             <tr><td>catalog_dir</td><td>/home/jovyan/./intake-catalogs/</td></tr>
+           
+            </tbody>
+           </table>
+          </div>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h4 class="panel-title">
+            <a data-toggle="collapse" data-parent="#accordion-LLC4320_SSS" href="#collapse3-LLC4320_SSS">
+            xarray preview</a>
+          </h4>
+        </div>
+        <div id="collapse3-LLC4320_SSS" class="panel-collapse collapse">
+          <div class="panel-body">
+          <pre>&lt;xarray.Dataset&gt;
+    Dimensions:  (face: 13, i: 4320, i_g: 4320, j: 4320, j_g: 4320, k: 90, k_l: 90, k_p1: 91, k_u: 90, time: 9030)
+    Coordinates:
+      * face     (face) int64 0 1 2 3 4 5 6 7 8 9 10 11 12
+      * i        (i) int64 0 1 2 3 4 5 6 7 ... 4313 4314 4315 4316 4317 4318 4319
+      * i_g      (i_g) int64 0 1 2 3 4 5 6 7 ... 4313 4314 4315 4316 4317 4318 4319
+      * j        (j) int64 0 1 2 3 4 5 6 7 ... 4313 4314 4315 4316 4317 4318 4319
+      * j_g      (j_g) int64 0 1 2 3 4 5 6 7 ... 4313 4314 4315 4316 4317 4318 4319
+      * k        (k) int64 0 1 2 3 4 5 6 7 8 9 10 ... 80 81 82 83 84 85 86 87 88 89
+      * k_l      (k_l) int64 0 1 2 3 4 5 6 7 8 9 ... 80 81 82 83 84 85 86 87 88 89
+      * k_p1     (k_p1) int64 0 1 2 3 4 5 6 7 8 9 ... 81 82 83 84 85 86 87 88 89 90
+      * k_u      (k_u) int64 0 1 2 3 4 5 6 7 8 9 ... 80 81 82 83 84 85 86 87 88 89
+      * time     (time) datetime64[ns] 2011-09-13 ... 2012-09-23T05:00:00
+    Data variables:
+        SSS      (time, face, j, i) float32 dask.array&lt;shape=(9030, 13, 4320, 4320), chunksize=(1, 1, 4320, 4320)&gt;
+        XC       (face, j, i) float32 dask.array&lt;shape=(13, 4320, 4320), chunksize=(1, 4320, 4320)&gt;
+        YC       (face, j, i) float32 dask.array&lt;shape=(13, 4320, 4320), chunksize=(1, 4320, 4320)&gt;
+        iter     (time) int64 dask.array&lt;shape=(9030,), chunksize=(9030,)&gt;
+    Attributes:
+        Conventions:  CF-1.6
+        history:      Created by calling `open_mdsdataset(llc_method=&#39;smallchunks...
+        source:       MITgcm
+        title:        netCDF wrapper of MITgcm MDS binary data</pre>
+          </div>
+        </div>
+      </div>
+    </div>
+
+LLC4320_SSH
+~~~~~~~~~~~
+
+MITgcm LLC4320 Ocean Simulation Sea Surface Height
+
+.. raw:: html
+
+       <div class="panel-group" id="accordion-LLC4320_SSH">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h4 class="panel-title">
+            <a data-toggle="collapse" data-parent="#accordion-LLC4320_SSH" href="#collapse1-LLC4320_SSH">
+            load in python
+            </a>
+          </h4>
+        </div>
+        <div id="collapse1-LLC4320_SSH" class="panel-collapse collapse">
+          <div class="panel-body">
+          <pre>import intake
+    cat = intake.Catalog(&#34;https://raw.githubusercontent.com/pangeo-data/pangeo-datastore/master/intake-catalogs/ocean.yaml&#34;)
+    ds = cat[&#34;LLC4320_SSH&#34;].to_dask()</pre>
+          </div>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h4 class="panel-title">
+            <a data-toggle="collapse" data-parent="#accordion-LLC4320_SSH" href="#collapse2-LLC4320_SSH">
+             metadata</a>
+          </h4>
+        </div>
+        <div id="collapse2-LLC4320_SSH" class="panel-collapse collapse">
+          <div class="panel-body">
+           <table class="table table-condensed table-hover">
+            <tbody>
+           
+             <tr><td>url</td><td>http://online.kitp.ucsb.edu/online/blayers18/menemenlis/</td></tr>
+           
+             <tr><td>tags</td><td>[&#39;ocean&#39;, &#39;model&#39;]</td></tr>
+           
+             <tr><td>catalog_dir</td><td>/home/jovyan/./intake-catalogs/</td></tr>
+           
+            </tbody>
+           </table>
+          </div>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h4 class="panel-title">
+            <a data-toggle="collapse" data-parent="#accordion-LLC4320_SSH" href="#collapse3-LLC4320_SSH">
+            xarray preview</a>
+          </h4>
+        </div>
+        <div id="collapse3-LLC4320_SSH" class="panel-collapse collapse">
+          <div class="panel-body">
+          <pre>&lt;xarray.Dataset&gt;
+    Dimensions:  (face: 13, i: 4320, j: 4320, time: 9030)
+    Coordinates:
+      * face     (face) int64 0 1 2 3 4 5 6 7 8 9 10 11 12
+      * i        (i) int64 0 1 2 3 4 5 6 7 ... 4313 4314 4315 4316 4317 4318 4319
+      * j        (j) int64 0 1 2 3 4 5 6 7 ... 4313 4314 4315 4316 4317 4318 4319
+      * time     (time) datetime64[ns] 2011-09-13 ... 2012-09-23T05:00:00
+    Data variables:
+        Eta      (time, face, j, i) float32 dask.array&lt;shape=(9030, 13, 4320, 4320), chunksize=(1, 1, 4320, 4320)&gt;
+    Attributes:
+        Conventions:  CF-1.6
+        history:      Created by calling `open_mdsdataset(llc_method=&#39;smallchunks...
+        source:       MITgcm
+        title:        netCDF wrapper of MITgcm MDS binary data</pre>
+          </div>
+        </div>
+      </div>
+    </div>
+
+LLC4320_SSU
+~~~~~~~~~~~
+
+MITgcm LLC4320 Ocean Simulation Sea Surface Zonal Velocity
+
+.. raw:: html
+
+       <div class="panel-group" id="accordion-LLC4320_SSU">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h4 class="panel-title">
+            <a data-toggle="collapse" data-parent="#accordion-LLC4320_SSU" href="#collapse1-LLC4320_SSU">
+            load in python
+            </a>
+          </h4>
+        </div>
+        <div id="collapse1-LLC4320_SSU" class="panel-collapse collapse">
+          <div class="panel-body">
+          <pre>import intake
+    cat = intake.Catalog(&#34;https://raw.githubusercontent.com/pangeo-data/pangeo-datastore/master/intake-catalogs/ocean.yaml&#34;)
+    ds = cat[&#34;LLC4320_SSU&#34;].to_dask()</pre>
+          </div>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h4 class="panel-title">
+            <a data-toggle="collapse" data-parent="#accordion-LLC4320_SSU" href="#collapse2-LLC4320_SSU">
+             metadata</a>
+          </h4>
+        </div>
+        <div id="collapse2-LLC4320_SSU" class="panel-collapse collapse">
+          <div class="panel-body">
+           <table class="table table-condensed table-hover">
+            <tbody>
+           
+             <tr><td>url</td><td>http://online.kitp.ucsb.edu/online/blayers18/menemenlis/</td></tr>
+           
+             <tr><td>tags</td><td>[&#39;ocean&#39;, &#39;model&#39;]</td></tr>
+           
+             <tr><td>catalog_dir</td><td>/home/jovyan/./intake-catalogs/</td></tr>
+           
+            </tbody>
+           </table>
+          </div>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h4 class="panel-title">
+            <a data-toggle="collapse" data-parent="#accordion-LLC4320_SSU" href="#collapse3-LLC4320_SSU">
+            xarray preview</a>
+          </h4>
+        </div>
+        <div id="collapse3-LLC4320_SSU" class="panel-collapse collapse">
+          <div class="panel-body">
+          <pre>&lt;xarray.Dataset&gt;
+    Dimensions:  (face: 13, i_g: 4320, j: 4320, time: 9030)
+    Coordinates:
+      * face     (face) int64 0 1 2 3 4 5 6 7 8 9 10 11 12
+      * i_g      (i_g) int64 0 1 2 3 4 5 6 7 ... 4313 4314 4315 4316 4317 4318 4319
+      * j        (j) int64 0 1 2 3 4 5 6 7 ... 4313 4314 4315 4316 4317 4318 4319
+      * time     (time) datetime64[ns] 2011-09-13 ... 2012-09-23T05:00:00
+    Data variables:
+        U        (time, face, j, i_g) float32 dask.array&lt;shape=(9030, 13, 4320, 4320), chunksize=(1, 1, 4320, 4320)&gt;
+    Attributes:
+        Conventions:  CF-1.6
+        history:      Created by calling `open_mdsdataset(llc_method=&#39;smallchunks...
+        source:       MITgcm
+        title:        netCDF wrapper of MITgcm MDS binary data</pre>
+          </div>
+        </div>
+      </div>
+    </div>
+
+LLC4320_SSV
+~~~~~~~~~~~
+
+MITgcm LLC4320 Ocean Simulation Sea Surface Meridional Velocity
+
+.. raw:: html
+
+       <div class="panel-group" id="accordion-LLC4320_SSV">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h4 class="panel-title">
+            <a data-toggle="collapse" data-parent="#accordion-LLC4320_SSV" href="#collapse1-LLC4320_SSV">
+            load in python
+            </a>
+          </h4>
+        </div>
+        <div id="collapse1-LLC4320_SSV" class="panel-collapse collapse">
+          <div class="panel-body">
+          <pre>import intake
+    cat = intake.Catalog(&#34;https://raw.githubusercontent.com/pangeo-data/pangeo-datastore/master/intake-catalogs/ocean.yaml&#34;)
+    ds = cat[&#34;LLC4320_SSV&#34;].to_dask()</pre>
+          </div>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h4 class="panel-title">
+            <a data-toggle="collapse" data-parent="#accordion-LLC4320_SSV" href="#collapse2-LLC4320_SSV">
+             metadata</a>
+          </h4>
+        </div>
+        <div id="collapse2-LLC4320_SSV" class="panel-collapse collapse">
+          <div class="panel-body">
+           <table class="table table-condensed table-hover">
+            <tbody>
+           
+             <tr><td>url</td><td>http://online.kitp.ucsb.edu/online/blayers18/menemenlis/</td></tr>
+           
+             <tr><td>tags</td><td>[&#39;ocean&#39;, &#39;model&#39;]</td></tr>
+           
+             <tr><td>catalog_dir</td><td>/home/jovyan/./intake-catalogs/</td></tr>
+           
+            </tbody>
+           </table>
+          </div>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h4 class="panel-title">
+            <a data-toggle="collapse" data-parent="#accordion-LLC4320_SSV" href="#collapse3-LLC4320_SSV">
+            xarray preview</a>
+          </h4>
+        </div>
+        <div id="collapse3-LLC4320_SSV" class="panel-collapse collapse">
+          <div class="panel-body">
+          <pre>&lt;xarray.Dataset&gt;
+    Dimensions:  (face: 13, i: 4320, j_g: 4320, time: 9030)
+    Coordinates:
+      * face     (face) int64 0 1 2 3 4 5 6 7 8 9 10 11 12
+      * i        (i) int64 0 1 2 3 4 5 6 7 ... 4313 4314 4315 4316 4317 4318 4319
+      * j_g      (j_g) int64 0 1 2 3 4 5 6 7 ... 4313 4314 4315 4316 4317 4318 4319
+      * time     (time) datetime64[ns] 2011-09-13 ... 2012-09-23T05:00:00
+    Data variables:
+        V        (time, face, j_g, i) float32 dask.array&lt;shape=(9030, 13, 4320, 4320), chunksize=(1, 1, 4320, 4320)&gt;
+    Attributes:
+        Conventions:  CF-1.6
+        history:      Created by calling `open_mdsdataset(llc_method=&#39;smallchunks...
+        source:       MITgcm
+        title:        netCDF wrapper of MITgcm MDS binary data</pre>
+          </div>
+        </div>
+      </div>
+    </div>
+
+CESM_POP_hires_control
+~~~~~~~~~~~~~~~~~~~~~~
+
+NCAR CESM POP model run hybrid_v5_rel04_BC5_ne120_t12_pop62
+
+.. raw:: html
+
+       <div class="panel-group" id="accordion-CESM_POP_hires_control">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h4 class="panel-title">
+            <a data-toggle="collapse" data-parent="#accordion-CESM_POP_hires_control" href="#collapse1-CESM_POP_hires_control">
+            load in python
+            </a>
+          </h4>
+        </div>
+        <div id="collapse1-CESM_POP_hires_control" class="panel-collapse collapse">
+          <div class="panel-body">
+          <pre>import intake
+    cat = intake.Catalog(&#34;https://raw.githubusercontent.com/pangeo-data/pangeo-datastore/master/intake-catalogs/ocean.yaml&#34;)
+    ds = cat[&#34;CESM_POP_hires_control&#34;].to_dask()</pre>
+          </div>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h4 class="panel-title">
+            <a data-toggle="collapse" data-parent="#accordion-CESM_POP_hires_control" href="#collapse2-CESM_POP_hires_control">
+             metadata</a>
+          </h4>
+        </div>
+        <div id="collapse2-CESM_POP_hires_control" class="panel-collapse collapse">
+          <div class="panel-body">
+           <table class="table table-condensed table-hover">
+            <tbody>
+           
+             <tr><td>time_period</td><td>perpetual 2000</td></tr>
+           
+             <tr><td>tags</td><td>[&#39;ocean&#39;, &#39;model&#39;]</td></tr>
+           
+             <tr><td>catalog_dir</td><td>/home/jovyan/./intake-catalogs/</td></tr>
+           
+            </tbody>
+           </table>
+          </div>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h4 class="panel-title">
+            <a data-toggle="collapse" data-parent="#accordion-CESM_POP_hires_control" href="#collapse3-CESM_POP_hires_control">
+            xarray preview</a>
+          </h4>
+        </div>
+        <div id="collapse3-CESM_POP_hires_control" class="panel-collapse collapse">
+          <div class="panel-body">
+          <pre>&lt;xarray.Dataset&gt;
+    Dimensions:             (nlat: 2400, nlon: 3600, time: 14965, z_t: 62, z_t_150m: 15, z_w: 62, z_w_bot: 62, z_w_top: 62)
+    Coordinates:
+        ANGLE               (nlat, nlon) float64 dask.array&lt;shape=(2400, 3600), chunksize=(2400, 3600)&gt;
+        ANGLET              (nlat, nlon) float64 dask.array&lt;shape=(2400, 3600), chunksize=(2400, 3600)&gt;
+        DXT                 (nlat, nlon) float64 dask.array&lt;shape=(2400, 3600), chunksize=(2400, 3600)&gt;
+        DXU                 (nlat, nlon) float64 dask.array&lt;shape=(2400, 3600), chunksize=(2400, 3600)&gt;
+        DYT                 (nlat, nlon) float64 dask.array&lt;shape=(2400, 3600), chunksize=(2400, 3600)&gt;
+        DYU                 (nlat, nlon) float64 dask.array&lt;shape=(2400, 3600), chunksize=(2400, 3600)&gt;
+        HT                  (nlat, nlon) float64 dask.array&lt;shape=(2400, 3600), chunksize=(2400, 3600)&gt;
+        HTE                 (nlat, nlon) float64 dask.array&lt;shape=(2400, 3600), chunksize=(2400, 3600)&gt;
+        HTN                 (nlat, nlon) float64 dask.array&lt;shape=(2400, 3600), chunksize=(2400, 3600)&gt;
+        HU                  (nlat, nlon) float64 dask.array&lt;shape=(2400, 3600), chunksize=(2400, 3600)&gt;
+        HUS                 (nlat, nlon) float64 dask.array&lt;shape=(2400, 3600), chunksize=(2400, 3600)&gt;
+        HUW                 (nlat, nlon) float64 dask.array&lt;shape=(2400, 3600), chunksize=(2400, 3600)&gt;
+        KMT                 (nlat, nlon) float64 dask.array&lt;shape=(2400, 3600), chunksize=(2400, 3600)&gt;
+        KMU                 (nlat, nlon) float64 dask.array&lt;shape=(2400, 3600), chunksize=(2400, 3600)&gt;
+        REGION_MASK         (nlat, nlon) float64 dask.array&lt;shape=(2400, 3600), chunksize=(2400, 3600)&gt;
+        T0_Kelvin           float64 ...
+        TAREA               (nlat, nlon) float64 dask.array&lt;shape=(2400, 3600), chunksize=(2400, 3600)&gt;
+        TLAT                (nlat, nlon) float64 dask.array&lt;shape=(2400, 3600), chunksize=(2400, 3600)&gt;
+        TLONG               (nlat, nlon) float64 dask.array&lt;shape=(2400, 3600), chunksize=(2400, 3600)&gt;
+        UAREA               (nlat, nlon) float64 dask.array&lt;shape=(2400, 3600), chunksize=(2400, 3600)&gt;
+        ULAT                (nlat, nlon) float64 dask.array&lt;shape=(2400, 3600), chunksize=(2400, 3600)&gt;
+        ULONG               (nlat, nlon) float64 dask.array&lt;shape=(2400, 3600), chunksize=(2400, 3600)&gt;
+        cp_air              float64 ...
+        cp_sw               float64 ...
+        days_in_norm_year   timedelta64[ns] ...
+        dz                  (z_t) float32 dask.array&lt;shape=(62,), chunksize=(62,)&gt;
+        dzw                 (z_w) float32 dask.array&lt;shape=(62,), chunksize=(62,)&gt;
+        fwflux_factor       float64 ...
+        grav                float64 ...
+        heat_to_PW          float64 ...
+        hflux_factor        float64 ...
+        latent_heat_fusion  float64 ...
+        latent_heat_vapor   float64 ...
+        mass_to_Sv          float64 ...
+        momentum_factor     float64 ...
+        nsurface_t          float64 ...
+        nsurface_u          float64 ...
+        ocn_ref_salinity    float64 ...
+        omega               float64 ...
+        ppt_to_salt         float64 ...
+        radius              float64 ...
+        rho_air             float64 ...
+        rho_fw              float64 ...
+        rho_sw              float64 ...
+        salinity_factor     float64 ...
+        salt_to_Svppt       float64 ...
+        salt_to_mmday       float64 ...
+        salt_to_ppt         float64 ...
+        sea_ice_salinity    float64 ...
+        sflux_factor        float64 ...
+        sound               float64 ...
+        stefan_boltzmann    float64 ...
+      * time                (time) object 0046-01-02 00:00:00 ... 0087-01-01 00:00:00
+        vonkar              float64 ...
+      * z_t                 (z_t) float32 500.0 1500.0 ... 562499.06 587499.06
+      * z_t_150m            (z_t_150m) float32 500.0 1500.0 ... 13500.0 14500.0
+      * z_w                 (z_w) float32 0.0 1000.0 2000.0 ... 549999.06 574999.06
+      * z_w_bot             (z_w_bot) float32 1000.0 2000.0 ... 574999.06 599999.06
+      * z_w_top             (z_w_top) float32 0.0 1000.0 ... 549999.06 574999.06
+    Dimensions without coordinates: nlat, nlon
+    Data variables:
+        HMXL_2              (time, nlat, nlon) float32 dask.array&lt;shape=(14965, 2400, 3600), chunksize=(1, 2400, 3600)&gt;
+        SFWF_2              (time, nlat, nlon) float32 dask.array&lt;shape=(14965, 2400, 3600), chunksize=(1, 2400, 3600)&gt;
+        SHF_2               (time, nlat, nlon) float32 dask.array&lt;shape=(14965, 2400, 3600), chunksize=(1, 2400, 3600)&gt;
+        SSH_2               (time, nlat, nlon) float32 dask.array&lt;shape=(14965, 2400, 3600), chunksize=(1, 2400, 3600)&gt;
+        SSS                 (time, nlat, nlon) float32 dask.array&lt;shape=(14965, 2400, 3600), chunksize=(1, 2400, 3600)&gt;
+        SST                 (time, nlat, nlon) float32 dask.array&lt;shape=(14965, 2400, 3600), chunksize=(1, 2400, 3600)&gt;
+        TAUX_2              (time, nlat, nlon) float32 dask.array&lt;shape=(14965, 2400, 3600), chunksize=(1, 2400, 3600)&gt;
+        TAUY_2              (time, nlat, nlon) float32 dask.array&lt;shape=(14965, 2400, 3600), chunksize=(1, 2400, 3600)&gt;
+        U1_1                (time, nlat, nlon) float32 dask.array&lt;shape=(14965, 2400, 3600), chunksize=(1, 2400, 3600)&gt;
+        U2_2                (time, nlat, nlon) float32 dask.array&lt;shape=(14965, 2400, 3600), chunksize=(1, 2400, 3600)&gt;
+        V1_1                (time, nlat, nlon) float32 dask.array&lt;shape=(14965, 2400, 3600), chunksize=(1, 2400, 3600)&gt;
+        V2_2                (time, nlat, nlon) float32 dask.array&lt;shape=(14965, 2400, 3600), chunksize=(1, 2400, 3600)&gt;
+    Attributes:
+        Conventions:   CF-1.0; http://www.cgd.ucar.edu/cms/eaton/netcdf/CF-curren...
+        calendar:      All years have exactly  365 days.
+        cell_methods:  cell_methods = time: mean ==&gt; the variable values are aver...
+        contents:      Diagnostic and Prognostic Variables
+        history:       none
+        nsteps_total:  13088337
+        revision:      $Id: tavg.F90 41939 2012-11-14 16:37:23Z mlevy@ucar.edu $
+        source:        CCSM POP2, the CCSM Ocean Component
+        start_time:    This dataset was created on 2013-03-09 at 12:25:55.7
+        tavg_sum:      86399.99999999962
+        title:         hybrid_v5_rel04_BC5_ne120_t12_pop62</pre>
+          </div>
+        </div>
+      </div>
+    </div>
+
+CESM_POP_hires_RCP8_5
+~~~~~~~~~~~~~~~~~~~~~
+
+NCAR CESM POP model run BRCP85C5CN_ne120_t12_pop62.c13b17.asdphys.001
+
+.. raw:: html
+
+       <div class="panel-group" id="accordion-CESM_POP_hires_RCP8_5">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h4 class="panel-title">
+            <a data-toggle="collapse" data-parent="#accordion-CESM_POP_hires_RCP8_5" href="#collapse1-CESM_POP_hires_RCP8_5">
+            load in python
+            </a>
+          </h4>
+        </div>
+        <div id="collapse1-CESM_POP_hires_RCP8_5" class="panel-collapse collapse">
+          <div class="panel-body">
+          <pre>import intake
+    cat = intake.Catalog(&#34;https://raw.githubusercontent.com/pangeo-data/pangeo-datastore/master/intake-catalogs/ocean.yaml&#34;)
+    ds = cat[&#34;CESM_POP_hires_RCP8_5&#34;].to_dask()</pre>
+          </div>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h4 class="panel-title">
+            <a data-toggle="collapse" data-parent="#accordion-CESM_POP_hires_RCP8_5" href="#collapse2-CESM_POP_hires_RCP8_5">
+             metadata</a>
+          </h4>
+        </div>
+        <div id="collapse2-CESM_POP_hires_RCP8_5" class="panel-collapse collapse">
+          <div class="panel-body">
+           <table class="table table-condensed table-hover">
+            <tbody>
+           
+             <tr><td>time_period</td><td>2000-2050</td></tr>
+           
+             <tr><td>tags</td><td>[&#39;ocean&#39;, &#39;model&#39;]</td></tr>
+           
+             <tr><td>catalog_dir</td><td>/home/jovyan/./intake-catalogs/</td></tr>
+           
+            </tbody>
+           </table>
+          </div>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h4 class="panel-title">
+            <a data-toggle="collapse" data-parent="#accordion-CESM_POP_hires_RCP8_5" href="#collapse3-CESM_POP_hires_RCP8_5">
+            xarray preview</a>
+          </h4>
+        </div>
+        <div id="collapse3-CESM_POP_hires_RCP8_5" class="panel-collapse collapse">
+          <div class="panel-body">
+          <pre>&lt;xarray.Dataset&gt;
+    Dimensions:             (nlat: 2400, nlon: 3600, time: 16401, z_t: 62, z_t_150m: 15, z_w: 62, z_w_bot: 62, z_w_top: 62)
+    Coordinates:
+        ANGLE               (nlat, nlon) float64 dask.array&lt;shape=(2400, 3600), chunksize=(2400, 3600)&gt;
+        ANGLET              (nlat, nlon) float64 dask.array&lt;shape=(2400, 3600), chunksize=(2400, 3600)&gt;
+        DXT                 (nlat, nlon) float64 dask.array&lt;shape=(2400, 3600), chunksize=(2400, 3600)&gt;
+        DXU                 (nlat, nlon) float64 dask.array&lt;shape=(2400, 3600), chunksize=(2400, 3600)&gt;
+        DYT                 (nlat, nlon) float64 dask.array&lt;shape=(2400, 3600), chunksize=(2400, 3600)&gt;
+        DYU                 (nlat, nlon) float64 dask.array&lt;shape=(2400, 3600), chunksize=(2400, 3600)&gt;
+        HT                  (nlat, nlon) float64 dask.array&lt;shape=(2400, 3600), chunksize=(2400, 3600)&gt;
+        HTE                 (nlat, nlon) float64 dask.array&lt;shape=(2400, 3600), chunksize=(2400, 3600)&gt;
+        HTN                 (nlat, nlon) float64 dask.array&lt;shape=(2400, 3600), chunksize=(2400, 3600)&gt;
+        HU                  (nlat, nlon) float64 dask.array&lt;shape=(2400, 3600), chunksize=(2400, 3600)&gt;
+        HUS                 (nlat, nlon) float64 dask.array&lt;shape=(2400, 3600), chunksize=(2400, 3600)&gt;
+        HUW                 (nlat, nlon) float64 dask.array&lt;shape=(2400, 3600), chunksize=(2400, 3600)&gt;
+        KMT                 (nlat, nlon) float64 dask.array&lt;shape=(2400, 3600), chunksize=(2400, 3600)&gt;
+        KMU                 (nlat, nlon) float64 dask.array&lt;shape=(2400, 3600), chunksize=(2400, 3600)&gt;
+        REGION_MASK         (nlat, nlon) float64 dask.array&lt;shape=(2400, 3600), chunksize=(2400, 3600)&gt;
+        T0_Kelvin           float64 ...
+        TAREA               (nlat, nlon) float64 dask.array&lt;shape=(2400, 3600), chunksize=(2400, 3600)&gt;
+        TLAT                (nlat, nlon) float64 dask.array&lt;shape=(2400, 3600), chunksize=(2400, 3600)&gt;
+        TLONG               (nlat, nlon) float64 dask.array&lt;shape=(2400, 3600), chunksize=(2400, 3600)&gt;
+        UAREA               (nlat, nlon) float64 dask.array&lt;shape=(2400, 3600), chunksize=(2400, 3600)&gt;
+        ULAT                (nlat, nlon) float64 dask.array&lt;shape=(2400, 3600), chunksize=(2400, 3600)&gt;
+        ULONG               (nlat, nlon) float64 dask.array&lt;shape=(2400, 3600), chunksize=(2400, 3600)&gt;
+        cp_air              float64 ...
+        cp_sw               float64 ...
+        days_in_norm_year   timedelta64[ns] ...
+        dz                  (z_t) float32 dask.array&lt;shape=(62,), chunksize=(62,)&gt;
+        dzw                 (z_w) float32 dask.array&lt;shape=(62,), chunksize=(62,)&gt;
+        fwflux_factor       float64 ...
+        grav                float64 ...
+        heat_to_PW          float64 ...
+        hflux_factor        float64 ...
+        latent_heat_fusion  float64 ...
+        latent_heat_vapor   float64 ...
+        mass_to_Sv          float64 ...
+        momentum_factor     float64 ...
+        nsurface_t          float64 ...
+        nsurface_u          float64 ...
+        ocn_ref_salinity    float64 ...
+        omega               float64 ...
+        ppt_to_salt         float64 ...
+        radius              float64 ...
+        rho_air             float64 ...
+        rho_fw              float64 ...
+        rho_sw              float64 ...
+        salinity_factor     float64 ...
+        salt_to_Svppt       float64 ...
+        salt_to_mmday       float64 ...
+        salt_to_ppt         float64 ...
+        sea_ice_salinity    float64 ...
+        sflux_factor        float64 ...
+        sound               float64 ...
+        stefan_boltzmann    float64 ...
+      * time                (time) object 2006-01-02 00:00:00 ... 2051-01-01 00:00:00
+        vonkar              float64 ...
+      * z_t                 (z_t) float32 500.0 1500.0 ... 562499.06 587499.06
+      * z_t_150m            (z_t_150m) float32 500.0 1500.0 ... 13500.0 14500.0
+      * z_w                 (z_w) float32 0.0 1000.0 2000.0 ... 549999.06 574999.06
+      * z_w_bot             (z_w_bot) float32 1000.0 2000.0 ... 574999.06 599999.06
+      * z_w_top             (z_w_top) float32 0.0 1000.0 ... 549999.06 574999.06
+    Dimensions without coordinates: nlat, nlon
+    Data variables:
+        SSH_2               (time, nlat, nlon) float32 dask.array&lt;shape=(16401, 2400, 3600), chunksize=(1, 2400, 3600)&gt;
+        SSS                 (time, nlat, nlon) float32 dask.array&lt;shape=(16401, 2400, 3600), chunksize=(1, 2400, 3600)&gt;
+        SST                 (time, nlat, nlon) float32 dask.array&lt;shape=(16401, 2400, 3600), chunksize=(1, 2400, 3600)&gt;
+        TAUX_2              (time, nlat, nlon) float32 dask.array&lt;shape=(16401, 2400, 3600), chunksize=(1, 2400, 3600)&gt;
+        TAUY_2              (time, nlat, nlon) float32 dask.array&lt;shape=(16401, 2400, 3600), chunksize=(1, 2400, 3600)&gt;
+        U1_1                (time, nlat, nlon) float32 dask.array&lt;shape=(16401, 2400, 3600), chunksize=(1, 2400, 3600)&gt;
+        U2_2                (time, nlat, nlon) float32 dask.array&lt;shape=(16401, 2400, 3600), chunksize=(1, 2400, 3600)&gt;
+        V1_1                (time, nlat, nlon) float32 dask.array&lt;shape=(16401, 2400, 3600), chunksize=(1, 2400, 3600)&gt;
+    Attributes:
+        Conventions:   CF-1.0; http://www.cgd.ucar.edu/cms/eaton/netcdf/CF-curren...
+        calendar:      All years have exactly  365 days.
+        cell_methods:  cell_methods = time: mean ==&gt; the variable values are aver...
+        contents:      Diagnostic and Prognostic Variables
+        history:       none
+        nsteps_total:  3535200
+        revision:      $Id: tavg.F90 56176 2013-12-20 18:35:46Z mlevy@ucar.edu $
+        source:        CCSM POP2, the CCSM Ocean Component
+        start_time:    This dataset was created on 2016-05-17 at 03:29:14.8
+        tavg_sum:      86399.99999999999
+        title:         BRCP85C5CN_ne120_t12_pop62.c13b17.asdphys.001</pre>
+          </div>
+        </div>
+      </div>
+    </div>
+
+GFDL_CM2_6_control_ocean_surface
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+GFDL CM2.6 climate model control run daily ocean surface fields
+
+.. raw:: html
+
+       <div class="panel-group" id="accordion-GFDL_CM2_6_control_ocean_surface">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h4 class="panel-title">
+            <a data-toggle="collapse" data-parent="#accordion-GFDL_CM2_6_control_ocean_surface" href="#collapse1-GFDL_CM2_6_control_ocean_surface">
+            load in python
+            </a>
+          </h4>
+        </div>
+        <div id="collapse1-GFDL_CM2_6_control_ocean_surface" class="panel-collapse collapse">
+          <div class="panel-body">
+          <pre>import intake
+    cat = intake.Catalog(&#34;https://raw.githubusercontent.com/pangeo-data/pangeo-datastore/master/intake-catalogs/ocean.yaml&#34;)
+    ds = cat[&#34;GFDL_CM2_6_control_ocean_surface&#34;].to_dask()</pre>
+          </div>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h4 class="panel-title">
+            <a data-toggle="collapse" data-parent="#accordion-GFDL_CM2_6_control_ocean_surface" href="#collapse2-GFDL_CM2_6_control_ocean_surface">
+             metadata</a>
+          </h4>
+        </div>
+        <div id="collapse2-GFDL_CM2_6_control_ocean_surface" class="panel-collapse collapse">
+          <div class="panel-body">
+           <table class="table table-condensed table-hover">
+            <tbody>
+           
+             <tr><td>url</td><td>https://www.gfdl.noaa.gov/cm2-6/</td></tr>
+           
+             <tr><td>tags</td><td>[&#39;ocean&#39;, &#39;model&#39;]</td></tr>
+           
+             <tr><td>catalog_dir</td><td>/home/jovyan/./intake-catalogs/</td></tr>
+           
+            </tbody>
+           </table>
+          </div>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h4 class="panel-title">
+            <a data-toggle="collapse" data-parent="#accordion-GFDL_CM2_6_control_ocean_surface" href="#collapse3-GFDL_CM2_6_control_ocean_surface">
+            xarray preview</a>
+          </h4>
+        </div>
+        <div id="collapse3-GFDL_CM2_6_control_ocean_surface" class="panel-collapse collapse">
+          <div class="panel-body">
+          <pre>&lt;xarray.Dataset&gt;
+    Dimensions:         (nv: 2, st_ocean_sub01: 1, time: 7305, xt_ocean: 3600, xu_ocean: 3600, yt_ocean: 2700, yu_ocean: 2700)
+    Coordinates:
+      * nv              (nv) float64 1.0 2.0
+      * st_ocean_sub01  (st_ocean_sub01) float64 5.034
+      * time            (time) object 0181-01-01 12:00:00 ... 0200-12-31 12:00:00
+      * xt_ocean        (xt_ocean) float64 -279.9 -279.8 -279.7 ... 79.85 79.95
+      * xu_ocean        (xu_ocean) float64 -279.9 -279.8 -279.7 ... 79.8 79.9 80.0
+      * yt_ocean        (yt_ocean) float64 -81.11 -81.07 -81.02 ... 89.94 89.98
+      * yu_ocean        (yu_ocean) float64 -81.09 -81.05 -81.0 ... 89.92 89.96 90.0
+    Data variables:
+        biomass_p       (time, yt_ocean, xt_ocean) float32 dask.array&lt;shape=(7305, 2700, 3600), chunksize=(1, 2700, 3600)&gt;
+        chl             (time, yt_ocean, xt_ocean) float32 dask.array&lt;shape=(7305, 2700, 3600), chunksize=(1, 2700, 3600)&gt;
+        dic             (time, yt_ocean, xt_ocean) float32 dask.array&lt;shape=(7305, 2700, 3600), chunksize=(1, 2700, 3600)&gt;
+        htotal          (time, yt_ocean, xt_ocean) float32 dask.array&lt;shape=(7305, 2700, 3600), chunksize=(1, 2700, 3600)&gt;
+        irr_mix         (time, st_ocean_sub01, yt_ocean, xt_ocean) float32 dask.array&lt;shape=(7305, 1, 2700, 3600), chunksize=(1, 1, 2700, 3600)&gt;
+        kw              (time, yt_ocean, xt_ocean) float32 dask.array&lt;shape=(7305, 2700, 3600), chunksize=(1, 2700, 3600)&gt;
+        o2              (time, yt_ocean, xt_ocean) float32 dask.array&lt;shape=(7305, 2700, 3600), chunksize=(1, 2700, 3600)&gt;
+        po4             (time, yt_ocean, xt_ocean) float32 dask.array&lt;shape=(7305, 2700, 3600), chunksize=(1, 2700, 3600)&gt;
+        sea_level       (time, yt_ocean, xt_ocean) float32 dask.array&lt;shape=(7305, 2700, 3600), chunksize=(1, 2700, 3600)&gt;
+        sea_level_sq    (time, yt_ocean, xt_ocean) float32 dask.array&lt;shape=(7305, 2700, 3600), chunksize=(1, 2700, 3600)&gt;
+        surface_salt    (time, yt_ocean, xt_ocean) float32 dask.array&lt;shape=(7305, 2700, 3600), chunksize=(1, 2700, 3600)&gt;
+        surface_temp    (time, yt_ocean, xt_ocean) float32 dask.array&lt;shape=(7305, 2700, 3600), chunksize=(1, 2700, 3600)&gt;
+        usurf           (time, yu_ocean, xu_ocean) float32 dask.array&lt;shape=(7305, 2700, 3600), chunksize=(1, 2700, 3600)&gt;
+        vsurf           (time, yu_ocean, xu_ocean) float32 dask.array&lt;shape=(7305, 2700, 3600), chunksize=(1, 2700, 3600)&gt;
+    Attributes:
+        filename:   01810101.ocean_minibling_surf_field.nc
+        grid_tile:  1
+        grid_type:  mosaic
+        history:    2014-01-15 17:01:45 -0500: /home/Richard.Slater/ruby/remove_d...
+        title:      CM2.6_miniBling</pre>
+          </div>
+        </div>
+      </div>
+    </div>
+
+GFDL_CM2_6_control_ocean_3D
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+GFDL CM2.6 climate model control run 5-day-average 3D ocean fields
+
+.. raw:: html
+
+       <div class="panel-group" id="accordion-GFDL_CM2_6_control_ocean_3D">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h4 class="panel-title">
+            <a data-toggle="collapse" data-parent="#accordion-GFDL_CM2_6_control_ocean_3D" href="#collapse1-GFDL_CM2_6_control_ocean_3D">
+            load in python
+            </a>
+          </h4>
+        </div>
+        <div id="collapse1-GFDL_CM2_6_control_ocean_3D" class="panel-collapse collapse">
+          <div class="panel-body">
+          <pre>import intake
+    cat = intake.Catalog(&#34;https://raw.githubusercontent.com/pangeo-data/pangeo-datastore/master/intake-catalogs/ocean.yaml&#34;)
+    ds = cat[&#34;GFDL_CM2_6_control_ocean_3D&#34;].to_dask()</pre>
+          </div>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h4 class="panel-title">
+            <a data-toggle="collapse" data-parent="#accordion-GFDL_CM2_6_control_ocean_3D" href="#collapse2-GFDL_CM2_6_control_ocean_3D">
+             metadata</a>
+          </h4>
+        </div>
+        <div id="collapse2-GFDL_CM2_6_control_ocean_3D" class="panel-collapse collapse">
+          <div class="panel-body">
+           <table class="table table-condensed table-hover">
+            <tbody>
+           
+             <tr><td>url</td><td>https://www.gfdl.noaa.gov/cm2-6/</td></tr>
+           
+             <tr><td>tags</td><td>[&#39;ocean&#39;, &#39;model&#39;]</td></tr>
+           
+             <tr><td>catalog_dir</td><td>/home/jovyan/./intake-catalogs/</td></tr>
+           
+            </tbody>
+           </table>
+          </div>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h4 class="panel-title">
+            <a data-toggle="collapse" data-parent="#accordion-GFDL_CM2_6_control_ocean_3D" href="#collapse3-GFDL_CM2_6_control_ocean_3D">
+            xarray preview</a>
+          </h4>
+        </div>
+        <div id="collapse3-GFDL_CM2_6_control_ocean_3D" class="panel-collapse collapse">
+          <div class="panel-body">
+          <pre>&lt;xarray.Dataset&gt;
+    Dimensions:         (nv: 2, st_edges_ocean: 51, st_ocean: 50, time: 1460, xt_ocean: 3600, xu_ocean: 3600, yt_ocean: 2700, yu_ocean: 2700)
+    Coordinates:
+      * nv              (nv) float64 1.0 2.0
+      * st_edges_ocean  (st_edges_ocean) float64 0.0 10.07 ... 5.29e+03 5.5e+03
+      * st_ocean        (st_ocean) float64 5.034 15.1 25.22 ... 5.185e+03 5.395e+03
+      * time            (time) object 0181-01-03 12:00:00 ... 0200-12-28 12:00:00
+      * xt_ocean        (xt_ocean) float64 -279.9 -279.8 -279.7 ... 79.85 79.95
+      * xu_ocean        (xu_ocean) float64 -279.9 -279.8 -279.7 ... 79.8 79.9 80.0
+      * yt_ocean        (yt_ocean) float64 -81.11 -81.07 -81.02 ... 89.94 89.98
+      * yu_ocean        (yu_ocean) float64 -81.09 -81.05 -81.0 ... 89.92 89.96 90.0
+    Data variables:
+        salt            (time, st_ocean, yt_ocean, xt_ocean) float32 dask.array&lt;shape=(1460, 50, 2700, 3600), chunksize=(1, 1, 2700, 3600)&gt;
+        temp            (time, st_ocean, yt_ocean, xt_ocean) float32 dask.array&lt;shape=(1460, 50, 2700, 3600), chunksize=(1, 1, 2700, 3600)&gt;
+        u               (time, st_ocean, yu_ocean, xu_ocean) float32 dask.array&lt;shape=(1460, 50, 2700, 3600), chunksize=(1, 1, 2700, 3600)&gt;
+        v               (time, st_ocean, yu_ocean, xu_ocean) float32 dask.array&lt;shape=(1460, 50, 2700, 3600), chunksize=(1, 1, 2700, 3600)&gt;</pre>
+          </div>
+        </div>
+      </div>
+    </div>
+
+GFDL_CM2_6_one_percent_ocean_surface
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+GFDL CM2.6 climate model one-percent CO2 increase ocean surface fields
+
+.. raw:: html
+
+       <div class="panel-group" id="accordion-GFDL_CM2_6_one_percent_ocean_surface">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h4 class="panel-title">
+            <a data-toggle="collapse" data-parent="#accordion-GFDL_CM2_6_one_percent_ocean_surface" href="#collapse1-GFDL_CM2_6_one_percent_ocean_surface">
+            load in python
+            </a>
+          </h4>
+        </div>
+        <div id="collapse1-GFDL_CM2_6_one_percent_ocean_surface" class="panel-collapse collapse">
+          <div class="panel-body">
+          <pre>import intake
+    cat = intake.Catalog(&#34;https://raw.githubusercontent.com/pangeo-data/pangeo-datastore/master/intake-catalogs/ocean.yaml&#34;)
+    ds = cat[&#34;GFDL_CM2_6_one_percent_ocean_surface&#34;].to_dask()</pre>
+          </div>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h4 class="panel-title">
+            <a data-toggle="collapse" data-parent="#accordion-GFDL_CM2_6_one_percent_ocean_surface" href="#collapse2-GFDL_CM2_6_one_percent_ocean_surface">
+             metadata</a>
+          </h4>
+        </div>
+        <div id="collapse2-GFDL_CM2_6_one_percent_ocean_surface" class="panel-collapse collapse">
+          <div class="panel-body">
+           <table class="table table-condensed table-hover">
+            <tbody>
+           
+             <tr><td>url</td><td>https://www.gfdl.noaa.gov/cm2-6/</td></tr>
+           
+             <tr><td>tags</td><td>[&#39;ocean&#39;, &#39;model&#39;]</td></tr>
+           
+             <tr><td>catalog_dir</td><td>/home/jovyan/./intake-catalogs/</td></tr>
+           
+            </tbody>
+           </table>
+          </div>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h4 class="panel-title">
+            <a data-toggle="collapse" data-parent="#accordion-GFDL_CM2_6_one_percent_ocean_surface" href="#collapse3-GFDL_CM2_6_one_percent_ocean_surface">
+            xarray preview</a>
+          </h4>
+        </div>
+        <div id="collapse3-GFDL_CM2_6_one_percent_ocean_surface" class="panel-collapse collapse">
+          <div class="panel-body">
+          <pre>&lt;xarray.Dataset&gt;
+    Dimensions:         (nv: 2, st_ocean_sub01: 1, time: 7305, xt_ocean: 3600, xu_ocean: 3600, yt_ocean: 2700, yu_ocean: 2700)
+    Coordinates:
+      * nv              (nv) float64 1.0 2.0
+      * st_ocean_sub01  (st_ocean_sub01) float64 5.034
+      * time            (time) object 0181-01-01 12:00:00 ... 0200-12-31 12:00:00
+      * xt_ocean        (xt_ocean) float64 -279.9 -279.8 -279.7 ... 79.85 79.95
+      * xu_ocean        (xu_ocean) float64 -279.9 -279.8 -279.7 ... 79.8 79.9 80.0
+      * yt_ocean        (yt_ocean) float64 -81.11 -81.07 -81.02 ... 89.94 89.98
+      * yu_ocean        (yu_ocean) float64 -81.09 -81.05 -81.0 ... 89.92 89.96 90.0
+    Data variables:
+        biomass_p       (time, yt_ocean, xt_ocean) float32 dask.array&lt;shape=(7305, 2700, 3600), chunksize=(1, 2700, 3600)&gt;
+        chl             (time, yt_ocean, xt_ocean) float32 dask.array&lt;shape=(7305, 2700, 3600), chunksize=(1, 2700, 3600)&gt;
+        dic             (time, yt_ocean, xt_ocean) float32 dask.array&lt;shape=(7305, 2700, 3600), chunksize=(1, 2700, 3600)&gt;
+        htotal          (time, yt_ocean, xt_ocean) float32 dask.array&lt;shape=(7305, 2700, 3600), chunksize=(1, 2700, 3600)&gt;
+        irr_mix         (time, st_ocean_sub01, yt_ocean, xt_ocean) float32 dask.array&lt;shape=(7305, 1, 2700, 3600), chunksize=(1, 1, 2700, 3600)&gt;
+        kw              (time, yt_ocean, xt_ocean) float32 dask.array&lt;shape=(7305, 2700, 3600), chunksize=(1, 2700, 3600)&gt;
+        o2              (time, yt_ocean, xt_ocean) float32 dask.array&lt;shape=(7305, 2700, 3600), chunksize=(1, 2700, 3600)&gt;
+        po4             (time, yt_ocean, xt_ocean) float32 dask.array&lt;shape=(7305, 2700, 3600), chunksize=(1, 2700, 3600)&gt;
+        sea_level       (time, yt_ocean, xt_ocean) float32 dask.array&lt;shape=(7305, 2700, 3600), chunksize=(1, 2700, 3600)&gt;
+        sea_level_sq    (time, yt_ocean, xt_ocean) float32 dask.array&lt;shape=(7305, 2700, 3600), chunksize=(1, 2700, 3600)&gt;
+        surface_salt    (time, yt_ocean, xt_ocean) float32 dask.array&lt;shape=(7305, 2700, 3600), chunksize=(1, 2700, 3600)&gt;
+        surface_temp    (time, yt_ocean, xt_ocean) float32 dask.array&lt;shape=(7305, 2700, 3600), chunksize=(1, 2700, 3600)&gt;
+        usurf           (time, yu_ocean, xu_ocean) float32 dask.array&lt;shape=(7305, 2700, 3600), chunksize=(1, 2700, 3600)&gt;
+        vsurf           (time, yu_ocean, xu_ocean) float32 dask.array&lt;shape=(7305, 2700, 3600), chunksize=(1, 2700, 3600)&gt;
+    Attributes:
+        filename:   01810101.ocean_minibling_surf_field.nc
+        grid_tile:  1
+        grid_type:  mosaic
+        title:      CM2.6_miniBling</pre>
+          </div>
+        </div>
+      </div>
+    </div>
+
+GFDL_CM2_6_one_percent_ocean_3D
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+GFDL CM2.6 climate model one-percent CO2 increase run 5-day-average 3D
+ocean fields
+
+.. raw:: html
+
+       <div class="panel-group" id="accordion-GFDL_CM2_6_one_percent_ocean_3D">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h4 class="panel-title">
+            <a data-toggle="collapse" data-parent="#accordion-GFDL_CM2_6_one_percent_ocean_3D" href="#collapse1-GFDL_CM2_6_one_percent_ocean_3D">
+            load in python
+            </a>
+          </h4>
+        </div>
+        <div id="collapse1-GFDL_CM2_6_one_percent_ocean_3D" class="panel-collapse collapse">
+          <div class="panel-body">
+          <pre>import intake
+    cat = intake.Catalog(&#34;https://raw.githubusercontent.com/pangeo-data/pangeo-datastore/master/intake-catalogs/ocean.yaml&#34;)
+    ds = cat[&#34;GFDL_CM2_6_one_percent_ocean_3D&#34;].to_dask()</pre>
+          </div>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h4 class="panel-title">
+            <a data-toggle="collapse" data-parent="#accordion-GFDL_CM2_6_one_percent_ocean_3D" href="#collapse2-GFDL_CM2_6_one_percent_ocean_3D">
+             metadata</a>
+          </h4>
+        </div>
+        <div id="collapse2-GFDL_CM2_6_one_percent_ocean_3D" class="panel-collapse collapse">
+          <div class="panel-body">
+           <table class="table table-condensed table-hover">
+            <tbody>
+           
+             <tr><td>url</td><td>https://www.gfdl.noaa.gov/cm2-6/</td></tr>
+           
+             <tr><td>tags</td><td>[&#39;ocean&#39;, &#39;model&#39;]</td></tr>
+           
+             <tr><td>catalog_dir</td><td>/home/jovyan/./intake-catalogs/</td></tr>
+           
+            </tbody>
+           </table>
+          </div>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h4 class="panel-title">
+            <a data-toggle="collapse" data-parent="#accordion-GFDL_CM2_6_one_percent_ocean_3D" href="#collapse3-GFDL_CM2_6_one_percent_ocean_3D">
+            xarray preview</a>
+          </h4>
+        </div>
+        <div id="collapse3-GFDL_CM2_6_one_percent_ocean_3D" class="panel-collapse collapse">
+          <div class="panel-body">
+          <pre>&lt;xarray.Dataset&gt;
+    Dimensions:         (nv: 2, st_edges_ocean: 51, st_ocean: 50, time: 1460, xt_ocean: 3600, xu_ocean: 3600, yt_ocean: 2700, yu_ocean: 2700)
+    Coordinates:
+      * nv              (nv) float64 1.0 2.0
+      * st_edges_ocean  (st_edges_ocean) float64 0.0 10.07 ... 5.29e+03 5.5e+03
+      * st_ocean        (st_ocean) float64 5.034 15.1 25.22 ... 5.185e+03 5.395e+03
+      * time            (time) object 0181-01-03 12:00:00 ... 0200-12-28 12:00:00
+      * xt_ocean        (xt_ocean) float64 -279.9 -279.8 -279.7 ... 79.85 79.95
+      * xu_ocean        (xu_ocean) float64 -279.9 -279.8 -279.7 ... 79.8 79.9 80.0
+      * yt_ocean        (yt_ocean) float64 -81.11 -81.07 -81.02 ... 89.94 89.98
+      * yu_ocean        (yu_ocean) float64 -81.09 -81.05 -81.0 ... 89.92 89.96 90.0
+    Data variables:
+        salt            (time, st_ocean, yt_ocean, xt_ocean) float32 dask.array&lt;shape=(1460, 50, 2700, 3600), chunksize=(1, 1, 2700, 3600)&gt;
+        temp            (time, st_ocean, yt_ocean, xt_ocean) float32 dask.array&lt;shape=(1460, 50, 2700, 3600), chunksize=(1, 1, 2700, 3600)&gt;
+        u               (time, st_ocean, yu_ocean, xu_ocean) float32 dask.array&lt;shape=(1460, 50, 2700, 3600), chunksize=(1, 1, 2700, 3600)&gt;
+        v               (time, st_ocean, yu_ocean, xu_ocean) float32 dask.array&lt;shape=(1460, 50, 2700, 3600), chunksize=(1, 1, 2700, 3600)&gt;</pre>
+          </div>
+        </div>
+      </div>
+    </div>
+
+GFDL_CM2_6_grid
+~~~~~~~~~~~~~~~
+
+GFDL CM2.6 climate model ocean grid
+
+.. raw:: html
+
+       <div class="panel-group" id="accordion-GFDL_CM2_6_grid">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h4 class="panel-title">
+            <a data-toggle="collapse" data-parent="#accordion-GFDL_CM2_6_grid" href="#collapse1-GFDL_CM2_6_grid">
+            load in python
+            </a>
+          </h4>
+        </div>
+        <div id="collapse1-GFDL_CM2_6_grid" class="panel-collapse collapse">
+          <div class="panel-body">
+          <pre>import intake
+    cat = intake.Catalog(&#34;https://raw.githubusercontent.com/pangeo-data/pangeo-datastore/master/intake-catalogs/ocean.yaml&#34;)
+    ds = cat[&#34;GFDL_CM2_6_grid&#34;].to_dask()</pre>
+          </div>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h4 class="panel-title">
+            <a data-toggle="collapse" data-parent="#accordion-GFDL_CM2_6_grid" href="#collapse2-GFDL_CM2_6_grid">
+             metadata</a>
+          </h4>
+        </div>
+        <div id="collapse2-GFDL_CM2_6_grid" class="panel-collapse collapse">
+          <div class="panel-body">
+           <table class="table table-condensed table-hover">
+            <tbody>
+           
+             <tr><td>url</td><td>https://www.gfdl.noaa.gov/cm2-6/</td></tr>
+           
+             <tr><td>tags</td><td>[&#39;ocean&#39;, &#39;model&#39;]</td></tr>
+           
+             <tr><td>catalog_dir</td><td>/home/jovyan/./intake-catalogs/</td></tr>
+           
+            </tbody>
+           </table>
+          </div>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h4 class="panel-title">
+            <a data-toggle="collapse" data-parent="#accordion-GFDL_CM2_6_grid" href="#collapse3-GFDL_CM2_6_grid">
+            xarray preview</a>
+          </h4>
+        </div>
+        <div id="collapse3-GFDL_CM2_6_grid" class="panel-collapse collapse">
+          <div class="panel-body">
+          <pre>&lt;xarray.Dataset&gt;
+    Dimensions:         (st_edges_ocean: 51, st_ocean: 50, sw_edges_ocean: 51, sw_ocean: 50, xt_ocean: 3600, xu_ocean: 3600, yt_ocean: 2700, yu_ocean: 2700)
+    Coordinates:
+        area_t          (yt_ocean, xt_ocean) float32 dask.array&lt;shape=(2700, 3600), chunksize=(2700, 3600)&gt;
+        area_u          (yu_ocean, xu_ocean) float32 dask.array&lt;shape=(2700, 3600), chunksize=(2700, 3600)&gt;
+        dxt             (yt_ocean, xt_ocean) float64 dask.array&lt;shape=(2700, 3600), chunksize=(2700, 3600)&gt;
+        dxu             (yu_ocean, xu_ocean) float64 dask.array&lt;shape=(2700, 3600), chunksize=(2700, 3600)&gt;
+        dyt             (yt_ocean, xt_ocean) float64 dask.array&lt;shape=(2700, 3600), chunksize=(2700, 3600)&gt;
+        dyu             (yu_ocean, xu_ocean) float64 dask.array&lt;shape=(2700, 3600), chunksize=(2700, 3600)&gt;
+        geolat_c        (yu_ocean, xu_ocean) float32 dask.array&lt;shape=(2700, 3600), chunksize=(2700, 3600)&gt;
+        geolat_e        (yt_ocean, xu_ocean) float64 dask.array&lt;shape=(2700, 3600), chunksize=(2700, 3600)&gt;
+        geolat_n        (yu_ocean, xt_ocean) float64 dask.array&lt;shape=(2700, 3600), chunksize=(2700, 3600)&gt;
+        geolat_t        (yt_ocean, xt_ocean) float32 dask.array&lt;shape=(2700, 3600), chunksize=(2700, 3600)&gt;
+        geolon_c        (yu_ocean, xu_ocean) float32 dask.array&lt;shape=(2700, 3600), chunksize=(2700, 3600)&gt;
+        geolon_e        (yt_ocean, xu_ocean) float64 dask.array&lt;shape=(2700, 3600), chunksize=(2700, 3600)&gt;
+        geolon_n        (yu_ocean, xt_ocean) float64 dask.array&lt;shape=(2700, 3600), chunksize=(2700, 3600)&gt;
+        geolon_t        (yt_ocean, xt_ocean) float32 dask.array&lt;shape=(2700, 3600), chunksize=(2700, 3600)&gt;
+        ht              (yt_ocean, xt_ocean) float32 dask.array&lt;shape=(2700, 3600), chunksize=(2700, 3600)&gt;
+        hu              (yu_ocean, xu_ocean) float32 dask.array&lt;shape=(2700, 3600), chunksize=(2700, 3600)&gt;
+        kmt             (yt_ocean, xt_ocean) float32 dask.array&lt;shape=(2700, 3600), chunksize=(2700, 3600)&gt;
+        kmu             (yu_ocean, xu_ocean) float32 dask.array&lt;shape=(2700, 3600), chunksize=(2700, 3600)&gt;
+      * st_edges_ocean  (st_edges_ocean) float64 0.0 10.07 ... 5.29e+03 5.5e+03
+      * st_ocean        (st_ocean) float64 5.034 15.1 25.22 ... 5.185e+03 5.395e+03
+      * sw_edges_ocean  (sw_edges_ocean) float64 5.034 15.1 ... 5.395e+03 5.5e+03
+      * sw_ocean        (sw_ocean) float64 10.07 20.16 30.29 ... 5.29e+03 5.5e+03
+        wet             (yt_ocean, xt_ocean) float64 dask.array&lt;shape=(2700, 3600), chunksize=(2700, 3600)&gt;
+      * xt_ocean        (xt_ocean) float64 -279.9 -279.8 -279.7 ... 79.85 79.95
+      * xu_ocean        (xu_ocean) float64 -279.9 -279.8 -279.7 ... 79.8 79.9 80.0
+      * yt_ocean        (yt_ocean) float64 -81.11 -81.07 -81.02 ... 89.94 89.98
+      * yu_ocean        (yu_ocean) float64 -81.09 -81.05 -81.0 ... 89.92 89.96 90.0
+    Data variables:
+        *empty*
+    Attributes:
+        NCO:      4.0.3</pre>
+          </div>
+        </div>
+      </div>
+    </div>
+

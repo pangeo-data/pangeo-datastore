@@ -1,0 +1,26 @@
+=====
+cmip6
+=====
+
+Pangeo CMIP6 Dataset Catalog
+----------------------------
+
+Catalog URL:
+
+.. code-block:: html
+
+   https://raw.githubusercontent.com/pangeo-data/pangeo-datastore/master/intake-catalogs/cmip6.yaml
+
+Parent Catalogs
+---------------
+
+:doc:`master <../master>`
+
+Child Catalogs
+--------------
+
+.. toctree::
+   :glob: 
+   :maxdepth: 1
+
+   cmip6/*

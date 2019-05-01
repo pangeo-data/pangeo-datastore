@@ -1,0 +1,21 @@
+======
+master
+======
+
+Pangeo Master Data Catalog
+--------------------------
+
+Catalog URL:
+
+.. code-block:: html
+
+   https://raw.githubusercontent.com/pangeo-data/pangeo-datastore/master/intake-catalogs/master.yaml
+
+Child Catalogs
+--------------
+
+.. toctree::
+   :glob: 
+   :maxdepth: 1
+
+   master/*
