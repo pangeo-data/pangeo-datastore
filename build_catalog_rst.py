@@ -131,9 +131,10 @@ class CatalogRSTBuilder:
                 extra_prefixes = ['..'] * levels_up
                 full_path = extra_prefixes + [to_valid_filename(prefix[n])]
                 parent_cat_path = os.path.join(*full_path)
-                parent_link = ':doc:' + d.inline_link(prefix[n], parent_cat_path)
+                parent_link = ':doc:' + d.inline_link(prefix[n], parent_cat_path)[:-1]
                 parent_links.append(parent_link)
             d.content(' / '.join(parent_links))
+            d.newline()
 
         sub_catalogs = []
         entries = []
@@ -152,7 +153,7 @@ class CatalogRSTBuilder:
             d.h2('Child Catalogs')
             d.newline()
             sub_catalog_path = os.path.join(to_valid_filename(cat.name), '*')
-            d.directive('toctree', fields=[('glob', ''), ('depth', '1')],
+            d.directive('toctree', fields=[('glob', ''), ('maxdepth', '1')],
                         content=sub_catalog_path)
 
         if len(entries) > 0:
@@ -179,7 +180,7 @@ class CatalogRSTBuilder:
         d.write(document_path)
 
 
-    def build(self, depth=2):
+    def build(self, depth=5):
         self.walk_and_write_rst(self.cat, depth=depth)
 
 
