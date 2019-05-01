@@ -151,16 +151,9 @@ class CatalogRSTBuilder:
         if len(sub_catalogs) > 0:
             d.h2('Child Catalogs')
             d.newline()
-        for sub_cat in sub_catalogs:
-            sub_cat_item = cat[sub_cat]
-            sub_cat_path = normalize_document_path([cat.name] + [sub_cat])
-            sub_cat_link = ':doc:' + d.inline_link(sub_cat, sub_cat_path)
-            d.h3(sub_cat_link)
-            d.newline()
-            description = sub_cat_item.description
-            if description:
-                d.content(description)
-                d.newline()
+            sub_catalog_path = os.path.join(to_valid_filename(cat.name), '*')
+            d.directive('toctree', fields=[('glob', ''), ('depth', '1')],
+                        content=sub_catalog_path)
 
         if len(entries) > 0:
             d.h2('Datasets')
@@ -192,7 +185,7 @@ class CatalogRSTBuilder:
 
 def main():
     master_catalog = './intake-catalogs/master.yaml'
-    output_rst_dir = 'intake-catalogs-rst'
+    output_rst_dir = 'docs'
     remote_url_base = 'https://raw.githubusercontent.com/pangeo-data/pangeo-datastore/master/intake-catalogs'
     builder = CatalogRSTBuilder(master_catalog, output_rst_dir, remote_url_base,
                                 actually_load=False)
