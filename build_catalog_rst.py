@@ -7,8 +7,7 @@ import jinja2
 from rstcloth.rstcloth import RstCloth
 
 
-template_html = """
-    <div class="panel-group" id="accordion-{{ id }}">
+template_html = """    <div class="panel-group" id="accordion-{{ id }}">
       <div class="panel panel-default">
         <div class="panel-heading">
           <h4 class="panel-title">
@@ -89,8 +88,10 @@ class CatalogRSTBuilder:
 
     def remote_catalog_url(self, path):
         # translate local path name to url
-        local_base_path = os.path.dirname(self.master_catalog_path)
-        return path.replace(local_base_path, self.remote_url_base)
+        local_base_path = os.path.abspath(os.path.dirname(self.master_catalog_path))
+        abs_path = os.path.abspath(path)
+        url_path = abs_path.replace(local_base_path, self.remote_url_base)
+        return url_path
 
 
     def dataset_open_code(self, intake_ds):
@@ -117,8 +118,16 @@ class CatalogRSTBuilder:
         d = RstCloth()
 
         assert cat.description, 'Catalog needs a description for title'
-        title = cat.description
+        #title = cat.description
+
+        title = cat.name
         d.title(title)
+        d.newline()
+        d.h2(cat.description)
+        d.newline()
+        d.content('Catalog URL:')
+        d.newline()
+        d.codeblock(self.remote_catalog_url(cat.path), language='html')
         d.newline()
 
         if len(prefix) > 0:
@@ -153,7 +162,9 @@ class CatalogRSTBuilder:
             d.h2('Child Catalogs')
             d.newline()
             sub_catalog_path = os.path.join(to_valid_filename(cat.name), '*')
-            d.directive('toctree', fields=[('glob', ''), ('maxdepth', '1')],
+            d.directive('toctree',
+                        fields=[#('caption', 'Child Datasets'),
+                                ('glob', ''), ('maxdepth', '1')],
                         content=sub_catalog_path)
 
         if len(entries) > 0:
