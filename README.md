@@ -2,6 +2,8 @@
 
 **Catalog Status**: [![Build Status](https://travis-ci.org/pangeo-data/pangeo-datastore.svg?branch=master)](https://travis-ci.org/pangeo-data/pangeo-datastore) 
 
+**Browseable Online Website**: <https://pangeo-data.github.io/pangeo-datastore/>
+
 This repository is where Pangeo's official cloud data catalog lives.
 This catalog is an [Intake](https://github.com/ContinuumIO/intake) catalog.
 Most of the data is stored in [Zarr](https://github.com/zarr-developers/zarr) format
