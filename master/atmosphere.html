@@ -92,6 +92,7 @@
 <li><a class="reference internal" href="#trmm-3b42rt">trmm_3b42rt</a></li>
 <li><a class="reference internal" href="#sam-ngaqua-qobs-eqx-3d">sam_ngaqua_qobs_eqx_3d</a></li>
 <li><a class="reference internal" href="#gpcp-cdr-daily-v1-3">gpcp_cdr_daily_v1_3</a></li>
+<li><a class="reference internal" href="#wrf50-erai">wrf50_erai</a></li>
 </ul>
 </li>
 </ul>
@@ -140,6 +141,7 @@
 <li><a class="reference internal" href="#trmm-3b42rt">trmm_3b42rt</a></li>
 <li><a class="reference internal" href="#sam-ngaqua-qobs-eqx-3d">sam_ngaqua_qobs_eqx_3d</a></li>
 <li><a class="reference internal" href="#gpcp-cdr-daily-v1-3">gpcp_cdr_daily_v1_3</a></li>
+<li><a class="reference internal" href="#wrf50-erai">wrf50_erai</a></li>
 </ul>
 </li>
 </ul>
@@ -555,6 +557,86 @@ Attributes:
     time_coverage_end:          1997-01-01T23:59:59Z
     time_coverage_start:        1997-01-01T00:00:00Z
     title:                      Global Precipitation Climatatology Project (G...</pre>
+      </div>
+    </div>
+  </div>
+</div></div>
+<div class="section" id="wrf50-erai">
+<h3>wrf50_erai<a class="headerlink" href="#wrf50-erai" title="Permalink to this headline">¶</a></h3>
+<p>Daily meteorology from 50km WRF simulation forced with ERA-Interim</p>
+   <div class="panel-group" id="accordion-wrf50_erai">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion-wrf50_erai" href="#collapse1-wrf50_erai">
+        load in python
+        </a>
+      </h4>
+    </div>
+    <div id="collapse1-wrf50_erai" class="panel-collapse collapse">
+      <div class="panel-body">
+      <pre>import intake
+cat = intake.Catalog(&#34;https://raw.githubusercontent.com/pangeo-data/pangeo-datastore/master/intake-catalogs/atmosphere.yaml&#34;)
+ds = cat[&#34;wrf50_erai&#34;].to_dask()</pre>
+      </div>
+    </div>
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion-wrf50_erai" href="#collapse2-wrf50_erai">
+         metadata</a>
+      </h4>
+    </div>
+    <div id="collapse2-wrf50_erai" class="panel-collapse collapse">
+      <div class="panel-body">
+       <table class="table table-condensed table-hover">
+        <tbody>
+
+         <tr><td>catalog_dir</td><td>/home/jovyan/./intake-catalogs/</td></tr>
+
+        </tbody>
+       </table>
+      </div>
+    </div>
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion-wrf50_erai" href="#collapse3-wrf50_erai">
+        xarray preview</a>
+      </h4>
+    </div>
+    <div id="collapse3-wrf50_erai" class="panel-collapse collapse">
+      <div class="panel-body">
+      <pre>&lt;xarray.Dataset&gt;
+Dimensions:      (ni: 71, nj: 107, time: 13483)
+Coordinates:
+    lat          (ni, nj) float32 dask.array&lt;shape=(71, 107), chunksize=(71, 107)&gt;
+    lon          (ni, nj) float32 dask.array&lt;shape=(71, 107), chunksize=(71, 107)&gt;
+  * time         (time) datetime64[ns] 1979-01-01T11:30:00 ... 2015-11-30T11:30:00
+Dimensions without coordinates: ni, nj
+Data variables:
+    DIV          (time, ni, nj) float32 dask.array&lt;shape=(13483, 71, 107), chunksize=(3650, 71, 107)&gt;
+    PREC_ACC_C   (time, ni, nj) float32 dask.array&lt;shape=(13483, 71, 107), chunksize=(3650, 71, 107)&gt;
+    PREC_ACC_NC  (time, ni, nj) float32 dask.array&lt;shape=(13483, 71, 107), chunksize=(3650, 71, 107)&gt;
+    PREC_TOT     (time, ni, nj) float32 dask.array&lt;shape=(13483, 71, 107), chunksize=(3650, 71, 107)&gt;
+    PSFC         (time, ni, nj) float32 dask.array&lt;shape=(13483, 71, 107), chunksize=(3650, 71, 107)&gt;
+    QVAPOR       (time, ni, nj) float32 dask.array&lt;shape=(13483, 71, 107), chunksize=(3650, 71, 107)&gt;
+    T            (time, ni, nj) float32 dask.array&lt;shape=(13483, 71, 107), chunksize=(3650, 71, 107)&gt;
+    T2           (time, ni, nj) float32 dask.array&lt;shape=(13483, 71, 107), chunksize=(3650, 71, 107)&gt;
+    T2max        (time, ni, nj) float32 dask.array&lt;shape=(13483, 71, 107), chunksize=(3650, 71, 107)&gt;
+    T2min        (time, ni, nj) float32 dask.array&lt;shape=(13483, 71, 107), chunksize=(3650, 71, 107)&gt;
+    T_MEAN       (time, ni, nj) float32 dask.array&lt;shape=(13483, 71, 107), chunksize=(3650, 71, 107)&gt;
+    T_RANGE      (time, ni, nj) float32 dask.array&lt;shape=(13483, 71, 107), chunksize=(3650, 71, 107)&gt;
+    U            (time, ni, nj) float32 dask.array&lt;shape=(13483, 71, 107), chunksize=(3650, 71, 107)&gt;
+    V            (time, ni, nj) float32 dask.array&lt;shape=(13483, 71, 107), chunksize=(3650, 71, 107)&gt;
+    W            (time, ni, nj) float32 dask.array&lt;shape=(13483, 71, 107), chunksize=(3650, 71, 107)&gt;
+Attributes:
+    NCO:                        &#34;4.5.5&#34;
+    history:                    Wed Mar  1 13:48:35 2017: ncatted -a calendar...
+    history_of_appended_files:  Wed Feb  8 14:15:52 2017: Appended file wrf_d...
+    nco_openmp_thread_number:   1</pre>
       </div>
     </div>
   </div>
