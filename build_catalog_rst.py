@@ -182,7 +182,8 @@ class CatalogRSTBuilder:
 
             ds_repr = self.dataset_repr(ds_item)
             open_code = self.dataset_open_code(ds_item)
-            html = template.render(id=name, open_code=open_code,
+            name_jsfriendly = to_valid_filename(name).replace('.', '_')
+            html = template.render(id=name_jsfriendly, open_code=open_code,
                                    repr=ds_repr, metadata=ds_item.metadata)
             d.directive('raw', arg='html', content=html)
             d.newline()
