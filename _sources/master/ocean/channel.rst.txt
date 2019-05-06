@@ -27,16 +27,16 @@ field monthly mean climatology
 
 .. raw:: html
 
-       <div class="panel-group" id="accordion-MITgcm_channel_flatbottom_02km_run01_phys-mon">
+       <div class="panel-group" id="accordion-mitgcm_channel_flatbottom_02km_run01_phys-mon">
       <div class="panel panel-default">
         <div class="panel-heading">
           <h4 class="panel-title">
-            <a data-toggle="collapse" data-parent="#accordion-MITgcm_channel_flatbottom_02km_run01_phys-mon" href="#collapse1-MITgcm_channel_flatbottom_02km_run01_phys-mon">
+            <a data-toggle="collapse" data-parent="#accordion-mitgcm_channel_flatbottom_02km_run01_phys-mon" href="#collapse1-mitgcm_channel_flatbottom_02km_run01_phys-mon">
             load in python
             </a>
           </h4>
         </div>
-        <div id="collapse1-MITgcm_channel_flatbottom_02km_run01_phys-mon" class="panel-collapse collapse">
+        <div id="collapse1-mitgcm_channel_flatbottom_02km_run01_phys-mon" class="panel-collapse collapse">
           <div class="panel-body">
           <pre>import intake
     cat = intake.Catalog(&#34;https://raw.githubusercontent.com/pangeo-data/pangeo-datastore/master/intake-catalogs/ocean/channel.yaml&#34;)
@@ -47,11 +47,11 @@ field monthly mean climatology
       <div class="panel panel-default">
         <div class="panel-heading">
           <h4 class="panel-title">
-            <a data-toggle="collapse" data-parent="#accordion-MITgcm_channel_flatbottom_02km_run01_phys-mon" href="#collapse2-MITgcm_channel_flatbottom_02km_run01_phys-mon">
+            <a data-toggle="collapse" data-parent="#accordion-mitgcm_channel_flatbottom_02km_run01_phys-mon" href="#collapse2-mitgcm_channel_flatbottom_02km_run01_phys-mon">
              metadata</a>
           </h4>
         </div>
-        <div id="collapse2-MITgcm_channel_flatbottom_02km_run01_phys-mon" class="panel-collapse collapse">
+        <div id="collapse2-mitgcm_channel_flatbottom_02km_run01_phys-mon" class="panel-collapse collapse">
           <div class="panel-body">
            <table class="table table-condensed table-hover">
             <tbody>
@@ -72,11 +72,11 @@ field monthly mean climatology
       <div class="panel panel-default">
         <div class="panel-heading">
           <h4 class="panel-title">
-            <a data-toggle="collapse" data-parent="#accordion-MITgcm_channel_flatbottom_02km_run01_phys-mon" href="#collapse3-MITgcm_channel_flatbottom_02km_run01_phys-mon">
+            <a data-toggle="collapse" data-parent="#accordion-mitgcm_channel_flatbottom_02km_run01_phys-mon" href="#collapse3-mitgcm_channel_flatbottom_02km_run01_phys-mon">
             xarray preview</a>
           </h4>
         </div>
-        <div id="collapse3-MITgcm_channel_flatbottom_02km_run01_phys-mon" class="panel-collapse collapse">
+        <div id="collapse3-mitgcm_channel_flatbottom_02km_run01_phys-mon" class="panel-collapse collapse">
           <div class="panel-body">
           <pre>&lt;xarray.Dataset&gt;
     Dimensions:   (XC: 500, XG: 500, YC: 1000, YG: 1000, Z: 76, Zl: 76, Zp1: 77, Zu: 76, time: 12)
@@ -126,16 +126,16 @@ field snapshots every 15 days
 
 .. raw:: html
 
-       <div class="panel-group" id="accordion-MITgcm_channel_flatbottom_02km_run01_phys_snap15D">
+       <div class="panel-group" id="accordion-mitgcm_channel_flatbottom_02km_run01_phys_snap15d">
       <div class="panel panel-default">
         <div class="panel-heading">
           <h4 class="panel-title">
-            <a data-toggle="collapse" data-parent="#accordion-MITgcm_channel_flatbottom_02km_run01_phys_snap15D" href="#collapse1-MITgcm_channel_flatbottom_02km_run01_phys_snap15D">
+            <a data-toggle="collapse" data-parent="#accordion-mitgcm_channel_flatbottom_02km_run01_phys_snap15d" href="#collapse1-mitgcm_channel_flatbottom_02km_run01_phys_snap15d">
             load in python
             </a>
           </h4>
         </div>
-        <div id="collapse1-MITgcm_channel_flatbottom_02km_run01_phys_snap15D" class="panel-collapse collapse">
+        <div id="collapse1-mitgcm_channel_flatbottom_02km_run01_phys_snap15d" class="panel-collapse collapse">
           <div class="panel-body">
           <pre>import intake
     cat = intake.Catalog(&#34;https://raw.githubusercontent.com/pangeo-data/pangeo-datastore/master/intake-catalogs/ocean/channel.yaml&#34;)
@@ -146,11 +146,11 @@ field snapshots every 15 days
       <div class="panel panel-default">
         <div class="panel-heading">
           <h4 class="panel-title">
-            <a data-toggle="collapse" data-parent="#accordion-MITgcm_channel_flatbottom_02km_run01_phys_snap15D" href="#collapse2-MITgcm_channel_flatbottom_02km_run01_phys_snap15D">
+            <a data-toggle="collapse" data-parent="#accordion-mitgcm_channel_flatbottom_02km_run01_phys_snap15d" href="#collapse2-mitgcm_channel_flatbottom_02km_run01_phys_snap15d">
              metadata</a>
           </h4>
         </div>
-        <div id="collapse2-MITgcm_channel_flatbottom_02km_run01_phys_snap15D" class="panel-collapse collapse">
+        <div id="collapse2-mitgcm_channel_flatbottom_02km_run01_phys_snap15d" class="panel-collapse collapse">
           <div class="panel-body">
            <table class="table table-condensed table-hover">
             <tbody>
@@ -171,11 +171,11 @@ field snapshots every 15 days
       <div class="panel panel-default">
         <div class="panel-heading">
           <h4 class="panel-title">
-            <a data-toggle="collapse" data-parent="#accordion-MITgcm_channel_flatbottom_02km_run01_phys_snap15D" href="#collapse3-MITgcm_channel_flatbottom_02km_run01_phys_snap15D">
+            <a data-toggle="collapse" data-parent="#accordion-mitgcm_channel_flatbottom_02km_run01_phys_snap15d" href="#collapse3-mitgcm_channel_flatbottom_02km_run01_phys_snap15d">
             xarray preview</a>
           </h4>
         </div>
-        <div id="collapse3-MITgcm_channel_flatbottom_02km_run01_phys_snap15D" class="panel-collapse collapse">
+        <div id="collapse3-mitgcm_channel_flatbottom_02km_run01_phys_snap15d" class="panel-collapse collapse">
           <div class="panel-body">
           <pre>&lt;xarray.Dataset&gt;
     Dimensions:  (XC: 500, XG: 500, YC: 1000, YG: 1000, Z: 76, Zl: 76, Zp1: 77, Zu: 76, time: 25)
