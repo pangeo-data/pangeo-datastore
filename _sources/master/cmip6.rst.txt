@@ -1,9 +1,6 @@
-=====
-cmip6
-=====
-
-Pangeo CMIP6 Dataset Catalog
-----------------------------
+===================================
+cmip6: Pangeo CMIP6 Dataset Catalog
+===================================
 
 Catalog URL:
 

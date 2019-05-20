@@ -1,9 +1,6 @@
-=======
-channel
-=======
-
-MITgcm High Resolution Channel Simulations
-------------------------------------------
+===================================================
+channel: MITgcm High Resolution Channel Simulations
+===================================================
 
 Catalog URL:
 

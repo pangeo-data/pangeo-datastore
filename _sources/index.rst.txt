@@ -39,7 +39,7 @@ Catalog Contents
 This website is a statically generated Sphinx site from which you can browse the catalog contents.
 
 .. toctree::
-   :maxdepth: 10
+   :maxdepth: 3
 
    master
 

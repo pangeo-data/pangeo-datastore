@@ -1,9 +1,6 @@
-==========
-atmosphere
-==========
-
-Pangeo Atmospheric Science Dataset Catalog
-------------------------------------------
+======================================================
+atmosphere: Pangeo Atmospheric Science Dataset Catalog
+======================================================
 
 Catalog URL:
 

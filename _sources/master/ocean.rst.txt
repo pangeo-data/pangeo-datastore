@@ -1,9 +1,6 @@
-=====
-ocean
-=====
-
-Pangeo Oceanography Dataset Catalog
------------------------------------
+==========================================
+ocean: Pangeo Oceanography Dataset Catalog
+==========================================
 
 Catalog URL:
 

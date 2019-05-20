@@ -1,9 +1,6 @@
-=====
-hydro
-=====
-
-Pangeo Hydrology Dataset Catalog
---------------------------------
+=======================================
+hydro: Pangeo Hydrology Dataset Catalog
+=======================================
 
 Catalog URL:
 

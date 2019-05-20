@@ -1,9 +1,6 @@
-====
-A3hr
-====
-
-Pangeo CMIP6 Dataset Catalog - historical 3hourly atmosphere data
------------------------------------------------------------------
+=======================================================================
+A3hr: Pangeo CMIP6 Dataset Catalog - historical 3hourly atmosphere data
+=======================================================================
 
 Catalog URL:
 

@@ -1,9 +1,6 @@
-======
-master
-======
-
-Pangeo Master Data Catalog
---------------------------
+==================================
+master: Pangeo Master Data Catalog
+==================================
 
 Catalog URL:
 

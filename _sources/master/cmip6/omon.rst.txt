@@ -1,9 +1,6 @@
-====
-Omon
-====
-
-Pangeo CMIP6 Dataset Catalog - historical monthly ocean data
-------------------------------------------------------------
+==================================================================
+Omon: Pangeo CMIP6 Dataset Catalog - historical monthly ocean data
+==================================================================
 
 Catalog URL:
 
