@@ -120,10 +120,8 @@ class CatalogRSTBuilder:
         assert cat.description, 'Catalog needs a description for title'
         #title = cat.description
 
-        title = cat.name
+        title = cat.name + ': ' + cat.description
         d.title(title)
-        d.newline()
-        d.h2(cat.description)
         d.newline()
         d.content('Catalog URL:')
         d.newline()
