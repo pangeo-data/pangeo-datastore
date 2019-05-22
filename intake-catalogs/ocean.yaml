@@ -46,217 +46,26 @@ sources:
         token: anon
       consolidated: True
 
-  LLC4320_grid:
-    description: MITgcm LLC4320 Ocean Simulation Grid
-    metadata:
-      url: 'http://online.kitp.ucsb.edu/online/blayers18/menemenlis/'
-      tags:
-        - ocean
-        - model
-    driver: zarr
+  LLC4320:
     args:
-      urlpath: 'gcs://pangeo-data/llc4320_surface/grid'
-      storage_options:
-        token: anon
-      consolidated: True
+      path: "{{CATALOG_DIR}}/ocean/llc4320.yaml"
+    description: 'MITgcm Global LLC4320 Simulations'
+    driver: intake.catalog.local.YAMLFileCatalog
+    metadata: {}
 
-  LLC4320_SST:
-    description: MITgcm LLC4320 Ocean Simulation Sea Surface Temperature
-    metadata:
-      url: 'http://online.kitp.ucsb.edu/online/blayers18/menemenlis/'
-      tags:
-        - ocean
-        - model
-    driver: zarr
+  GFDL_CM2_6:
     args:
-      urlpath: 'gcs://pangeo-data/llc4320_surface/SST'
-      storage_options:
-        token: anon
-      consolidated: True
+      path: "{{CATALOG_DIR}}/ocean/GFDL_CM2.6.yaml"
+    description: 'GFDL CM2.6 Climate Model Ocean Fields'
+    driver: intake.catalog.local.YAMLFileCatalog
+    metadata: {}
 
-  LLC4320_SSS:
-    description: MITgcm LLC4320 Ocean Simulation Sea Surface Salinity
-    metadata:
-      url: 'http://online.kitp.ucsb.edu/online/blayers18/menemenlis/'
-      tags:
-        - ocean
-        - model
-    driver: zarr
+  CESM_POP:
     args:
-      urlpath: 'gcs://pangeo-data/llc4320_surface/SSS'
-      storage_options:
-        token: anon
-      consolidated: True
-
-  LLC4320_SSH:
-    description: MITgcm LLC4320 Ocean Simulation Sea Surface Height
-    metadata:
-      url: 'http://online.kitp.ucsb.edu/online/blayers18/menemenlis/'
-      tags:
-        - ocean
-        - model
-    driver: zarr
-    args:
-      urlpath: 'gcs://pangeo-data/llc4320_surface/Eta'
-      storage_options:
-        token: anon
-      consolidated: True
-
-  LLC4320_SSU:
-    description: MITgcm LLC4320 Ocean Simulation Sea Surface Zonal Velocity
-    metadata:
-      url: 'http://online.kitp.ucsb.edu/online/blayers18/menemenlis/'
-      tags:
-        - ocean
-        - model
-    driver: zarr
-    args:
-      urlpath: 'gcs://pangeo-data/llc4320_surface/U'
-      storage_options:
-        token: anon
-      consolidated: True
-
-  LLC4320_SSV:
-    description: MITgcm LLC4320 Ocean Simulation Sea Surface Meridional Velocity
-    metadata:
-      url: 'http://online.kitp.ucsb.edu/online/blayers18/menemenlis/'
-      tags:
-        - ocean
-        - model
-    driver: zarr
-    args:
-      urlpath: 'gcs://pangeo-data/llc4320_surface/V'
-      storage_options:
-        token: anon
-      consolidated: True
-
-  CESM_POP_hires_control:
-    description: NCAR CESM POP model run hybrid_v5_rel04_BC5_ne120_t12_pop62
-    metadata:
-      time_period: perpetual 2000
-      tags:
-        - ocean
-        - model
-    driver: zarr
-    args:
-      urlpath: 'gcs://pangeo-data/cesm/hybrid_v5_rel04_BC5_ne120_t12_pop62'
-      storage_options:
-        token: anon
-      consolidated: True
-
-  CESM_POP_hires_RCP8_5:
-    description: NCAR CESM POP model run BRCP85C5CN_ne120_t12_pop62.c13b17.asdphys.001
-    metadata:
-      time_period: "2000-2050"
-      tags:
-        - ocean
-        - model
-    driver: zarr
-    args:
-      urlpath: 'gcs://pangeo-data/cesm/BRCP85C5CN_ne120_t12_pop62.c13b17.asdphys.001'
-      storage_options:
-        token: anon
-      consolidated: True
-
-  GFDL_CM2_6_control_ocean_surface:
-    description: "GFDL CM2.6 climate model control run daily ocean surface fields"
-    metadata:
-      url: 'https://www.gfdl.noaa.gov/cm2-6/'
-      tags:
-        - ocean
-        - model
-    driver: zarr
-    args:
-      urlpath: 'gcs://pangeo-data/cm2.6/control/surface_daily'
-      storage_options:
-        token: anon
-      consolidated: True
-
-  GFDL_CM2_6_control_ocean_boundary:
-    description: "GFDL CM2.6 climate model control run ocean boundary flux fields"
-    metadata:
-      url: 'https://www.gfdl.noaa.gov/cm2-6/'
-      tags:
-        - ocean
-        - model
-    driver: zarr
-    args:
-      urlpath: 'gcs://pangeo-data/cm2.6/control/ocean_bdy_flux'
-      storage_options:
-        token: anon
-      consolidated: True
-
-  GFDL_CM2_6_control_ocean_3D:
-    description: "GFDL CM2.6 climate model control run 5-day-average 3D ocean fields"
-    metadata:
-      url: 'https://www.gfdl.noaa.gov/cm2-6/'
-      tags:
-        - ocean
-        - model
-    driver: zarr
-    args:
-      urlpath: 'gcs://pangeo-data/cm2.6/control/temp_salt_u_v-5day_avg'
-      storage_options:
-        token: anon
-      consolidated: True
-
-  GFDL_CM2_6_one_percent_ocean_surface:
-    description: "GFDL CM2.6 climate model one-percent CO2 increase ocean surface fields"
-    metadata:
-      url: 'https://www.gfdl.noaa.gov/cm2-6/'
-      tags:
-        - ocean
-        - model
-    driver: zarr
-    args:
-      urlpath: 'gcs://pangeo-data/cm2.6/one_percent/surface_daily'
-      storage_options:
-        token: anon
-      consolidated: True
-
-  GFDL_CM2_6_one_percent_ocean_3D:
-    description: "GFDL CM2.6 climate model one-percent CO2 increase run 5-day-average 3D ocean fields"
-    metadata:
-      url: 'https://www.gfdl.noaa.gov/cm2-6/'
-      tags:
-        - ocean
-        - model
-    driver: zarr
-    args:
-      urlpath: 'gcs://pangeo-data/cm2.6/control/temp_salt_u_v-5day_avg'
-      storage_options:
-        token: anon
-      consolidated: True
-
-  GFDL_CM2_6_grid:
-    description: "GFDL CM2.6 climate model ocean grid"
-    metadata:
-      url: 'https://www.gfdl.noaa.gov/cm2-6/'
-      tags:
-        - ocean
-        - model
-    driver: zarr
-    args:
-      urlpath: 'gcs://pangeo-data/cm2.6/grid'
-      storage_options:
-        token: anon
-      consolidated: True
-
-  GODAS:
-    description: "NCEP Global Ocean Data Assimilation System"
-    metadata:
-      uploader_github: rabernat
-      uploader_email: rpa@ldeo.columbia.edu
-      url: 'https://www.esrl.noaa.gov/psd/data/gridded/data.godas.html'
-      tags:
-        - ocean
-        - data assimilation
-    driver: zarr
-    args:
-      urlpath: 'gcs://pangeo-data/GODAS/zarr'
-      storage_options:
-        token: anon
-      consolidated: True
+      path: "{{CATALOG_DIR}}/ocean/CESM_POP.yaml"
+    description: 'NCAR CESM Global High Resolution Ocean Model Fields'
+    driver: intake.catalog.local.YAMLFileCatalog
+    metadata: {}
 
   channel:
     args:
