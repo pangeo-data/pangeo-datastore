@@ -1,0 +1,312 @@
+=============================================================
+CESM_POP: NCAR CESM Global High Resolution Ocean Model Fields
+=============================================================
+
+Catalog URL:
+
+.. code-block:: html
+
+   https://raw.githubusercontent.com/pangeo-data/pangeo-datastore/master/intake-catalogs/ocean/CESM_POP.yaml
+
+Parent Catalogs
+---------------
+
+:doc:`master <../../master>` / :doc:`ocean <../ocean>`
+
+Datasets
+--------
+
+CESM_POP_hires_control
+~~~~~~~~~~~~~~~~~~~~~~
+
+NCAR CESM POP model run hybrid_v5_rel04_BC5_ne120_t12_pop62
+
+.. raw:: html
+
+       <div class="panel-group" id="accordion-cesm_pop_hires_control">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h4 class="panel-title">
+            <a data-toggle="collapse" data-parent="#accordion-cesm_pop_hires_control" href="#collapse1-cesm_pop_hires_control">
+            load in python
+            </a>
+          </h4>
+        </div>
+        <div id="collapse1-cesm_pop_hires_control" class="panel-collapse collapse">
+          <div class="panel-body">
+          <pre>import intake
+    cat = intake.Catalog(&#34;https://raw.githubusercontent.com/pangeo-data/pangeo-datastore/master/intake-catalogs/ocean/CESM_POP.yaml&#34;)
+    ds = cat[&#34;CESM_POP_hires_control&#34;].to_dask()</pre>
+          </div>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h4 class="panel-title">
+            <a data-toggle="collapse" data-parent="#accordion-cesm_pop_hires_control" href="#collapse2-cesm_pop_hires_control">
+             metadata</a>
+          </h4>
+        </div>
+        <div id="collapse2-cesm_pop_hires_control" class="panel-collapse collapse">
+          <div class="panel-body">
+           <table class="table table-condensed table-hover">
+            <tbody>
+           
+             <tr><td>time_period</td><td>perpetual 2000</td></tr>
+           
+             <tr><td>tags</td><td>[&#39;ocean&#39;, &#39;model&#39;]</td></tr>
+           
+             <tr><td>catalog_dir</td><td>/home/jovyan/./intake-catalogs/ocean/</td></tr>
+           
+            </tbody>
+           </table>
+          </div>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h4 class="panel-title">
+            <a data-toggle="collapse" data-parent="#accordion-cesm_pop_hires_control" href="#collapse3-cesm_pop_hires_control">
+            xarray preview</a>
+          </h4>
+        </div>
+        <div id="collapse3-cesm_pop_hires_control" class="panel-collapse collapse">
+          <div class="panel-body">
+          <pre>&lt;xarray.Dataset&gt;
+    Dimensions:             (nlat: 2400, nlon: 3600, time: 14965, z_t: 62, z_t_150m: 15, z_w: 62, z_w_bot: 62, z_w_top: 62)
+    Coordinates:
+        ANGLE               (nlat, nlon) float64 dask.array&lt;shape=(2400, 3600), chunksize=(2400, 3600)&gt;
+        ANGLET              (nlat, nlon) float64 dask.array&lt;shape=(2400, 3600), chunksize=(2400, 3600)&gt;
+        DXT                 (nlat, nlon) float64 dask.array&lt;shape=(2400, 3600), chunksize=(2400, 3600)&gt;
+        DXU                 (nlat, nlon) float64 dask.array&lt;shape=(2400, 3600), chunksize=(2400, 3600)&gt;
+        DYT                 (nlat, nlon) float64 dask.array&lt;shape=(2400, 3600), chunksize=(2400, 3600)&gt;
+        DYU                 (nlat, nlon) float64 dask.array&lt;shape=(2400, 3600), chunksize=(2400, 3600)&gt;
+        HT                  (nlat, nlon) float64 dask.array&lt;shape=(2400, 3600), chunksize=(2400, 3600)&gt;
+        HTE                 (nlat, nlon) float64 dask.array&lt;shape=(2400, 3600), chunksize=(2400, 3600)&gt;
+        HTN                 (nlat, nlon) float64 dask.array&lt;shape=(2400, 3600), chunksize=(2400, 3600)&gt;
+        HU                  (nlat, nlon) float64 dask.array&lt;shape=(2400, 3600), chunksize=(2400, 3600)&gt;
+        HUS                 (nlat, nlon) float64 dask.array&lt;shape=(2400, 3600), chunksize=(2400, 3600)&gt;
+        HUW                 (nlat, nlon) float64 dask.array&lt;shape=(2400, 3600), chunksize=(2400, 3600)&gt;
+        KMT                 (nlat, nlon) float64 dask.array&lt;shape=(2400, 3600), chunksize=(2400, 3600)&gt;
+        KMU                 (nlat, nlon) float64 dask.array&lt;shape=(2400, 3600), chunksize=(2400, 3600)&gt;
+        REGION_MASK         (nlat, nlon) float64 dask.array&lt;shape=(2400, 3600), chunksize=(2400, 3600)&gt;
+        T0_Kelvin           float64 ...
+        TAREA               (nlat, nlon) float64 dask.array&lt;shape=(2400, 3600), chunksize=(2400, 3600)&gt;
+        TLAT                (nlat, nlon) float64 dask.array&lt;shape=(2400, 3600), chunksize=(2400, 3600)&gt;
+        TLONG               (nlat, nlon) float64 dask.array&lt;shape=(2400, 3600), chunksize=(2400, 3600)&gt;
+        UAREA               (nlat, nlon) float64 dask.array&lt;shape=(2400, 3600), chunksize=(2400, 3600)&gt;
+        ULAT                (nlat, nlon) float64 dask.array&lt;shape=(2400, 3600), chunksize=(2400, 3600)&gt;
+        ULONG               (nlat, nlon) float64 dask.array&lt;shape=(2400, 3600), chunksize=(2400, 3600)&gt;
+        cp_air              float64 ...
+        cp_sw               float64 ...
+        days_in_norm_year   timedelta64[ns] ...
+        dz                  (z_t) float32 dask.array&lt;shape=(62,), chunksize=(62,)&gt;
+        dzw                 (z_w) float32 dask.array&lt;shape=(62,), chunksize=(62,)&gt;
+        fwflux_factor       float64 ...
+        grav                float64 ...
+        heat_to_PW          float64 ...
+        hflux_factor        float64 ...
+        latent_heat_fusion  float64 ...
+        latent_heat_vapor   float64 ...
+        mass_to_Sv          float64 ...
+        momentum_factor     float64 ...
+        nsurface_t          float64 ...
+        nsurface_u          float64 ...
+        ocn_ref_salinity    float64 ...
+        omega               float64 ...
+        ppt_to_salt         float64 ...
+        radius              float64 ...
+        rho_air             float64 ...
+        rho_fw              float64 ...
+        rho_sw              float64 ...
+        salinity_factor     float64 ...
+        salt_to_Svppt       float64 ...
+        salt_to_mmday       float64 ...
+        salt_to_ppt         float64 ...
+        sea_ice_salinity    float64 ...
+        sflux_factor        float64 ...
+        sound               float64 ...
+        stefan_boltzmann    float64 ...
+      * time                (time) object 0046-01-02 00:00:00 ... 0087-01-01 00:00:00
+        vonkar              float64 ...
+      * z_t                 (z_t) float32 500.0 1500.0 ... 562499.06 587499.06
+      * z_t_150m            (z_t_150m) float32 500.0 1500.0 ... 13500.0 14500.0
+      * z_w                 (z_w) float32 0.0 1000.0 2000.0 ... 549999.06 574999.06
+      * z_w_bot             (z_w_bot) float32 1000.0 2000.0 ... 574999.06 599999.06
+      * z_w_top             (z_w_top) float32 0.0 1000.0 ... 549999.06 574999.06
+    Dimensions without coordinates: nlat, nlon
+    Data variables:
+        HMXL_2              (time, nlat, nlon) float32 dask.array&lt;shape=(14965, 2400, 3600), chunksize=(1, 2400, 3600)&gt;
+        SFWF_2              (time, nlat, nlon) float32 dask.array&lt;shape=(14965, 2400, 3600), chunksize=(1, 2400, 3600)&gt;
+        SHF_2               (time, nlat, nlon) float32 dask.array&lt;shape=(14965, 2400, 3600), chunksize=(1, 2400, 3600)&gt;
+        SSH_2               (time, nlat, nlon) float32 dask.array&lt;shape=(14965, 2400, 3600), chunksize=(1, 2400, 3600)&gt;
+        SSS                 (time, nlat, nlon) float32 dask.array&lt;shape=(14965, 2400, 3600), chunksize=(1, 2400, 3600)&gt;
+        SST                 (time, nlat, nlon) float32 dask.array&lt;shape=(14965, 2400, 3600), chunksize=(1, 2400, 3600)&gt;
+        TAUX_2              (time, nlat, nlon) float32 dask.array&lt;shape=(14965, 2400, 3600), chunksize=(1, 2400, 3600)&gt;
+        TAUY_2              (time, nlat, nlon) float32 dask.array&lt;shape=(14965, 2400, 3600), chunksize=(1, 2400, 3600)&gt;
+        U1_1                (time, nlat, nlon) float32 dask.array&lt;shape=(14965, 2400, 3600), chunksize=(1, 2400, 3600)&gt;
+        U2_2                (time, nlat, nlon) float32 dask.array&lt;shape=(14965, 2400, 3600), chunksize=(1, 2400, 3600)&gt;
+        V1_1                (time, nlat, nlon) float32 dask.array&lt;shape=(14965, 2400, 3600), chunksize=(1, 2400, 3600)&gt;
+        V2_2                (time, nlat, nlon) float32 dask.array&lt;shape=(14965, 2400, 3600), chunksize=(1, 2400, 3600)&gt;
+    Attributes:
+        Conventions:   CF-1.0; http://www.cgd.ucar.edu/cms/eaton/netcdf/CF-curren...
+        calendar:      All years have exactly  365 days.
+        cell_methods:  cell_methods = time: mean ==&gt; the variable values are aver...
+        contents:      Diagnostic and Prognostic Variables
+        history:       none
+        nsteps_total:  13088337
+        revision:      $Id: tavg.F90 41939 2012-11-14 16:37:23Z mlevy@ucar.edu $
+        source:        CCSM POP2, the CCSM Ocean Component
+        start_time:    This dataset was created on 2013-03-09 at 12:25:55.7
+        tavg_sum:      86399.99999999962
+        title:         hybrid_v5_rel04_BC5_ne120_t12_pop62</pre>
+          </div>
+        </div>
+      </div>
+    </div>
+
+CESM_POP_hires_RCP8_5
+~~~~~~~~~~~~~~~~~~~~~
+
+NCAR CESM POP model run BRCP85C5CN_ne120_t12_pop62.c13b17.asdphys.001
+
+.. raw:: html
+
+       <div class="panel-group" id="accordion-cesm_pop_hires_rcp8_5">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h4 class="panel-title">
+            <a data-toggle="collapse" data-parent="#accordion-cesm_pop_hires_rcp8_5" href="#collapse1-cesm_pop_hires_rcp8_5">
+            load in python
+            </a>
+          </h4>
+        </div>
+        <div id="collapse1-cesm_pop_hires_rcp8_5" class="panel-collapse collapse">
+          <div class="panel-body">
+          <pre>import intake
+    cat = intake.Catalog(&#34;https://raw.githubusercontent.com/pangeo-data/pangeo-datastore/master/intake-catalogs/ocean/CESM_POP.yaml&#34;)
+    ds = cat[&#34;CESM_POP_hires_RCP8_5&#34;].to_dask()</pre>
+          </div>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h4 class="panel-title">
+            <a data-toggle="collapse" data-parent="#accordion-cesm_pop_hires_rcp8_5" href="#collapse2-cesm_pop_hires_rcp8_5">
+             metadata</a>
+          </h4>
+        </div>
+        <div id="collapse2-cesm_pop_hires_rcp8_5" class="panel-collapse collapse">
+          <div class="panel-body">
+           <table class="table table-condensed table-hover">
+            <tbody>
+           
+             <tr><td>time_period</td><td>2000-2050</td></tr>
+           
+             <tr><td>tags</td><td>[&#39;ocean&#39;, &#39;model&#39;]</td></tr>
+           
+             <tr><td>catalog_dir</td><td>/home/jovyan/./intake-catalogs/ocean/</td></tr>
+           
+            </tbody>
+           </table>
+          </div>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h4 class="panel-title">
+            <a data-toggle="collapse" data-parent="#accordion-cesm_pop_hires_rcp8_5" href="#collapse3-cesm_pop_hires_rcp8_5">
+            xarray preview</a>
+          </h4>
+        </div>
+        <div id="collapse3-cesm_pop_hires_rcp8_5" class="panel-collapse collapse">
+          <div class="panel-body">
+          <pre>&lt;xarray.Dataset&gt;
+    Dimensions:             (nlat: 2400, nlon: 3600, time: 16401, z_t: 62, z_t_150m: 15, z_w: 62, z_w_bot: 62, z_w_top: 62)
+    Coordinates:
+        ANGLE               (nlat, nlon) float64 dask.array&lt;shape=(2400, 3600), chunksize=(2400, 3600)&gt;
+        ANGLET              (nlat, nlon) float64 dask.array&lt;shape=(2400, 3600), chunksize=(2400, 3600)&gt;
+        DXT                 (nlat, nlon) float64 dask.array&lt;shape=(2400, 3600), chunksize=(2400, 3600)&gt;
+        DXU                 (nlat, nlon) float64 dask.array&lt;shape=(2400, 3600), chunksize=(2400, 3600)&gt;
+        DYT                 (nlat, nlon) float64 dask.array&lt;shape=(2400, 3600), chunksize=(2400, 3600)&gt;
+        DYU                 (nlat, nlon) float64 dask.array&lt;shape=(2400, 3600), chunksize=(2400, 3600)&gt;
+        HT                  (nlat, nlon) float64 dask.array&lt;shape=(2400, 3600), chunksize=(2400, 3600)&gt;
+        HTE                 (nlat, nlon) float64 dask.array&lt;shape=(2400, 3600), chunksize=(2400, 3600)&gt;
+        HTN                 (nlat, nlon) float64 dask.array&lt;shape=(2400, 3600), chunksize=(2400, 3600)&gt;
+        HU                  (nlat, nlon) float64 dask.array&lt;shape=(2400, 3600), chunksize=(2400, 3600)&gt;
+        HUS                 (nlat, nlon) float64 dask.array&lt;shape=(2400, 3600), chunksize=(2400, 3600)&gt;
+        HUW                 (nlat, nlon) float64 dask.array&lt;shape=(2400, 3600), chunksize=(2400, 3600)&gt;
+        KMT                 (nlat, nlon) float64 dask.array&lt;shape=(2400, 3600), chunksize=(2400, 3600)&gt;
+        KMU                 (nlat, nlon) float64 dask.array&lt;shape=(2400, 3600), chunksize=(2400, 3600)&gt;
+        REGION_MASK         (nlat, nlon) float64 dask.array&lt;shape=(2400, 3600), chunksize=(2400, 3600)&gt;
+        T0_Kelvin           float64 ...
+        TAREA               (nlat, nlon) float64 dask.array&lt;shape=(2400, 3600), chunksize=(2400, 3600)&gt;
+        TLAT                (nlat, nlon) float64 dask.array&lt;shape=(2400, 3600), chunksize=(2400, 3600)&gt;
+        TLONG               (nlat, nlon) float64 dask.array&lt;shape=(2400, 3600), chunksize=(2400, 3600)&gt;
+        UAREA               (nlat, nlon) float64 dask.array&lt;shape=(2400, 3600), chunksize=(2400, 3600)&gt;
+        ULAT                (nlat, nlon) float64 dask.array&lt;shape=(2400, 3600), chunksize=(2400, 3600)&gt;
+        ULONG               (nlat, nlon) float64 dask.array&lt;shape=(2400, 3600), chunksize=(2400, 3600)&gt;
+        cp_air              float64 ...
+        cp_sw               float64 ...
+        days_in_norm_year   timedelta64[ns] ...
+        dz                  (z_t) float32 dask.array&lt;shape=(62,), chunksize=(62,)&gt;
+        dzw                 (z_w) float32 dask.array&lt;shape=(62,), chunksize=(62,)&gt;
+        fwflux_factor       float64 ...
+        grav                float64 ...
+        heat_to_PW          float64 ...
+        hflux_factor        float64 ...
+        latent_heat_fusion  float64 ...
+        latent_heat_vapor   float64 ...
+        mass_to_Sv          float64 ...
+        momentum_factor     float64 ...
+        nsurface_t          float64 ...
+        nsurface_u          float64 ...
+        ocn_ref_salinity    float64 ...
+        omega               float64 ...
+        ppt_to_salt         float64 ...
+        radius              float64 ...
+        rho_air             float64 ...
+        rho_fw              float64 ...
+        rho_sw              float64 ...
+        salinity_factor     float64 ...
+        salt_to_Svppt       float64 ...
+        salt_to_mmday       float64 ...
+        salt_to_ppt         float64 ...
+        sea_ice_salinity    float64 ...
+        sflux_factor        float64 ...
+        sound               float64 ...
+        stefan_boltzmann    float64 ...
+      * time                (time) object 2006-01-02 00:00:00 ... 2051-01-01 00:00:00
+        vonkar              float64 ...
+      * z_t                 (z_t) float32 500.0 1500.0 ... 562499.06 587499.06
+      * z_t_150m            (z_t_150m) float32 500.0 1500.0 ... 13500.0 14500.0
+      * z_w                 (z_w) float32 0.0 1000.0 2000.0 ... 549999.06 574999.06
+      * z_w_bot             (z_w_bot) float32 1000.0 2000.0 ... 574999.06 599999.06
+      * z_w_top             (z_w_top) float32 0.0 1000.0 ... 549999.06 574999.06
+    Dimensions without coordinates: nlat, nlon
+    Data variables:
+        SSH_2               (time, nlat, nlon) float32 dask.array&lt;shape=(16401, 2400, 3600), chunksize=(1, 2400, 3600)&gt;
+        SSS                 (time, nlat, nlon) float32 dask.array&lt;shape=(16401, 2400, 3600), chunksize=(1, 2400, 3600)&gt;
+        SST                 (time, nlat, nlon) float32 dask.array&lt;shape=(16401, 2400, 3600), chunksize=(1, 2400, 3600)&gt;
+        TAUX_2              (time, nlat, nlon) float32 dask.array&lt;shape=(16401, 2400, 3600), chunksize=(1, 2400, 3600)&gt;
+        TAUY_2              (time, nlat, nlon) float32 dask.array&lt;shape=(16401, 2400, 3600), chunksize=(1, 2400, 3600)&gt;
+        U1_1                (time, nlat, nlon) float32 dask.array&lt;shape=(16401, 2400, 3600), chunksize=(1, 2400, 3600)&gt;
+        U2_2                (time, nlat, nlon) float32 dask.array&lt;shape=(16401, 2400, 3600), chunksize=(1, 2400, 3600)&gt;
+        V1_1                (time, nlat, nlon) float32 dask.array&lt;shape=(16401, 2400, 3600), chunksize=(1, 2400, 3600)&gt;
+    Attributes:
+        Conventions:   CF-1.0; http://www.cgd.ucar.edu/cms/eaton/netcdf/CF-curren...
+        calendar:      All years have exactly  365 days.
+        cell_methods:  cell_methods = time: mean ==&gt; the variable values are aver...
+        contents:      Diagnostic and Prognostic Variables
+        history:       none
+        nsteps_total:  3535200
+        revision:      $Id: tavg.F90 56176 2013-12-20 18:35:46Z mlevy@ucar.edu $
+        source:        CCSM POP2, the CCSM Ocean Component
+        start_time:    This dataset was created on 2016-05-17 at 03:29:14.8
+        tavg_sum:      86399.99999999999
+        title:         BRCP85C5CN_ne120_t12_pop62.c13b17.asdphys.001</pre>
+          </div>
+        </div>
+      </div>
+    </div>
+
