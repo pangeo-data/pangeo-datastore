@@ -1,0 +1,89 @@
+plugins:
+  source:
+    - module: intake_xarray
+
+sources:
+
+  LLC4320_grid:
+    description: MITgcm LLC4320 Ocean Simulation Grid
+    metadata:
+      url: 'http://online.kitp.ucsb.edu/online/blayers18/menemenlis/'
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      urlpath: 'gcs://pangeo-data/llc4320_surface/grid'
+      storage_options:
+        token: anon
+      consolidated: True
+
+  LLC4320_SST:
+    description: MITgcm LLC4320 Ocean Simulation Sea Surface Temperature
+    metadata:
+      url: 'http://online.kitp.ucsb.edu/online/blayers18/menemenlis/'
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      urlpath: 'gcs://pangeo-data/llc4320_surface/SST'
+      storage_options:
+        token: anon
+      consolidated: True
+
+  LLC4320_SSS:
+    description: MITgcm LLC4320 Ocean Simulation Sea Surface Salinity
+    metadata:
+      url: 'http://online.kitp.ucsb.edu/online/blayers18/menemenlis/'
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      urlpath: 'gcs://pangeo-data/llc4320_surface/SSS'
+      storage_options:
+        token: anon
+      consolidated: True
+
+  LLC4320_SSH:
+    description: MITgcm LLC4320 Ocean Simulation Sea Surface Height
+    metadata:
+      url: 'http://online.kitp.ucsb.edu/online/blayers18/menemenlis/'
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      urlpath: 'gcs://pangeo-data/llc4320_surface/Eta'
+      storage_options:
+        token: anon
+      consolidated: True
+
+  LLC4320_SSU:
+    description: MITgcm LLC4320 Ocean Simulation Sea Surface Zonal Velocity
+    metadata:
+      url: 'http://online.kitp.ucsb.edu/online/blayers18/menemenlis/'
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      urlpath: 'gcs://pangeo-data/llc4320_surface/U'
+      storage_options:
+        token: anon
+      consolidated: True
+
+  LLC4320_SSV:
+    description: MITgcm LLC4320 Ocean Simulation Sea Surface Meridional Velocity
+    metadata:
+      url: 'http://online.kitp.ucsb.edu/online/blayers18/menemenlis/'
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      urlpath: 'gcs://pangeo-data/llc4320_surface/V'
+      storage_options:
+        token: anon
+      consolidated: True
