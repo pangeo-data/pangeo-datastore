@@ -30,7 +30,6 @@ To open the catalog and load a dataset from python, you can run the following co
 
 To explore the whole catalog, you can try::
 
-    python
     cat.walk(depth=5)
 
 Catalog Contents
