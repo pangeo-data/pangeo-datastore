@@ -242,6 +242,20 @@ sources:
         token: anon
       consolidated: True
 
+  GODAS:
+    description: "NCEP Global Ocean Data Assimilation System"
+    metadata:
+      url: 'https://www.esrl.noaa.gov/psd/data/gridded/data.godas.html'
+      tags:
+        - ocean
+        - data assimilation
+    driver: zarr
+    args:
+      urlpath: 'gcs://pangeo-data/GODAS/zarr'
+      storage_options:
+        token: anon
+      consolidated: True
+
   channel:
     args:
       path: "{{CATALOG_DIR}}/ocean/channel.yaml"
