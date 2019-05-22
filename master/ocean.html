@@ -89,6 +89,7 @@
 <li><a class="reference internal" href="#sea-surface-height">sea_surface_height</a></li>
 <li><a class="reference internal" href="#eccov4r3">ECCOv4r3</a></li>
 <li><a class="reference internal" href="#sose">SOSE</a></li>
+<li><a class="reference internal" href="#godas">GODAS</a></li>
 </ul>
 </li>
 </ul>
@@ -135,6 +136,7 @@
 <li><a class="reference internal" href="#sea-surface-height">sea_surface_height</a></li>
 <li><a class="reference internal" href="#eccov4r3">ECCOv4r3</a></li>
 <li><a class="reference internal" href="#sose">SOSE</a></li>
+<li><a class="reference internal" href="#godas">GODAS</a></li>
 </ul>
 </li>
 </ul>
@@ -551,6 +553,100 @@ Data variables:
     oceTAUY   (time, YG, XC) float32 dask.array&lt;shape=(438, 320, 2160), chunksize=(1, 320, 2160)&gt;
     surForcS  (time, YC, XC) float32 dask.array&lt;shape=(438, 320, 2160), chunksize=(1, 320, 2160)&gt;
     surForcT  (time, YC, XC) float32 dask.array&lt;shape=(438, 320, 2160), chunksize=(1, 320, 2160)&gt;</pre>
+      </div>
+    </div>
+  </div>
+</div></div>
+<div class="section" id="godas">
+<h3>GODAS<a class="headerlink" href="#godas" title="Permalink to this headline">¶</a></h3>
+<p>NCEP Global Ocean Data Assimilation System</p>
+   <div class="panel-group" id="accordion-godas">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion-godas" href="#collapse1-godas">
+        load in python
+        </a>
+      </h4>
+    </div>
+    <div id="collapse1-godas" class="panel-collapse collapse">
+      <div class="panel-body">
+      <pre>import intake
+cat = intake.Catalog(&#34;https://raw.githubusercontent.com/pangeo-data/pangeo-datastore/master/intake-catalogs/ocean.yaml&#34;)
+ds = cat[&#34;GODAS&#34;].to_dask()</pre>
+      </div>
+    </div>
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion-godas" href="#collapse2-godas">
+         metadata</a>
+      </h4>
+    </div>
+    <div id="collapse2-godas" class="panel-collapse collapse">
+      <div class="panel-body">
+       <table class="table table-condensed table-hover">
+        <tbody>
+
+         <tr><td>uploader_github</td><td>rabernat</td></tr>
+
+         <tr><td>uploader_email</td><td>rpa@ldeo.columbia.edu</td></tr>
+
+         <tr><td>url</td><td>https://www.esrl.noaa.gov/psd/data/gridded/data.godas.html</td></tr>
+
+         <tr><td>tags</td><td>[&#39;ocean&#39;, &#39;data assimilation&#39;]</td></tr>
+
+         <tr><td>catalog_dir</td><td>/home/jovyan/./intake-catalogs/</td></tr>
+
+        </tbody>
+       </table>
+      </div>
+    </div>
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion-godas" href="#collapse3-godas">
+        xarray preview</a>
+      </h4>
+    </div>
+    <div id="collapse3-godas" class="panel-collapse collapse">
+      <div class="panel-body">
+      <pre>&lt;xarray.Dataset&gt;
+Dimensions:    (lat: 836, level: 80, lon: 720, time: 472)
+Coordinates:
+  * lat        (lat) float32 -74.5 -74.16667 -74.0 ... 64.499 64.66566 64.999
+  * level      (level) float32 5.0 10.0 15.0 20.0 ... 4225.0 4478.0 4736.0
+  * lon        (lon) float32 0.5 1.0 1.5 2.0 2.5 ... 358.5 359.0 359.5 360.0
+  * time       (time) datetime64[ns] 1980-01-01 1980-02-01 ... 2019-04-01
+Data variables:
+    dbss_obil  (time, lat, lon) float32 dask.array&lt;shape=(472, 836, 720), chunksize=(12, 836, 720)&gt;
+    dbss_obml  (time, lat, lon) float32 dask.array&lt;shape=(472, 836, 720), chunksize=(12, 836, 720)&gt;
+    dzdt       (time, level, lat, lon) float32 dask.array&lt;shape=(472, 80, 836, 720), chunksize=(4, 80, 836, 720)&gt;
+    pottmp     (time, level, lat, lon) float32 dask.array&lt;shape=(472, 80, 836, 720), chunksize=(4, 80, 836, 720)&gt;
+    salt       (time, level, lat, lon) float32 dask.array&lt;shape=(472, 80, 836, 720), chunksize=(4, 80, 836, 720)&gt;
+    sltfl      (time, lat, lon) float32 dask.array&lt;shape=(472, 836, 720), chunksize=(12, 836, 720)&gt;
+    sshg       (time, lat, lon) float32 dask.array&lt;shape=(472, 836, 720), chunksize=(12, 836, 720)&gt;
+    thflx      (time, lat, lon) float32 dask.array&lt;shape=(472, 836, 720), chunksize=(12, 836, 720)&gt;
+    ucur       (time, level, lat, lon) float32 dask.array&lt;shape=(472, 80, 836, 720), chunksize=(4, 80, 836, 720)&gt;
+    uflx       (time, lat, lon) float32 dask.array&lt;shape=(472, 836, 720), chunksize=(12, 836, 720)&gt;
+    vcur       (time, level, lat, lon) float32 dask.array&lt;shape=(472, 80, 836, 720), chunksize=(4, 80, 836, 720)&gt;
+    vflx       (time, lat, lon) float32 dask.array&lt;shape=(472, 836, 720), chunksize=(12, 836, 720)&gt;
+Attributes:
+    Conventions:      COARDS
+    References:       https://www.esrl.noaa.gov/psd/data/gridded/data.godas.html
+    comment:          NOTE:  THESE ARE THE BIAS CORRECTED GODAS FILES.
+    creation_date:    Sat Dec 16 20:00:00 MDT 2006
+    dataset_title:    NCEP Global Ocean Data Assimilation System (GODAS)
+    grib_file:        godas.M.198001-12.grb
+    history:          Created 2006/12 by Hoop
+    html_BACKGROUND:  http://www.cpc.ncep.noaa.gov/products/GODAS/background....
+    html_GODAS:       www.cpc.ncep.noaa.gov/products/GODAS
+    html_REFERENCES:  http://www.cpc.ncep.noaa.gov/products/GODAS/background....
+    sfcHeatFlux:      \nNote that the net surface heat flux are the total sur...
+    time_comment:     The internal time stamp indicates the FIRST day of the ...
+    title:            GODAS: Global Ocean Data Assimilation System</pre>
       </div>
     </div>
   </div>
