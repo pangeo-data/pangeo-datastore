@@ -62,7 +62,7 @@ sources:
 
   CESM_POP:
     args:
-      path: "{{CATALOG_DIR}}/ocean/CESM_POP.6.yaml"
+      path: "{{CATALOG_DIR}}/ocean/CESM_POP.yaml"
     description: 'NCAR CESM Global High Resolution Ocean Model Fields'
     driver: intake.catalog.local.YAMLFileCatalog
     metadata: {}
