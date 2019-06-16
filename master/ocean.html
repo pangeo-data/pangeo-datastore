@@ -614,25 +614,28 @@ ds = cat[&#34;GODAS&#34;].to_dask()</pre>
     <div id="collapse3-godas" class="panel-collapse collapse">
       <div class="panel-body">
       <pre>&lt;xarray.Dataset&gt;
-Dimensions:    (lat: 836, level: 80, lon: 720, time: 472)
+Dimensions:    (lat: 417, lat_u: 417, level: 40, level_w: 40, lon: 360, lon_u: 360, time: 471)
 Coordinates:
-  * lat        (lat) float32 -74.5 -74.16667 -74.0 ... 64.499 64.66566 64.999
-  * level      (level) float32 5.0 10.0 15.0 20.0 ... 4225.0 4478.0 4736.0
-  * lon        (lon) float32 0.5 1.0 1.5 2.0 2.5 ... 358.5 359.0 359.5 360.0
-  * time       (time) datetime64[ns] 1980-01-01 1980-02-01 ... 2019-04-01
+  * lat        (lat) float32 -74.16667 -73.83334 -73.50001 ... 64.16566 64.499
+  * lat_u      (lat_u) float32 -74.0 -73.66667 -73.33334 ... 64.33234 64.66566
+  * level      (level) float32 5.0 15.0 25.0 35.0 ... 3483.0 3972.0 4478.0
+  * level_w    (level_w) float32 10.0 20.0 30.0 40.0 ... 3727.0 4225.0 4736.0
+  * lon        (lon) float32 0.5 1.5 2.5 3.5 4.5 ... 356.5 357.5 358.5 359.5
+  * lon_u      (lon_u) float32 1.0 2.0 3.0 4.0 5.0 ... 357.0 358.0 359.0 360.0
+  * time       (time) datetime64[ns] 1980-01-01 1980-02-01 ... 2019-03-01
 Data variables:
-    dbss_obil  (time, lat, lon) float32 dask.array&lt;shape=(472, 836, 720), chunksize=(12, 836, 720)&gt;
-    dbss_obml  (time, lat, lon) float32 dask.array&lt;shape=(472, 836, 720), chunksize=(12, 836, 720)&gt;
-    dzdt       (time, level, lat, lon) float32 dask.array&lt;shape=(472, 80, 836, 720), chunksize=(4, 80, 836, 720)&gt;
-    pottmp     (time, level, lat, lon) float32 dask.array&lt;shape=(472, 80, 836, 720), chunksize=(4, 80, 836, 720)&gt;
-    salt       (time, level, lat, lon) float32 dask.array&lt;shape=(472, 80, 836, 720), chunksize=(4, 80, 836, 720)&gt;
-    sltfl      (time, lat, lon) float32 dask.array&lt;shape=(472, 836, 720), chunksize=(12, 836, 720)&gt;
-    sshg       (time, lat, lon) float32 dask.array&lt;shape=(472, 836, 720), chunksize=(12, 836, 720)&gt;
-    thflx      (time, lat, lon) float32 dask.array&lt;shape=(472, 836, 720), chunksize=(12, 836, 720)&gt;
-    ucur       (time, level, lat, lon) float32 dask.array&lt;shape=(472, 80, 836, 720), chunksize=(4, 80, 836, 720)&gt;
-    uflx       (time, lat, lon) float32 dask.array&lt;shape=(472, 836, 720), chunksize=(12, 836, 720)&gt;
-    vcur       (time, level, lat, lon) float32 dask.array&lt;shape=(472, 80, 836, 720), chunksize=(4, 80, 836, 720)&gt;
-    vflx       (time, lat, lon) float32 dask.array&lt;shape=(472, 836, 720), chunksize=(12, 836, 720)&gt;
+    dbss_obil  (time, lat, lon) float32 dask.array&lt;shape=(471, 417, 360), chunksize=(12, 417, 360)&gt;
+    dbss_obml  (time, lat, lon) float32 dask.array&lt;shape=(471, 417, 360), chunksize=(12, 417, 360)&gt;
+    dzdt       (time, level_w, lat, lon) float32 dask.array&lt;shape=(471, 40, 417, 360), chunksize=(4, 40, 417, 360)&gt;
+    pottmp     (time, level, lat, lon) float32 dask.array&lt;shape=(471, 40, 417, 360), chunksize=(4, 40, 417, 360)&gt;
+    salt       (time, level, lat, lon) float32 dask.array&lt;shape=(471, 40, 417, 360), chunksize=(4, 40, 417, 360)&gt;
+    sltfl      (time, lat, lon) float32 dask.array&lt;shape=(471, 417, 360), chunksize=(12, 417, 360)&gt;
+    sshg       (time, lat, lon) float32 dask.array&lt;shape=(471, 417, 360), chunksize=(12, 417, 360)&gt;
+    thflx      (time, lat, lon) float32 dask.array&lt;shape=(471, 417, 360), chunksize=(12, 417, 360)&gt;
+    ucur       (time, level, lat_u, lon_u) float32 dask.array&lt;shape=(471, 40, 417, 360), chunksize=(4, 40, 417, 360)&gt;
+    uflx       (time, lat_u, lon_u) float32 dask.array&lt;shape=(471, 417, 360), chunksize=(12, 417, 360)&gt;
+    vcur       (time, level, lat_u, lon_u) float32 dask.array&lt;shape=(471, 40, 417, 360), chunksize=(4, 40, 417, 360)&gt;
+    vflx       (time, lat_u, lon_u) float32 dask.array&lt;shape=(471, 417, 360), chunksize=(12, 417, 360)&gt;
 Attributes:
     Conventions:      COARDS
     References:       https://www.esrl.noaa.gov/psd/data/gridded/data.godas.html

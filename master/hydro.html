@@ -88,6 +88,7 @@
 <li><a class="reference internal" href="#cgiar-pet">cgiar_pet</a></li>
 <li><a class="reference internal" href="#hydrosheds-dir">hydrosheds_dir</a></li>
 <li><a class="reference internal" href="#hydrosheds-acc">hydrosheds_acc</a></li>
+<li><a class="reference internal" href="#hydrosheds-dem">hydrosheds_dem</a></li>
 </ul>
 </li>
 </ul>
@@ -133,6 +134,7 @@
 <li><a class="reference internal" href="#cgiar-pet">cgiar_pet</a></li>
 <li><a class="reference internal" href="#hydrosheds-dir">hydrosheds_dir</a></li>
 <li><a class="reference internal" href="#hydrosheds-acc">hydrosheds_acc</a></li>
+<li><a class="reference internal" href="#hydrosheds-dem">hydrosheds_dem</a></li>
 </ul>
 </li>
 </ul>
@@ -357,6 +359,77 @@ Attributes:
     res:         (0.0008333333333333438, 0.0008333333333333438)
     is_tiled:    1
     nodatavals:  (0.0,)</pre>
+      </div>
+    </div>
+  </div>
+</div></div>
+<div class="section" id="hydrosheds-dem">
+<h3>hydrosheds_dem<a class="headerlink" href="#hydrosheds-dem" title="Permalink to this headline">¶</a></h3>
+<p>Digital Elevation Model (conditioned DEM) at 3-second resolution</p>
+   <div class="panel-group" id="accordion-hydrosheds_dem">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion-hydrosheds_dem" href="#collapse1-hydrosheds_dem">
+        load in python
+        </a>
+      </h4>
+    </div>
+    <div id="collapse1-hydrosheds_dem" class="panel-collapse collapse">
+      <div class="panel-body">
+      <pre>import intake
+cat = intake.Catalog(&#34;https://raw.githubusercontent.com/pangeo-data/pangeo-datastore/master/intake-catalogs/hydro.yaml&#34;)
+ds = cat[&#34;hydrosheds_dem&#34;].to_dask()</pre>
+      </div>
+    </div>
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion-hydrosheds_dem" href="#collapse2-hydrosheds_dem">
+         metadata</a>
+      </h4>
+    </div>
+    <div id="collapse2-hydrosheds_dem" class="panel-collapse collapse">
+      <div class="panel-body">
+       <table class="table table-condensed table-hover">
+        <tbody>
+
+         <tr><td>url</td><td>https://www.hydrosheds.org</td></tr>
+
+         <tr><td>tags</td><td>[&#39;DEM&#39;]</td></tr>
+
+         <tr><td>catalog_dir</td><td>/home/jovyan/./intake-catalogs/</td></tr>
+
+         <tr><td>cache</td><td>[{&#39;argkey&#39;: &#39;urlpath&#39;, &#39;regex&#39;: &#39;pangeo-data&#39;, &#39;type&#39;: &#39;file&#39;}]</td></tr>
+
+        </tbody>
+       </table>
+      </div>
+    </div>
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion-hydrosheds_dem" href="#collapse3-hydrosheds_dem">
+        xarray preview</a>
+      </h4>
+    </div>
+    <div id="collapse3-hydrosheds_dem" class="panel-collapse collapse">
+      <div class="panel-body">
+      <pre>&lt;xarray.DataArray (concat_dim: 1, band: 1, y: 144000, x: 390000)&gt;
+dask.array&lt;shape=(1, 1, 144000, 390000), dtype=uint8, chunksize=(1, 1, 6000, 6000)&gt;
+Coordinates:
+  * band     (band) int64 1
+  * y        (y) float64 60.0 60.0 60.0 60.0 60.0 ... -60.0 -60.0 -60.0 -60.0
+  * x        (x) float64 -145.0 -145.0 -145.0 -145.0 ... 180.0 180.0 180.0 180.0
+Dimensions without coordinates: concat_dim
+Attributes:
+    transform:   (0.0008333333333333098, 0.0, -145.0, 0.0, -0.000833333333333...
+    crs:         +init=epsg:4326
+    res:         (0.0008333333333333098, 0.0008333333333333098)
+    is_tiled:    1
+    nodatavals:  (nan,)</pre>
       </div>
     </div>
   </div>
