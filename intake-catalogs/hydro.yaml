@@ -45,3 +45,18 @@ sources:
     args:
       urlpath: 'gs://pangeo-data/hydrosheds/acc.vrt'
       chunks: {'y': 6000, 'x': 6000}
+
+  hydrosheds_dem:
+    description: Digital Elevation Model (conditioned DEM) at 3-second resolution
+    metadata:
+      url: 'https://www.hydrosheds.org'
+      tags:
+        - DEM
+    driver: rasterio
+    cache:
+      - argkey: urlpath
+        regex: 'pangeo-data'
+        type: file
+    args:
+      urlpath: 'gs://pangeo-data/hydrosheds/dem.vrt'
+      chunks: {'y': 6000, 'x': 6000}
