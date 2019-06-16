@@ -185,6 +185,104 @@ GFDL CM2.6 climate model control run 5-day-average 3D ocean fields
       </div>
     </div>
 
+GFDL_CM2_6_control_ocean_transport
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+GFDL CM2.6 climate model control run monthly ocean transport fields
+
+.. raw:: html
+
+       <div class="panel-group" id="accordion-gfdl_cm2_6_control_ocean_transport">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h4 class="panel-title">
+            <a data-toggle="collapse" data-parent="#accordion-gfdl_cm2_6_control_ocean_transport" href="#collapse1-gfdl_cm2_6_control_ocean_transport">
+            load in python
+            </a>
+          </h4>
+        </div>
+        <div id="collapse1-gfdl_cm2_6_control_ocean_transport" class="panel-collapse collapse">
+          <div class="panel-body">
+          <pre>import intake
+    cat = intake.Catalog(&#34;https://raw.githubusercontent.com/pangeo-data/pangeo-datastore/master/intake-catalogs/ocean/GFDL_CM2.6.yaml&#34;)
+    ds = cat[&#34;GFDL_CM2_6_control_ocean_transport&#34;].to_dask()</pre>
+          </div>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h4 class="panel-title">
+            <a data-toggle="collapse" data-parent="#accordion-gfdl_cm2_6_control_ocean_transport" href="#collapse2-gfdl_cm2_6_control_ocean_transport">
+             metadata</a>
+          </h4>
+        </div>
+        <div id="collapse2-gfdl_cm2_6_control_ocean_transport" class="panel-collapse collapse">
+          <div class="panel-body">
+           <table class="table table-condensed table-hover">
+            <tbody>
+           
+             <tr><td>url</td><td>https://www.gfdl.noaa.gov/cm2-6/</td></tr>
+           
+             <tr><td>tags</td><td>[&#39;ocean&#39;, &#39;model&#39;]</td></tr>
+           
+             <tr><td>catalog_dir</td><td>/home/jovyan/./intake-catalogs/ocean/</td></tr>
+           
+            </tbody>
+           </table>
+          </div>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h4 class="panel-title">
+            <a data-toggle="collapse" data-parent="#accordion-gfdl_cm2_6_control_ocean_transport" href="#collapse3-gfdl_cm2_6_control_ocean_transport">
+            xarray preview</a>
+          </h4>
+        </div>
+        <div id="collapse3-gfdl_cm2_6_control_ocean_transport" class="panel-collapse collapse">
+          <div class="panel-body">
+          <pre>&lt;xarray.Dataset&gt;
+    Dimensions:                   (grid_xt_ocean: 3600, grid_yu_ocean: 2700, nv: 2, potrho: 80, potrho_edges: 81, st_edges_ocean: 51, st_ocean: 50, time: 240, xt_ocean: 3600, xu_ocean: 3600, yt_ocean: 2700, yu_ocean: 2700)
+    Coordinates:
+        geolat_c                  (yu_ocean, xu_ocean) float32 dask.array&lt;shape=(2700, 3600), chunksize=(338, 450)&gt;
+        geolat_t                  (yt_ocean, xt_ocean) float32 dask.array&lt;shape=(2700, 3600), chunksize=(338, 450)&gt;
+        geolon_c                  (yu_ocean, xu_ocean) float32 dask.array&lt;shape=(2700, 3600), chunksize=(338, 450)&gt;
+        geolon_t                  (yt_ocean, xt_ocean) float32 dask.array&lt;shape=(2700, 3600), chunksize=(338, 450)&gt;
+      * grid_xt_ocean             (grid_xt_ocean) float64 -279.9 -279.8 ... 79.95
+      * grid_yu_ocean             (grid_yu_ocean) float64 -81.09 -81.05 ... 90.0
+      * nv                        (nv) float64 1.0 2.0
+      * potrho                    (potrho) float64 1.028e+03 1.028e+03 ... 1.038e+03
+      * potrho_edges              (potrho_edges) float64 1.028e+03 ... 1.038e+03
+      * st_edges_ocean            (st_edges_ocean) float64 0.0 10.07 ... 5.5e+03
+      * st_ocean                  (st_ocean) float64 5.034 15.1 ... 5.395e+03
+      * time                      (time) object 0181-01-16 12:00:00 ... 0200-12-16 12:00:00
+      * xt_ocean                  (xt_ocean) float64 -279.9 -279.8 ... 79.85 79.95
+      * xu_ocean                  (xu_ocean) float64 -279.9 -279.8 ... 79.9 80.0
+      * yt_ocean                  (yt_ocean) float64 -81.11 -81.07 ... 89.94 89.98
+      * yu_ocean                  (yu_ocean) float64 -81.09 -81.05 ... 89.96 90.0
+    Data variables:
+        salt_xflux_adv_int_z      (time, yt_ocean, xu_ocean) float32 dask.array&lt;shape=(240, 2700, 3600), chunksize=(3, 2700, 3600)&gt;
+        salt_yflux_adv_int_z      (time, yu_ocean, xt_ocean) float32 dask.array&lt;shape=(240, 2700, 3600), chunksize=(3, 2700, 3600)&gt;
+        temp_xflux_adv_int_z      (time, yt_ocean, xu_ocean) float32 dask.array&lt;shape=(240, 2700, 3600), chunksize=(3, 2700, 3600)&gt;
+        temp_xflux_submeso_int_z  (time, yt_ocean, xu_ocean) float32 dask.array&lt;shape=(240, 2700, 3600), chunksize=(3, 2700, 3600)&gt;
+        temp_yflux_adv_int_z      (time, yu_ocean, xt_ocean) float32 dask.array&lt;shape=(240, 2700, 3600), chunksize=(3, 2700, 3600)&gt;
+        temp_yflux_submeso_int_z  (time, yu_ocean, xt_ocean) float32 dask.array&lt;shape=(240, 2700, 3600), chunksize=(3, 2700, 3600)&gt;
+        tx_trans                  (time, st_ocean, yt_ocean, xu_ocean) float32 dask.array&lt;shape=(240, 50, 2700, 3600), chunksize=(1, 5, 2700, 3600)&gt;
+        tx_trans_int_z            (time, yt_ocean, xu_ocean) float32 dask.array&lt;shape=(240, 2700, 3600), chunksize=(3, 2700, 3600)&gt;
+        ty_trans                  (time, st_ocean, yu_ocean, xt_ocean) float32 dask.array&lt;shape=(240, 50, 2700, 3600), chunksize=(1, 5, 2700, 3600)&gt;
+        ty_trans_int_z            (time, yu_ocean, xt_ocean) float32 dask.array&lt;shape=(240, 2700, 3600), chunksize=(3, 2700, 3600)&gt;
+        ty_trans_rho              (time, potrho, grid_yu_ocean, grid_xt_ocean) float32 dask.array&lt;shape=(240, 80, 2700, 3600), chunksize=(1, 5, 2700, 3600)&gt;
+        ty_trans_submeso          (time, st_ocean, yu_ocean, xt_ocean) float32 dask.array&lt;shape=(240, 50, 2700, 3600), chunksize=(1, 5, 2700, 3600)&gt;
+    Attributes:
+        filename:   01810101.ocean_trans.nc
+        grid_tile:  1
+        grid_type:  mosaic
+        title:      CM2.6_miniBling</pre>
+          </div>
+        </div>
+      </div>
+    </div>
+
 GFDL_CM2_6_one_percent_ocean_surface
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -349,6 +447,104 @@ ocean fields
         temp            (time, st_ocean, yt_ocean, xt_ocean) float32 dask.array&lt;shape=(1460, 50, 2700, 3600), chunksize=(1, 1, 2700, 3600)&gt;
         u               (time, st_ocean, yu_ocean, xu_ocean) float32 dask.array&lt;shape=(1460, 50, 2700, 3600), chunksize=(1, 1, 2700, 3600)&gt;
         v               (time, st_ocean, yu_ocean, xu_ocean) float32 dask.array&lt;shape=(1460, 50, 2700, 3600), chunksize=(1, 1, 2700, 3600)&gt;</pre>
+          </div>
+        </div>
+      </div>
+    </div>
+
+GFDL_CM2_6_one_percent_ocean_transport
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+GFDL CM2.6 climate model one-percent CO2 increase monthly ocean
+transport fields
+
+.. raw:: html
+
+       <div class="panel-group" id="accordion-gfdl_cm2_6_one_percent_ocean_transport">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h4 class="panel-title">
+            <a data-toggle="collapse" data-parent="#accordion-gfdl_cm2_6_one_percent_ocean_transport" href="#collapse1-gfdl_cm2_6_one_percent_ocean_transport">
+            load in python
+            </a>
+          </h4>
+        </div>
+        <div id="collapse1-gfdl_cm2_6_one_percent_ocean_transport" class="panel-collapse collapse">
+          <div class="panel-body">
+          <pre>import intake
+    cat = intake.Catalog(&#34;https://raw.githubusercontent.com/pangeo-data/pangeo-datastore/master/intake-catalogs/ocean/GFDL_CM2.6.yaml&#34;)
+    ds = cat[&#34;GFDL_CM2_6_one_percent_ocean_transport&#34;].to_dask()</pre>
+          </div>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h4 class="panel-title">
+            <a data-toggle="collapse" data-parent="#accordion-gfdl_cm2_6_one_percent_ocean_transport" href="#collapse2-gfdl_cm2_6_one_percent_ocean_transport">
+             metadata</a>
+          </h4>
+        </div>
+        <div id="collapse2-gfdl_cm2_6_one_percent_ocean_transport" class="panel-collapse collapse">
+          <div class="panel-body">
+           <table class="table table-condensed table-hover">
+            <tbody>
+           
+             <tr><td>url</td><td>https://www.gfdl.noaa.gov/cm2-6/</td></tr>
+           
+             <tr><td>tags</td><td>[&#39;ocean&#39;, &#39;model&#39;]</td></tr>
+           
+             <tr><td>catalog_dir</td><td>/home/jovyan/./intake-catalogs/ocean/</td></tr>
+           
+            </tbody>
+           </table>
+          </div>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h4 class="panel-title">
+            <a data-toggle="collapse" data-parent="#accordion-gfdl_cm2_6_one_percent_ocean_transport" href="#collapse3-gfdl_cm2_6_one_percent_ocean_transport">
+            xarray preview</a>
+          </h4>
+        </div>
+        <div id="collapse3-gfdl_cm2_6_one_percent_ocean_transport" class="panel-collapse collapse">
+          <div class="panel-body">
+          <pre>&lt;xarray.Dataset&gt;
+    Dimensions:                   (grid_xt_ocean: 3600, grid_yu_ocean: 2700, nv: 2, potrho: 80, potrho_edges: 81, st_edges_ocean: 51, st_ocean: 50, time: 240, xt_ocean: 3600, xu_ocean: 3600, yt_ocean: 2700, yu_ocean: 2700)
+    Coordinates:
+        geolat_c                  (yu_ocean, xu_ocean) float32 dask.array&lt;shape=(2700, 3600), chunksize=(338, 450)&gt;
+        geolat_t                  (yt_ocean, xt_ocean) float32 dask.array&lt;shape=(2700, 3600), chunksize=(338, 450)&gt;
+        geolon_c                  (yu_ocean, xu_ocean) float32 dask.array&lt;shape=(2700, 3600), chunksize=(338, 450)&gt;
+        geolon_t                  (yt_ocean, xt_ocean) float32 dask.array&lt;shape=(2700, 3600), chunksize=(338, 450)&gt;
+      * nv                        (nv) float64 1.0 2.0
+      * potrho                    (potrho) float64 1.028e+03 1.028e+03 ... 1.038e+03
+      * potrho_edges              (potrho_edges) float64 1.028e+03 ... 1.038e+03
+      * st_edges_ocean            (st_edges_ocean) float64 0.0 10.07 ... 5.5e+03
+      * st_ocean                  (st_ocean) float64 5.034 15.1 ... 5.395e+03
+      * time                      (time) object 0181-01-16 12:00:00 ... 0200-12-16 12:00:00
+      * xt_ocean                  (xt_ocean) float64 -279.9 -279.8 ... 79.85 79.95
+      * xu_ocean                  (xu_ocean) float64 -279.9 -279.8 ... 79.9 80.0
+      * yt_ocean                  (yt_ocean) float64 -81.11 -81.07 ... 89.94 89.98
+      * yu_ocean                  (yu_ocean) float64 -81.09 -81.05 ... 89.96 90.0
+    Dimensions without coordinates: grid_xt_ocean, grid_yu_ocean
+    Data variables:
+        salt_xflux_adv_int_z      (time, yt_ocean, xu_ocean) float32 dask.array&lt;shape=(240, 2700, 3600), chunksize=(3, 2700, 3600)&gt;
+        salt_yflux_adv_int_z      (time, yu_ocean, xt_ocean) float32 dask.array&lt;shape=(240, 2700, 3600), chunksize=(3, 2700, 3600)&gt;
+        temp_xflux_adv_int_z      (time, yt_ocean, xu_ocean) float32 dask.array&lt;shape=(240, 2700, 3600), chunksize=(3, 2700, 3600)&gt;
+        temp_xflux_submeso_int_z  (time, yt_ocean, xu_ocean) float32 dask.array&lt;shape=(240, 2700, 3600), chunksize=(3, 2700, 3600)&gt;
+        temp_yflux_adv_int_z      (time, yu_ocean, xt_ocean) float32 dask.array&lt;shape=(240, 2700, 3600), chunksize=(3, 2700, 3600)&gt;
+        temp_yflux_submeso_int_z  (time, yu_ocean, xt_ocean) float32 dask.array&lt;shape=(240, 2700, 3600), chunksize=(3, 2700, 3600)&gt;
+        tx_trans                  (time, st_ocean, yt_ocean, xu_ocean) float32 dask.array&lt;shape=(240, 50, 2700, 3600), chunksize=(1, 5, 2700, 3600)&gt;
+        tx_trans_int_z            (time, yt_ocean, xu_ocean) float32 dask.array&lt;shape=(240, 2700, 3600), chunksize=(3, 2700, 3600)&gt;
+        ty_trans                  (time, st_ocean, yu_ocean, xt_ocean) float32 dask.array&lt;shape=(240, 50, 2700, 3600), chunksize=(1, 5, 2700, 3600)&gt;
+        ty_trans_int_z            (time, yu_ocean, xt_ocean) float32 dask.array&lt;shape=(240, 2700, 3600), chunksize=(3, 2700, 3600)&gt;
+        ty_trans_rho              (time, potrho, grid_yu_ocean, grid_xt_ocean) float32 dask.array&lt;shape=(240, 80, 2700, 3600), chunksize=(1, 5, 2700, 3600)&gt;
+        ty_trans_submeso          (time, st_ocean, yu_ocean, xt_ocean) float32 dask.array&lt;shape=(240, 50, 2700, 3600), chunksize=(1, 5, 2700, 3600)&gt;
+    Attributes:
+        filename:   01810101.ocean_trans.nc
+        grid_tile:  1
+        grid_type:  mosaic
+        title:      CM2.6_miniBling</pre>
           </div>
         </div>
       </div>
