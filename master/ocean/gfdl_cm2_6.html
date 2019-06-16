@@ -88,9 +88,11 @@
 <li><a class="reference internal" href="#gfdl-cm2-6-control-ocean-surface">GFDL_CM2_6_control_ocean_surface</a></li>
 <li><a class="reference internal" href="#gfdl-cm2-6-control-ocean-3d">GFDL_CM2_6_control_ocean_3D</a></li>
 <li><a class="reference internal" href="#gfdl-cm2-6-control-ocean-transport">GFDL_CM2_6_control_ocean_transport</a></li>
+<li><a class="reference internal" href="#gfdl-cm2-6-control-ocean-boundary-flux">GFDL_CM2_6_control_ocean_boundary_flux</a></li>
 <li><a class="reference internal" href="#gfdl-cm2-6-one-percent-ocean-surface">GFDL_CM2_6_one_percent_ocean_surface</a></li>
 <li><a class="reference internal" href="#gfdl-cm2-6-one-percent-ocean-3d">GFDL_CM2_6_one_percent_ocean_3D</a></li>
 <li><a class="reference internal" href="#gfdl-cm2-6-one-percent-ocean-transport">GFDL_CM2_6_one_percent_ocean_transport</a></li>
+<li><a class="reference internal" href="#gfdl-cm2-6-one-percent-ocean-boundary-flux">GFDL_CM2_6_one_percent_ocean_boundary_flux</a></li>
 <li><a class="reference internal" href="#gfdl-cm2-6-grid">GFDL_CM2_6_grid</a></li>
 </ul>
 </li>
@@ -137,9 +139,11 @@
 <li><a class="reference internal" href="#gfdl-cm2-6-control-ocean-surface">GFDL_CM2_6_control_ocean_surface</a></li>
 <li><a class="reference internal" href="#gfdl-cm2-6-control-ocean-3d">GFDL_CM2_6_control_ocean_3D</a></li>
 <li><a class="reference internal" href="#gfdl-cm2-6-control-ocean-transport">GFDL_CM2_6_control_ocean_transport</a></li>
+<li><a class="reference internal" href="#gfdl-cm2-6-control-ocean-boundary-flux">GFDL_CM2_6_control_ocean_boundary_flux</a></li>
 <li><a class="reference internal" href="#gfdl-cm2-6-one-percent-ocean-surface">GFDL_CM2_6_one_percent_ocean_surface</a></li>
 <li><a class="reference internal" href="#gfdl-cm2-6-one-percent-ocean-3d">GFDL_CM2_6_one_percent_ocean_3D</a></li>
 <li><a class="reference internal" href="#gfdl-cm2-6-one-percent-ocean-transport">GFDL_CM2_6_one_percent_ocean_transport</a></li>
+<li><a class="reference internal" href="#gfdl-cm2-6-one-percent-ocean-boundary-flux">GFDL_CM2_6_one_percent_ocean_boundary_flux</a></li>
 <li><a class="reference internal" href="#gfdl-cm2-6-grid">GFDL_CM2_6_grid</a></li>
 </ul>
 </li>
@@ -415,6 +419,108 @@ Attributes:
     </div>
   </div>
 </div></div>
+<div class="section" id="gfdl-cm2-6-control-ocean-boundary-flux">
+<h3>GFDL_CM2_6_control_ocean_boundary_flux<a class="headerlink" href="#gfdl-cm2-6-control-ocean-boundary-flux" title="Permalink to this headline">¶</a></h3>
+<p>GFDL CM2.6 climate model control run monthly ocean boundary flux fields</p>
+   <div class="panel-group" id="accordion-gfdl_cm2_6_control_ocean_boundary_flux">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion-gfdl_cm2_6_control_ocean_boundary_flux" href="#collapse1-gfdl_cm2_6_control_ocean_boundary_flux">
+        load in python
+        </a>
+      </h4>
+    </div>
+    <div id="collapse1-gfdl_cm2_6_control_ocean_boundary_flux" class="panel-collapse collapse">
+      <div class="panel-body">
+      <pre>import intake
+cat = intake.Catalog(&#34;https://raw.githubusercontent.com/pangeo-data/pangeo-datastore/master/intake-catalogs/ocean/GFDL_CM2.6.yaml&#34;)
+ds = cat[&#34;GFDL_CM2_6_control_ocean_boundary_flux&#34;].to_dask()</pre>
+      </div>
+    </div>
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion-gfdl_cm2_6_control_ocean_boundary_flux" href="#collapse2-gfdl_cm2_6_control_ocean_boundary_flux">
+         metadata</a>
+      </h4>
+    </div>
+    <div id="collapse2-gfdl_cm2_6_control_ocean_boundary_flux" class="panel-collapse collapse">
+      <div class="panel-body">
+       <table class="table table-condensed table-hover">
+        <tbody>
+
+         <tr><td>url</td><td>https://www.gfdl.noaa.gov/cm2-6/</td></tr>
+
+         <tr><td>tags</td><td>[&#39;ocean&#39;, &#39;model&#39;]</td></tr>
+
+         <tr><td>catalog_dir</td><td>/home/jovyan/./intake-catalogs/ocean/</td></tr>
+
+        </tbody>
+       </table>
+      </div>
+    </div>
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion-gfdl_cm2_6_control_ocean_boundary_flux" href="#collapse3-gfdl_cm2_6_control_ocean_boundary_flux">
+        xarray preview</a>
+      </h4>
+    </div>
+    <div id="collapse3-gfdl_cm2_6_control_ocean_boundary_flux" class="panel-collapse collapse">
+      <div class="panel-body">
+      <pre>&lt;xarray.Dataset&gt;
+Dimensions:                    (nv: 2, time: 240, xt_ocean: 3600, xu_ocean: 3600, yt_ocean: 2700, yu_ocean: 2700)
+Coordinates:
+    geolat_c                   (yu_ocean, xu_ocean) float32 dask.array&lt;shape=(2700, 3600), chunksize=(338, 450)&gt;
+    geolat_t                   (yt_ocean, xt_ocean) float32 dask.array&lt;shape=(2700, 3600), chunksize=(338, 450)&gt;
+    geolon_c                   (yu_ocean, xu_ocean) float32 dask.array&lt;shape=(2700, 3600), chunksize=(338, 450)&gt;
+    geolon_t                   (yt_ocean, xt_ocean) float32 dask.array&lt;shape=(2700, 3600), chunksize=(338, 450)&gt;
+  * nv                         (nv) float64 1.0 2.0
+  * time                       (time) object 0181-01-16 12:00:00 ... 0200-12-16 12:00:00
+  * xt_ocean                   (xt_ocean) float64 -279.9 -279.8 ... 79.85 79.95
+  * xu_ocean                   (xu_ocean) float64 -279.9 -279.8 ... 79.9 80.0
+  * yt_ocean                   (yt_ocean) float64 -81.11 -81.07 ... 89.94 89.98
+  * yu_ocean                   (yu_ocean) float64 -81.09 -81.05 ... 89.96 90.0
+Data variables:
+    bottom_power_u             (time, yu_ocean, xu_ocean) float32 dask.array&lt;shape=(240, 2700, 3600), chunksize=(1, 2700, 3600)&gt;
+    bottom_power_v             (time, yu_ocean, xu_ocean) float32 dask.array&lt;shape=(240, 2700, 3600), chunksize=(1, 2700, 3600)&gt;
+    calving_melt_heat          (time, yt_ocean, xt_ocean) float32 dask.array&lt;shape=(240, 2700, 3600), chunksize=(1, 2700, 3600)&gt;
+    ekman_heat                 (time, yu_ocean, xt_ocean) float32 dask.array&lt;shape=(240, 2700, 3600), chunksize=(1, 2700, 3600)&gt;
+    ekman_we                   (time, yu_ocean, xt_ocean) float32 dask.array&lt;shape=(240, 2700, 3600), chunksize=(1, 2700, 3600)&gt;
+    evap                       (time, yt_ocean, xt_ocean) float32 dask.array&lt;shape=(240, 2700, 3600), chunksize=(1, 2700, 3600)&gt;
+    evap_heat                  (time, yt_ocean, xt_ocean) float32 dask.array&lt;shape=(240, 2700, 3600), chunksize=(1, 2700, 3600)&gt;
+    fprec                      (time, yt_ocean, xt_ocean) float32 dask.array&lt;shape=(240, 2700, 3600), chunksize=(1, 2700, 3600)&gt;
+    fprec_melt_heat            (time, yt_ocean, xt_ocean) float32 dask.array&lt;shape=(240, 2700, 3600), chunksize=(1, 2700, 3600)&gt;
+    frazil_2d                  (time, yt_ocean, xt_ocean) float32 dask.array&lt;shape=(240, 2700, 3600), chunksize=(1, 2700, 3600)&gt;
+    ice_calving                (time, yt_ocean, xt_ocean) float32 dask.array&lt;shape=(240, 2700, 3600), chunksize=(1, 2700, 3600)&gt;
+    lprec                      (time, yt_ocean, xt_ocean) float32 dask.array&lt;shape=(240, 2700, 3600), chunksize=(1, 2700, 3600)&gt;
+    lw_heat                    (time, yt_ocean, xt_ocean) float32 dask.array&lt;shape=(240, 2700, 3600), chunksize=(1, 2700, 3600)&gt;
+    melt                       (time, yt_ocean, xt_ocean) float32 dask.array&lt;shape=(240, 2700, 3600), chunksize=(1, 2700, 3600)&gt;
+    net_sfc_heating            (time, yt_ocean, xt_ocean) float32 dask.array&lt;shape=(240, 2700, 3600), chunksize=(1, 2700, 3600)&gt;
+    river                      (time, yt_ocean, xt_ocean) float32 dask.array&lt;shape=(240, 2700, 3600), chunksize=(1, 2700, 3600)&gt;
+    sens_heat                  (time, yt_ocean, xt_ocean) float32 dask.array&lt;shape=(240, 2700, 3600), chunksize=(1, 2700, 3600)&gt;
+    sfc_hflux_from_calving     (time, yt_ocean, xt_ocean) float32 dask.array&lt;shape=(240, 2700, 3600), chunksize=(1, 2700, 3600)&gt;
+    sfc_hflux_from_runoff      (time, yt_ocean, xt_ocean) float32 dask.array&lt;shape=(240, 2700, 3600), chunksize=(1, 2700, 3600)&gt;
+    sfc_hflux_from_water_evap  (time, yt_ocean, xt_ocean) float32 dask.array&lt;shape=(240, 2700, 3600), chunksize=(1, 2700, 3600)&gt;
+    sfc_hflux_from_water_prec  (time, yt_ocean, xt_ocean) float32 dask.array&lt;shape=(240, 2700, 3600), chunksize=(1, 2700, 3600)&gt;
+    sfc_hflux_pme              (time, yt_ocean, xt_ocean) float32 dask.array&lt;shape=(240, 2700, 3600), chunksize=(1, 2700, 3600)&gt;
+    swflx                      (time, yt_ocean, xt_ocean) float32 dask.array&lt;shape=(240, 2700, 3600), chunksize=(1, 2700, 3600)&gt;
+    tau_x                      (time, yu_ocean, xu_ocean) float32 dask.array&lt;shape=(240, 2700, 3600), chunksize=(1, 2700, 3600)&gt;
+    tau_y                      (time, yu_ocean, xu_ocean) float32 dask.array&lt;shape=(240, 2700, 3600), chunksize=(1, 2700, 3600)&gt;
+    wind_power_u               (time, yu_ocean, xu_ocean) float32 dask.array&lt;shape=(240, 2700, 3600), chunksize=(1, 2700, 3600)&gt;
+    wind_power_v               (time, yu_ocean, xu_ocean) float32 dask.array&lt;shape=(240, 2700, 3600), chunksize=(1, 2700, 3600)&gt;
+Attributes:
+    filename:   01810101.ocean_bdy_flux.nc
+    grid_tile:  1
+    grid_type:  mosaic
+    title:      CM2.6_miniBling</pre>
+      </div>
+    </div>
+  </div>
+</div></div>
 <div class="section" id="gfdl-cm2-6-one-percent-ocean-surface">
 <h3>GFDL_CM2_6_one_percent_ocean_surface<a class="headerlink" href="#gfdl-cm2-6-one-percent-ocean-surface" title="Permalink to this headline">¶</a></h3>
 <p>GFDL CM2.6 climate model one-percent CO2 increase ocean surface fields</p>
@@ -660,6 +766,109 @@ Data variables:
     ty_trans_submeso          (time, st_ocean, yu_ocean, xt_ocean) float32 dask.array&lt;shape=(240, 50, 2700, 3600), chunksize=(1, 5, 2700, 3600)&gt;
 Attributes:
     filename:   01810101.ocean_trans.nc
+    grid_tile:  1
+    grid_type:  mosaic
+    title:      CM2.6_miniBling</pre>
+      </div>
+    </div>
+  </div>
+</div></div>
+<div class="section" id="gfdl-cm2-6-one-percent-ocean-boundary-flux">
+<h3>GFDL_CM2_6_one_percent_ocean_boundary_flux<a class="headerlink" href="#gfdl-cm2-6-one-percent-ocean-boundary-flux" title="Permalink to this headline">¶</a></h3>
+<p>GFDL CM2.6 climate model one-percent CO2 increase monthly ocean boundary
+flux fields</p>
+   <div class="panel-group" id="accordion-gfdl_cm2_6_one_percent_ocean_boundary_flux">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion-gfdl_cm2_6_one_percent_ocean_boundary_flux" href="#collapse1-gfdl_cm2_6_one_percent_ocean_boundary_flux">
+        load in python
+        </a>
+      </h4>
+    </div>
+    <div id="collapse1-gfdl_cm2_6_one_percent_ocean_boundary_flux" class="panel-collapse collapse">
+      <div class="panel-body">
+      <pre>import intake
+cat = intake.Catalog(&#34;https://raw.githubusercontent.com/pangeo-data/pangeo-datastore/master/intake-catalogs/ocean/GFDL_CM2.6.yaml&#34;)
+ds = cat[&#34;GFDL_CM2_6_one_percent_ocean_boundary_flux&#34;].to_dask()</pre>
+      </div>
+    </div>
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion-gfdl_cm2_6_one_percent_ocean_boundary_flux" href="#collapse2-gfdl_cm2_6_one_percent_ocean_boundary_flux">
+         metadata</a>
+      </h4>
+    </div>
+    <div id="collapse2-gfdl_cm2_6_one_percent_ocean_boundary_flux" class="panel-collapse collapse">
+      <div class="panel-body">
+       <table class="table table-condensed table-hover">
+        <tbody>
+
+         <tr><td>url</td><td>https://www.gfdl.noaa.gov/cm2-6/</td></tr>
+
+         <tr><td>tags</td><td>[&#39;ocean&#39;, &#39;model&#39;]</td></tr>
+
+         <tr><td>catalog_dir</td><td>/home/jovyan/./intake-catalogs/ocean/</td></tr>
+
+        </tbody>
+       </table>
+      </div>
+    </div>
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion-gfdl_cm2_6_one_percent_ocean_boundary_flux" href="#collapse3-gfdl_cm2_6_one_percent_ocean_boundary_flux">
+        xarray preview</a>
+      </h4>
+    </div>
+    <div id="collapse3-gfdl_cm2_6_one_percent_ocean_boundary_flux" class="panel-collapse collapse">
+      <div class="panel-body">
+      <pre>&lt;xarray.Dataset&gt;
+Dimensions:                    (nv: 2, time: 240, xt_ocean: 3600, xu_ocean: 3600, yt_ocean: 2700, yu_ocean: 2700)
+Coordinates:
+    geolat_c                   (yu_ocean, xu_ocean) float32 dask.array&lt;shape=(2700, 3600), chunksize=(338, 450)&gt;
+    geolat_t                   (yt_ocean, xt_ocean) float32 dask.array&lt;shape=(2700, 3600), chunksize=(338, 450)&gt;
+    geolon_c                   (yu_ocean, xu_ocean) float32 dask.array&lt;shape=(2700, 3600), chunksize=(338, 450)&gt;
+    geolon_t                   (yt_ocean, xt_ocean) float32 dask.array&lt;shape=(2700, 3600), chunksize=(338, 450)&gt;
+  * nv                         (nv) float64 1.0 2.0
+  * time                       (time) object 0181-01-16 12:00:00 ... 0200-12-16 12:00:00
+  * xt_ocean                   (xt_ocean) float64 -279.9 -279.8 ... 79.85 79.95
+  * xu_ocean                   (xu_ocean) float64 -279.9 -279.8 ... 79.9 80.0
+  * yt_ocean                   (yt_ocean) float64 -81.11 -81.07 ... 89.94 89.98
+  * yu_ocean                   (yu_ocean) float64 -81.09 -81.05 ... 89.96 90.0
+Data variables:
+    bottom_power_u             (time, yu_ocean, xu_ocean) float32 dask.array&lt;shape=(240, 2700, 3600), chunksize=(1, 2700, 3600)&gt;
+    bottom_power_v             (time, yu_ocean, xu_ocean) float32 dask.array&lt;shape=(240, 2700, 3600), chunksize=(1, 2700, 3600)&gt;
+    calving_melt_heat          (time, yt_ocean, xt_ocean) float32 dask.array&lt;shape=(240, 2700, 3600), chunksize=(1, 2700, 3600)&gt;
+    ekman_heat                 (time, yu_ocean, xt_ocean) float32 dask.array&lt;shape=(240, 2700, 3600), chunksize=(1, 2700, 3600)&gt;
+    ekman_we                   (time, yu_ocean, xt_ocean) float32 dask.array&lt;shape=(240, 2700, 3600), chunksize=(1, 2700, 3600)&gt;
+    evap                       (time, yt_ocean, xt_ocean) float32 dask.array&lt;shape=(240, 2700, 3600), chunksize=(1, 2700, 3600)&gt;
+    evap_heat                  (time, yt_ocean, xt_ocean) float32 dask.array&lt;shape=(240, 2700, 3600), chunksize=(1, 2700, 3600)&gt;
+    fprec                      (time, yt_ocean, xt_ocean) float32 dask.array&lt;shape=(240, 2700, 3600), chunksize=(1, 2700, 3600)&gt;
+    fprec_melt_heat            (time, yt_ocean, xt_ocean) float32 dask.array&lt;shape=(240, 2700, 3600), chunksize=(1, 2700, 3600)&gt;
+    frazil_2d                  (time, yt_ocean, xt_ocean) float32 dask.array&lt;shape=(240, 2700, 3600), chunksize=(1, 2700, 3600)&gt;
+    ice_calving                (time, yt_ocean, xt_ocean) float32 dask.array&lt;shape=(240, 2700, 3600), chunksize=(1, 2700, 3600)&gt;
+    lprec                      (time, yt_ocean, xt_ocean) float32 dask.array&lt;shape=(240, 2700, 3600), chunksize=(1, 2700, 3600)&gt;
+    lw_heat                    (time, yt_ocean, xt_ocean) float32 dask.array&lt;shape=(240, 2700, 3600), chunksize=(1, 2700, 3600)&gt;
+    melt                       (time, yt_ocean, xt_ocean) float32 dask.array&lt;shape=(240, 2700, 3600), chunksize=(1, 2700, 3600)&gt;
+    net_sfc_heating            (time, yt_ocean, xt_ocean) float32 dask.array&lt;shape=(240, 2700, 3600), chunksize=(1, 2700, 3600)&gt;
+    river                      (time, yt_ocean, xt_ocean) float32 dask.array&lt;shape=(240, 2700, 3600), chunksize=(1, 2700, 3600)&gt;
+    sens_heat                  (time, yt_ocean, xt_ocean) float32 dask.array&lt;shape=(240, 2700, 3600), chunksize=(1, 2700, 3600)&gt;
+    sfc_hflux_from_calving     (time, yt_ocean, xt_ocean) float32 dask.array&lt;shape=(240, 2700, 3600), chunksize=(1, 2700, 3600)&gt;
+    sfc_hflux_from_runoff      (time, yt_ocean, xt_ocean) float32 dask.array&lt;shape=(240, 2700, 3600), chunksize=(1, 2700, 3600)&gt;
+    sfc_hflux_from_water_evap  (time, yt_ocean, xt_ocean) float32 dask.array&lt;shape=(240, 2700, 3600), chunksize=(1, 2700, 3600)&gt;
+    sfc_hflux_from_water_prec  (time, yt_ocean, xt_ocean) float32 dask.array&lt;shape=(240, 2700, 3600), chunksize=(1, 2700, 3600)&gt;
+    sfc_hflux_pme              (time, yt_ocean, xt_ocean) float32 dask.array&lt;shape=(240, 2700, 3600), chunksize=(1, 2700, 3600)&gt;
+    swflx                      (time, yt_ocean, xt_ocean) float32 dask.array&lt;shape=(240, 2700, 3600), chunksize=(1, 2700, 3600)&gt;
+    tau_x                      (time, yu_ocean, xu_ocean) float32 dask.array&lt;shape=(240, 2700, 3600), chunksize=(1, 2700, 3600)&gt;
+    tau_y                      (time, yu_ocean, xu_ocean) float32 dask.array&lt;shape=(240, 2700, 3600), chunksize=(1, 2700, 3600)&gt;
+    wind_power_u               (time, yu_ocean, xu_ocean) float32 dask.array&lt;shape=(240, 2700, 3600), chunksize=(1, 2700, 3600)&gt;
+    wind_power_v               (time, yu_ocean, xu_ocean) float32 dask.array&lt;shape=(240, 2700, 3600), chunksize=(1, 2700, 3600)&gt;
+Attributes:
+    filename:   01810101.ocean_bdy_flux.nc
     grid_tile:  1
     grid_type:  mosaic
     title:      CM2.6_miniBling</pre>
