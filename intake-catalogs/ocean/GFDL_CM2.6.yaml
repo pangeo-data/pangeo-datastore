@@ -41,7 +41,7 @@ sources:
         - model
     driver: zarr
     args:
-      urlpath: 'gcs://pangeo-data/cm2.6/control/ocean_transe'
+      urlpath: 'gcs://pangeo-data/cm2.6/control/ocean_trans'
       storage_options:
         token: anon
       consolidated: True
@@ -83,7 +83,7 @@ sources:
         - model
     driver: zarr
     args:
-      urlpath: 'gcs://pangeo-data/cm2.6/control/ocean_transe'
+      urlpath: 'gcs://pangeo-data/cm2.6/one_percent/ocean_trans'
       storage_options:
         token: anon
       consolidated: True
