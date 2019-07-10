@@ -17,6 +17,22 @@ sources:
       storage_options:
         token: anon
       consolidated: True
+      
+  cesm_mom6_example:
+    description: CESM MOM6 Ocean Model Example Data
+    metadata:
+      uploader_github: gustavo-marques
+      uploader_email: gmarques@ucar.edu
+      url: 'https://github.com/NCAR/MOM6-cases'
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      urlpath: 'gcs://pangeo-data/MOM6.cesm'
+      storage_options:
+        token: anon
+      consolidated: True      
 
   ECCOv4r3:
     description: Estimating the Circulation and Climate of the Ocean (ECCO) State Estimate Version 4 Release 3
@@ -61,7 +77,6 @@ sources:
       storage_options:
         token: anon
       consolidated: True
-
 
   LLC4320:
     args:
