@@ -296,7 +296,7 @@ Digital Elevation Model (conditioned DEM) at 3-second resolution
         <div id="collapse3-hydrosheds_dem" class="panel-collapse collapse">
           <div class="panel-body">
           <pre>&lt;xarray.DataArray (concat_dim: 1, band: 1, y: 144000, x: 390000)&gt;
-    dask.array&lt;shape=(1, 1, 144000, 390000), dtype=uint8, chunksize=(1, 1, 6000, 6000)&gt;
+    dask.array&lt;shape=(1, 1, 144000, 390000), dtype=int16, chunksize=(1, 1, 6000, 6000)&gt;
     Coordinates:
       * band     (band) int64 1
       * y        (y) float64 60.0 60.0 60.0 60.0 60.0 ... -60.0 -60.0 -60.0 -60.0
@@ -307,7 +307,7 @@ Digital Elevation Model (conditioned DEM) at 3-second resolution
         crs:         +init=epsg:4326
         res:         (0.0008333333333333098, 0.0008333333333333098)
         is_tiled:    1
-        nodatavals:  (nan,)</pre>
+        nodatavals:  (-32768.0,)</pre>
           </div>
         </div>
       </div>

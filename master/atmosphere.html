@@ -89,6 +89,7 @@
 <li><a class="reference internal" href="#gpm-imerg-early">gpm_imerg_early</a></li>
 <li><a class="reference internal" href="#trmm-3b42rt">trmm_3b42rt</a></li>
 <li><a class="reference internal" href="#sam-ngaqua-qobs-eqx-3d">sam_ngaqua_qobs_eqx_3d</a></li>
+<li><a class="reference internal" href="#sam-ngaqua-qobs-eqx-2d">sam_ngaqua_qobs_eqx_2d</a></li>
 <li><a class="reference internal" href="#gpcp-cdr-daily-v1-3">gpcp_cdr_daily_v1_3</a></li>
 <li><a class="reference internal" href="#wrf50-erai">wrf50_erai</a></li>
 </ul>
@@ -137,6 +138,7 @@
 <li><a class="reference internal" href="#gpm-imerg-early">gpm_imerg_early</a></li>
 <li><a class="reference internal" href="#trmm-3b42rt">trmm_3b42rt</a></li>
 <li><a class="reference internal" href="#sam-ngaqua-qobs-eqx-3d">sam_ngaqua_qobs_eqx_3d</a></li>
+<li><a class="reference internal" href="#sam-ngaqua-qobs-eqx-2d">sam_ngaqua_qobs_eqx_2d</a></li>
 <li><a class="reference internal" href="#gpcp-cdr-daily-v1-3">gpcp_cdr_daily_v1_3</a></li>
 <li><a class="reference internal" href="#wrf50-erai">wrf50_erai</a></li>
 </ul>
@@ -434,6 +436,99 @@ Data variables:
     V        (time, z, y, x) float32 dask.array&lt;shape=(640, 34, 2560, 5120), chunksize=(1, 34, 1280, 1280)&gt;
     W        (time, z, y, x) float32 dask.array&lt;shape=(640, 34, 2560, 5120), chunksize=(1, 34, 1280, 1280)&gt;
     p        (z) float32 dask.array&lt;shape=(34,), chunksize=(34,)&gt;</pre>
+      </div>
+    </div>
+  </div>
+</div></div>
+<div class="section" id="sam-ngaqua-qobs-eqx-2d">
+<h3>sam_ngaqua_qobs_eqx_2d<a class="headerlink" href="#sam-ngaqua-qobs-eqx-2d" title="Permalink to this headline">¶</a></h3>
+<p>2D fields from a near-global Aquaplanet Simulation with the System for
+Atmospheric Modeling</p>
+   <div class="panel-group" id="accordion-sam_ngaqua_qobs_eqx_2d">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion-sam_ngaqua_qobs_eqx_2d" href="#collapse1-sam_ngaqua_qobs_eqx_2d">
+        load in python
+        </a>
+      </h4>
+    </div>
+    <div id="collapse1-sam_ngaqua_qobs_eqx_2d" class="panel-collapse collapse">
+      <div class="panel-body">
+      <pre>import intake
+cat = intake.Catalog(&#34;https://raw.githubusercontent.com/pangeo-data/pangeo-datastore/master/intake-catalogs/atmosphere.yaml&#34;)
+ds = cat[&#34;sam_ngaqua_qobs_eqx_2d&#34;].to_dask()</pre>
+      </div>
+    </div>
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion-sam_ngaqua_qobs_eqx_2d" href="#collapse2-sam_ngaqua_qobs_eqx_2d">
+         metadata</a>
+      </h4>
+    </div>
+    <div id="collapse2-sam_ngaqua_qobs_eqx_2d" class="panel-collapse collapse">
+      <div class="panel-body">
+       <table class="table table-condensed table-hover">
+        <tbody>
+
+         <tr><td>tags</td><td>[&#39;atmosphere&#39;, &#39;model&#39;]</td></tr>
+
+         <tr><td>catalog_dir</td><td>/home/jovyan/./intake-catalogs/</td></tr>
+
+        </tbody>
+       </table>
+      </div>
+    </div>
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion-sam_ngaqua_qobs_eqx_2d" href="#collapse3-sam_ngaqua_qobs_eqx_2d">
+        xarray preview</a>
+      </h4>
+    </div>
+    <div id="collapse3-sam_ngaqua_qobs_eqx_2d" class="panel-collapse collapse">
+      <div class="panel-body">
+      <pre>&lt;xarray.Dataset&gt;
+Dimensions:  (time: 1920, x: 5120, y: 2560)
+Coordinates:
+  * time     (time) float64 101.6 100.5 101.6 100.6 ... 180.4 180.4 180.5 180.5
+  * x        (x) float32 0.0 4000.0 8000.0 ... 20468000.0 20472000.0 20476000.0
+  * y        (y) float32 0.0 4000.0 8000.0 ... 10228000.0 10232000.0 10236000.0
+Data variables:
+    CLD      (time, y, x) float32 dask.array&lt;shape=(1920, 2560, 5120), chunksize=(1, 2560, 5120)&gt;
+    CLDC     (time, y, x) float32 dask.array&lt;shape=(1920, 2560, 5120), chunksize=(1, 2560, 5120)&gt;
+    CWP      (time, y, x) float32 dask.array&lt;shape=(1920, 2560, 5120), chunksize=(1, 2560, 5120)&gt;
+    IWP      (time, y, x) float32 dask.array&lt;shape=(1920, 2560, 5120), chunksize=(1, 2560, 5120)&gt;
+    LHF      (time, y, x) float32 dask.array&lt;shape=(1920, 2560, 5120), chunksize=(1, 2560, 5120)&gt;
+    LWNS     (time, y, x) float32 dask.array&lt;shape=(1920, 2560, 5120), chunksize=(1, 2560, 5120)&gt;
+    LWNSC    (time, y, x) float32 dask.array&lt;shape=(1920, 2560, 5120), chunksize=(1, 2560, 5120)&gt;
+    LWNT     (time, y, x) float32 dask.array&lt;shape=(1920, 2560, 5120), chunksize=(1, 2560, 5120)&gt;
+    LWNTC    (time, y, x) float32 dask.array&lt;shape=(1920, 2560, 5120), chunksize=(1, 2560, 5120)&gt;
+    PSFC     (time, y, x) float32 dask.array&lt;shape=(1920, 2560, 5120), chunksize=(1, 2560, 5120)&gt;
+    PW       (time, y, x) float32 dask.array&lt;shape=(1920, 2560, 5120), chunksize=(1, 2560, 5120)&gt;
+    Prec     (time, y, x) float32 dask.array&lt;shape=(1920, 2560, 5120), chunksize=(1, 2560, 5120)&gt;
+    SHF      (time, y, x) float32 dask.array&lt;shape=(1920, 2560, 5120), chunksize=(1, 2560, 5120)&gt;
+    SOLIN    (time, y, x) float32 dask.array&lt;shape=(1920, 2560, 5120), chunksize=(1, 2560, 5120)&gt;
+    SST      (time, y, x) float32 dask.array&lt;shape=(1920, 2560, 5120), chunksize=(1, 2560, 5120)&gt;
+    SWNS     (time, y, x) float32 dask.array&lt;shape=(1920, 2560, 5120), chunksize=(1, 2560, 5120)&gt;
+    SWNSC    (time, y, x) float32 dask.array&lt;shape=(1920, 2560, 5120), chunksize=(1, 2560, 5120)&gt;
+    SWNT     (time, y, x) float32 dask.array&lt;shape=(1920, 2560, 5120), chunksize=(1, 2560, 5120)&gt;
+    SWNTC    (time, y, x) float32 dask.array&lt;shape=(1920, 2560, 5120), chunksize=(1, 2560, 5120)&gt;
+    SWVP     (time, y, x) float32 dask.array&lt;shape=(1920, 2560, 5120), chunksize=(1, 2560, 5120)&gt;
+    TA       (time, y, x) float32 dask.array&lt;shape=(1920, 2560, 5120), chunksize=(1, 2560, 5120)&gt;
+    TB       (time, y, x) float32 dask.array&lt;shape=(1920, 2560, 5120), chunksize=(1, 2560, 5120)&gt;
+    U200     (time, y, x) float32 dask.array&lt;shape=(1920, 2560, 5120), chunksize=(1, 2560, 5120)&gt;
+    U850     (time, y, x) float32 dask.array&lt;shape=(1920, 2560, 5120), chunksize=(1, 2560, 5120)&gt;
+    USFC     (time, y, x) float32 dask.array&lt;shape=(1920, 2560, 5120), chunksize=(1, 2560, 5120)&gt;
+    V200     (time, y, x) float32 dask.array&lt;shape=(1920, 2560, 5120), chunksize=(1, 2560, 5120)&gt;
+    V850     (time, y, x) float32 dask.array&lt;shape=(1920, 2560, 5120), chunksize=(1, 2560, 5120)&gt;
+    VSFC     (time, y, x) float32 dask.array&lt;shape=(1920, 2560, 5120), chunksize=(1, 2560, 5120)&gt;
+    W500     (time, y, x) float32 dask.array&lt;shape=(1920, 2560, 5120), chunksize=(1, 2560, 5120)&gt;
+    ZC       (time, y, x) float32 dask.array&lt;shape=(1920, 2560, 5120), chunksize=(1, 2560, 5120)&gt;
+    ZE       (time, y, x) float32 dask.array&lt;shape=(1920, 2560, 5120), chunksize=(1, 2560, 5120)&gt;</pre>
       </div>
     </div>
   </div>
