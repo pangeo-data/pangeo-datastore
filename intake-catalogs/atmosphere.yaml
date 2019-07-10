@@ -51,6 +51,18 @@ sources:
       urlpath: 'gcs://pangeo-data/SAM/NG_5120x2560x34_4km_10s_QOBS_EQX/3d.zarr'
       storage_options:
         token: anon
+       
+  sam_ngaqua_qobs_eqx_2d:
+    description: 2D fields from a near-global Aquaplanet Simulation with the System for Atmospheric Modeling
+    metadata:
+      tags:
+        - atmosphere
+        - model
+    driver: zarr
+    args:
+      urlpath: 'gcs://pangeo-data/SAM/NG_5120x2560x34_4km_10s_QOBS_EQX/2d.zarr'
+      storage_options:
+        token: anon
 
   gpcp_cdr_daily_v1_3:
     description: 3D fields from a near-global Aquaplanet Simulation with the System for Atmospheric Modeling
