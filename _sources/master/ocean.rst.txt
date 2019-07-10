@@ -147,6 +147,121 @@ sea-surface altimetry data from The Copernicus Marine Environment
       </div>
     </div>
 
+cesm_mom6_example
+~~~~~~~~~~~~~~~~~
+
+CESM MOM6 Ocean Model Example Data
+
+.. raw:: html
+
+       <div class="panel-group" id="accordion-cesm_mom6_example">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h4 class="panel-title">
+            <a data-toggle="collapse" data-parent="#accordion-cesm_mom6_example" href="#collapse1-cesm_mom6_example">
+            load in python
+            </a>
+          </h4>
+        </div>
+        <div id="collapse1-cesm_mom6_example" class="panel-collapse collapse">
+          <div class="panel-body">
+          <pre>import intake
+    cat = intake.Catalog(&#34;https://raw.githubusercontent.com/pangeo-data/pangeo-datastore/master/intake-catalogs/ocean.yaml&#34;)
+    ds = cat[&#34;cesm_mom6_example&#34;].to_dask()</pre>
+          </div>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h4 class="panel-title">
+            <a data-toggle="collapse" data-parent="#accordion-cesm_mom6_example" href="#collapse2-cesm_mom6_example">
+             metadata</a>
+          </h4>
+        </div>
+        <div id="collapse2-cesm_mom6_example" class="panel-collapse collapse">
+          <div class="panel-body">
+           <table class="table table-condensed table-hover">
+            <tbody>
+           
+             <tr><td>uploader_github</td><td>gustavo-marques</td></tr>
+           
+             <tr><td>uploader_email</td><td>gmarques@ucar.edu</td></tr>
+           
+             <tr><td>url</td><td>https://github.com/NCAR/MOM6-cases</td></tr>
+           
+             <tr><td>tags</td><td>[&#39;ocean&#39;, &#39;model&#39;]</td></tr>
+           
+             <tr><td>catalog_dir</td><td>/home/jovyan/./intake-catalogs/</td></tr>
+           
+            </tbody>
+           </table>
+          </div>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h4 class="panel-title">
+            <a data-toggle="collapse" data-parent="#accordion-cesm_mom6_example" href="#collapse3-cesm_mom6_example">
+            xarray preview</a>
+          </h4>
+        </div>
+        <div id="collapse3-cesm_mom6_example" class="panel-collapse collapse">
+          <div class="panel-body">
+          <pre>&lt;xarray.Dataset&gt;
+    Dimensions:       (lath: 458, latq: 458, lonh: 540, lonq: 540, nv: 2, scalar_axis: 1, time: 24, xh: 540, xq: 540, yh: 458, yq: 458, z_i: 35, z_l: 34)
+    Coordinates:
+        geolat        (yh, xh) float64 dask.array&lt;shape=(458, 540), chunksize=(458, 540)&gt;
+        geolatb       (yq, xq) float64 dask.array&lt;shape=(458, 540), chunksize=(458, 540)&gt;
+        geolon        (yh, xh) float64 dask.array&lt;shape=(458, 540), chunksize=(458, 540)&gt;
+        geolonb       (yq, xq) float64 dask.array&lt;shape=(458, 540), chunksize=(458, 540)&gt;
+      * lath          (lath) float64 -79.2 -79.08 -78.95 ... 87.64 87.71 87.74
+      * latq          (latq) float64 -79.14 -79.01 -78.89 ... 87.68 87.73 87.74
+      * lonh          (lonh) float64 -286.7 -286.0 -285.3 ... 71.33 72.0 72.67
+      * lonq          (lonq) float64 -286.3 -285.7 -285.0 ... 71.67 72.33 73.0
+      * nv            (nv) float64 1.0 2.0
+      * scalar_axis   (scalar_axis) float64 0.0
+      * time          (time) object 0001-01-16 12:00:00 ... 0002-12-16 12:00:00
+      * xh            (xh) float64 -286.7 -286.0 -285.3 -284.7 ... 71.33 72.0 72.67
+      * xq            (xq) float64 -286.3 -285.7 -285.0 -284.3 ... 71.67 72.33 73.0
+      * yh            (yh) float64 -79.2 -79.08 -78.95 -78.82 ... 87.64 87.71 87.74
+      * yq            (yq) float64 -79.14 -79.01 -78.89 -78.76 ... 87.68 87.73 87.74
+      * z_i           (z_i) float64 0.0 5.0 15.0 25.0 ... 5.25e+03 5.75e+03 6.25e+03
+      * z_l           (z_l) float64 2.5 10.0 20.0 32.5 ... 5e+03 5.5e+03 6e+03
+    Data variables:
+        KE            (time, z_l, yh, xh) float64 dask.array&lt;shape=(24, 34, 458, 540), chunksize=(1, 34, 458, 540)&gt;
+        KPP_OBLdepth  (time, yh, xh) float64 dask.array&lt;shape=(24, 458, 540), chunksize=(1, 458, 540)&gt;
+        MLD_0125      (time, yh, xh) float64 dask.array&lt;shape=(24, 458, 540), chunksize=(1, 458, 540)&gt;
+        SSH           (time, yh, xh) float64 dask.array&lt;shape=(24, 458, 540), chunksize=(1, 458, 540)&gt;
+        SSS           (time, yh, xh) float64 dask.array&lt;shape=(24, 458, 540), chunksize=(1, 458, 540)&gt;
+        SST           (time, yh, xh) float64 dask.array&lt;shape=(24, 458, 540), chunksize=(1, 458, 540)&gt;
+        average_DT    (time) timedelta64[ns] dask.array&lt;shape=(24,), chunksize=(1,)&gt;
+        average_T1    (time) object dask.array&lt;shape=(24,), chunksize=(1,)&gt;
+        average_T2    (time) object dask.array&lt;shape=(24,), chunksize=(1,)&gt;
+        friver        (time, yh, xh) float64 dask.array&lt;shape=(24, 458, 540), chunksize=(1, 458, 540)&gt;
+        h             (time, z_l, yh, xh) float64 dask.array&lt;shape=(24, 34, 458, 540), chunksize=(1, 34, 458, 540)&gt;
+        hfds          (time, yh, xh) float64 dask.array&lt;shape=(24, 458, 540), chunksize=(1, 458, 540)&gt;
+        hfsnthermds   (time, yh, xh) float64 dask.array&lt;shape=(24, 458, 540), chunksize=(1, 458, 540)&gt;
+        rhoinsitu     (time, z_l, yh, xh) float64 dask.array&lt;shape=(24, 34, 458, 540), chunksize=(1, 34, 458, 540)&gt;
+        salt          (time, z_l, yh, xh) float64 dask.array&lt;shape=(24, 34, 458, 540), chunksize=(1, 34, 458, 540)&gt;
+        soga          (time, scalar_axis) float64 dask.array&lt;shape=(24, 1), chunksize=(1, 1)&gt;
+        taux          (time, yh, xq) float64 dask.array&lt;shape=(24, 458, 540), chunksize=(1, 458, 540)&gt;
+        tauy          (time, yq, xh) float64 dask.array&lt;shape=(24, 458, 540), chunksize=(1, 458, 540)&gt;
+        temp          (time, z_l, yh, xh) float64 dask.array&lt;shape=(24, 34, 458, 540), chunksize=(1, 34, 458, 540)&gt;
+        thetaoga      (time, scalar_axis) float64 dask.array&lt;shape=(24, 1), chunksize=(1, 1)&gt;
+        time_bnds     (time, nv) timedelta64[ns] dask.array&lt;shape=(24, 2), chunksize=(1, 2)&gt;
+        u             (time, z_l, yh, xq) float64 dask.array&lt;shape=(24, 34, 458, 540), chunksize=(1, 34, 458, 540)&gt;
+        v             (time, z_l, yq, xh) float64 dask.array&lt;shape=(24, 34, 458, 540), chunksize=(1, 34, 458, 540)&gt;
+    Attributes:
+        associated_files:  area_t: g.c2b6.GNYF.T62_t061.melt_potential.003.mom6.s...
+        filename:          g.c2b6.GNYF.T62_t061.melt_potential.003.mom6.h_0001_01.nc
+        grid_tile:         N/A
+        grid_type:         regular
+        title:             MOM6 g.c2b6.GNYF.T62_t061.melt_potential.003 Experiment</pre>
+          </div>
+        </div>
+      </div>
+    </div>
+
 ECCOv4r3
 ~~~~~~~~
 
