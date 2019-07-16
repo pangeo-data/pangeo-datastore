@@ -51,7 +51,7 @@ sources:
       urlpath: 'gcs://pangeo-data/SAM/NG_5120x2560x34_4km_10s_QOBS_EQX/3d.zarr'
       storage_options:
         token: anon
-       
+
   sam_ngaqua_qobs_eqx_2d:
     description: 2D fields from a near-global Aquaplanet Simulation with the System for Atmospheric Modeling
     metadata:
@@ -88,3 +88,16 @@ sources:
         access: read_only
       urlpath: 'gcs://pangeo-data/ncar_wrf50/erai.wrf_daily_data.zarr'
       consolidated: True
+
+  tracmip:
+    description: 'Tropical Rain belts with an Annual cycle and a Continent Model Intercomparison Project'
+    metadata:
+      uploader_github: charlesbluca
+      uploader_email: ccb2158@columbia.edu
+      url: 'https://sites.google.com/site/tracmip/'
+      tags:
+        - atmosphere
+        - model
+    driver: intake.catalog.local.YAMLFileCatalog
+    args:
+      path: '{{CATALOG_DIR}}/atmosphere/tracmip.yaml'

@@ -1,0 +1,2684 @@
+plugins:
+    source:
+        - module: intake_xarray
+
+sources:
+
+    Amon_aquaControl_GISS-ModelE2_v20190114:
+        description: GISS-ModelE2 model of aquaControl experiment at monthly timestep; uploaded on 01/14/2019
+        metadata:
+            tags:
+                - atmosphere
+                - model
+        driver: zarr
+        args:
+            urlpath: gcs://pangeo-data/tracmip/Amon/aquaControl/GISS-ModelE2/v20190114
+            storage_options:
+                token: anon
+            consolidated: True
+
+    Amon_aqua4xCO2_GISS-ModelE2_v20190114:
+        description: GISS-ModelE2 model of aqua4xCO2 experiment at monthly timestep; uploaded on 01/14/2019
+        metadata:
+            tags:
+                - atmosphere
+                - model
+        driver: zarr
+        args:
+            urlpath: gcs://pangeo-data/tracmip/Amon/aqua4xCO2/GISS-ModelE2/v20190114
+            storage_options:
+                token: anon
+            consolidated: True
+
+    Amon_aquaControl_MetUM-CTL_v20180423:
+        description: MetUM-CTL model of aquaControl experiment at monthly timestep; uploaded on 04/23/2018
+        metadata:
+            tags:
+                - atmosphere
+                - model
+        driver: zarr
+        args:
+            urlpath: gcs://pangeo-data/tracmip/Amon/aquaControl/MetUM-CTL/v20180423
+            storage_options:
+                token: anon
+            consolidated: True
+
+    Amon_aqua4xCO2_MetUM-CTL_v20180423:
+        description: MetUM-CTL model of aqua4xCO2 experiment at monthly timestep; uploaded on 04/23/2018
+        metadata:
+            tags:
+                - atmosphere
+                - model
+        driver: zarr
+        args:
+            urlpath: gcs://pangeo-data/tracmip/Amon/aqua4xCO2/MetUM-CTL/v20180423
+            storage_options:
+                token: anon
+            consolidated: True
+
+    Amon_land4xCO2_MetUM-CTL_v20180423:
+        description: MetUM-CTL model of land4xCO2 experiment at monthly timestep; uploaded on 04/23/2018
+        metadata:
+            tags:
+                - atmosphere
+                - model
+        driver: zarr
+        args:
+            urlpath: gcs://pangeo-data/tracmip/Amon/land4xCO2/MetUM-CTL/v20180423
+            storage_options:
+                token: anon
+            consolidated: True
+
+    Amon_landOrbit_MetUM-CTL_v20180423:
+        description: MetUM-CTL model of landOrbit experiment at monthly timestep; uploaded on 04/23/2018
+        metadata:
+            tags:
+                - atmosphere
+                - model
+        driver: zarr
+        args:
+            urlpath: gcs://pangeo-data/tracmip/Amon/landOrbit/MetUM-CTL/v20180423
+            storage_options:
+                token: anon
+            consolidated: True
+
+    Amon_landControl_MetUM-CTL_v20180423:
+        description: MetUM-CTL model of landControl experiment at monthly timestep; uploaded on 04/23/2018
+        metadata:
+            tags:
+                - atmosphere
+                - model
+        driver: zarr
+        args:
+            urlpath: gcs://pangeo-data/tracmip/Amon/landControl/MetUM-CTL/v20180423
+            storage_options:
+                token: anon
+            consolidated: True
+
+    Amon_aquaControl_CAM5Nor_v20190305:
+        description: CAM5Nor model of aquaControl experiment at monthly timestep; uploaded on 03/05/2019
+        metadata:
+            tags:
+                - atmosphere
+                - model
+        driver: zarr
+        args:
+            urlpath: gcs://pangeo-data/tracmip/Amon/aquaControl/CAM5Nor/v20190305
+            storage_options:
+                token: anon
+            consolidated: True
+
+    Amon_aqua4xCO2_CAM5Nor_v20190305:
+        description: CAM5Nor model of aqua4xCO2 experiment at monthly timestep; uploaded on 03/05/2019
+        metadata:
+            tags:
+                - atmosphere
+                - model
+        driver: zarr
+        args:
+            urlpath: gcs://pangeo-data/tracmip/Amon/aqua4xCO2/CAM5Nor/v20190305
+            storage_options:
+                token: anon
+            consolidated: True
+
+    Amon_land4xCO2_CAM5Nor_v20190305:
+        description: CAM5Nor model of land4xCO2 experiment at monthly timestep; uploaded on 03/05/2019
+        metadata:
+            tags:
+                - atmosphere
+                - model
+        driver: zarr
+        args:
+            urlpath: gcs://pangeo-data/tracmip/Amon/land4xCO2/CAM5Nor/v20190305
+            storage_options:
+                token: anon
+            consolidated: True
+
+    Amon_landControl_CAM5Nor_v20190305:
+        description: CAM5Nor model of landControl experiment at monthly timestep; uploaded on 03/05/2019
+        metadata:
+            tags:
+                - atmosphere
+                - model
+        driver: zarr
+        args:
+            urlpath: gcs://pangeo-data/tracmip/Amon/landControl/CAM5Nor/v20190305
+            storage_options:
+                token: anon
+            consolidated: True
+
+    Amon_aquaControl_CAM3_v20190129:
+        description: CAM3 model of aquaControl experiment at monthly timestep; uploaded on 01/29/2019
+        metadata:
+            tags:
+                - atmosphere
+                - model
+        driver: zarr
+        args:
+            urlpath: gcs://pangeo-data/tracmip/Amon/aquaControl/CAM3/v20190129
+            storage_options:
+                token: anon
+            consolidated: True
+
+    Amon_aqua4xCO2_CAM3_v20190129:
+        description: CAM3 model of aqua4xCO2 experiment at monthly timestep; uploaded on 01/29/2019
+        metadata:
+            tags:
+                - atmosphere
+                - model
+        driver: zarr
+        args:
+            urlpath: gcs://pangeo-data/tracmip/Amon/aqua4xCO2/CAM3/v20190129
+            storage_options:
+                token: anon
+            consolidated: True
+
+    Amon_land4xCO2_CAM3_v20190129:
+        description: CAM3 model of land4xCO2 experiment at monthly timestep; uploaded on 01/29/2019
+        metadata:
+            tags:
+                - atmosphere
+                - model
+        driver: zarr
+        args:
+            urlpath: gcs://pangeo-data/tracmip/Amon/land4xCO2/CAM3/v20190129
+            storage_options:
+                token: anon
+            consolidated: True
+
+    Amon_landOrbit_CAM3_v20190129:
+        description: CAM3 model of landOrbit experiment at monthly timestep; uploaded on 01/29/2019
+        metadata:
+            tags:
+                - atmosphere
+                - model
+        driver: zarr
+        args:
+            urlpath: gcs://pangeo-data/tracmip/Amon/landOrbit/CAM3/v20190129
+            storage_options:
+                token: anon
+            consolidated: True
+
+    Amon_landControl_CAM3_v20190129:
+        description: CAM3 model of landControl experiment at monthly timestep; uploaded on 01/29/2019
+        metadata:
+            tags:
+                - atmosphere
+                - model
+        driver: zarr
+        args:
+            urlpath: gcs://pangeo-data/tracmip/Amon/landControl/CAM3/v20190129
+            storage_options:
+                token: anon
+            consolidated: True
+
+    Amon_aquaControl_CNRM-AM5_v20180423:
+        description: CNRM-AM5 model of aquaControl experiment at monthly timestep; uploaded on 04/23/2018
+        metadata:
+            tags:
+                - atmosphere
+                - model
+        driver: zarr
+        args:
+            urlpath: gcs://pangeo-data/tracmip/Amon/aquaControl/CNRM-AM5/v20180423
+            storage_options:
+                token: anon
+            consolidated: True
+
+    Amon_aqua4xCO2_CNRM-AM5_v20180423:
+        description: CNRM-AM5 model of aqua4xCO2 experiment at monthly timestep; uploaded on 04/23/2018
+        metadata:
+            tags:
+                - atmosphere
+                - model
+        driver: zarr
+        args:
+            urlpath: gcs://pangeo-data/tracmip/Amon/aqua4xCO2/CNRM-AM5/v20180423
+            storage_options:
+                token: anon
+            consolidated: True
+
+    Amon_land4xCO2_CNRM-AM5_v20180423:
+        description: CNRM-AM5 model of land4xCO2 experiment at monthly timestep; uploaded on 04/23/2018
+        metadata:
+            tags:
+                - atmosphere
+                - model
+        driver: zarr
+        args:
+            urlpath: gcs://pangeo-data/tracmip/Amon/land4xCO2/CNRM-AM5/v20180423
+            storage_options:
+                token: anon
+            consolidated: True
+
+    Amon_landOrbit_CNRM-AM5_v20180423:
+        description: CNRM-AM5 model of landOrbit experiment at monthly timestep; uploaded on 04/23/2018
+        metadata:
+            tags:
+                - atmosphere
+                - model
+        driver: zarr
+        args:
+            urlpath: gcs://pangeo-data/tracmip/Amon/landOrbit/CNRM-AM5/v20180423
+            storage_options:
+                token: anon
+            consolidated: True
+
+    Amon_landControl_CNRM-AM5_v20180423:
+        description: CNRM-AM5 model of landControl experiment at monthly timestep; uploaded on 04/23/2018
+        metadata:
+            tags:
+                - atmosphere
+                - model
+        driver: zarr
+        args:
+            urlpath: gcs://pangeo-data/tracmip/Amon/landControl/CNRM-AM5/v20180423
+            storage_options:
+                token: anon
+            consolidated: True
+
+    Amon_aquaControl_AM21_v20190116:
+        description: AM21 model of aquaControl experiment at monthly timestep; uploaded on 01/16/2019
+        metadata:
+            tags:
+                - atmosphere
+                - model
+        driver: zarr
+        args:
+            urlpath: gcs://pangeo-data/tracmip/Amon/aquaControl/AM21/v20190116
+            storage_options:
+                token: anon
+            consolidated: True
+
+    Amon_aqua4xCO2_AM21_v20190116:
+        description: AM21 model of aqua4xCO2 experiment at monthly timestep; uploaded on 01/16/2019
+        metadata:
+            tags:
+                - atmosphere
+                - model
+        driver: zarr
+        args:
+            urlpath: gcs://pangeo-data/tracmip/Amon/aqua4xCO2/AM21/v20190116
+            storage_options:
+                token: anon
+            consolidated: True
+
+    Amon_land4xCO2_AM21_v20190116:
+        description: AM21 model of land4xCO2 experiment at monthly timestep; uploaded on 01/16/2019
+        metadata:
+            tags:
+                - atmosphere
+                - model
+        driver: zarr
+        args:
+            urlpath: gcs://pangeo-data/tracmip/Amon/land4xCO2/AM21/v20190116
+            storage_options:
+                token: anon
+            consolidated: True
+
+    Amon_landControl_AM21_v20190116:
+        description: AM21 model of landControl experiment at monthly timestep; uploaded on 01/16/2019
+        metadata:
+            tags:
+                - atmosphere
+                - model
+        driver: zarr
+        args:
+            urlpath: gcs://pangeo-data/tracmip/Amon/landControl/AM21/v20190116
+            storage_options:
+                token: anon
+            consolidated: True
+
+    Amon_aquaControl_ECHAM61_v20180423:
+        description: ECHAM61 model of aquaControl experiment at monthly timestep; uploaded on 04/23/2018
+        metadata:
+            tags:
+                - atmosphere
+                - model
+        driver: zarr
+        args:
+            urlpath: gcs://pangeo-data/tracmip/Amon/aquaControl/ECHAM61/v20180423
+            storage_options:
+                token: anon
+            consolidated: True
+
+    Amon_aqua4xCO2_ECHAM61_v20180423:
+        description: ECHAM61 model of aqua4xCO2 experiment at monthly timestep; uploaded on 04/23/2018
+        metadata:
+            tags:
+                - atmosphere
+                - model
+        driver: zarr
+        args:
+            urlpath: gcs://pangeo-data/tracmip/Amon/aqua4xCO2/ECHAM61/v20180423
+            storage_options:
+                token: anon
+            consolidated: True
+
+    Amon_land4xCO2_ECHAM61_v20180423:
+        description: ECHAM61 model of land4xCO2 experiment at monthly timestep; uploaded on 04/23/2018
+        metadata:
+            tags:
+                - atmosphere
+                - model
+        driver: zarr
+        args:
+            urlpath: gcs://pangeo-data/tracmip/Amon/land4xCO2/ECHAM61/v20180423
+            storage_options:
+                token: anon
+            consolidated: True
+
+    Amon_landOrbit_ECHAM61_v20180423:
+        description: ECHAM61 model of landOrbit experiment at monthly timestep; uploaded on 04/23/2018
+        metadata:
+            tags:
+                - atmosphere
+                - model
+        driver: zarr
+        args:
+            urlpath: gcs://pangeo-data/tracmip/Amon/landOrbit/ECHAM61/v20180423
+            storage_options:
+                token: anon
+            consolidated: True
+
+    Amon_landControl_ECHAM61_v20180423:
+        description: ECHAM61 model of landControl experiment at monthly timestep; uploaded on 04/23/2018
+        metadata:
+            tags:
+                - atmosphere
+                - model
+        driver: zarr
+        args:
+            urlpath: gcs://pangeo-data/tracmip/Amon/landControl/ECHAM61/v20180423
+            storage_options:
+                token: anon
+            consolidated: True
+
+    Amon_aquaControl_MetUM-ENT_v20180423:
+        description: MetUM-ENT model of aquaControl experiment at monthly timestep; uploaded on 04/23/2018
+        metadata:
+            tags:
+                - atmosphere
+                - model
+        driver: zarr
+        args:
+            urlpath: gcs://pangeo-data/tracmip/Amon/aquaControl/MetUM-ENT/v20180423
+            storage_options:
+                token: anon
+            consolidated: True
+
+    Amon_aqua4xCO2_MetUM-ENT_v20180423:
+        description: MetUM-ENT model of aqua4xCO2 experiment at monthly timestep; uploaded on 04/23/2018
+        metadata:
+            tags:
+                - atmosphere
+                - model
+        driver: zarr
+        args:
+            urlpath: gcs://pangeo-data/tracmip/Amon/aqua4xCO2/MetUM-ENT/v20180423
+            storage_options:
+                token: anon
+            consolidated: True
+
+    Amon_land4xCO2_MetUM-ENT_v20180423:
+        description: MetUM-ENT model of land4xCO2 experiment at monthly timestep; uploaded on 04/23/2018
+        metadata:
+            tags:
+                - atmosphere
+                - model
+        driver: zarr
+        args:
+            urlpath: gcs://pangeo-data/tracmip/Amon/land4xCO2/MetUM-ENT/v20180423
+            storage_options:
+                token: anon
+            consolidated: True
+
+    Amon_landOrbit_MetUM-ENT_v20180423:
+        description: MetUM-ENT model of landOrbit experiment at monthly timestep; uploaded on 04/23/2018
+        metadata:
+            tags:
+                - atmosphere
+                - model
+        driver: zarr
+        args:
+            urlpath: gcs://pangeo-data/tracmip/Amon/landOrbit/MetUM-ENT/v20180423
+            storage_options:
+                token: anon
+            consolidated: True
+
+    Amon_landControl_MetUM-ENT_v20180423:
+        description: MetUM-ENT model of landControl experiment at monthly timestep; uploaded on 04/23/2018
+        metadata:
+            tags:
+                - atmosphere
+                - model
+        driver: zarr
+        args:
+            urlpath: gcs://pangeo-data/tracmip/Amon/landControl/MetUM-ENT/v20180423
+            storage_options:
+                token: anon
+            consolidated: True
+
+    Amon_aquaControl_MPAS_v20190131:
+        description: MPAS model of aquaControl experiment at monthly timestep; uploaded on 01/31/2019
+        metadata:
+            tags:
+                - atmosphere
+                - model
+        driver: zarr
+        args:
+            urlpath: gcs://pangeo-data/tracmip/Amon/aquaControl/MPAS/v20190131
+            storage_options:
+                token: anon
+            consolidated: True
+
+    Amon_aqua4xCO2_MPAS_v20190131:
+        description: MPAS model of aqua4xCO2 experiment at monthly timestep; uploaded on 01/31/2019
+        metadata:
+            tags:
+                - atmosphere
+                - model
+        driver: zarr
+        args:
+            urlpath: gcs://pangeo-data/tracmip/Amon/aqua4xCO2/MPAS/v20190131
+            storage_options:
+                token: anon
+            consolidated: True
+
+    Amon_land4xCO2_MPAS_v20190131:
+        description: MPAS model of land4xCO2 experiment at monthly timestep; uploaded on 01/31/2019
+        metadata:
+            tags:
+                - atmosphere
+                - model
+        driver: zarr
+        args:
+            urlpath: gcs://pangeo-data/tracmip/Amon/land4xCO2/MPAS/v20190131
+            storage_options:
+                token: anon
+            consolidated: True
+
+    Amon_landOrbit_MPAS_v20190131:
+        description: MPAS model of landOrbit experiment at monthly timestep; uploaded on 01/31/2019
+        metadata:
+            tags:
+                - atmosphere
+                - model
+        driver: zarr
+        args:
+            urlpath: gcs://pangeo-data/tracmip/Amon/landOrbit/MPAS/v20190131
+            storage_options:
+                token: anon
+            consolidated: True
+
+    Amon_landControl_MPAS_v20190131:
+        description: MPAS model of landControl experiment at monthly timestep; uploaded on 01/31/2019
+        metadata:
+            tags:
+                - atmosphere
+                - model
+        driver: zarr
+        args:
+            urlpath: gcs://pangeo-data/tracmip/Amon/landControl/MPAS/v20190131
+            storage_options:
+                token: anon
+            consolidated: True
+
+    Amon_aquaControl_LMDZ5A_v20190114:
+        description: LMDZ5A model of aquaControl experiment at monthly timestep; uploaded on 01/14/2019
+        metadata:
+            tags:
+                - atmosphere
+                - model
+        driver: zarr
+        args:
+            urlpath: gcs://pangeo-data/tracmip/Amon/aquaControl/LMDZ5A/v20190114
+            storage_options:
+                token: anon
+            consolidated: True
+
+    Amon_aqua4xCO2_LMDZ5A_v20190114:
+        description: LMDZ5A model of aqua4xCO2 experiment at monthly timestep; uploaded on 01/14/2019
+        metadata:
+            tags:
+                - atmosphere
+                - model
+        driver: zarr
+        args:
+            urlpath: gcs://pangeo-data/tracmip/Amon/aqua4xCO2/LMDZ5A/v20190114
+            storage_options:
+                token: anon
+            consolidated: True
+
+    Amon_land4xCO2_LMDZ5A_v20190114:
+        description: LMDZ5A model of land4xCO2 experiment at monthly timestep; uploaded on 01/14/2019
+        metadata:
+            tags:
+                - atmosphere
+                - model
+        driver: zarr
+        args:
+            urlpath: gcs://pangeo-data/tracmip/Amon/land4xCO2/LMDZ5A/v20190114
+            storage_options:
+                token: anon
+            consolidated: True
+
+    Amon_landOrbit_LMDZ5A_v20190114:
+        description: LMDZ5A model of landOrbit experiment at monthly timestep; uploaded on 01/14/2019
+        metadata:
+            tags:
+                - atmosphere
+                - model
+        driver: zarr
+        args:
+            urlpath: gcs://pangeo-data/tracmip/Amon/landOrbit/LMDZ5A/v20190114
+            storage_options:
+                token: anon
+            consolidated: True
+
+    Amon_landControl_LMDZ5A_v20190114:
+        description: LMDZ5A model of landControl experiment at monthly timestep; uploaded on 01/14/2019
+        metadata:
+            tags:
+                - atmosphere
+                - model
+        driver: zarr
+        args:
+            urlpath: gcs://pangeo-data/tracmip/Amon/landControl/LMDZ5A/v20190114
+            storage_options:
+                token: anon
+            consolidated: True
+
+    Amon_aquaControl_ECHAM63_v20190129:
+        description: ECHAM63 model of aquaControl experiment at monthly timestep; uploaded on 01/29/2019
+        metadata:
+            tags:
+                - atmosphere
+                - model
+        driver: zarr
+        args:
+            urlpath: gcs://pangeo-data/tracmip/Amon/aquaControl/ECHAM63/v20190129
+            storage_options:
+                token: anon
+            consolidated: True
+
+    Amon_aqua4xCO2_ECHAM63_v20190129:
+        description: ECHAM63 model of aqua4xCO2 experiment at monthly timestep; uploaded on 01/29/2019
+        metadata:
+            tags:
+                - atmosphere
+                - model
+        driver: zarr
+        args:
+            urlpath: gcs://pangeo-data/tracmip/Amon/aqua4xCO2/ECHAM63/v20190129
+            storage_options:
+                token: anon
+            consolidated: True
+
+    Amon_land4xCO2_ECHAM63_v20190129:
+        description: ECHAM63 model of land4xCO2 experiment at monthly timestep; uploaded on 01/29/2019
+        metadata:
+            tags:
+                - atmosphere
+                - model
+        driver: zarr
+        args:
+            urlpath: gcs://pangeo-data/tracmip/Amon/land4xCO2/ECHAM63/v20190129
+            storage_options:
+                token: anon
+            consolidated: True
+
+    Amon_landOrbit_ECHAM63_v20190129:
+        description: ECHAM63 model of landOrbit experiment at monthly timestep; uploaded on 01/29/2019
+        metadata:
+            tags:
+                - atmosphere
+                - model
+        driver: zarr
+        args:
+            urlpath: gcs://pangeo-data/tracmip/Amon/landOrbit/ECHAM63/v20190129
+            storage_options:
+                token: anon
+            consolidated: True
+
+    Amon_landControl_ECHAM63_v20190129:
+        description: ECHAM63 model of landControl experiment at monthly timestep; uploaded on 01/29/2019
+        metadata:
+            tags:
+                - atmosphere
+                - model
+        driver: zarr
+        args:
+            urlpath: gcs://pangeo-data/tracmip/Amon/landControl/ECHAM63/v20190129
+            storage_options:
+                token: anon
+            consolidated: True
+
+    Amon_aquaControl_CALTECH_v20181025:
+        description: CALTECH model of aquaControl experiment at monthly timestep; uploaded on 10/25/2018
+        metadata:
+            tags:
+                - atmosphere
+                - model
+        driver: zarr
+        args:
+            urlpath: gcs://pangeo-data/tracmip/Amon/aquaControl/CALTECH/v20181025
+            storage_options:
+                token: anon
+            consolidated: True
+
+    Amon_aquaAbs20_CALTECH_v20181025:
+        description: CALTECH model of aquaAbs20 experiment at monthly timestep; uploaded on 10/25/2018
+        metadata:
+            tags:
+                - atmosphere
+                - model
+        driver: zarr
+        args:
+            urlpath: gcs://pangeo-data/tracmip/Amon/aquaAbs20/CALTECH/v20181025
+            storage_options:
+                token: anon
+            consolidated: True
+
+    Amon_aquaAbs07_CALTECH_v20181025:
+        description: CALTECH model of aquaAbs07 experiment at monthly timestep; uploaded on 10/25/2018
+        metadata:
+            tags:
+                - atmosphere
+                - model
+        driver: zarr
+        args:
+            urlpath: gcs://pangeo-data/tracmip/Amon/aquaAbs07/CALTECH/v20181025
+            storage_options:
+                token: anon
+            consolidated: True
+
+    Amon_landAbs20_CALTECH_v20190408:
+        description: CALTECH model of landAbs20 experiment at monthly timestep; uploaded on 04/08/2019
+        metadata:
+            tags:
+                - atmosphere
+                - model
+        driver: zarr
+        args:
+            urlpath: gcs://pangeo-data/tracmip/Amon/landAbs20/CALTECH/v20190408
+            storage_options:
+                token: anon
+            consolidated: True
+
+    Amon_landAbs20_CALTECH_v20181025:
+        description: CALTECH model of landAbs20 experiment at monthly timestep; uploaded on 10/25/2018
+        metadata:
+            tags:
+                - atmosphere
+                - model
+        driver: zarr
+        args:
+            urlpath: gcs://pangeo-data/tracmip/Amon/landAbs20/CALTECH/v20181025
+            storage_options:
+                token: anon
+            consolidated: True
+
+    Amon_landAbs15_CALTECH_v20181025:
+        description: CALTECH model of landAbs15 experiment at monthly timestep; uploaded on 10/25/2018
+        metadata:
+            tags:
+                - atmosphere
+                - model
+        driver: zarr
+        args:
+            urlpath: gcs://pangeo-data/tracmip/Amon/landAbs15/CALTECH/v20181025
+            storage_options:
+                token: anon
+            consolidated: True
+
+    Amon_landAbs15_CALTECH_v20190408:
+        description: CALTECH model of landAbs15 experiment at monthly timestep; uploaded on 04/08/2019
+        metadata:
+            tags:
+                - atmosphere
+                - model
+        driver: zarr
+        args:
+            urlpath: gcs://pangeo-data/tracmip/Amon/landAbs15/CALTECH/v20190408
+            storage_options:
+                token: anon
+            consolidated: True
+
+    Amon_landOrbit_CALTECH_v20190408:
+        description: CALTECH model of landOrbit experiment at monthly timestep; uploaded on 04/08/2019
+        metadata:
+            tags:
+                - atmosphere
+                - model
+        driver: zarr
+        args:
+            urlpath: gcs://pangeo-data/tracmip/Amon/landOrbit/CALTECH/v20190408
+            storage_options:
+                token: anon
+            consolidated: True
+
+    Amon_landOrbit_CALTECH_v20181025:
+        description: CALTECH model of landOrbit experiment at monthly timestep; uploaded on 10/25/2018
+        metadata:
+            tags:
+                - atmosphere
+                - model
+        driver: zarr
+        args:
+            urlpath: gcs://pangeo-data/tracmip/Amon/landOrbit/CALTECH/v20181025
+            storage_options:
+                token: anon
+            consolidated: True
+
+    Amon_aquaAbs15_CALTECH_v20181025:
+        description: CALTECH model of aquaAbs15 experiment at monthly timestep; uploaded on 10/25/2018
+        metadata:
+            tags:
+                - atmosphere
+                - model
+        driver: zarr
+        args:
+            urlpath: gcs://pangeo-data/tracmip/Amon/aquaAbs15/CALTECH/v20181025
+            storage_options:
+                token: anon
+            consolidated: True
+
+    Amon_landControl_CALTECH_v20190408:
+        description: CALTECH model of landControl experiment at monthly timestep; uploaded on 04/08/2019
+        metadata:
+            tags:
+                - atmosphere
+                - model
+        driver: zarr
+        args:
+            urlpath: gcs://pangeo-data/tracmip/Amon/landControl/CALTECH/v20190408
+            storage_options:
+                token: anon
+            consolidated: True
+
+    Amon_landControl_CALTECH_v20181025:
+        description: CALTECH model of landControl experiment at monthly timestep; uploaded on 10/25/2018
+        metadata:
+            tags:
+                - atmosphere
+                - model
+        driver: zarr
+        args:
+            urlpath: gcs://pangeo-data/tracmip/Amon/landControl/CALTECH/v20181025
+            storage_options:
+                token: anon
+            consolidated: True
+
+    Amon_landAbs07_CALTECH_v20181025:
+        description: CALTECH model of landAbs07 experiment at monthly timestep; uploaded on 10/25/2018
+        metadata:
+            tags:
+                - atmosphere
+                - model
+        driver: zarr
+        args:
+            urlpath: gcs://pangeo-data/tracmip/Amon/landAbs07/CALTECH/v20181025
+            storage_options:
+                token: anon
+            consolidated: True
+
+    Amon_landAbs07_CALTECH_v20190408:
+        description: CALTECH model of landAbs07 experiment at monthly timestep; uploaded on 04/08/2019
+        metadata:
+            tags:
+                - atmosphere
+                - model
+        driver: zarr
+        args:
+            urlpath: gcs://pangeo-data/tracmip/Amon/landAbs07/CALTECH/v20190408
+            storage_options:
+                token: anon
+            consolidated: True
+
+    Amon_aquaControl_MIROC5_v20181025:
+        description: MIROC5 model of aquaControl experiment at monthly timestep; uploaded on 10/25/2018
+        metadata:
+            tags:
+                - atmosphere
+                - model
+        driver: zarr
+        args:
+            urlpath: gcs://pangeo-data/tracmip/Amon/aquaControl/MIROC5/v20181025
+            storage_options:
+                token: anon
+            consolidated: True
+
+    Amon_aqua4xCO2_MIROC5_v20181025:
+        description: MIROC5 model of aqua4xCO2 experiment at monthly timestep; uploaded on 10/25/2018
+        metadata:
+            tags:
+                - atmosphere
+                - model
+        driver: zarr
+        args:
+            urlpath: gcs://pangeo-data/tracmip/Amon/aqua4xCO2/MIROC5/v20181025
+            storage_options:
+                token: anon
+            consolidated: True
+
+    Amon_land4xCO2_MIROC5_v20181025:
+        description: MIROC5 model of land4xCO2 experiment at monthly timestep; uploaded on 10/25/2018
+        metadata:
+            tags:
+                - atmosphere
+                - model
+        driver: zarr
+        args:
+            urlpath: gcs://pangeo-data/tracmip/Amon/land4xCO2/MIROC5/v20181025
+            storage_options:
+                token: anon
+            consolidated: True
+
+    Amon_landOrbit_MIROC5_v20181025:
+        description: MIROC5 model of landOrbit experiment at monthly timestep; uploaded on 10/25/2018
+        metadata:
+            tags:
+                - atmosphere
+                - model
+        driver: zarr
+        args:
+            urlpath: gcs://pangeo-data/tracmip/Amon/landOrbit/MIROC5/v20181025
+            storage_options:
+                token: anon
+            consolidated: True
+
+    Amon_landControl_MIROC5_v20181025:
+        description: MIROC5 model of landControl experiment at monthly timestep; uploaded on 10/25/2018
+        metadata:
+            tags:
+                - atmosphere
+                - model
+        driver: zarr
+        args:
+            urlpath: gcs://pangeo-data/tracmip/Amon/landControl/MIROC5/v20181025
+            storage_options:
+                token: anon
+            consolidated: True
+
+    Amon_aquaControl_CAM4_v20190409:
+        description: CAM4 model of aquaControl experiment at monthly timestep; uploaded on 04/09/2019
+        metadata:
+            tags:
+                - atmosphere
+                - model
+        driver: zarr
+        args:
+            urlpath: gcs://pangeo-data/tracmip/Amon/aquaControl/CAM4/v20190409
+            storage_options:
+                token: anon
+            consolidated: True
+
+    Amon_aqua4xCO2_CAM4_v20190409:
+        description: CAM4 model of aqua4xCO2 experiment at monthly timestep; uploaded on 04/09/2019
+        metadata:
+            tags:
+                - atmosphere
+                - model
+        driver: zarr
+        args:
+            urlpath: gcs://pangeo-data/tracmip/Amon/aqua4xCO2/CAM4/v20190409
+            storage_options:
+                token: anon
+            consolidated: True
+
+    Amon_land4xCO2_CAM4_v20190409:
+        description: CAM4 model of land4xCO2 experiment at monthly timestep; uploaded on 04/09/2019
+        metadata:
+            tags:
+                - atmosphere
+                - model
+        driver: zarr
+        args:
+            urlpath: gcs://pangeo-data/tracmip/Amon/land4xCO2/CAM4/v20190409
+            storage_options:
+                token: anon
+            consolidated: True
+
+    Amon_landOrbit_CAM4_v20190409:
+        description: CAM4 model of landOrbit experiment at monthly timestep; uploaded on 04/09/2019
+        metadata:
+            tags:
+                - atmosphere
+                - model
+        driver: zarr
+        args:
+            urlpath: gcs://pangeo-data/tracmip/Amon/landOrbit/CAM4/v20190409
+            storage_options:
+                token: anon
+            consolidated: True
+
+    Amon_landControl_CAM4_v20190409:
+        description: CAM4 model of landControl experiment at monthly timestep; uploaded on 04/09/2019
+        metadata:
+            tags:
+                - atmosphere
+                - model
+        driver: zarr
+        args:
+            urlpath: gcs://pangeo-data/tracmip/Amon/landControl/CAM4/v20190409
+            storage_options:
+                token: anon
+            consolidated: True
+
+    Aday_aquaControl_GISS-ModelE2_v20190114:
+        description: GISS-ModelE2 model of aquaControl experiment at daily timestep; uploaded on 01/14/2019
+        metadata:
+            tags:
+                - atmosphere
+                - model
+        driver: zarr
+        args:
+            urlpath: gcs://pangeo-data/tracmip/Aday/aquaControl/GISS-ModelE2/v20190114
+            storage_options:
+                token: anon
+            consolidated: True
+
+    Aday_aqua4xCO2_GISS-ModelE2_v20190114:
+        description: GISS-ModelE2 model of aqua4xCO2 experiment at daily timestep; uploaded on 01/14/2019
+        metadata:
+            tags:
+                - atmosphere
+                - model
+        driver: zarr
+        args:
+            urlpath: gcs://pangeo-data/tracmip/Aday/aqua4xCO2/GISS-ModelE2/v20190114
+            storage_options:
+                token: anon
+            consolidated: True
+
+    Aday_aquaControl_MetUM-CTL_v20180423:
+        description: MetUM-CTL model of aquaControl experiment at daily timestep; uploaded on 04/23/2018
+        metadata:
+            tags:
+                - atmosphere
+                - model
+        driver: zarr
+        args:
+            urlpath: gcs://pangeo-data/tracmip/Aday/aquaControl/MetUM-CTL/v20180423
+            storage_options:
+                token: anon
+            consolidated: True
+
+    Aday_aqua4xCO2_MetUM-CTL_v20180423:
+        description: MetUM-CTL model of aqua4xCO2 experiment at daily timestep; uploaded on 04/23/2018
+        metadata:
+            tags:
+                - atmosphere
+                - model
+        driver: zarr
+        args:
+            urlpath: gcs://pangeo-data/tracmip/Aday/aqua4xCO2/MetUM-CTL/v20180423
+            storage_options:
+                token: anon
+            consolidated: True
+
+    Aday_land4xCO2_MetUM-CTL_v20180423:
+        description: MetUM-CTL model of land4xCO2 experiment at daily timestep; uploaded on 04/23/2018
+        metadata:
+            tags:
+                - atmosphere
+                - model
+        driver: zarr
+        args:
+            urlpath: gcs://pangeo-data/tracmip/Aday/land4xCO2/MetUM-CTL/v20180423
+            storage_options:
+                token: anon
+            consolidated: True
+
+    Aday_landOrbit_MetUM-CTL_v20180423:
+        description: MetUM-CTL model of landOrbit experiment at daily timestep; uploaded on 04/23/2018
+        metadata:
+            tags:
+                - atmosphere
+                - model
+        driver: zarr
+        args:
+            urlpath: gcs://pangeo-data/tracmip/Aday/landOrbit/MetUM-CTL/v20180423
+            storage_options:
+                token: anon
+            consolidated: True
+
+    Aday_landControl_MetUM-CTL_v20180423:
+        description: MetUM-CTL model of landControl experiment at daily timestep; uploaded on 04/23/2018
+        metadata:
+            tags:
+                - atmosphere
+                - model
+        driver: zarr
+        args:
+            urlpath: gcs://pangeo-data/tracmip/Aday/landControl/MetUM-CTL/v20180423
+            storage_options:
+                token: anon
+            consolidated: True
+
+    Aday_aquaControl_CAM5Nor_v20190305:
+        description: CAM5Nor model of aquaControl experiment at daily timestep; uploaded on 03/05/2019
+        metadata:
+            tags:
+                - atmosphere
+                - model
+        driver: zarr
+        args:
+            urlpath: gcs://pangeo-data/tracmip/Aday/aquaControl/CAM5Nor/v20190305
+            storage_options:
+                token: anon
+            consolidated: True
+
+    Aday_aquaControl_CAM5Nor_v20190507:
+        description: CAM5Nor model of aquaControl experiment at daily timestep; uploaded on 05/07/2019
+        metadata:
+            tags:
+                - atmosphere
+                - model
+        driver: zarr
+        args:
+            urlpath: gcs://pangeo-data/tracmip/Aday/aquaControl/CAM5Nor/v20190507
+            storage_options:
+                token: anon
+            consolidated: True
+
+    Aday_aqua4xCO2_CAM5Nor_v20190305:
+        description: CAM5Nor model of aqua4xCO2 experiment at daily timestep; uploaded on 03/05/2019
+        metadata:
+            tags:
+                - atmosphere
+                - model
+        driver: zarr
+        args:
+            urlpath: gcs://pangeo-data/tracmip/Aday/aqua4xCO2/CAM5Nor/v20190305
+            storage_options:
+                token: anon
+            consolidated: True
+
+    Aday_aqua4xCO2_CAM5Nor_v20190507:
+        description: CAM5Nor model of aqua4xCO2 experiment at daily timestep; uploaded on 05/07/2019
+        metadata:
+            tags:
+                - atmosphere
+                - model
+        driver: zarr
+        args:
+            urlpath: gcs://pangeo-data/tracmip/Aday/aqua4xCO2/CAM5Nor/v20190507
+            storage_options:
+                token: anon
+            consolidated: True
+
+    Aday_land4xCO2_CAM5Nor_v20190507:
+        description: CAM5Nor model of land4xCO2 experiment at daily timestep; uploaded on 05/07/2019
+        metadata:
+            tags:
+                - atmosphere
+                - model
+        driver: zarr
+        args:
+            urlpath: gcs://pangeo-data/tracmip/Aday/land4xCO2/CAM5Nor/v20190507
+            storage_options:
+                token: anon
+            consolidated: True
+
+    Aday_land4xCO2_CAM5Nor_v20190305:
+        description: CAM5Nor model of land4xCO2 experiment at daily timestep; uploaded on 03/05/2019
+        metadata:
+            tags:
+                - atmosphere
+                - model
+        driver: zarr
+        args:
+            urlpath: gcs://pangeo-data/tracmip/Aday/land4xCO2/CAM5Nor/v20190305
+            storage_options:
+                token: anon
+            consolidated: True
+
+    Aday_landControl_CAM5Nor_v20190507:
+        description: CAM5Nor model of landControl experiment at daily timestep; uploaded on 05/07/2019
+        metadata:
+            tags:
+                - atmosphere
+                - model
+        driver: zarr
+        args:
+            urlpath: gcs://pangeo-data/tracmip/Aday/landControl/CAM5Nor/v20190507
+            storage_options:
+                token: anon
+            consolidated: True
+
+    Aday_landControl_CAM5Nor_v20190305:
+        description: CAM5Nor model of landControl experiment at daily timestep; uploaded on 03/05/2019
+        metadata:
+            tags:
+                - atmosphere
+                - model
+        driver: zarr
+        args:
+            urlpath: gcs://pangeo-data/tracmip/Aday/landControl/CAM5Nor/v20190305
+            storage_options:
+                token: anon
+            consolidated: True
+
+    Aday_aquaControl_CAM3_v20190129:
+        description: CAM3 model of aquaControl experiment at daily timestep; uploaded on 01/29/2019
+        metadata:
+            tags:
+                - atmosphere
+                - model
+        driver: zarr
+        args:
+            urlpath: gcs://pangeo-data/tracmip/Aday/aquaControl/CAM3/v20190129
+            storage_options:
+                token: anon
+            consolidated: True
+
+    Aday_aqua4xCO2_CAM3_v20190129:
+        description: CAM3 model of aqua4xCO2 experiment at daily timestep; uploaded on 01/29/2019
+        metadata:
+            tags:
+                - atmosphere
+                - model
+        driver: zarr
+        args:
+            urlpath: gcs://pangeo-data/tracmip/Aday/aqua4xCO2/CAM3/v20190129
+            storage_options:
+                token: anon
+            consolidated: True
+
+    Aday_land4xCO2_CAM3_v20190129:
+        description: CAM3 model of land4xCO2 experiment at daily timestep; uploaded on 01/29/2019
+        metadata:
+            tags:
+                - atmosphere
+                - model
+        driver: zarr
+        args:
+            urlpath: gcs://pangeo-data/tracmip/Aday/land4xCO2/CAM3/v20190129
+            storage_options:
+                token: anon
+            consolidated: True
+
+    Aday_landOrbit_CAM3_v20190129:
+        description: CAM3 model of landOrbit experiment at daily timestep; uploaded on 01/29/2019
+        metadata:
+            tags:
+                - atmosphere
+                - model
+        driver: zarr
+        args:
+            urlpath: gcs://pangeo-data/tracmip/Aday/landOrbit/CAM3/v20190129
+            storage_options:
+                token: anon
+            consolidated: True
+
+    Aday_landControl_CAM3_v20190129:
+        description: CAM3 model of landControl experiment at daily timestep; uploaded on 01/29/2019
+        metadata:
+            tags:
+                - atmosphere
+                - model
+        driver: zarr
+        args:
+            urlpath: gcs://pangeo-data/tracmip/Aday/landControl/CAM3/v20190129
+            storage_options:
+                token: anon
+            consolidated: True
+
+    Aday_aquaControl_CNRM-AM5_v20180423:
+        description: CNRM-AM5 model of aquaControl experiment at daily timestep; uploaded on 04/23/2018
+        metadata:
+            tags:
+                - atmosphere
+                - model
+        driver: zarr
+        args:
+            urlpath: gcs://pangeo-data/tracmip/Aday/aquaControl/CNRM-AM5/v20180423
+            storage_options:
+                token: anon
+            consolidated: True
+
+    Aday_aqua4xCO2_CNRM-AM5_v20180423:
+        description: CNRM-AM5 model of aqua4xCO2 experiment at daily timestep; uploaded on 04/23/2018
+        metadata:
+            tags:
+                - atmosphere
+                - model
+        driver: zarr
+        args:
+            urlpath: gcs://pangeo-data/tracmip/Aday/aqua4xCO2/CNRM-AM5/v20180423
+            storage_options:
+                token: anon
+            consolidated: True
+
+    Aday_land4xCO2_CNRM-AM5_v20180423:
+        description: CNRM-AM5 model of land4xCO2 experiment at daily timestep; uploaded on 04/23/2018
+        metadata:
+            tags:
+                - atmosphere
+                - model
+        driver: zarr
+        args:
+            urlpath: gcs://pangeo-data/tracmip/Aday/land4xCO2/CNRM-AM5/v20180423
+            storage_options:
+                token: anon
+            consolidated: True
+
+    Aday_landOrbit_CNRM-AM5_v20180423:
+        description: CNRM-AM5 model of landOrbit experiment at daily timestep; uploaded on 04/23/2018
+        metadata:
+            tags:
+                - atmosphere
+                - model
+        driver: zarr
+        args:
+            urlpath: gcs://pangeo-data/tracmip/Aday/landOrbit/CNRM-AM5/v20180423
+            storage_options:
+                token: anon
+            consolidated: True
+
+    Aday_landControl_CNRM-AM5_v20180423:
+        description: CNRM-AM5 model of landControl experiment at daily timestep; uploaded on 04/23/2018
+        metadata:
+            tags:
+                - atmosphere
+                - model
+        driver: zarr
+        args:
+            urlpath: gcs://pangeo-data/tracmip/Aday/landControl/CNRM-AM5/v20180423
+            storage_options:
+                token: anon
+            consolidated: True
+
+    Aday_aquaControl_AM21_v20190116:
+        description: AM21 model of aquaControl experiment at daily timestep; uploaded on 01/16/2019
+        metadata:
+            tags:
+                - atmosphere
+                - model
+        driver: zarr
+        args:
+            urlpath: gcs://pangeo-data/tracmip/Aday/aquaControl/AM21/v20190116
+            storage_options:
+                token: anon
+            consolidated: True
+
+    Aday_aqua4xCO2_AM21_v20190116:
+        description: AM21 model of aqua4xCO2 experiment at daily timestep; uploaded on 01/16/2019
+        metadata:
+            tags:
+                - atmosphere
+                - model
+        driver: zarr
+        args:
+            urlpath: gcs://pangeo-data/tracmip/Aday/aqua4xCO2/AM21/v20190116
+            storage_options:
+                token: anon
+            consolidated: True
+
+    Aday_land4xCO2_AM21_v20190116:
+        description: AM21 model of land4xCO2 experiment at daily timestep; uploaded on 01/16/2019
+        metadata:
+            tags:
+                - atmosphere
+                - model
+        driver: zarr
+        args:
+            urlpath: gcs://pangeo-data/tracmip/Aday/land4xCO2/AM21/v20190116
+            storage_options:
+                token: anon
+            consolidated: True
+
+    Aday_landControl_AM21_v20190116:
+        description: AM21 model of landControl experiment at daily timestep; uploaded on 01/16/2019
+        metadata:
+            tags:
+                - atmosphere
+                - model
+        driver: zarr
+        args:
+            urlpath: gcs://pangeo-data/tracmip/Aday/landControl/AM21/v20190116
+            storage_options:
+                token: anon
+            consolidated: True
+
+    Aday_aquaControl_ECHAM61_v20180423:
+        description: ECHAM61 model of aquaControl experiment at daily timestep; uploaded on 04/23/2018
+        metadata:
+            tags:
+                - atmosphere
+                - model
+        driver: zarr
+        args:
+            urlpath: gcs://pangeo-data/tracmip/Aday/aquaControl/ECHAM61/v20180423
+            storage_options:
+                token: anon
+            consolidated: True
+
+    Aday_aqua4xCO2_ECHAM61_v20180423:
+        description: ECHAM61 model of aqua4xCO2 experiment at daily timestep; uploaded on 04/23/2018
+        metadata:
+            tags:
+                - atmosphere
+                - model
+        driver: zarr
+        args:
+            urlpath: gcs://pangeo-data/tracmip/Aday/aqua4xCO2/ECHAM61/v20180423
+            storage_options:
+                token: anon
+            consolidated: True
+
+    Aday_land4xCO2_ECHAM61_v20180423:
+        description: ECHAM61 model of land4xCO2 experiment at daily timestep; uploaded on 04/23/2018
+        metadata:
+            tags:
+                - atmosphere
+                - model
+        driver: zarr
+        args:
+            urlpath: gcs://pangeo-data/tracmip/Aday/land4xCO2/ECHAM61/v20180423
+            storage_options:
+                token: anon
+            consolidated: True
+
+    Aday_landOrbit_ECHAM61_v20180423:
+        description: ECHAM61 model of landOrbit experiment at daily timestep; uploaded on 04/23/2018
+        metadata:
+            tags:
+                - atmosphere
+                - model
+        driver: zarr
+        args:
+            urlpath: gcs://pangeo-data/tracmip/Aday/landOrbit/ECHAM61/v20180423
+            storage_options:
+                token: anon
+            consolidated: True
+
+    Aday_landControl_ECHAM61_v20180423:
+        description: ECHAM61 model of landControl experiment at daily timestep; uploaded on 04/23/2018
+        metadata:
+            tags:
+                - atmosphere
+                - model
+        driver: zarr
+        args:
+            urlpath: gcs://pangeo-data/tracmip/Aday/landControl/ECHAM61/v20180423
+            storage_options:
+                token: anon
+            consolidated: True
+
+    Aday_aquaControl_MetUM-ENT_v20180423:
+        description: MetUM-ENT model of aquaControl experiment at daily timestep; uploaded on 04/23/2018
+        metadata:
+            tags:
+                - atmosphere
+                - model
+        driver: zarr
+        args:
+            urlpath: gcs://pangeo-data/tracmip/Aday/aquaControl/MetUM-ENT/v20180423
+            storage_options:
+                token: anon
+            consolidated: True
+
+    Aday_aqua4xCO2_MetUM-ENT_v20180423:
+        description: MetUM-ENT model of aqua4xCO2 experiment at daily timestep; uploaded on 04/23/2018
+        metadata:
+            tags:
+                - atmosphere
+                - model
+        driver: zarr
+        args:
+            urlpath: gcs://pangeo-data/tracmip/Aday/aqua4xCO2/MetUM-ENT/v20180423
+            storage_options:
+                token: anon
+            consolidated: True
+
+    Aday_land4xCO2_MetUM-ENT_v20180423:
+        description: MetUM-ENT model of land4xCO2 experiment at daily timestep; uploaded on 04/23/2018
+        metadata:
+            tags:
+                - atmosphere
+                - model
+        driver: zarr
+        args:
+            urlpath: gcs://pangeo-data/tracmip/Aday/land4xCO2/MetUM-ENT/v20180423
+            storage_options:
+                token: anon
+            consolidated: True
+
+    Aday_landOrbit_MetUM-ENT_v20180423:
+        description: MetUM-ENT model of landOrbit experiment at daily timestep; uploaded on 04/23/2018
+        metadata:
+            tags:
+                - atmosphere
+                - model
+        driver: zarr
+        args:
+            urlpath: gcs://pangeo-data/tracmip/Aday/landOrbit/MetUM-ENT/v20180423
+            storage_options:
+                token: anon
+            consolidated: True
+
+    Aday_landControl_MetUM-ENT_v20180423:
+        description: MetUM-ENT model of landControl experiment at daily timestep; uploaded on 04/23/2018
+        metadata:
+            tags:
+                - atmosphere
+                - model
+        driver: zarr
+        args:
+            urlpath: gcs://pangeo-data/tracmip/Aday/landControl/MetUM-ENT/v20180423
+            storage_options:
+                token: anon
+            consolidated: True
+
+    Aday_aquaControl_MPAS_v20190131:
+        description: MPAS model of aquaControl experiment at daily timestep; uploaded on 01/31/2019
+        metadata:
+            tags:
+                - atmosphere
+                - model
+        driver: zarr
+        args:
+            urlpath: gcs://pangeo-data/tracmip/Aday/aquaControl/MPAS/v20190131
+            storage_options:
+                token: anon
+            consolidated: True
+
+    Aday_aqua4xCO2_MPAS_v20190131:
+        description: MPAS model of aqua4xCO2 experiment at daily timestep; uploaded on 01/31/2019
+        metadata:
+            tags:
+                - atmosphere
+                - model
+        driver: zarr
+        args:
+            urlpath: gcs://pangeo-data/tracmip/Aday/aqua4xCO2/MPAS/v20190131
+            storage_options:
+                token: anon
+            consolidated: True
+
+    Aday_land4xCO2_MPAS_v20190131:
+        description: MPAS model of land4xCO2 experiment at daily timestep; uploaded on 01/31/2019
+        metadata:
+            tags:
+                - atmosphere
+                - model
+        driver: zarr
+        args:
+            urlpath: gcs://pangeo-data/tracmip/Aday/land4xCO2/MPAS/v20190131
+            storage_options:
+                token: anon
+            consolidated: True
+
+    Aday_landOrbit_MPAS_v20190131:
+        description: MPAS model of landOrbit experiment at daily timestep; uploaded on 01/31/2019
+        metadata:
+            tags:
+                - atmosphere
+                - model
+        driver: zarr
+        args:
+            urlpath: gcs://pangeo-data/tracmip/Aday/landOrbit/MPAS/v20190131
+            storage_options:
+                token: anon
+            consolidated: True
+
+    Aday_landControl_MPAS_v20190131:
+        description: MPAS model of landControl experiment at daily timestep; uploaded on 01/31/2019
+        metadata:
+            tags:
+                - atmosphere
+                - model
+        driver: zarr
+        args:
+            urlpath: gcs://pangeo-data/tracmip/Aday/landControl/MPAS/v20190131
+            storage_options:
+                token: anon
+            consolidated: True
+
+    Aday_aquaControl_LMDZ5A_v20190114:
+        description: LMDZ5A model of aquaControl experiment at daily timestep; uploaded on 01/14/2019
+        metadata:
+            tags:
+                - atmosphere
+                - model
+        driver: zarr
+        args:
+            urlpath: gcs://pangeo-data/tracmip/Aday/aquaControl/LMDZ5A/v20190114
+            storage_options:
+                token: anon
+            consolidated: True
+
+    Aday_aquaControl_LMDZ5A_v20190507:
+        description: LMDZ5A model of aquaControl experiment at daily timestep; uploaded on 05/07/2019
+        metadata:
+            tags:
+                - atmosphere
+                - model
+        driver: zarr
+        args:
+            urlpath: gcs://pangeo-data/tracmip/Aday/aquaControl/LMDZ5A/v20190507
+            storage_options:
+                token: anon
+            consolidated: True
+
+    Aday_aqua4xCO2_LMDZ5A_v20190507:
+        description: LMDZ5A model of aqua4xCO2 experiment at daily timestep; uploaded on 05/07/2019
+        metadata:
+            tags:
+                - atmosphere
+                - model
+        driver: zarr
+        args:
+            urlpath: gcs://pangeo-data/tracmip/Aday/aqua4xCO2/LMDZ5A/v20190507
+            storage_options:
+                token: anon
+            consolidated: True
+
+    Aday_aqua4xCO2_LMDZ5A_v20190114:
+        description: LMDZ5A model of aqua4xCO2 experiment at daily timestep; uploaded on 01/14/2019
+        metadata:
+            tags:
+                - atmosphere
+                - model
+        driver: zarr
+        args:
+            urlpath: gcs://pangeo-data/tracmip/Aday/aqua4xCO2/LMDZ5A/v20190114
+            storage_options:
+                token: anon
+            consolidated: True
+
+    Aday_land4xCO2_LMDZ5A_v20190114:
+        description: LMDZ5A model of land4xCO2 experiment at daily timestep; uploaded on 01/14/2019
+        metadata:
+            tags:
+                - atmosphere
+                - model
+        driver: zarr
+        args:
+            urlpath: gcs://pangeo-data/tracmip/Aday/land4xCO2/LMDZ5A/v20190114
+            storage_options:
+                token: anon
+            consolidated: True
+
+    Aday_land4xCO2_LMDZ5A_v20190507:
+        description: LMDZ5A model of land4xCO2 experiment at daily timestep; uploaded on 05/07/2019
+        metadata:
+            tags:
+                - atmosphere
+                - model
+        driver: zarr
+        args:
+            urlpath: gcs://pangeo-data/tracmip/Aday/land4xCO2/LMDZ5A/v20190507
+            storage_options:
+                token: anon
+            consolidated: True
+
+    Aday_landOrbit_LMDZ5A_v20190507:
+        description: LMDZ5A model of landOrbit experiment at daily timestep; uploaded on 05/07/2019
+        metadata:
+            tags:
+                - atmosphere
+                - model
+        driver: zarr
+        args:
+            urlpath: gcs://pangeo-data/tracmip/Aday/landOrbit/LMDZ5A/v20190507
+            storage_options:
+                token: anon
+            consolidated: True
+
+    Aday_landOrbit_LMDZ5A_v20190114:
+        description: LMDZ5A model of landOrbit experiment at daily timestep; uploaded on 01/14/2019
+        metadata:
+            tags:
+                - atmosphere
+                - model
+        driver: zarr
+        args:
+            urlpath: gcs://pangeo-data/tracmip/Aday/landOrbit/LMDZ5A/v20190114
+            storage_options:
+                token: anon
+            consolidated: True
+
+    Aday_landControl_LMDZ5A_v20190114:
+        description: LMDZ5A model of landControl experiment at daily timestep; uploaded on 01/14/2019
+        metadata:
+            tags:
+                - atmosphere
+                - model
+        driver: zarr
+        args:
+            urlpath: gcs://pangeo-data/tracmip/Aday/landControl/LMDZ5A/v20190114
+            storage_options:
+                token: anon
+            consolidated: True
+
+    Aday_landControl_LMDZ5A_v20190507:
+        description: LMDZ5A model of landControl experiment at daily timestep; uploaded on 05/07/2019
+        metadata:
+            tags:
+                - atmosphere
+                - model
+        driver: zarr
+        args:
+            urlpath: gcs://pangeo-data/tracmip/Aday/landControl/LMDZ5A/v20190507
+            storage_options:
+                token: anon
+            consolidated: True
+
+    Aday_aquaControl_ECHAM63_v20190129:
+        description: ECHAM63 model of aquaControl experiment at daily timestep; uploaded on 01/29/2019
+        metadata:
+            tags:
+                - atmosphere
+                - model
+        driver: zarr
+        args:
+            urlpath: gcs://pangeo-data/tracmip/Aday/aquaControl/ECHAM63/v20190129
+            storage_options:
+                token: anon
+            consolidated: True
+
+    Aday_aqua4xCO2_ECHAM63_v20190129:
+        description: ECHAM63 model of aqua4xCO2 experiment at daily timestep; uploaded on 01/29/2019
+        metadata:
+            tags:
+                - atmosphere
+                - model
+        driver: zarr
+        args:
+            urlpath: gcs://pangeo-data/tracmip/Aday/aqua4xCO2/ECHAM63/v20190129
+            storage_options:
+                token: anon
+            consolidated: True
+
+    Aday_land4xCO2_ECHAM63_v20190129:
+        description: ECHAM63 model of land4xCO2 experiment at daily timestep; uploaded on 01/29/2019
+        metadata:
+            tags:
+                - atmosphere
+                - model
+        driver: zarr
+        args:
+            urlpath: gcs://pangeo-data/tracmip/Aday/land4xCO2/ECHAM63/v20190129
+            storage_options:
+                token: anon
+            consolidated: True
+
+    Aday_landOrbit_ECHAM63_v20190129:
+        description: ECHAM63 model of landOrbit experiment at daily timestep; uploaded on 01/29/2019
+        metadata:
+            tags:
+                - atmosphere
+                - model
+        driver: zarr
+        args:
+            urlpath: gcs://pangeo-data/tracmip/Aday/landOrbit/ECHAM63/v20190129
+            storage_options:
+                token: anon
+            consolidated: True
+
+    Aday_landControl_ECHAM63_v20190129:
+        description: ECHAM63 model of landControl experiment at daily timestep; uploaded on 01/29/2019
+        metadata:
+            tags:
+                - atmosphere
+                - model
+        driver: zarr
+        args:
+            urlpath: gcs://pangeo-data/tracmip/Aday/landControl/ECHAM63/v20190129
+            storage_options:
+                token: anon
+            consolidated: True
+
+    Aday_aquaControl_CALTECH_v20181025:
+        description: CALTECH model of aquaControl experiment at daily timestep; uploaded on 10/25/2018
+        metadata:
+            tags:
+                - atmosphere
+                - model
+        driver: zarr
+        args:
+            urlpath: gcs://pangeo-data/tracmip/Aday/aquaControl/CALTECH/v20181025
+            storage_options:
+                token: anon
+            consolidated: True
+
+    Aday_aquaAbs20_CALTECH_v20181025:
+        description: CALTECH model of aquaAbs20 experiment at daily timestep; uploaded on 10/25/2018
+        metadata:
+            tags:
+                - atmosphere
+                - model
+        driver: zarr
+        args:
+            urlpath: gcs://pangeo-data/tracmip/Aday/aquaAbs20/CALTECH/v20181025
+            storage_options:
+                token: anon
+            consolidated: True
+
+    Aday_aquaAbs07_CALTECH_v20181025:
+        description: CALTECH model of aquaAbs07 experiment at daily timestep; uploaded on 10/25/2018
+        metadata:
+            tags:
+                - atmosphere
+                - model
+        driver: zarr
+        args:
+            urlpath: gcs://pangeo-data/tracmip/Aday/aquaAbs07/CALTECH/v20181025
+            storage_options:
+                token: anon
+            consolidated: True
+
+    Aday_landAbs20_CALTECH_v20190408:
+        description: CALTECH model of landAbs20 experiment at daily timestep; uploaded on 04/08/2019
+        metadata:
+            tags:
+                - atmosphere
+                - model
+        driver: zarr
+        args:
+            urlpath: gcs://pangeo-data/tracmip/Aday/landAbs20/CALTECH/v20190408
+            storage_options:
+                token: anon
+            consolidated: True
+
+    Aday_landAbs20_CALTECH_v20181025:
+        description: CALTECH model of landAbs20 experiment at daily timestep; uploaded on 10/25/2018
+        metadata:
+            tags:
+                - atmosphere
+                - model
+        driver: zarr
+        args:
+            urlpath: gcs://pangeo-data/tracmip/Aday/landAbs20/CALTECH/v20181025
+            storage_options:
+                token: anon
+            consolidated: True
+
+    Aday_landAbs15_CALTECH_v20190408:
+        description: CALTECH model of landAbs15 experiment at daily timestep; uploaded on 04/08/2019
+        metadata:
+            tags:
+                - atmosphere
+                - model
+        driver: zarr
+        args:
+            urlpath: gcs://pangeo-data/tracmip/Aday/landAbs15/CALTECH/v20190408
+            storage_options:
+                token: anon
+            consolidated: True
+
+    Aday_landAbs15_CALTECH_v20181025:
+        description: CALTECH model of landAbs15 experiment at daily timestep; uploaded on 10/25/2018
+        metadata:
+            tags:
+                - atmosphere
+                - model
+        driver: zarr
+        args:
+            urlpath: gcs://pangeo-data/tracmip/Aday/landAbs15/CALTECH/v20181025
+            storage_options:
+                token: anon
+            consolidated: True
+
+    Aday_landOrbit_CALTECH_v20190408:
+        description: CALTECH model of landOrbit experiment at daily timestep; uploaded on 04/08/2019
+        metadata:
+            tags:
+                - atmosphere
+                - model
+        driver: zarr
+        args:
+            urlpath: gcs://pangeo-data/tracmip/Aday/landOrbit/CALTECH/v20190408
+            storage_options:
+                token: anon
+            consolidated: True
+
+    Aday_landOrbit_CALTECH_v20181025:
+        description: CALTECH model of landOrbit experiment at daily timestep; uploaded on 10/25/2018
+        metadata:
+            tags:
+                - atmosphere
+                - model
+        driver: zarr
+        args:
+            urlpath: gcs://pangeo-data/tracmip/Aday/landOrbit/CALTECH/v20181025
+            storage_options:
+                token: anon
+            consolidated: True
+
+    Aday_aquaAbs15_CALTECH_v20181025:
+        description: CALTECH model of aquaAbs15 experiment at daily timestep; uploaded on 10/25/2018
+        metadata:
+            tags:
+                - atmosphere
+                - model
+        driver: zarr
+        args:
+            urlpath: gcs://pangeo-data/tracmip/Aday/aquaAbs15/CALTECH/v20181025
+            storage_options:
+                token: anon
+            consolidated: True
+
+    Aday_landControl_CALTECH_v20190408:
+        description: CALTECH model of landControl experiment at daily timestep; uploaded on 04/08/2019
+        metadata:
+            tags:
+                - atmosphere
+                - model
+        driver: zarr
+        args:
+            urlpath: gcs://pangeo-data/tracmip/Aday/landControl/CALTECH/v20190408
+            storage_options:
+                token: anon
+            consolidated: True
+
+    Aday_landControl_CALTECH_v20181025:
+        description: CALTECH model of landControl experiment at daily timestep; uploaded on 10/25/2018
+        metadata:
+            tags:
+                - atmosphere
+                - model
+        driver: zarr
+        args:
+            urlpath: gcs://pangeo-data/tracmip/Aday/landControl/CALTECH/v20181025
+            storage_options:
+                token: anon
+            consolidated: True
+
+    Aday_landAbs07_CALTECH_v20181025:
+        description: CALTECH model of landAbs07 experiment at daily timestep; uploaded on 10/25/2018
+        metadata:
+            tags:
+                - atmosphere
+                - model
+        driver: zarr
+        args:
+            urlpath: gcs://pangeo-data/tracmip/Aday/landAbs07/CALTECH/v20181025
+            storage_options:
+                token: anon
+            consolidated: True
+
+    Aday_landAbs07_CALTECH_v20190408:
+        description: CALTECH model of landAbs07 experiment at daily timestep; uploaded on 04/08/2019
+        metadata:
+            tags:
+                - atmosphere
+                - model
+        driver: zarr
+        args:
+            urlpath: gcs://pangeo-data/tracmip/Aday/landAbs07/CALTECH/v20190408
+            storage_options:
+                token: anon
+            consolidated: True
+
+    Aday_aquaControl_MIROC5_v20181025:
+        description: MIROC5 model of aquaControl experiment at daily timestep; uploaded on 10/25/2018
+        metadata:
+            tags:
+                - atmosphere
+                - model
+        driver: zarr
+        args:
+            urlpath: gcs://pangeo-data/tracmip/Aday/aquaControl/MIROC5/v20181025
+            storage_options:
+                token: anon
+            consolidated: True
+
+    Aday_aqua4xCO2_MIROC5_v20181025:
+        description: MIROC5 model of aqua4xCO2 experiment at daily timestep; uploaded on 10/25/2018
+        metadata:
+            tags:
+                - atmosphere
+                - model
+        driver: zarr
+        args:
+            urlpath: gcs://pangeo-data/tracmip/Aday/aqua4xCO2/MIROC5/v20181025
+            storage_options:
+                token: anon
+            consolidated: True
+
+    Aday_land4xCO2_MIROC5_v20181025:
+        description: MIROC5 model of land4xCO2 experiment at daily timestep; uploaded on 10/25/2018
+        metadata:
+            tags:
+                - atmosphere
+                - model
+        driver: zarr
+        args:
+            urlpath: gcs://pangeo-data/tracmip/Aday/land4xCO2/MIROC5/v20181025
+            storage_options:
+                token: anon
+            consolidated: True
+
+    Aday_landOrbit_MIROC5_v20181025:
+        description: MIROC5 model of landOrbit experiment at daily timestep; uploaded on 10/25/2018
+        metadata:
+            tags:
+                - atmosphere
+                - model
+        driver: zarr
+        args:
+            urlpath: gcs://pangeo-data/tracmip/Aday/landOrbit/MIROC5/v20181025
+            storage_options:
+                token: anon
+            consolidated: True
+
+    Aday_landControl_MIROC5_v20181025:
+        description: MIROC5 model of landControl experiment at daily timestep; uploaded on 10/25/2018
+        metadata:
+            tags:
+                - atmosphere
+                - model
+        driver: zarr
+        args:
+            urlpath: gcs://pangeo-data/tracmip/Aday/landControl/MIROC5/v20181025
+            storage_options:
+                token: anon
+            consolidated: True
+
+    Aday_aquaControl_CAM4_v20190409:
+        description: CAM4 model of aquaControl experiment at daily timestep; uploaded on 04/09/2019
+        metadata:
+            tags:
+                - atmosphere
+                - model
+        driver: zarr
+        args:
+            urlpath: gcs://pangeo-data/tracmip/Aday/aquaControl/CAM4/v20190409
+            storage_options:
+                token: anon
+            consolidated: True
+
+    Aday_aqua4xCO2_CAM4_v20190409:
+        description: CAM4 model of aqua4xCO2 experiment at daily timestep; uploaded on 04/09/2019
+        metadata:
+            tags:
+                - atmosphere
+                - model
+        driver: zarr
+        args:
+            urlpath: gcs://pangeo-data/tracmip/Aday/aqua4xCO2/CAM4/v20190409
+            storage_options:
+                token: anon
+            consolidated: True
+
+    Aday_land4xCO2_CAM4_v20190409:
+        description: CAM4 model of land4xCO2 experiment at daily timestep; uploaded on 04/09/2019
+        metadata:
+            tags:
+                - atmosphere
+                - model
+        driver: zarr
+        args:
+            urlpath: gcs://pangeo-data/tracmip/Aday/land4xCO2/CAM4/v20190409
+            storage_options:
+                token: anon
+            consolidated: True
+
+    Aday_landOrbit_CAM4_v20190409:
+        description: CAM4 model of landOrbit experiment at daily timestep; uploaded on 04/09/2019
+        metadata:
+            tags:
+                - atmosphere
+                - model
+        driver: zarr
+        args:
+            urlpath: gcs://pangeo-data/tracmip/Aday/landOrbit/CAM4/v20190409
+            storage_options:
+                token: anon
+            consolidated: True
+
+    Aday_landControl_CAM4_v20190409:
+        description: CAM4 model of landControl experiment at daily timestep; uploaded on 04/09/2019
+        metadata:
+            tags:
+                - atmosphere
+                - model
+        driver: zarr
+        args:
+            urlpath: gcs://pangeo-data/tracmip/Aday/landControl/CAM4/v20190409
+            storage_options:
+                token: anon
+            consolidated: True
+
+    A3hr_aquaControl_GISS-ModelE2_v20190114:
+        description: GISS-ModelE2 model of aquaControl experiment at 3-hourly timestep; uploaded on 01/14/2019
+        metadata:
+            tags:
+                - atmosphere
+                - model
+        driver: zarr
+        args:
+            urlpath: gcs://pangeo-data/tracmip/A3hr/aquaControl/GISS-ModelE2/v20190114
+            storage_options:
+                token: anon
+            consolidated: True
+
+    A3hr_aqua4xCO2_GISS-ModelE2_v20190114:
+        description: GISS-ModelE2 model of aqua4xCO2 experiment at 3-hourly timestep; uploaded on 01/14/2019
+        metadata:
+            tags:
+                - atmosphere
+                - model
+        driver: zarr
+        args:
+            urlpath: gcs://pangeo-data/tracmip/A3hr/aqua4xCO2/GISS-ModelE2/v20190114
+            storage_options:
+                token: anon
+            consolidated: True
+
+    A3hr_aquaControl_MetUM-CTL_v20180423:
+        description: MetUM-CTL model of aquaControl experiment at 3-hourly timestep; uploaded on 04/23/2018
+        metadata:
+            tags:
+                - atmosphere
+                - model
+        driver: zarr
+        args:
+            urlpath: gcs://pangeo-data/tracmip/A3hr/aquaControl/MetUM-CTL/v20180423
+            storage_options:
+                token: anon
+            consolidated: True
+
+    A3hr_aqua4xCO2_MetUM-CTL_v20180423:
+        description: MetUM-CTL model of aqua4xCO2 experiment at 3-hourly timestep; uploaded on 04/23/2018
+        metadata:
+            tags:
+                - atmosphere
+                - model
+        driver: zarr
+        args:
+            urlpath: gcs://pangeo-data/tracmip/A3hr/aqua4xCO2/MetUM-CTL/v20180423
+            storage_options:
+                token: anon
+            consolidated: True
+
+    A3hr_land4xCO2_MetUM-CTL_v20180423:
+        description: MetUM-CTL model of land4xCO2 experiment at 3-hourly timestep; uploaded on 04/23/2018
+        metadata:
+            tags:
+                - atmosphere
+                - model
+        driver: zarr
+        args:
+            urlpath: gcs://pangeo-data/tracmip/A3hr/land4xCO2/MetUM-CTL/v20180423
+            storage_options:
+                token: anon
+            consolidated: True
+
+    A3hr_landControl_MetUM-CTL_v20180423:
+        description: MetUM-CTL model of landControl experiment at 3-hourly timestep; uploaded on 04/23/2018
+        metadata:
+            tags:
+                - atmosphere
+                - model
+        driver: zarr
+        args:
+            urlpath: gcs://pangeo-data/tracmip/A3hr/landControl/MetUM-CTL/v20180423
+            storage_options:
+                token: anon
+            consolidated: True
+
+    A3hr_aquaControl_CAM5Nor_v20190305:
+        description: CAM5Nor model of aquaControl experiment at 3-hourly timestep; uploaded on 03/05/2019
+        metadata:
+            tags:
+                - atmosphere
+                - model
+        driver: zarr
+        args:
+            urlpath: gcs://pangeo-data/tracmip/A3hr/aquaControl/CAM5Nor/v20190305
+            storage_options:
+                token: anon
+            consolidated: True
+
+    A3hr_aqua4xCO2_CAM5Nor_v20190305:
+        description: CAM5Nor model of aqua4xCO2 experiment at 3-hourly timestep; uploaded on 03/05/2019
+        metadata:
+            tags:
+                - atmosphere
+                - model
+        driver: zarr
+        args:
+            urlpath: gcs://pangeo-data/tracmip/A3hr/aqua4xCO2/CAM5Nor/v20190305
+            storage_options:
+                token: anon
+            consolidated: True
+
+    A3hr_land4xCO2_CAM5Nor_v20190305:
+        description: CAM5Nor model of land4xCO2 experiment at 3-hourly timestep; uploaded on 03/05/2019
+        metadata:
+            tags:
+                - atmosphere
+                - model
+        driver: zarr
+        args:
+            urlpath: gcs://pangeo-data/tracmip/A3hr/land4xCO2/CAM5Nor/v20190305
+            storage_options:
+                token: anon
+            consolidated: True
+
+    A3hr_landControl_CAM5Nor_v20190305:
+        description: CAM5Nor model of landControl experiment at 3-hourly timestep; uploaded on 03/05/2019
+        metadata:
+            tags:
+                - atmosphere
+                - model
+        driver: zarr
+        args:
+            urlpath: gcs://pangeo-data/tracmip/A3hr/landControl/CAM5Nor/v20190305
+            storage_options:
+                token: anon
+            consolidated: True
+
+    A3hr_aquaControl_CAM3_v20190129:
+        description: CAM3 model of aquaControl experiment at 3-hourly timestep; uploaded on 01/29/2019
+        metadata:
+            tags:
+                - atmosphere
+                - model
+        driver: zarr
+        args:
+            urlpath: gcs://pangeo-data/tracmip/A3hr/aquaControl/CAM3/v20190129
+            storage_options:
+                token: anon
+            consolidated: True
+
+    A3hr_land4xCO2_CAM3_v20190129:
+        description: CAM3 model of land4xCO2 experiment at 3-hourly timestep; uploaded on 01/29/2019
+        metadata:
+            tags:
+                - atmosphere
+                - model
+        driver: zarr
+        args:
+            urlpath: gcs://pangeo-data/tracmip/A3hr/land4xCO2/CAM3/v20190129
+            storage_options:
+                token: anon
+            consolidated: True
+
+    A3hr_landOrbit_CAM3_v20190129:
+        description: CAM3 model of landOrbit experiment at 3-hourly timestep; uploaded on 01/29/2019
+        metadata:
+            tags:
+                - atmosphere
+                - model
+        driver: zarr
+        args:
+            urlpath: gcs://pangeo-data/tracmip/A3hr/landOrbit/CAM3/v20190129
+            storage_options:
+                token: anon
+            consolidated: True
+
+    A3hr_landControl_CAM3_v20190129:
+        description: CAM3 model of landControl experiment at 3-hourly timestep; uploaded on 01/29/2019
+        metadata:
+            tags:
+                - atmosphere
+                - model
+        driver: zarr
+        args:
+            urlpath: gcs://pangeo-data/tracmip/A3hr/landControl/CAM3/v20190129
+            storage_options:
+                token: anon
+            consolidated: True
+
+    A3hr_aquaControl_CNRM-AM5_v20180423:
+        description: CNRM-AM5 model of aquaControl experiment at 3-hourly timestep; uploaded on 04/23/2018
+        metadata:
+            tags:
+                - atmosphere
+                - model
+        driver: zarr
+        args:
+            urlpath: gcs://pangeo-data/tracmip/A3hr/aquaControl/CNRM-AM5/v20180423
+            storage_options:
+                token: anon
+            consolidated: True
+
+    A3hr_aqua4xCO2_CNRM-AM5_v20180423:
+        description: CNRM-AM5 model of aqua4xCO2 experiment at 3-hourly timestep; uploaded on 04/23/2018
+        metadata:
+            tags:
+                - atmosphere
+                - model
+        driver: zarr
+        args:
+            urlpath: gcs://pangeo-data/tracmip/A3hr/aqua4xCO2/CNRM-AM5/v20180423
+            storage_options:
+                token: anon
+            consolidated: True
+
+    A3hr_land4xCO2_CNRM-AM5_v20180423:
+        description: CNRM-AM5 model of land4xCO2 experiment at 3-hourly timestep; uploaded on 04/23/2018
+        metadata:
+            tags:
+                - atmosphere
+                - model
+        driver: zarr
+        args:
+            urlpath: gcs://pangeo-data/tracmip/A3hr/land4xCO2/CNRM-AM5/v20180423
+            storage_options:
+                token: anon
+            consolidated: True
+
+    A3hr_landOrbit_CNRM-AM5_v20180423:
+        description: CNRM-AM5 model of landOrbit experiment at 3-hourly timestep; uploaded on 04/23/2018
+        metadata:
+            tags:
+                - atmosphere
+                - model
+        driver: zarr
+        args:
+            urlpath: gcs://pangeo-data/tracmip/A3hr/landOrbit/CNRM-AM5/v20180423
+            storage_options:
+                token: anon
+            consolidated: True
+
+    A3hr_landControl_CNRM-AM5_v20180423:
+        description: CNRM-AM5 model of landControl experiment at 3-hourly timestep; uploaded on 04/23/2018
+        metadata:
+            tags:
+                - atmosphere
+                - model
+        driver: zarr
+        args:
+            urlpath: gcs://pangeo-data/tracmip/A3hr/landControl/CNRM-AM5/v20180423
+            storage_options:
+                token: anon
+            consolidated: True
+
+    A3hr_aquaControl_AM21_v20190116:
+        description: AM21 model of aquaControl experiment at 3-hourly timestep; uploaded on 01/16/2019
+        metadata:
+            tags:
+                - atmosphere
+                - model
+        driver: zarr
+        args:
+            urlpath: gcs://pangeo-data/tracmip/A3hr/aquaControl/AM21/v20190116
+            storage_options:
+                token: anon
+            consolidated: True
+
+    A3hr_aqua4xCO2_AM21_v20190116:
+        description: AM21 model of aqua4xCO2 experiment at 3-hourly timestep; uploaded on 01/16/2019
+        metadata:
+            tags:
+                - atmosphere
+                - model
+        driver: zarr
+        args:
+            urlpath: gcs://pangeo-data/tracmip/A3hr/aqua4xCO2/AM21/v20190116
+            storage_options:
+                token: anon
+            consolidated: True
+
+    A3hr_land4xCO2_AM21_v20190116:
+        description: AM21 model of land4xCO2 experiment at 3-hourly timestep; uploaded on 01/16/2019
+        metadata:
+            tags:
+                - atmosphere
+                - model
+        driver: zarr
+        args:
+            urlpath: gcs://pangeo-data/tracmip/A3hr/land4xCO2/AM21/v20190116
+            storage_options:
+                token: anon
+            consolidated: True
+
+    A3hr_landControl_AM21_v20190116:
+        description: AM21 model of landControl experiment at 3-hourly timestep; uploaded on 01/16/2019
+        metadata:
+            tags:
+                - atmosphere
+                - model
+        driver: zarr
+        args:
+            urlpath: gcs://pangeo-data/tracmip/A3hr/landControl/AM21/v20190116
+            storage_options:
+                token: anon
+            consolidated: True
+
+    A3hr_aquaControl_ECHAM61_v20180423:
+        description: ECHAM61 model of aquaControl experiment at 3-hourly timestep; uploaded on 04/23/2018
+        metadata:
+            tags:
+                - atmosphere
+                - model
+        driver: zarr
+        args:
+            urlpath: gcs://pangeo-data/tracmip/A3hr/aquaControl/ECHAM61/v20180423
+            storage_options:
+                token: anon
+            consolidated: True
+
+    A3hr_aqua4xCO2_ECHAM61_v20180423:
+        description: ECHAM61 model of aqua4xCO2 experiment at 3-hourly timestep; uploaded on 04/23/2018
+        metadata:
+            tags:
+                - atmosphere
+                - model
+        driver: zarr
+        args:
+            urlpath: gcs://pangeo-data/tracmip/A3hr/aqua4xCO2/ECHAM61/v20180423
+            storage_options:
+                token: anon
+            consolidated: True
+
+    A3hr_land4xCO2_ECHAM61_v20180423:
+        description: ECHAM61 model of land4xCO2 experiment at 3-hourly timestep; uploaded on 04/23/2018
+        metadata:
+            tags:
+                - atmosphere
+                - model
+        driver: zarr
+        args:
+            urlpath: gcs://pangeo-data/tracmip/A3hr/land4xCO2/ECHAM61/v20180423
+            storage_options:
+                token: anon
+            consolidated: True
+
+    A3hr_landOrbit_ECHAM61_v20180423:
+        description: ECHAM61 model of landOrbit experiment at 3-hourly timestep; uploaded on 04/23/2018
+        metadata:
+            tags:
+                - atmosphere
+                - model
+        driver: zarr
+        args:
+            urlpath: gcs://pangeo-data/tracmip/A3hr/landOrbit/ECHAM61/v20180423
+            storage_options:
+                token: anon
+            consolidated: True
+
+    A3hr_landControl_ECHAM61_v20180423:
+        description: ECHAM61 model of landControl experiment at 3-hourly timestep; uploaded on 04/23/2018
+        metadata:
+            tags:
+                - atmosphere
+                - model
+        driver: zarr
+        args:
+            urlpath: gcs://pangeo-data/tracmip/A3hr/landControl/ECHAM61/v20180423
+            storage_options:
+                token: anon
+            consolidated: True
+
+    A3hr_aquaControl_MetUM-ENT_v20180423:
+        description: MetUM-ENT model of aquaControl experiment at 3-hourly timestep; uploaded on 04/23/2018
+        metadata:
+            tags:
+                - atmosphere
+                - model
+        driver: zarr
+        args:
+            urlpath: gcs://pangeo-data/tracmip/A3hr/aquaControl/MetUM-ENT/v20180423
+            storage_options:
+                token: anon
+            consolidated: True
+
+    A3hr_aqua4xCO2_MetUM-ENT_v20180423:
+        description: MetUM-ENT model of aqua4xCO2 experiment at 3-hourly timestep; uploaded on 04/23/2018
+        metadata:
+            tags:
+                - atmosphere
+                - model
+        driver: zarr
+        args:
+            urlpath: gcs://pangeo-data/tracmip/A3hr/aqua4xCO2/MetUM-ENT/v20180423
+            storage_options:
+                token: anon
+            consolidated: True
+
+    A3hr_land4xCO2_MetUM-ENT_v20180423:
+        description: MetUM-ENT model of land4xCO2 experiment at 3-hourly timestep; uploaded on 04/23/2018
+        metadata:
+            tags:
+                - atmosphere
+                - model
+        driver: zarr
+        args:
+            urlpath: gcs://pangeo-data/tracmip/A3hr/land4xCO2/MetUM-ENT/v20180423
+            storage_options:
+                token: anon
+            consolidated: True
+
+    A3hr_landControl_MetUM-ENT_v20180423:
+        description: MetUM-ENT model of landControl experiment at 3-hourly timestep; uploaded on 04/23/2018
+        metadata:
+            tags:
+                - atmosphere
+                - model
+        driver: zarr
+        args:
+            urlpath: gcs://pangeo-data/tracmip/A3hr/landControl/MetUM-ENT/v20180423
+            storage_options:
+                token: anon
+            consolidated: True
+
+    A3hr_aquaControl_MPAS_v20190131:
+        description: MPAS model of aquaControl experiment at 3-hourly timestep; uploaded on 01/31/2019
+        metadata:
+            tags:
+                - atmosphere
+                - model
+        driver: zarr
+        args:
+            urlpath: gcs://pangeo-data/tracmip/A3hr/aquaControl/MPAS/v20190131
+            storage_options:
+                token: anon
+            consolidated: True
+
+    A3hr_aqua4xCO2_MPAS_v20190131:
+        description: MPAS model of aqua4xCO2 experiment at 3-hourly timestep; uploaded on 01/31/2019
+        metadata:
+            tags:
+                - atmosphere
+                - model
+        driver: zarr
+        args:
+            urlpath: gcs://pangeo-data/tracmip/A3hr/aqua4xCO2/MPAS/v20190131
+            storage_options:
+                token: anon
+            consolidated: True
+
+    A3hr_aquaControl_ECHAM63_v20190129:
+        description: ECHAM63 model of aquaControl experiment at 3-hourly timestep; uploaded on 01/29/2019
+        metadata:
+            tags:
+                - atmosphere
+                - model
+        driver: zarr
+        args:
+            urlpath: gcs://pangeo-data/tracmip/A3hr/aquaControl/ECHAM63/v20190129
+            storage_options:
+                token: anon
+            consolidated: True
+
+    A3hr_aqua4xCO2_ECHAM63_v20190129:
+        description: ECHAM63 model of aqua4xCO2 experiment at 3-hourly timestep; uploaded on 01/29/2019
+        metadata:
+            tags:
+                - atmosphere
+                - model
+        driver: zarr
+        args:
+            urlpath: gcs://pangeo-data/tracmip/A3hr/aqua4xCO2/ECHAM63/v20190129
+            storage_options:
+                token: anon
+            consolidated: True
+
+    A3hr_land4xCO2_ECHAM63_v20190129:
+        description: ECHAM63 model of land4xCO2 experiment at 3-hourly timestep; uploaded on 01/29/2019
+        metadata:
+            tags:
+                - atmosphere
+                - model
+        driver: zarr
+        args:
+            urlpath: gcs://pangeo-data/tracmip/A3hr/land4xCO2/ECHAM63/v20190129
+            storage_options:
+                token: anon
+            consolidated: True
+
+    A3hr_landOrbit_ECHAM63_v20190129:
+        description: ECHAM63 model of landOrbit experiment at 3-hourly timestep; uploaded on 01/29/2019
+        metadata:
+            tags:
+                - atmosphere
+                - model
+        driver: zarr
+        args:
+            urlpath: gcs://pangeo-data/tracmip/A3hr/landOrbit/ECHAM63/v20190129
+            storage_options:
+                token: anon
+            consolidated: True
+
+    A3hr_landControl_ECHAM63_v20190129:
+        description: ECHAM63 model of landControl experiment at 3-hourly timestep; uploaded on 01/29/2019
+        metadata:
+            tags:
+                - atmosphere
+                - model
+        driver: zarr
+        args:
+            urlpath: gcs://pangeo-data/tracmip/A3hr/landControl/ECHAM63/v20190129
+            storage_options:
+                token: anon
+            consolidated: True
+
+    A3hr_aquaControl_MIROC5_v20181025:
+        description: MIROC5 model of aquaControl experiment at 3-hourly timestep; uploaded on 10/25/2018
+        metadata:
+            tags:
+                - atmosphere
+                - model
+        driver: zarr
+        args:
+            urlpath: gcs://pangeo-data/tracmip/A3hr/aquaControl/MIROC5/v20181025
+            storage_options:
+                token: anon
+            consolidated: True
+
+    A3hr_aqua4xCO2_MIROC5_v20181025:
+        description: MIROC5 model of aqua4xCO2 experiment at 3-hourly timestep; uploaded on 10/25/2018
+        metadata:
+            tags:
+                - atmosphere
+                - model
+        driver: zarr
+        args:
+            urlpath: gcs://pangeo-data/tracmip/A3hr/aqua4xCO2/MIROC5/v20181025
+            storage_options:
+                token: anon
+            consolidated: True
+
+    A3hr_land4xCO2_MIROC5_v20181025:
+        description: MIROC5 model of land4xCO2 experiment at 3-hourly timestep; uploaded on 10/25/2018
+        metadata:
+            tags:
+                - atmosphere
+                - model
+        driver: zarr
+        args:
+            urlpath: gcs://pangeo-data/tracmip/A3hr/land4xCO2/MIROC5/v20181025
+            storage_options:
+                token: anon
+            consolidated: True
+
+    A3hr_landOrbit_MIROC5_v20181025:
+        description: MIROC5 model of landOrbit experiment at 3-hourly timestep; uploaded on 10/25/2018
+        metadata:
+            tags:
+                - atmosphere
+                - model
+        driver: zarr
+        args:
+            urlpath: gcs://pangeo-data/tracmip/A3hr/landOrbit/MIROC5/v20181025
+            storage_options:
+                token: anon
+            consolidated: True
+
+    A3hr_landControl_MIROC5_v20181025:
+        description: MIROC5 model of landControl experiment at 3-hourly timestep; uploaded on 10/25/2018
+        metadata:
+            tags:
+                - atmosphere
+                - model
+        driver: zarr
+        args:
+            urlpath: gcs://pangeo-data/tracmip/A3hr/landControl/MIROC5/v20181025
+            storage_options:
+                token: anon
+            consolidated: True
+
+    A3hr_aquaControl_CAM4_v20190409:
+        description: CAM4 model of aquaControl experiment at 3-hourly timestep; uploaded on 04/09/2019
+        metadata:
+            tags:
+                - atmosphere
+                - model
+        driver: zarr
+        args:
+            urlpath: gcs://pangeo-data/tracmip/A3hr/aquaControl/CAM4/v20190409
+            storage_options:
+                token: anon
+            consolidated: True
+
+    A3hr_aqua4xCO2_CAM4_v20190409:
+        description: CAM4 model of aqua4xCO2 experiment at 3-hourly timestep; uploaded on 04/09/2019
+        metadata:
+            tags:
+                - atmosphere
+                - model
+        driver: zarr
+        args:
+            urlpath: gcs://pangeo-data/tracmip/A3hr/aqua4xCO2/CAM4/v20190409
+            storage_options:
+                token: anon
+            consolidated: True
+
+    A3hr_land4xCO2_CAM4_v20190409:
+        description: CAM4 model of land4xCO2 experiment at 3-hourly timestep; uploaded on 04/09/2019
+        metadata:
+            tags:
+                - atmosphere
+                - model
+        driver: zarr
+        args:
+            urlpath: gcs://pangeo-data/tracmip/A3hr/land4xCO2/CAM4/v20190409
+            storage_options:
+                token: anon
+            consolidated: True
+
+    A3hr_landOrbit_CAM4_v20190409:
+        description: CAM4 model of landOrbit experiment at 3-hourly timestep; uploaded on 04/09/2019
+        metadata:
+            tags:
+                - atmosphere
+                - model
+        driver: zarr
+        args:
+            urlpath: gcs://pangeo-data/tracmip/A3hr/landOrbit/CAM4/v20190409
+            storage_options:
+                token: anon
+            consolidated: True
+
+    A3hr_landControl_CAM4_v20190409:
+        description: CAM4 model of landControl experiment at 3-hourly timestep; uploaded on 04/09/2019
+        metadata:
+            tags:
+                - atmosphere
+                - model
+        driver: zarr
+        args:
+            urlpath: gcs://pangeo-data/tracmip/A3hr/landControl/CAM4/v20190409
+            storage_options:
+                token: anon
+            consolidated: True
+
