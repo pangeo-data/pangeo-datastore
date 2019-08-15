@@ -83,7 +83,7 @@ sources:
         - model
     driver: zarr
     args:
-      urlpath: 'gcs://pangeo-data/cm2.6/control/temp_salt_u_v-5day_avg'
+      urlpath: 'gcs://pangeo-data/cm2.6/one_percent/temp_salt_u_v-5day_avg'
       storage_options:
         token: anon
       consolidated: True
