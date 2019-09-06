@@ -14,8 +14,8 @@ sources:
       urlpath: 'gcs://pangeo-data/gmet_v1.zarr'
       consolidated: True
 
-  gpm_imerg_early:
-    description: Early rainfall estimates from NASA's Global Precipitation Measurement mission
+  gpm_imerg_early_chunk_time:
+    description: Early rainfall estimates from NASA's Global Precipitation Measurement mission (chunked along time)
     metadata:
       url: 'https://pmm.nasa.gov/data-access/downloads/gpm'
       tags:
@@ -23,7 +23,20 @@ sources:
         - satellite
     driver: zarr
     args:
-      urlpath: 'gcs://pangeo-data/gpm_imerg_early'
+      urlpath: 'gcs://pangeo-data/gpm_imerg/early/chunk_time'
+      storage_options:
+        token: anon
+
+  gpm_imerg_early_chunk_space:
+    description: Early rainfall estimates from NASA's Global Precipitation Measurement mission (chunked along lat/lon)
+    metadata:
+      url: 'https://pmm.nasa.gov/data-access/downloads/gpm'
+      tags:
+        - precipitation
+        - satellite
+    driver: zarr
+    args:
+      urlpath: 'gcs://pangeo-data/gpm_imerg/early/chunk_space'
       storage_options:
         token: anon
 
