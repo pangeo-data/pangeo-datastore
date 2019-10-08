@@ -4,6 +4,29 @@ CMIP6 Catalog
 .. raw:: html
 
   <head>
+    <style>
+      html,
+      body {
+        height: 100%;
+        width: 100%;
+        margin: 0;
+        box-sizing: border-box;
+        -webkit-overflow-scrolling: touch;
+      }
+
+      html {
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding: 0;
+        overflow: auto;
+      }
+
+      body {
+        padding: 1rem;
+        overflow: auto;
+      }
+    </style>
     <script src="https://unpkg.com/papaparse@5.1.0/papaparse.min.js"></script>
     <script src="https://unpkg.com/ag-grid-community/dist/ag-grid-community.min.noStyle.js"></script>
     <link rel="stylesheet" href="https://unpkg.com/ag-grid-community/dist/styles/ag-grid.css">
@@ -11,7 +34,11 @@ CMIP6 Catalog
   </head>
 
   <body>
-    <div id="myGrid" style="height: 600px;width:1000px;" class="ag-theme-balham"></div>
+    <div style="display: flex; flex-direction: row">
+      <div style="overflow: auto; flex-grow: 1">
+        <div id="myGrid" class="ag-theme-balham" style="height: 600px; width: 100%;"></div>
+      </div>
+    </div>
 
     <script type="text/javascript" charset="utf-8">
       // load in sample CSV catalog
@@ -33,8 +60,14 @@ CMIP6 Catalog
         var gridOptions = {
           columnDefs: columnDefs,
           rowData: results.data,
-          onFirstDataRendered(params) {
+          onGridReady: function(params) {
             params.api.sizeColumnsToFit();
+
+            window.addEventListener('resize', function() {
+              setTimeout(function() {
+                params.api.sizeColumnsToFit();
+              })
+            })
           }
         };
 
