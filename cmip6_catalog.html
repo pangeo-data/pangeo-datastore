@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>master: Pangeo Master Data Catalog &#8212; Pangeo Catalog  documentation</title>
+    <title>CMIP6 CSV Catalog &#8212; Pangeo Catalog  documentation</title>
     <link rel="stylesheet" href="_static/pangeo-style.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css" />
@@ -27,8 +27,8 @@
     <script type="text/javascript" src="https://unpkg.com/ag-grid-community/dist/ag-grid-community.min.noStyle.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="atmosphere: Pangeo Atmospheric Science Dataset Catalog" href="master/atmosphere.html" />
-    <link rel="prev" title="CMIP6 CSV Catalog" href="cmip6_catalog.html" />
+    <link rel="next" title="master: Pangeo Master Data Catalog" href="master.html" />
+    <link rel="prev" title="Pangeo Cloud Data Catalog" href="index.html" />
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
 <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
@@ -69,9 +69,9 @@
   <ul class="dropdown-menu globaltoc"
       role="menu"
       aria-labelledby="dLabelGlobalToc"><ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="cmip6_catalog.html">CMIP6 CSV Catalog</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">master: Pangeo Master Data Catalog</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#child-catalogs">Child Catalogs</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">CMIP6 CSV Catalog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="master.html">master: Pangeo Master Data Catalog</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="master.html#child-catalogs">Child Catalogs</a></li>
 </ul>
 </li>
 </ul>
@@ -87,10 +87,7 @@
   <ul class="dropdown-menu localtoc"
       role="menu"
       aria-labelledby="dLabelLocalToc"><ul>
-<li><a class="reference internal" href="#">master: Pangeo Master Data Catalog</a><ul>
-<li><a class="reference internal" href="#child-catalogs">Child Catalogs</a></li>
-</ul>
-</li>
+<li><a class="reference internal" href="#">CMIP6 CSV Catalog</a></li>
 </ul>
 </ul>
 </li>
@@ -100,11 +97,11 @@
               
                 
   <li>
-    <a href="cmip6_catalog.html" title="Previous Chapter: CMIP6 CSV Catalog"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; CMIP6 CSV Catalog</span>
+    <a href="index.html" title="Previous Chapter: Pangeo Cloud Data Catalog"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; Pangeo Cloud ...</span>
     </a>
   </li>
   <li>
-    <a href="master/atmosphere.html" title="Next Chapter: atmosphere: Pangeo Atmospheric Science Dataset Catalog"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">atmosphere: P... &raquo;</span>
+    <a href="master.html" title="Next Chapter: master: Pangeo Master Data Catalog"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">master: Pange... &raquo;</span>
     </a>
   </li>
               
@@ -126,34 +123,81 @@
   <div class="row">
       <div class="col-md-3">
         <div id="sidebar" class="bs-sidenav" role="complementary"><ul>
-<li><a class="reference internal" href="#">master: Pangeo Master Data Catalog</a><ul>
-<li><a class="reference internal" href="#child-catalogs">Child Catalogs</a></li>
-</ul>
-</li>
+<li><a class="reference internal" href="#">CMIP6 CSV Catalog</a></li>
 </ul>
 
         </div>
       </div>
     <div class="body col-md-9 content" role="main">
       
-  <div class="section" id="master-pangeo-master-data-catalog">
-<h1>master: Pangeo Master Data Catalog<a class="headerlink" href="#master-pangeo-master-data-catalog" title="Permalink to this headline">¶</a></h1>
-<p>Catalog URL:</p>
-<div class="highlight-html"><div class="highlight"><pre><span></span>https://raw.githubusercontent.com/pangeo-data/pangeo-datastore/master/intake-catalogs/master.yaml
-</pre></div>
+  <div class="section" id="cmip6-csv-catalog">
+<h1>CMIP6 CSV Catalog<a class="headerlink" href="#cmip6-csv-catalog" title="Permalink to this headline">¶</a></h1>
+<div style="display: flex; flex-direction: row">
+  <div style="overflow: auto; flex-grow: 1">
+    <div id="myGrid" class="ag-theme-balham" style="height: 600px; width: 100%;"></div>
+  </div>
 </div>
-<div class="section" id="child-catalogs">
-<h2>Child Catalogs<a class="headerlink" href="#child-catalogs" title="Permalink to this headline">¶</a></h2>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="master/atmosphere.html">atmosphere: Pangeo Atmospheric Science Dataset Catalog</a></li>
-<li class="toctree-l1"><a class="reference internal" href="master/cmip6.html">cmip6: Pangeo CMIP6 Dataset Catalog</a></li>
-<li class="toctree-l1"><a class="reference internal" href="master/hydro.html">hydro: Pangeo Hydrology Dataset Catalog</a></li>
-<li class="toctree-l1"><a class="reference internal" href="master/ocean.html">ocean: Pangeo Oceanography Dataset Catalog</a></li>
-</ul>
-</div>
-</div>
-</div>
+
+<script type="text/javascript" charset="utf-8">
+  // load in sample CSV catalog
+  Papa.parse("https://storage.googleapis.com/pangeo-cmip6/pangeo-cmip6-zarr-consolidated-stores.csv", {
+    download: true,
+    header: true,
+    complete: function(results) {
+      makeGrid(results);
+    }
+  });
+
+  // Main function to produce ag-Grid based on CSV table
+  function makeGrid(results) {
+
+    // specify the columms
+    var columnDefs = getColumnDefs(results.meta.fields);
+
+    // let the grid know which columns and what data to use
+    var gridOptions = {
+      defaultColDef: {
+        editable: true,
+        sortable: true,
+        filter: true
+      },
+      columnDefs: columnDefs,
+      rowData: results.data,
+      rowSelection: 'multiple',
+      enableCellTextSelection: true,
+      onGridReady: function(params) {
+        params.api.sizeColumnsToFit();
+
+        window.addEventListener('resize', function() {
+          setTimeout(function() {
+            params.api.sizeColumnsToFit();
+          })
+        })
+      }
+    };
+
+    // lookup the container we want the Grid to use
+    var eGridDiv = document.querySelector('#myGrid');
+
+    // create the grid passing in the div to use together with the columns & data we want to use
+    new agGrid.Grid(eGridDiv, gridOptions);
+  }
+
+  // Get column definitions based on parsed fields
+  function getColumnDefs(fields) {
+
+    var columnDefs = [];
+
+    for (var i = 0; i < fields.length; i++) {
+      columnDefs.push({
+        headerName: fields[i],
+        field: fields[i]
+      });
+    }
+
+    return columnDefs;
+  }
+</script></div>
 
 
     </div>
