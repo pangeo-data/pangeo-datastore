@@ -21,18 +21,14 @@ The master intake catalog URL is::
 Examples
 --------
 
-To open the catalog and load a dataset from python, you can run the following code:
-
-.. code:: python
+To open the catalog and load a dataset from python, you can run the following code::
 
     import intake
     cat_url = 'https://raw.githubusercontent.com/pangeo-data/pangeo-datastore/master/intake-catalogs/master.yaml'
     cat = intake.Catalog(cat_url)
     ds = cat.atmosphere.gmet_v1.to_dask()
 
-To explore the whole catalog, you can try:
-
-.. code:: python
+To explore the whole catalog, you can try::
 
     cat.walk(depth=5)
 
@@ -44,7 +40,6 @@ This website is a statically generated Sphinx site from which you can browse the
 .. toctree::
    :maxdepth: 3
 
-   cmip6_catalog
    master
 
 

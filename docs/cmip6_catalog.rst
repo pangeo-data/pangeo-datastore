@@ -4,29 +4,6 @@ CMIP6 Catalog
 .. raw:: html
 
   <head>
-    <style>
-      html,
-      body {
-        height: 100%;
-        width: 100%;
-        margin: 0;
-        box-sizing: border-box;
-        -webkit-overflow-scrolling: touch;
-      }
-
-      html {
-        position: absolute;
-        top: 0;
-        left: 0;
-        padding: 0;
-        overflow: auto;
-      }
-
-      body {
-        padding: 1rem;
-        overflow: auto;
-      }
-    </style>
     <script src="https://unpkg.com/papaparse@5.1.0/papaparse.min.js"></script>
     <script src="https://unpkg.com/ag-grid-community/dist/ag-grid-community.min.noStyle.js"></script>
     <link rel="stylesheet" href="https://unpkg.com/ag-grid-community/dist/styles/ag-grid.css">
@@ -58,8 +35,15 @@ CMIP6 Catalog
 
         // let the grid know which columns and what data to use
         var gridOptions = {
+          defaultColDef: {
+            editable: true,
+            sortable: true,
+            filter: true
+          },
           columnDefs: columnDefs,
           rowData: results.data,
+          rowSelection: 'multiple',
+          enableCellTextSelection: true,
           onGridReady: function(params) {
             params.api.sizeColumnsToFit();
 
@@ -86,9 +70,7 @@ CMIP6 Catalog
         for (var i = 0; i < fields.length; i++) {
           columnDefs.push({
             headerName: fields[i],
-            field: fields[i],
-            sortable: true,
-            filter: true
+            field: fields[i]
           });
         }
 
