@@ -183,4 +183,8 @@ def rstjinja(app, docname, source):
 def setup(app):
     app.add_stylesheet("https://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css")
     app.add_stylesheet("catalog-custom.css")
+    app.add_stylesheet("https://unpkg.com/ag-grid-community/dist/styles/ag-grid.css")
+    app.add_stylesheet("https://unpkg.com/ag-grid-community/dist/styles/ag-theme-balham.css")
+    app.add_javascript("https://unpkg.com/papaparse@5.1.0/papaparse.min.js")
+    app.add_javascript("https://unpkg.com/ag-grid-community/dist/ag-grid-community.min.noStyle.js")
     app.connect("source-read", rstjinja)
