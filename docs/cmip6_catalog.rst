@@ -1,5 +1,5 @@
-CMIP6 Catalog
-=============
+CMIP6 CSV Catalog
+=================
 
 .. raw:: html
 
