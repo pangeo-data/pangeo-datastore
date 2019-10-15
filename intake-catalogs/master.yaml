@@ -21,10 +21,3 @@ sources:
     description: 'Pangeo Hydrology Dataset Catalog'
     driver: intake.catalog.local.YAMLFileCatalog
     metadata: {}
-
-  cmip6:
-    args:
-      path: "{{CATALOG_DIR}}/cmip6.yaml"
-    description: 'Pangeo CMIP6 Dataset Catalog'
-    driver: intake.catalog.local.YAMLFileCatalog
-    metadata: {}
