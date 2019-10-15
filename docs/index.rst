@@ -40,8 +40,9 @@ This website is a statically generated Sphinx site from which you can browse the
 .. toctree::
    :maxdepth: 3
 
-   cmip6_catalog
    master
+   cmip6_pangeo
+   cmip6_glade
 
 
 .. _Intake: https://intake.readthedocs.io
