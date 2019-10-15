@@ -186,5 +186,5 @@ def setup(app):
     app.add_stylesheet("https://unpkg.com/ag-grid-community/dist/styles/ag-grid.css")
     app.add_stylesheet("https://unpkg.com/ag-grid-community/dist/styles/ag-theme-balham.css")
     app.add_javascript("https://unpkg.com/papaparse@5.1.0/papaparse.min.js")
-    app.add_javascript("https://unpkg.com/ag-grid-community/dist/ag-grid-community.min.noStyle.js")
+    app.add_javascript("https://unpkg.com/ag-grid-enterprise@21.2.1/dist/ag-grid-enterprise.min.js")
     app.connect("source-read", rstjinja)
