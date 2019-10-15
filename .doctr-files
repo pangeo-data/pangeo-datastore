@@ -1,4 +1,6 @@
 ./_sources/cmip6_catalog.rst.txt
+./_sources/cmip6_glade.rst.txt
+./_sources/cmip6_pangeo.rst.txt
 ./_sources/index.rst.txt
 ./_sources/master.rst.txt
 ./_sources/master/atmosphere.rst.txt
@@ -102,6 +104,8 @@
 ./_static/up.png
 ./_static/websupport.js
 ./cmip6_catalog.html
+./cmip6_glade.html
+./cmip6_pangeo.html
 ./genindex.html
 ./index.html
 ./master.html
