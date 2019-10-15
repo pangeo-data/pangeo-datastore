@@ -67,11 +67,15 @@
      href="#">Site <b class="caret"></b></a>
   <ul class="dropdown-menu globaltoc"
       role="menu"
-      aria-labelledby="dLabelGlobalToc"><ul>
+      aria-labelledby="dLabelGlobalToc"><p class="caption"><span class="caption-text">Pangeo Intake Catalogs</span></p>
+<ul>
 <li class="toctree-l1"><a class="reference internal" href="master.html">master: Pangeo Master Data Catalog</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="master.html#child-catalogs">Child Catalogs</a></li>
 </ul>
 </li>
+</ul>
+<p class="caption"><span class="caption-text">Pangeo ESMCol Catalogs</span></p>
+<ul>
 <li class="toctree-l1"><a class="reference internal" href="cmip6_pangeo.html">CMIP6 Pangeo Catalog</a></li>
 <li class="toctree-l1"><a class="reference internal" href="cmip6_glade.html">CMIP6 GLADE Catalog</a></li>
 </ul>
@@ -88,8 +92,8 @@
       role="menu"
       aria-labelledby="dLabelLocalToc"><ul>
 <li><a class="reference internal" href="#">Pangeo Cloud Data Catalog</a><ul>
-<li><a class="reference internal" href="#examples">Examples</a></li>
-<li><a class="reference internal" href="#catalog-contents">Catalog Contents</a></li>
+<li><a class="reference internal" href="#intake-catalogs">Intake Catalogs</a></li>
+<li><a class="reference internal" href="#esm-collection">ESM Collection</a></li>
 </ul>
 </li>
 </ul>
@@ -128,15 +132,17 @@
 <p>Welcome to the Pangeo Cloud Data Catalog.
 The Pangeo Cloud Data Catalog lives in the following GitHub repository:
 <a class="reference external" href="https://github.com/pangeo-data/pangeo-datastore">https://github.com/pangeo-data/pangeo-datastore</a></p>
-<p>It consists of a nested set of <a class="reference external" href="https://intake.readthedocs.io">Intake</a> catalogs
-Most of the data is stored in cloud-friendly formats like <a class="reference external" href="https://zarr.readthedocs.io">Zarr</a>
-and meant to be opened with <a class="reference external" href="http://xarray.pydata.org">Xarray</a>.</p>
+<p>Most of the data is stored in cloud-friendly formats like <a class="reference external" href="https://zarr.readthedocs.io">Zarr</a>
+and meant to be opened with <a class="reference external" href="http://xarray.pydata.org">Xarray</a>.
+Catalog formats for cloud-based data is an evolving area.</p>
+<p>We are currently using two different approaches: <a class="reference external" href="https://intake.readthedocs.io">Intake</a> and <a class="reference external" href="https://github.com/NCAR/esm-collection-spec/">ESMCol</a>.</p>
+<div class="section" id="intake-catalogs">
+<h2>Intake Catalogs<a class="headerlink" href="#intake-catalogs" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="https://intake.readthedocs.io">Intake</a> is a python library for</p>
 <p>The master intake catalog URL is:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">raw</span><span class="o">.</span><span class="n">githubusercontent</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">pangeo</span><span class="o">-</span><span class="n">data</span><span class="o">/</span><span class="n">pangeo</span><span class="o">-</span><span class="n">datastore</span><span class="o">/</span><span class="n">master</span><span class="o">/</span><span class="n">intake</span><span class="o">-</span><span class="n">catalogs</span><span class="o">/</span><span class="n">master</span><span class="o">.</span><span class="n">yaml</span>
 </pre></div>
 </div>
-<div class="section" id="examples">
-<h2>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
 <p>To open the catalog and load a dataset from python, you can run the following code:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">intake</span>
 <span class="n">cat_url</span> <span class="o">=</span> <span class="s1">&#39;https://raw.githubusercontent.com/pangeo-data/pangeo-datastore/master/intake-catalogs/master.yaml&#39;</span>
@@ -148,22 +154,35 @@ and meant to be opened with <a class="reference external" href="http://xarray.py
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">cat</span><span class="o">.</span><span class="n">walk</span><span class="p">(</span><span class="n">depth</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="catalog-contents">
-<h2>Catalog Contents<a class="headerlink" href="#catalog-contents" title="Permalink to this headline">¶</a></h2>
-<p>This website is a statically generated Sphinx site from which you can browse the catalog contents.</p>
+<p>You can also find a static, online browser for the intake catalogs following
+the links below.</p>
 <div class="toctree-wrapper compound">
+<p class="caption"><span class="caption-text">Pangeo Intake Catalogs</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="master.html">master: Pangeo Master Data Catalog</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="master.html#child-catalogs">Child Catalogs</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="master/atmosphere.html">atmosphere: Pangeo Atmospheric Science Dataset Catalog</a></li>
-<li class="toctree-l3"><a class="reference internal" href="master/cmip6.html">cmip6: Pangeo CMIP6 Dataset Catalog</a></li>
 <li class="toctree-l3"><a class="reference internal" href="master/hydro.html">hydro: Pangeo Hydrology Dataset Catalog</a></li>
 <li class="toctree-l3"><a class="reference internal" href="master/ocean.html">ocean: Pangeo Oceanography Dataset Catalog</a></li>
 </ul>
 </li>
 </ul>
 </li>
+</ul>
+</div>
+</div>
+<div class="section" id="esm-collection">
+<h2>ESM Collection<a class="headerlink" href="#esm-collection" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="https://github.com/NCAR/esm-collection-spec/">ESMCol</a> stands for Earth System Model Collection.
+It is an experimental new format, inspired by <a class="reference external" href="https://github.com/radiantearth/stac-spec">STAC</a>, for cataloging large,
+homogeneous archives of Earth System Model output like CMIP6.
+The links below will take you to a javascript-based spreadsheet-style browser
+for the ESMCol catalogs.
+Data can be loaded in python with
+<a class="reference external" href="https://intake-esm.readthedocs.io/en/latest/">intake-esm</a>.</p>
+<div class="toctree-wrapper compound">
+<p class="caption"><span class="caption-text">Pangeo ESMCol Catalogs</span></p>
+<ul>
 <li class="toctree-l1"><a class="reference internal" href="cmip6_pangeo.html">CMIP6 Pangeo Catalog</a></li>
 <li class="toctree-l1"><a class="reference internal" href="cmip6_glade.html">CMIP6 GLADE Catalog</a></li>
 </ul>
