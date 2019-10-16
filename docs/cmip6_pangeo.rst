@@ -1,6 +1,11 @@
 Pangeo CMIP6 Catalog
 ====================
 
+This is a dynamically generated ESMCol collection.
+This collection can be viewed directly at::
+
+  https://raw.githubusercontent.com/NCAR/intake-esm-datastore/master/catalogs/pangeo-cmip6.json
+
 .. raw:: html
 
   <pre id="json-renderer"></pre>
