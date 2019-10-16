@@ -1,6 +1,11 @@
 GLADE CMIP6 Catalog
 ===================
 
+This is a dynamically generated ESMCol collection.
+This collection can be viewed directly at::
+
+  https://raw.githubusercontent.com/NCAR/intake-esm-datastore/master/catalogs/glade-cmip6.json
+
 .. raw:: html
 
   <pre id="json-renderer"></pre>
@@ -16,7 +21,7 @@ GLADE CMIP6 Catalog
     jQuery.getJSON("https://raw.githubusercontent.com/NCAR/intake-esm-datastore/master/catalogs/glade-cmip6.json", function(results) {
       $('#json-renderer').jsonViewer(results, {collapsed: true, rootCollapsable: false});
     })
-    
+
     // load in sample CSV catalog
     Papa.parse("https://storage.googleapis.com/pangeo-cmip6/glade-cmip6.csv.gz", {
       download: true,
