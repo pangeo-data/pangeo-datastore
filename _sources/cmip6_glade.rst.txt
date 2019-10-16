@@ -1,7 +1,9 @@
-CMIP6 GLADE Catalog
+GLADE CMIP6 Catalog
 ===================
 
 .. raw:: html
+
+  <pre id="json-renderer"></pre>
 
   <div style="display: flex; flex-direction: row">
     <div style="overflow: auto; flex-grow: 1">
@@ -10,6 +12,11 @@ CMIP6 GLADE Catalog
   </div>
 
   <script type="text/javascript" charset="utf-8">
+    // fetch json file
+    jQuery.getJSON("https://raw.githubusercontent.com/NCAR/intake-esm-datastore/master/catalogs/glade-cmip6.json", function(results) {
+      $('#json-renderer').jsonViewer(results, {collapsed: true, rootCollapsable: false});
+    })
+    
     // load in sample CSV catalog
     Papa.parse("https://storage.googleapis.com/pangeo-cmip6/glade-cmip6.csv.gz", {
       download: true,

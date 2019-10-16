@@ -3,13 +3,14 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>CMIP6 GLADE Catalog &#8212; Pangeo Catalog  documentation</title>
+    <title>GLADE CMIP6 Catalog &#8212; Pangeo Catalog  documentation</title>
     <link rel="stylesheet" href="_static/pangeo-style.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css" />
     <link rel="stylesheet" href="_static/catalog-custom.css" type="text/css" />
-    <link rel="stylesheet" href="https://unpkg.com/ag-grid-community/dist/styles/ag-grid.css" type="text/css" />
     <link rel="stylesheet" href="https://unpkg.com/ag-grid-community/dist/styles/ag-theme-balham.css" type="text/css" />
+    <link rel="stylesheet" href="https://unpkg.com/ag-grid-community/dist/styles/ag-grid.css" type="text/css" />
+    <link rel="stylesheet" href="_static/jquery.json-viewer.css" type="text/css" />
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    './',
@@ -25,9 +26,10 @@
     <script type="text/javascript" src="_static/doctools.js"></script>
     <script type="text/javascript" src="https://unpkg.com/papaparse@5.1.0/papaparse.min.js"></script>
     <script type="text/javascript" src="https://unpkg.com/ag-grid-enterprise@21.2.1/dist/ag-grid-enterprise.min.js"></script>
+    <script type="text/javascript" src="_static/jquery.json-viewer.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="prev" title="CMIP6 Pangeo Catalog" href="cmip6_pangeo.html" />
+    <link rel="prev" title="Pangeo CMIP6 Catalog" href="cmip6_pangeo.html" />
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
 <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
@@ -76,8 +78,8 @@
 </ul>
 <p class="caption"><span class="caption-text">Pangeo ESMCol Catalogs</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="cmip6_pangeo.html">CMIP6 Pangeo Catalog</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">CMIP6 GLADE Catalog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cmip6_pangeo.html">Pangeo CMIP6 Catalog</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">GLADE CMIP6 Catalog</a></li>
 </ul>
 </ul>
 </li>
@@ -91,7 +93,7 @@
   <ul class="dropdown-menu localtoc"
       role="menu"
       aria-labelledby="dLabelLocalToc"><ul>
-<li><a class="reference internal" href="#">CMIP6 GLADE Catalog</a></li>
+<li><a class="reference internal" href="#">GLADE CMIP6 Catalog</a></li>
 </ul>
 </ul>
 </li>
@@ -101,7 +103,7 @@
               
                 
   <li>
-    <a href="cmip6_pangeo.html" title="Previous Chapter: CMIP6 Pangeo Catalog"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; CMIP6 Pangeo Catalog</span>
+    <a href="cmip6_pangeo.html" title="Previous Chapter: Pangeo CMIP6 Catalog"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; Pangeo CMIP6 Catalog</span>
     </a>
   </li>
               
@@ -123,15 +125,17 @@
   <div class="row">
       <div class="col-md-3">
         <div id="sidebar" class="bs-sidenav" role="complementary"><ul>
-<li><a class="reference internal" href="#">CMIP6 GLADE Catalog</a></li>
+<li><a class="reference internal" href="#">GLADE CMIP6 Catalog</a></li>
 </ul>
 
         </div>
       </div>
     <div class="body col-md-9 content" role="main">
       
-  <div class="section" id="cmip6-glade-catalog">
-<h1>CMIP6 GLADE Catalog<a class="headerlink" href="#cmip6-glade-catalog" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="glade-cmip6-catalog">
+<h1>GLADE CMIP6 Catalog<a class="headerlink" href="#glade-cmip6-catalog" title="Permalink to this headline">¶</a></h1>
+<pre id="json-renderer"></pre>
+
 <div style="display: flex; flex-direction: row">
   <div style="overflow: auto; flex-grow: 1">
     <div id="myGrid" class="ag-theme-balham" style="height: 600px; width: 100%;"></div>
@@ -139,6 +143,11 @@
 </div>
 
 <script type="text/javascript" charset="utf-8">
+  // fetch json file
+  jQuery.getJSON("https://raw.githubusercontent.com/NCAR/intake-esm-datastore/master/catalogs/glade-cmip6.json", function(results) {
+    $('#json-renderer').jsonViewer(results, {collapsed: true, rootCollapsable: false});
+  })
+
   // load in sample CSV catalog
   Papa.parse("https://storage.googleapis.com/pangeo-cmip6/glade-cmip6.csv.gz", {
     download: true,
