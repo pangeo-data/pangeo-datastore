@@ -1,7 +1,9 @@
-CMIP6 Pangeo Catalog
+Pangeo CMIP6 Catalog
 ====================
 
 .. raw:: html
+
+  <pre id="json-renderer"></pre>
 
   <div style="display: flex; flex-direction: row">
     <div style="overflow: auto; flex-grow: 1">
@@ -10,6 +12,11 @@ CMIP6 Pangeo Catalog
   </div>
 
   <script type="text/javascript" charset="utf-8">
+    // fetch json file
+    jQuery.getJSON("https://raw.githubusercontent.com/NCAR/intake-esm-datastore/master/catalogs/pangeo-cmip6.json", function(results) {
+      $('#json-renderer').jsonViewer(results, {collapsed: true, rootCollapsable: false});
+    })
+
     // load in sample CSV catalog
     Papa.parse("https://storage.googleapis.com/pangeo-cmip6/pangeo-cmip6-zarr-consolidated-stores.csv", {
       download: true,
