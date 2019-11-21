@@ -77,6 +77,21 @@ sources:
       storage_options:
         token: anon
       consolidated: True
+      
+  ECCO_layers:
+    description: Rerun of Estimating the Circulation and Climate of the Ocean (ECCO) with the layers package
+    metadata:
+      url: 'https://ecco-v4-python-tutorial.readthedocs.io/intro.html'
+      tags:
+        - ocean
+        - model
+        - layers
+    driver: zarr
+    args:
+      urlpath: 'gcs://pangeo-data/ECCO_layers.zarr'
+      storage_options:
+        token: anon
+      consolidated: True
 
   LLC4320:
     args:
