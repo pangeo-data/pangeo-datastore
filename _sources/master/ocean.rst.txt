@@ -643,3 +643,135 @@ NCEP Global Ocean Data Assimilation System
       </div>
     </div>
 
+ECCO_layers
+~~~~~~~~~~~
+
+Rerun of Estimating the Circulation and Climate of the Ocean (ECCO) with
+the layers package
+
+.. raw:: html
+
+       <div class="panel-group" id="accordion-ecco_layers">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h4 class="panel-title">
+            <a data-toggle="collapse" data-parent="#accordion-ecco_layers" href="#collapse1-ecco_layers">
+            load in python
+            </a>
+          </h4>
+        </div>
+        <div id="collapse1-ecco_layers" class="panel-collapse collapse">
+          <div class="panel-body">
+          <pre>import intake
+    cat = intake.Catalog(&#34;https://raw.githubusercontent.com/pangeo-data/pangeo-datastore/master/intake-catalogs/ocean.yaml&#34;)
+    ds = cat[&#34;ECCO_layers&#34;].to_dask()</pre>
+          </div>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h4 class="panel-title">
+            <a data-toggle="collapse" data-parent="#accordion-ecco_layers" href="#collapse2-ecco_layers">
+             metadata</a>
+          </h4>
+        </div>
+        <div id="collapse2-ecco_layers" class="panel-collapse collapse">
+          <div class="panel-body">
+           <table class="table table-condensed table-hover">
+            <tbody>
+           
+             <tr><td>url</td><td>https://ecco-v4-python-tutorial.readthedocs.io/intro.html</td></tr>
+           
+             <tr><td>tags</td><td>[&#39;ocean&#39;, &#39;model&#39;, &#39;layers&#39;]</td></tr>
+           
+             <tr><td>catalog_dir</td><td>/home/jovyan/./intake-catalogs/</td></tr>
+           
+            </tbody>
+           </table>
+          </div>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h4 class="panel-title">
+            <a data-toggle="collapse" data-parent="#accordion-ecco_layers" href="#collapse3-ecco_layers">
+            xarray preview</a>
+          </h4>
+        </div>
+        <div id="collapse3-ecco_layers" class="panel-collapse collapse">
+          <div class="panel-body">
+          <pre>&lt;xarray.Dataset&gt;
+    Dimensions:               (face: 13, i: 90, i_g: 90, j: 90, j_g: 90, k: 50, k_l: 50, k_p1: 51, k_u: 50, l1_b: 222, l1_c: 221, l1_i: 220, l2_b: 222, l2_c: 221, l2_i: 220, l3_b: 222, l3_c: 221, l3_i: 220, time: 288)
+    Coordinates:
+        CS                    (face, j, i) float32 dask.array&lt;shape=(13, 90, 90), chunksize=(13, 90, 90)&gt;
+        Depth                 (face, j, i) float32 dask.array&lt;shape=(13, 90, 90), chunksize=(13, 90, 90)&gt;
+        PHrefC                (k) float32 dask.array&lt;shape=(50,), chunksize=(50,)&gt;
+        PHrefF                (k_p1) float32 dask.array&lt;shape=(51,), chunksize=(51,)&gt;
+        SN                    (face, j, i) float32 dask.array&lt;shape=(13, 90, 90), chunksize=(13, 90, 90)&gt;
+        XC                    (face, j, i) float32 dask.array&lt;shape=(13, 90, 90), chunksize=(13, 90, 90)&gt;
+        XG                    (face, j_g, i_g) float32 dask.array&lt;shape=(13, 90, 90), chunksize=(13, 90, 90)&gt;
+        YC                    (face, j, i) float32 dask.array&lt;shape=(13, 90, 90), chunksize=(13, 90, 90)&gt;
+        YG                    (face, j_g, i_g) float32 dask.array&lt;shape=(13, 90, 90), chunksize=(13, 90, 90)&gt;
+        Z                     (k) float32 dask.array&lt;shape=(50,), chunksize=(50,)&gt;
+        Zl                    (k_l) float32 dask.array&lt;shape=(50,), chunksize=(50,)&gt;
+        Zp1                   (k_p1) float32 dask.array&lt;shape=(51,), chunksize=(51,)&gt;
+        Zu                    (k_u) float32 dask.array&lt;shape=(50,), chunksize=(50,)&gt;
+        drC                   (k_p1) float32 dask.array&lt;shape=(51,), chunksize=(51,)&gt;
+        drF                   (k) float32 dask.array&lt;shape=(50,), chunksize=(50,)&gt;
+        dxC                   (face, j, i_g) float32 dask.array&lt;shape=(13, 90, 90), chunksize=(13, 90, 90)&gt;
+        dxG                   (face, j_g, i) float32 dask.array&lt;shape=(13, 90, 90), chunksize=(13, 90, 90)&gt;
+        dyC                   (face, j_g, i) float32 dask.array&lt;shape=(13, 90, 90), chunksize=(13, 90, 90)&gt;
+        dyG                   (face, j, i_g) float32 dask.array&lt;shape=(13, 90, 90), chunksize=(13, 90, 90)&gt;
+      * face                  (face) int64 0 1 2 3 4 5 6 7 8 9 10 11 12
+        hFacC                 (k, face, j, i) float32 dask.array&lt;shape=(50, 13, 90, 90), chunksize=(50, 13, 90, 90)&gt;
+        hFacS                 (k, face, j_g, i) float32 dask.array&lt;shape=(50, 13, 90, 90), chunksize=(50, 13, 90, 90)&gt;
+        hFacW                 (k, face, j, i_g) float32 dask.array&lt;shape=(50, 13, 90, 90), chunksize=(50, 13, 90, 90)&gt;
+      * i                     (i) int64 0 1 2 3 4 5 6 7 ... 82 83 84 85 86 87 88 89
+      * i_g                   (i_g) int64 0 1 2 3 4 5 6 7 ... 83 84 85 86 87 88 89
+        iter                  (time) int64 dask.array&lt;shape=(288,), chunksize=(1,)&gt;
+      * j                     (j) int64 0 1 2 3 4 5 6 7 ... 82 83 84 85 86 87 88 89
+      * j_g                   (j_g) int64 0 1 2 3 4 5 6 7 ... 83 84 85 86 87 88 89
+      * k                     (k) int64 0 1 2 3 4 5 6 7 ... 42 43 44 45 46 47 48 49
+      * k_l                   (k_l) int64 0 1 2 3 4 5 6 7 ... 43 44 45 46 47 48 49
+      * k_p1                  (k_p1) int64 0 1 2 3 4 5 6 7 ... 44 45 46 47 48 49 50
+      * k_u                   (k_u) int64 0 1 2 3 4 5 6 7 ... 43 44 45 46 47 48 49
+      * l1_b                  (l1_b) int64 0 1 2 3 4 5 6 ... 216 217 218 219 220 221
+      * l1_c                  (l1_c) int64 0 1 2 3 4 5 6 ... 215 216 217 218 219 220
+      * l1_i                  (l1_i) int64 0 1 2 3 4 5 6 ... 214 215 216 217 218 219
+      * l2_b                  (l2_b) int64 0 1 2 3 4 5 6 ... 216 217 218 219 220 221
+      * l2_c                  (l2_c) int64 0 1 2 3 4 5 6 ... 215 216 217 218 219 220
+      * l2_i                  (l2_i) int64 0 1 2 3 4 5 6 ... 214 215 216 217 218 219
+      * l3_b                  (l3_b) int64 0 1 2 3 4 5 6 ... 216 217 218 219 220 221
+      * l3_c                  (l3_c) int64 0 1 2 3 4 5 6 ... 215 216 217 218 219 220
+      * l3_i                  (l3_i) int64 0 1 2 3 4 5 6 ... 214 215 216 217 218 219
+        layer_1SLT_bounds     (l1_b) float32 dask.array&lt;shape=(222,), chunksize=(222,)&gt;
+        layer_1SLT_center     (l1_c) float32 dask.array&lt;shape=(221,), chunksize=(221,)&gt;
+        layer_1SLT_interface  (l1_i) float32 dask.array&lt;shape=(220,), chunksize=(220,)&gt;
+        layer_2TH_bounds      (l2_b) float32 dask.array&lt;shape=(222,), chunksize=(222,)&gt;
+        layer_2TH_center      (l2_c) float32 dask.array&lt;shape=(221,), chunksize=(221,)&gt;
+        layer_2TH_interface   (l2_i) float32 dask.array&lt;shape=(220,), chunksize=(220,)&gt;
+        layer_3RHO_bounds     (l3_b) float32 dask.array&lt;shape=(222,), chunksize=(222,)&gt;
+        layer_3RHO_center     (l3_c) float32 dask.array&lt;shape=(221,), chunksize=(221,)&gt;
+        layer_3RHO_interface  (l3_i) float32 dask.array&lt;shape=(220,), chunksize=(220,)&gt;
+        maskC                 (k, face, j, i) bool dask.array&lt;shape=(50, 13, 90, 90), chunksize=(50, 13, 90, 90)&gt;
+        maskS                 (k, face, j_g, i) bool dask.array&lt;shape=(50, 13, 90, 90), chunksize=(50, 13, 90, 90)&gt;
+        maskW                 (k, face, j, i_g) bool dask.array&lt;shape=(50, 13, 90, 90), chunksize=(50, 13, 90, 90)&gt;
+        rA                    (face, j, i) float32 dask.array&lt;shape=(13, 90, 90), chunksize=(13, 90, 90)&gt;
+        rAs                   (face, j_g, i) float32 dask.array&lt;shape=(13, 90, 90), chunksize=(13, 90, 90)&gt;
+        rAw                   (face, j, i_g) float32 dask.array&lt;shape=(13, 90, 90), chunksize=(13, 90, 90)&gt;
+        rAz                   (face, j_g, i_g) float32 dask.array&lt;shape=(13, 90, 90), chunksize=(13, 90, 90)&gt;
+      * time                  (time) datetime64[ns] 1992-01-15 ... 2015-12-14
+    Data variables:
+        LaAx3RHO              (time, l3_c, face, j, i_g) float64 dask.array&lt;shape=(288, 221, 13, 90, 90), chunksize=(1, 221, 13, 90, 90)&gt;
+        LaAy3RHO              (time, l3_c, face, j_g, i) float64 dask.array&lt;shape=(288, 221, 13, 90, 90), chunksize=(1, 221, 13, 90, 90)&gt;
+        LaFu3RHO              (time, l3_c, face, j, i_g) float64 dask.array&lt;shape=(288, 221, 13, 90, 90), chunksize=(1, 221, 13, 90, 90)&gt;
+        LaFv3RHO              (time, l3_c, face, j_g, i) float64 dask.array&lt;shape=(288, 221, 13, 90, 90), chunksize=(1, 221, 13, 90, 90)&gt;
+        LaHs3RHO              (time, l3_c, face, j_g, i) float64 dask.array&lt;shape=(288, 221, 13, 90, 90), chunksize=(1, 221, 13, 90, 90)&gt;
+        LaHw3RHO              (time, l3_c, face, j, i_g) float64 dask.array&lt;shape=(288, 221, 13, 90, 90), chunksize=(1, 221, 13, 90, 90)&gt;
+        LaUH3RHO              (time, l3_c, face, j, i_g) float64 dask.array&lt;shape=(288, 221, 13, 90, 90), chunksize=(1, 221, 13, 90, 90)&gt;
+        LaVH3RHO              (time, l3_c, face, j_g, i) float64 dask.array&lt;shape=(288, 221, 13, 90, 90), chunksize=(1, 221, 13, 90, 90)&gt;</pre>
+          </div>
+        </div>
+      </div>
+    </div>
+
