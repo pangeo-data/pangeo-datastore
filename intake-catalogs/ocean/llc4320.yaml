@@ -14,8 +14,6 @@ sources:
     driver: zarr
     args:
       urlpath: 'gcs://pangeo-data/llc4320_surface/grid'
-      storage_options:
-        token: anon
       consolidated: True
 
   LLC4320_SST:
@@ -28,8 +26,6 @@ sources:
     driver: zarr
     args:
       urlpath: 'gcs://pangeo-data/llc4320_surface/SST'
-      storage_options:
-        token: anon
       consolidated: True
 
   LLC4320_SSS:
@@ -42,8 +38,6 @@ sources:
     driver: zarr
     args:
       urlpath: 'gcs://pangeo-data/llc4320_surface/SSS'
-      storage_options:
-        token: anon
       consolidated: True
 
   LLC4320_SSH:
@@ -56,8 +50,6 @@ sources:
     driver: zarr
     args:
       urlpath: 'gcs://pangeo-data/llc4320_surface/Eta'
-      storage_options:
-        token: anon
       consolidated: True
 
   LLC4320_SSU:
@@ -70,8 +62,6 @@ sources:
     driver: zarr
     args:
       urlpath: 'gcs://pangeo-data/llc4320_surface/U'
-      storage_options:
-        token: anon
       consolidated: True
 
   LLC4320_SSV:
@@ -84,6 +74,4 @@ sources:
     driver: zarr
     args:
       urlpath: 'gcs://pangeo-data/llc4320_surface/V'
-      storage_options:
-        token: anon
       consolidated: True
