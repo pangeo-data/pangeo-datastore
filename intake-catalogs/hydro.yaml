@@ -60,3 +60,22 @@ sources:
     args:
       urlpath: 'gs://pangeo-data/hydrosheds/dem.vrt'
       chunks: {'y': 6000, 'x': 6000}
+
+  soil_grids:
+    description: Global gridded soil information in COG format
+    parameters:
+      # TODO: setup parameters for levels/variables
+    metadata:
+      url: https://soilgrids.org/
+      tags: Soil
+    driver: rasterio
+    args:
+      urlpath: 'gs://pangeo-data/soilgrids/AWCh1_M_sl1_250m.tif'
+      chunks: {'y': 6000, 'x': 6000}  # TODO: align with COG chunks
+
+  camels:
+    args:
+      path: "{{CATALOG_DIR}}/hydro/camels.yaml"
+    description: 'Pangeo Camels Dataset Catalog'
+    driver: intake.catalog.local.YAMLFileCatalog
+    metadata: {}
