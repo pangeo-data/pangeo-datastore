@@ -61,16 +61,38 @@ sources:
       urlpath: 'gs://pangeo-data/hydrosheds/dem.vrt'
       chunks: {'y': 6000, 'x': 6000}
 
-  soil_grids:
+  soil_grids_single_level:
     description: Global gridded soil information in COG format
     parameters:
-      # TODO: setup parameters for levels/variables
+      variable:
+        description: soil variable
+        type: str
+        default: TAXNWRB
     metadata:
       url: https://soilgrids.org/
       tags: Soil
     driver: rasterio
     args:
-      urlpath: 'gs://pangeo-data/soilgrids/AWCh1_M_sl1_250m.tif'
+      urlpath: "gs://pangeo-data/soilgrids/{{ variable }}_250m.tif"
+      chunks: {'y': 6000, 'x': 6000}  # TODO: align with COG chunks
+
+  soil_grids_multi_level:
+    description: Global gridded soil information in COG format
+    parameters:
+      variable:
+        description: soil variable
+        type: str
+        default: AWCh1_M
+      level:
+        description: soil level
+        type: int
+        default: 1
+    metadata:
+      url: https://soilgrids.org/
+      tags: Soil
+    driver: rasterio
+    args:
+      urlpath: "gs://pangeo-data/soilgrids/{{ variable }}_sl{{ '%01d' % level }}_250m.tif"
       chunks: {'y': 6000, 'x': 6000}  # TODO: align with COG chunks
 
   camels:

@@ -26,7 +26,7 @@ sources:
         type: str
     driver: csv
     args:
-      urlpath: 'gs://pangeo-data/camels/basin_dataset_public_v1p2/usgs_streamflow/*/{{ basin_id}}_streamflow_qc.txt'
+      urlpath: 'gs://pangeo-data/camels/basin_dataset_public_v1p2/usgs_streamflow/*/{{ basin_id }}_streamflow_qc.txt'
       csv_kwargs:
         sep: '\s+'
         names: ['basin', 'Year', 'Mnth', 'Day', 'QObs', 'flag']
