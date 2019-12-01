@@ -74,7 +74,8 @@ sources:
     driver: rasterio
     args:
       urlpath: "gs://pangeo-data/soilgrids/{{ variable }}_250m.tif"
-      chunks: {'y': 6000, 'x': 6000}  # TODO: align with COG chunks
+      chunks: {'y': 5120, 'x': 5120}
+      storage_options: {'anon': True}  # TODO: remove, see GH#61
 
   soil_grids_multi_level:
     description: Global gridded soil information in COG format
@@ -93,7 +94,8 @@ sources:
     driver: rasterio
     args:
       urlpath: "gs://pangeo-data/soilgrids/{{ variable }}_sl{{ '%01d' % level }}_250m.tif"
-      chunks: {'y': 6000, 'x': 6000}  # TODO: align with COG chunks
+      chunks: {'y': 5120, 'x': 5120}
+      storage_options: {'anon': True}  # TODO: remove, see GH#61
 
   camels:
     args:
