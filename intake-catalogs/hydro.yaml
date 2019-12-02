@@ -13,8 +13,6 @@ sources:
     driver: zarr
     args:
       urlpath: 'gcs://pangeo-data/cgiar_pet'
-      storage_options:
-        token: anon
 
   hydrosheds_dir:
     description: Drainage directions at 3-second resolution

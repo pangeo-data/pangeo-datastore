@@ -14,8 +14,6 @@ sources:
     driver: zarr
     args:
       urlpath: gcs://pangeo-data/dataset-duacs-rep-global-merged-allsat-phy-l4-v3-alt
-      storage_options:
-        token: anon
       consolidated: True
       
   cesm_mom6_example:
@@ -30,8 +28,6 @@ sources:
     driver: zarr
     args:
       urlpath: 'gcs://pangeo-data/MOM6.cesm'
-      storage_options:
-        token: anon
       consolidated: True      
 
   ECCOv4r3:
@@ -44,8 +40,6 @@ sources:
     driver: zarr
     args:
       urlpath: 'gcs://pangeo-data/ecco/eccov4r3'
-      storage_options:
-        token: anon
       consolidated: True
 
   SOSE:
@@ -58,8 +52,6 @@ sources:
     driver: zarr
     args:
       urlpath: 'gcs://pangeo-data/SOSE'
-      storage_options:
-        token: anon
       consolidated: True
 
   GODAS:
@@ -74,8 +66,6 @@ sources:
     driver: zarr
     args:
       urlpath: 'gcs://pangeo-data/GODAS/zarr'
-      storage_options:
-        token: anon
       consolidated: True
       
   ECCO_layers:
@@ -89,8 +79,6 @@ sources:
     driver: zarr
     args:
       urlpath: 'gcs://pangeo-data/ECCO_layers.zarr'
-      storage_options:
-        token: anon
       consolidated: True
 
   LLC4320:

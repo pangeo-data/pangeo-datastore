@@ -14,8 +14,6 @@ sources:
     driver: zarr
     args:
       urlpath: 'gcs://pangeo-data/cesm/hybrid_v5_rel04_BC5_ne120_t12_pop62'
-      storage_options:
-        token: anon
       consolidated: True
 
   CESM_POP_hires_RCP8_5:
@@ -28,6 +26,4 @@ sources:
     driver: zarr
     args:
       urlpath: 'gcs://pangeo-data/cesm/BRCP85C5CN_ne120_t12_pop62.c13b17.asdphys.001'
-      storage_options:
-        token: anon
       consolidated: True
