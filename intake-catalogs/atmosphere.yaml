@@ -6,6 +6,7 @@ sources:
   gmet_v1:
     description: Full GMET version 1 (Newman) met ensemble in zarr format
     driver: zarr
+    args:
       urlpath: 'gcs://pangeo-data/gmet_v1.zarr'
       consolidated: True
 
