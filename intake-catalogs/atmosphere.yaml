@@ -56,5 +56,6 @@ sources:
   wrf50_erai:
     description: Daily meteorology from 50km WRF simulation forced with ERA-Interim
     driver: zarr
+    args:
       urlpath: 'gcs://pangeo-data/ncar_wrf50/erai.wrf_daily_data.zarr'
       consolidated: True
