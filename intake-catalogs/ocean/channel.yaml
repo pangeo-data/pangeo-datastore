@@ -16,7 +16,7 @@ sources:
         - model
     driver: zarr
     args:
-      urlpath: 'gcs://pangeo-data/takaya/MITgcm-channel-flatbottom-02km-run01/phys-mon'
+      urlpath: gs://pangeo-ldeo-mitgcm/mon
       consolidated: True
 
   MITgcm_channel_flatbottom_02km_run01_phys_snap15D:
@@ -31,5 +31,5 @@ sources:
         - model
     driver: zarr
     args:
-      urlpath: 'gcs://pangeo-data/takaya/MITgcm-channel-flatbottom-02km-run01/phys-snap15D'
+      urlpath: gs://pangeo-ldeo-mitgcm/snap15d
       consolidated: True

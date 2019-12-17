@@ -13,7 +13,7 @@ sources:
         - satellite
     driver: zarr
     args:
-      urlpath: gcs://pangeo-data/dataset-duacs-rep-global-merged-allsat-phy-l4-v3-alt
+      urlpath: gs://pangeo-cmems-duacs
       consolidated: True
       
   cesm_mom6_example:
@@ -27,7 +27,7 @@ sources:
         - model
     driver: zarr
     args:
-      urlpath: 'gcs://pangeo-data/MOM6.cesm'
+      urlpath: gs://pangeo-cesm-mom6
       consolidated: True      
 
   ECCOv4r3:
@@ -39,7 +39,7 @@ sources:
         - model
     driver: zarr
     args:
-      urlpath: 'gcs://pangeo-data/ecco/eccov4r3'
+      urlpath: gs://pangeo-ecco-eccov4r3/eccov4r3
       consolidated: True
 
   SOSE:
@@ -51,7 +51,7 @@ sources:
         - model
     driver: zarr
     args:
-      urlpath: 'gcs://pangeo-data/SOSE'
+      urlpath: gs://pangeo-ecco-sose
       consolidated: True
 
   GODAS:
@@ -65,7 +65,7 @@ sources:
         - data assimilation
     driver: zarr
     args:
-      urlpath: 'gcs://pangeo-data/GODAS/zarr'
+      urlpath: gs://pangeo-ncep-godas
       consolidated: True
       
   ECCO_layers:
@@ -78,7 +78,7 @@ sources:
         - layers
     driver: zarr
     args:
-      urlpath: 'gcs://pangeo-data/ECCO_layers.zarr'
+      urlpath: gs://pangeo-ecco-eccov4r3/layers
       consolidated: True
 
   LLC4320:

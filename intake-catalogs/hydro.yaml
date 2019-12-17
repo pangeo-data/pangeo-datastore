@@ -12,7 +12,7 @@ sources:
         - evapotranspiration
     driver: zarr
     args:
-      urlpath: 'gcs://pangeo-data/cgiar_pet'
+      urlpath: gs://pangeo-cgiar-pet
 
   hydrosheds_dir:
     description: Drainage directions at 3-second resolution
@@ -26,7 +26,7 @@ sources:
         regex: 'pangeo-data'
         type: file
     args:
-      urlpath: 'gs://pangeo-data/hydrosheds/dir.vrt'
+      urlpath: gs://pangeo-usgs-hydrosheds/dir
       chunks: {'y': 6000, 'x': 6000}
 
   hydrosheds_acc:
@@ -41,7 +41,7 @@ sources:
         regex: 'pangeo-data'
         type: file
     args:
-      urlpath: 'gs://pangeo-data/hydrosheds/acc.vrt'
+      urlpath: gs://pangeo-usgs-hydrosheds/acc
       chunks: {'y': 6000, 'x': 6000}
 
   hydrosheds_dem:
@@ -56,5 +56,5 @@ sources:
         regex: 'pangeo-data'
         type: file
     args:
-      urlpath: 'gs://pangeo-data/hydrosheds/dem.vrt'
+      urlpath: gs://pangeo-usgs-hydrosheds/dem
       chunks: {'y': 6000, 'x': 6000}
