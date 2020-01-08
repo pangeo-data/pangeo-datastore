@@ -9,6 +9,8 @@ sources:
     args:
       urlpath: gs://pangeo-ncar-gmet
       consolidated: True
+      storage_options:
+        requester_pays: True
 
   trmm_3b42rt:
     description: Near real time rainfall estimates from NASA's Tropical Rainfall Measuring Mission
@@ -20,6 +22,8 @@ sources:
     driver: zarr
     args:
       urlpath: gs://pangeo-nasa-trmm
+      storage_options:
+        requester_pays: True
 
   sam_ngaqua_qobs_eqx_3d:
     description: 3D fields from a near-global Aquaplanet Simulation with the System for Atmospheric Modeling
@@ -30,6 +34,8 @@ sources:
     driver: zarr
     args:
       urlpath: gs://pangeo-vulcan-sam/3d
+      storage_options:
+        requester_pays: True
        
   sam_ngaqua_qobs_eqx_2d:
     description: 2D fields from a near-global Aquaplanet Simulation with the System for Atmospheric Modeling
@@ -40,6 +46,8 @@ sources:
     driver: zarr
     args:
       urlpath: gs://pangeo-vulcan-sam/2d
+      storage_options:
+        requester_pays: True
 
   gpcp_cdr_daily_v1_3:
     description: 3D fields from a near-global Aquaplanet Simulation with the System for Atmospheric Modeling
@@ -52,6 +60,8 @@ sources:
     driver: zarr
     args:
       urlpath: gs://pangeo-noaa-esrl-gpcp
+      storage_options:
+        requester_pays: True
 
   wrf50_erai:
     description: Daily meteorology from 50km WRF simulation forced with ERA-Interim
@@ -59,3 +69,5 @@ sources:
     args:
       urlpath: gs://pangeo-ncar-wrf
       consolidated: True
+      storage_options:
+        requester_pays: True
