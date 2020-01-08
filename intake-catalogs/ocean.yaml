@@ -15,6 +15,8 @@ sources:
     args:
       urlpath: gs://pangeo-cmems-duacs
       consolidated: True
+      storage_options:
+        requester_pays: True
       
   cesm_mom6_example:
     description: CESM MOM6 Ocean Model Example Data
@@ -28,7 +30,9 @@ sources:
     driver: zarr
     args:
       urlpath: gs://pangeo-cesm-mom6
-      consolidated: True      
+      consolidated: True   
+      storage_options:
+        requester_pays: True
 
   ECCOv4r3:
     description: Estimating the Circulation and Climate of the Ocean (ECCO) State Estimate Version 4 Release 3
@@ -41,6 +45,8 @@ sources:
     args:
       urlpath: gs://pangeo-ecco-eccov4r3/eccov4r3
       consolidated: True
+      storage_options:
+        requester_pays: True
 
   SOSE:
     description: Southern Ocean State Estimate
@@ -53,6 +59,8 @@ sources:
     args:
       urlpath: gs://pangeo-ecco-sose
       consolidated: True
+      storage_options:
+        requester_pays: True
 
   GODAS:
     description: "NCEP Global Ocean Data Assimilation System"
@@ -67,6 +75,8 @@ sources:
     args:
       urlpath: gs://pangeo-ncep-godas
       consolidated: True
+      storage_options:
+        requester_pays: True
       
   ECCO_layers:
     description: Rerun of Estimating the Circulation and Climate of the Ocean (ECCO) with the layers package
@@ -80,6 +90,8 @@ sources:
     args:
       urlpath: gs://pangeo-ecco-eccov4r3/layers
       consolidated: True
+      storage_options:
+        requester_pays: True
 
   LLC4320:
     args:
