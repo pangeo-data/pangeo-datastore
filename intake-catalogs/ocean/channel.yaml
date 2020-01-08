@@ -18,6 +18,8 @@ sources:
     args:
       urlpath: gs://pangeo-ldeo-mitgcm/mon
       consolidated: True
+      storage_options:
+        requester_pays: True
 
   MITgcm_channel_flatbottom_02km_run01_phys_snap15D:
     description: >
@@ -33,3 +35,5 @@ sources:
     args:
       urlpath: gs://pangeo-ldeo-mitgcm/snap15d
       consolidated: True
+      storage_options:
+        requester_pays: True
