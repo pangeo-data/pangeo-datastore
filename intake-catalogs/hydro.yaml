@@ -13,6 +13,8 @@ sources:
     driver: zarr
     args:
       urlpath: gs://pangeo-cgiar-pet
+      storage_options:
+        requester_pays: True
 
   hydrosheds_dir:
     description: Drainage directions at 3-second resolution
@@ -26,8 +28,10 @@ sources:
         regex: 'pangeo-data'
         type: file
     args:
-      urlpath: gs://pangeo-usgs-hydrosheds/dir
+      urlpath: gs://pangeo-usgs-hydrosheds/dir.vrt
       chunks: {'y': 6000, 'x': 6000}
+      storage_options:
+        requester_pays: True
 
   hydrosheds_acc:
     description: Flow accumulation at 3-second resolution
@@ -41,8 +45,10 @@ sources:
         regex: 'pangeo-data'
         type: file
     args:
-      urlpath: gs://pangeo-usgs-hydrosheds/acc
+      urlpath: gs://pangeo-usgs-hydrosheds/acc.vrt
       chunks: {'y': 6000, 'x': 6000}
+      storage_options:
+        requester_pays: True
 
   hydrosheds_dem:
     description: Digital Elevation Model (conditioned DEM) at 3-second resolution
@@ -56,5 +62,7 @@ sources:
         regex: 'pangeo-data'
         type: file
     args:
-      urlpath: gs://pangeo-usgs-hydrosheds/dem
+      urlpath: gs://pangeo-usgs-hydrosheds/dem.vrt
       chunks: {'y': 6000, 'x': 6000}
+      storage_options:
+        requester_pays: True
