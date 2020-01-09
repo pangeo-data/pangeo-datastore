@@ -13,8 +13,10 @@ sources:
         - model
     driver: zarr
     args:
-      urlpath: 'gcs://pangeo-data/llc4320_surface/grid'
+      urlpath: gs://pangeo-ecco-llc4320/grid
       consolidated: True
+      storage_options:
+        requester_pays: True
 
   LLC4320_SST:
     description: MITgcm LLC4320 Ocean Simulation Sea Surface Temperature
@@ -25,8 +27,10 @@ sources:
         - model
     driver: zarr
     args:
-      urlpath: 'gcs://pangeo-data/llc4320_surface/SST'
+      urlpath: gs://pangeo-ecco-llc4320/sst
       consolidated: True
+      storage_options:
+        requester_pays: True
 
   LLC4320_SSS:
     description: MITgcm LLC4320 Ocean Simulation Sea Surface Salinity
@@ -37,8 +41,10 @@ sources:
         - model
     driver: zarr
     args:
-      urlpath: 'gcs://pangeo-data/llc4320_surface/SSS'
+      urlpath: gs://pangeo-ecco-llc4320/sss
       consolidated: True
+      storage_options:
+        requester_pays: True
 
   LLC4320_SSH:
     description: MITgcm LLC4320 Ocean Simulation Sea Surface Height
@@ -49,8 +55,10 @@ sources:
         - model
     driver: zarr
     args:
-      urlpath: 'gcs://pangeo-data/llc4320_surface/Eta'
+      urlpath: gs://pangeo-ecco-llc4320/ssh
       consolidated: True
+      storage_options:
+        requester_pays: True
 
   LLC4320_SSU:
     description: MITgcm LLC4320 Ocean Simulation Sea Surface Zonal Velocity
@@ -61,8 +69,10 @@ sources:
         - model
     driver: zarr
     args:
-      urlpath: 'gcs://pangeo-data/llc4320_surface/U'
+      urlpath: gs://pangeo-ecco-llc4320/ssu
       consolidated: True
+      storage_options:
+        requester_pays: True
 
   LLC4320_SSV:
     description: MITgcm LLC4320 Ocean Simulation Sea Surface Meridional Velocity
@@ -73,5 +83,7 @@ sources:
         - model
     driver: zarr
     args:
-      urlpath: 'gcs://pangeo-data/llc4320_surface/V'
+      urlpath: gs://pangeo-ecco-llc4320/ssv
       consolidated: True
+      storage_options:
+        requester_pays: True

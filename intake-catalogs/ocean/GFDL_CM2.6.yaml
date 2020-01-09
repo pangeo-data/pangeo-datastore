@@ -13,8 +13,10 @@ sources:
         - model
     driver: zarr
     args:
-      urlpath: 'gcs://pangeo-data/cm2.6/control/ocean'
+      urlpath: gs://pangeo-gfdl-cm26/control/ocean
       consolidated: True
+      storage_options:
+        requester_pays: True
 
   GFDL_CM2_6_control_ocean_surface:
     description: "GFDL CM2.6 climate model control run daily ocean surface fields"
@@ -25,8 +27,10 @@ sources:
         - model
     driver: zarr
     args:
-      urlpath: 'gcs://pangeo-data/cm2.6/control/surface_daily'
+      urlpath: gs://pangeo-gfdl-cm26/control/surface
       consolidated: True
+      storage_options:
+        requester_pays: True
 
   GFDL_CM2_6_control_ocean_3D:
     description: "GFDL CM2.6 climate model control run 5-day-average 3D ocean fields"
@@ -37,8 +41,10 @@ sources:
         - model
     driver: zarr
     args:
-      urlpath: 'gcs://pangeo-data/cm2.6/control/temp_salt_u_v-5day_avg'
+      urlpath: gs://pangeo-gfdl-cm26/control/ocean_3d
       consolidated: True
+      storage_options:
+        requester_pays: True
 
   GFDL_CM2_6_control_ocean_transport:
     description: "GFDL CM2.6 climate model control run monthly ocean transport fields"
@@ -49,8 +55,10 @@ sources:
         - model
     driver: zarr
     args:
-      urlpath: 'gcs://pangeo-data/cm2.6/control/ocean_trans'
+      urlpath: gs://pangeo-gfdl-cm26/control/ocean_transport
       consolidated: True
+      storage_options:
+        requester_pays: True
 
   GFDL_CM2_6_control_ocean_boundary_flux:
     description: "GFDL CM2.6 climate model control run monthly ocean boundary flux fields"
@@ -61,8 +69,10 @@ sources:
         - model
     driver: zarr
     args:
-      urlpath: 'gcs://pangeo-data/cm2.6/control/ocean_bdy_flux'
+      urlpath: gs://pangeo-gfdl-cm26/control/ocean_boundary
       consolidated: True
+      storage_options:
+        requester_pays: True
 
   GFDL_CM2_6_one_percent_ocean:
     description: "GFDL CM2.6 climate model one-percent CO2 increase run monthly ocean fields"
@@ -73,8 +83,10 @@ sources:
         - model
     driver: zarr
     args:
-      urlpath: 'gcs://pangeo-data/cm2.6/one_percent/ocean'
+      urlpath: gs://pangeo-gfdl-cm26/one_percent/ocean
       consolidated: True
+      storage_options:
+        requester_pays: True
 
   GFDL_CM2_6_one_percent_ocean_surface:
     description: "GFDL CM2.6 climate model one-percent CO2 increase ocean surface fields"
@@ -85,8 +97,10 @@ sources:
         - model
     driver: zarr
     args:
-      urlpath: 'gcs://pangeo-data/cm2.6/one_percent/surface_daily'
+      urlpath: gs://pangeo-gfdl-cm26/one_percent/surface
       consolidated: True
+      storage_options:
+        requester_pays: True
 
   GFDL_CM2_6_one_percent_ocean_3D:
     description: "GFDL CM2.6 climate model one-percent CO2 increase run 5-day-average 3D ocean fields"
@@ -97,8 +111,10 @@ sources:
         - model
     driver: zarr
     args:
-      urlpath: 'gcs://pangeo-data/cm2.6/one_percent/temp_salt_u_v-5day_avg'
+      urlpath: gs://pangeo-gfdl-cm26/one_percent/ocean_3d
       consolidated: True
+      storage_options:
+        requester_pays: True
 
   GFDL_CM2_6_one_percent_ocean_transport:
     description: "GFDL CM2.6 climate model one-percent CO2 increase monthly ocean transport fields"
@@ -109,8 +125,10 @@ sources:
         - model
     driver: zarr
     args:
-      urlpath: 'gcs://pangeo-data/cm2.6/one_percent/ocean_trans'
+      urlpath: gs://pangeo-gfdl-cm26/one_percent/ocean_transport
       consolidated: True
+      storage_options:
+        requester_pays: True
 
   GFDL_CM2_6_one_percent_ocean_boundary_flux:
     description: "GFDL CM2.6 climate model one-percent CO2 increase monthly ocean boundary flux fields"
@@ -121,8 +139,10 @@ sources:
         - model
     driver: zarr
     args:
-      urlpath: 'gcs://pangeo-data/cm2.6/one_percent/ocean_bdy_flux'
+      urlpath: gs://pangeo-gfdl-cm26/one_percent/ocean_boundary
       consolidated: True
+      storage_options:
+        requester_pays: True
 
   GFDL_CM2_6_grid:
     description: "GFDL CM2.6 climate model ocean grid"
@@ -133,5 +153,7 @@ sources:
         - model
     driver: zarr
     args:
-      urlpath: 'gcs://pangeo-data/cm2.6/grid'
+      urlpath: gs://pangeo-gfdl-cm26/grid
       consolidated: True
+      storage_options:
+        requester_pays: True
