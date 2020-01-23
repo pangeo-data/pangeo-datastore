@@ -14,7 +14,7 @@ sources:
 
   cmip6_s3:
     args:
-      esmcol_path: "https://github.com/NCAR/cesm-lens-aws/blob/master/intake-catalogs/aws-cesm1-le.json"
+      esmcol_path: "https://raw.githubusercontent.com/NCAR/cesm-lens-aws/master/intake-catalogs/aws-cesm1-le.json"
     description: 'NCAR Large Ensemble in AWS S3 Storage'
     driver: intake_esm.esm_datastore
     metadata: {}
