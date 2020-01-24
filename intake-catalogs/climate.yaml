@@ -7,14 +7,7 @@ sources:
 
   cmip6_gcs:
     args:
-      esmcol_path: "https://raw.githubusercontent.com/NCAR/intake-esm-datastore/master/catalogs/pangeo-cmip6.json"
+      esmcol_path: "https://storage.googleapis.com/cmip6/pangeo-cmip6.json"
     description: 'CMIP6 in Google Cloud Storage'
-    driver: intake_esm.esm_datastore
-    metadata: {}
-
-  cesm1_lens_s3:
-    args:
-      esmcol_path: "https://raw.githubusercontent.com/NCAR/cesm-lens-aws/master/intake-catalogs/aws-cesm1-le.json"
-    description: 'NCAR Large Ensemble in AWS S3 Storage'
     driver: intake_esm.esm_datastore
     metadata: {}
