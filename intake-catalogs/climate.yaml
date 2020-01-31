@@ -11,3 +11,10 @@ sources:
     description: 'CMIP6 in Google Cloud Storage'
     driver: intake_esm.esm_datastore
     metadata: {}
+
+  tracmip:
+    args:
+      esmcol_path: "https://storage.googleapis.com/pangeo-kit-tracmip/tracmip.json"
+    description: "TRACMIP in Google Cloud Storage"
+    driver: intake_esm.esm_datastore
+    metadata: {}
