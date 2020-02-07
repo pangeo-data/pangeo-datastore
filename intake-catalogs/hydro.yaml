@@ -64,6 +64,8 @@ sources:
     args:
       urlpath: gs://pangeo-usgs-hydrosheds/dem.vrt
       chunks: {'y': 6000, 'x': 6000}
+      storage_options:
+        requester_pays: True
 
   soil_grids_single_level:
     description: Global gridded soil information in COG format
