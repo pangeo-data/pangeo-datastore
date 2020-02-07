@@ -22,11 +22,10 @@ print(ALL_ENTRIES)
 def dataset_name(request):
     return request.param
 
-#@pytest.mark.parametrize("dataset_name", ALL_ENTRIES, ids=['.'.join(name) for name in ALL_ENTRIES])
 def test_get_intake_source(catalog, dataset_name):
     item = catalog[dataset_name]
 
-#@pytest.mark.parametrize("dataset_name", ALL_ENTRIES, ids=['.'.join(name) for name in ALL_ENTRIES])
+@pytest.mark.skip(reason="need to resolve credentials issue for requester-pays data")
 def test_intake_dataset_to_dask(catalog, dataset_name):
     item = catalog[dataset_name]
     try:

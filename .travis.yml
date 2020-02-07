@@ -28,10 +28,3 @@ script:
 - >
    docker exec -it pangeo bash -c
    'py.test --durations=9999 -v tests/*.py'
-- >
-   docker exec -it pangeo bash -c
-   'python build_catalog_rst.py'
-- docker cp pangeo:/home/jovyan/catalog-docs/. docs/
-- set -e
-- cd docs && make html && cd ..
-- doctr deploy . --built-docs docs/_build/html
