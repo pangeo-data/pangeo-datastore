@@ -1,0 +1,21 @@
+plugins:
+  source:
+    - module: intake_xarray
+    - module: intake_esm
+
+sources:
+
+  cmip6_gcs:
+    args:
+      esmcol_path: "https://storage.googleapis.com/cmip6/pangeo-cmip6.json"
+    description: 'CMIP6 in Google Cloud Storage'
+    driver: intake_esm.esm_datastore
+    metadata: {}
+    
+  tracmip:
+    args:
+      esmcol_path: "https://storage.googleapis.com/cmip6/tracmip.json"
+    description: "TRACMIP in Pangeo Google Cloud Storage"
+    driver: intake_esm.esm_datastore
+    metadata: {}
+

@@ -11,9 +11,6 @@ sources:
         - model
     driver: zarr
     args:
-      storage_options:
-        token: anon
-        access: read_only
       consolidated: True
       urlpath: 'gcs://pangeo-data/CMIP6_3hr/BCC-CSM2-MR/historical/r1i1p1f1/pr/'
 
@@ -25,9 +22,6 @@ sources:
         - model
     driver: zarr
     args:
-      storage_options:
-        token: anon
-        access: read_only
       consolidated: True
       urlpath: 'gcs://pangeo-data/CMIP6_3hr/CNRM-CM6-1/historical/r1i1p1f2/huss/'
 
@@ -39,9 +33,6 @@ sources:
         - model
     driver: zarr
     args:
-      storage_options:
-        token: anon
-        access: read_only
       consolidated: True
       urlpath: 'gcs://pangeo-data/CMIP6_3hr/CNRM-CM6-1/historical/r1i1p1f2/pr/'
 
@@ -53,9 +44,6 @@ sources:
         - model
     driver: zarr
     args:
-      storage_options:
-        token: anon
-        access: read_only
       consolidated: True
       urlpath: 'gcs://pangeo-data/CMIP6_3hr/CNRM-CM6-1/historical/r1i1p1f2/tas/'
 
@@ -67,9 +55,6 @@ sources:
         - model
     driver: zarr
     args:
-      storage_options:
-        token: anon
-        access: read_only
       consolidated: True
       urlpath: 'gcs://pangeo-data/CMIP6_3hr/CNRM-CM6-1/historical/r2i1p1f2/huss/'
 
@@ -81,9 +66,6 @@ sources:
         - model
     driver: zarr
     args:
-      storage_options:
-        token: anon
-        access: read_only
       consolidated: True
       urlpath: 'gcs://pangeo-data/CMIP6_3hr/CNRM-CM6-1/historical/r2i1p1f2/pr/'
 
@@ -95,9 +77,6 @@ sources:
         - model
     driver: zarr
     args:
-      storage_options:
-        token: anon
-        access: read_only
       consolidated: True
       urlpath: 'gcs://pangeo-data/CMIP6_3hr/CNRM-CM6-1/historical/r2i1p1f2/tas/'
 
@@ -109,9 +88,6 @@ sources:
         - model
     driver: zarr
     args:
-      storage_options:
-        token: anon
-        access: read_only
       consolidated: True
       urlpath: 'gcs://pangeo-data/CMIP6_3hr/CNRM-ESM2-1/historical/r1i1p1f2/huss/'
 
@@ -123,9 +99,6 @@ sources:
         - model
     driver: zarr
     args:
-      storage_options:
-        token: anon
-        access: read_only
       consolidated: True
       urlpath: 'gcs://pangeo-data/CMIP6_3hr/CNRM-ESM2-1/historical/r1i1p1f2/pr/'
 
@@ -137,9 +110,6 @@ sources:
         - model
     driver: zarr
     args:
-      storage_options:
-        token: anon
-        access: read_only
       consolidated: True
       urlpath: 'gcs://pangeo-data/CMIP6_3hr/CNRM-ESM2-1/historical/r1i1p1f2/tas/'
 
@@ -151,9 +121,6 @@ sources:
         - model
     driver: zarr
     args:
-      storage_options:
-        token: anon
-        access: read_only
       consolidated: True
       urlpath: 'gcs://pangeo-data/CMIP6_3hr/GISS-E2-1-G/historical/r1i1p1f1/huss/'
 
@@ -165,9 +132,6 @@ sources:
         - model
     driver: zarr
     args:
-      storage_options:
-        token: anon
-        access: read_only
       consolidated: True
       urlpath: 'gcs://pangeo-data/CMIP6_3hr/GISS-E2-1-G/historical/r1i1p1f1/pr/'
 
@@ -179,9 +143,6 @@ sources:
         - model
     driver: zarr
     args:
-      storage_options:
-        token: anon
-        access: read_only
       consolidated: True
       urlpath: 'gcs://pangeo-data/CMIP6_3hr/GISS-E2-1-G/historical/r1i1p1f1/tas/'
 
@@ -193,9 +154,6 @@ sources:
         - model
     driver: zarr
     args:
-      storage_options:
-        token: anon
-        access: read_only
       consolidated: True
       urlpath: 'gcs://pangeo-data/CMIP6_3hr/IPSL-CM6A-LR/historical/r1i1p1f1/huss/'
 
@@ -207,9 +165,6 @@ sources:
         - model
     driver: zarr
     args:
-      storage_options:
-        token: anon
-        access: read_only
       consolidated: True
       urlpath: 'gcs://pangeo-data/CMIP6_3hr/IPSL-CM6A-LR/historical/r1i1p1f1/pr/'
 
@@ -221,9 +176,6 @@ sources:
         - model
     driver: zarr
     args:
-      storage_options:
-        token: anon
-        access: read_only
       consolidated: True
       urlpath: 'gcs://pangeo-data/CMIP6_3hr/IPSL-CM6A-LR/historical/r1i1p1f1/tas/'
 
@@ -235,9 +187,6 @@ sources:
         - model
     driver: zarr
     args:
-      storage_options:
-        token: anon
-        access: read_only
       consolidated: True
       urlpath: 'gcs://pangeo-data/CMIP6_3hr/IPSL-CM6A-LR/historical/r2i1p1f1/huss/'
 
@@ -249,9 +198,6 @@ sources:
         - model
     driver: zarr
     args:
-      storage_options:
-        token: anon
-        access: read_only
       consolidated: True
       urlpath: 'gcs://pangeo-data/CMIP6_3hr/IPSL-CM6A-LR/historical/r2i1p1f1/pr/'
 
@@ -263,9 +209,6 @@ sources:
         - model
     driver: zarr
     args:
-      storage_options:
-        token: anon
-        access: read_only
       consolidated: True
       urlpath: 'gcs://pangeo-data/CMIP6_3hr/IPSL-CM6A-LR/historical/r2i1p1f1/tas/'
 
@@ -277,9 +220,6 @@ sources:
         - model
     driver: zarr
     args:
-      storage_options:
-        token: anon
-        access: read_only
       consolidated: True
       urlpath: 'gcs://pangeo-data/CMIP6_3hr/IPSL-CM6A-LR/historical/r3i1p1f1/huss/'
 
@@ -291,9 +231,6 @@ sources:
         - model
     driver: zarr
     args:
-      storage_options:
-        token: anon
-        access: read_only
       consolidated: True
       urlpath: 'gcs://pangeo-data/CMIP6_3hr/IPSL-CM6A-LR/historical/r3i1p1f1/pr/'
 
@@ -305,9 +242,6 @@ sources:
         - model
     driver: zarr
     args:
-      storage_options:
-        token: anon
-        access: read_only
       consolidated: True
       urlpath: 'gcs://pangeo-data/CMIP6_3hr/IPSL-CM6A-LR/historical/r3i1p1f1/tas/'
 
@@ -319,9 +253,6 @@ sources:
         - model
     driver: zarr
     args:
-      storage_options:
-        token: anon
-        access: read_only
       consolidated: True
       urlpath: 'gcs://pangeo-data/CMIP6_3hr/IPSL-CM6A-LR/historical/r4i1p1f1/huss/'
 
@@ -333,9 +264,6 @@ sources:
         - model
     driver: zarr
     args:
-      storage_options:
-        token: anon
-        access: read_only
       consolidated: True
       urlpath: 'gcs://pangeo-data/CMIP6_3hr/IPSL-CM6A-LR/historical/r4i1p1f1/pr/'
 
@@ -347,9 +275,6 @@ sources:
         - model
     driver: zarr
     args:
-      storage_options:
-        token: anon
-        access: read_only
       consolidated: True
       urlpath: 'gcs://pangeo-data/CMIP6_3hr/IPSL-CM6A-LR/historical/r4i1p1f1/tas/'
 
@@ -361,9 +286,6 @@ sources:
         - model
     driver: zarr
     args:
-      storage_options:
-        token: anon
-        access: read_only
       consolidated: True
       urlpath: 'gcs://pangeo-data/CMIP6_3hr/IPSL-CM6A-LR/historical/r5i1p1f1/huss/'
 
@@ -375,9 +297,6 @@ sources:
         - model
     driver: zarr
     args:
-      storage_options:
-        token: anon
-        access: read_only
       consolidated: True
       urlpath: 'gcs://pangeo-data/CMIP6_3hr/IPSL-CM6A-LR/historical/r5i1p1f1/pr/'
 
@@ -389,9 +308,6 @@ sources:
         - model
     driver: zarr
     args:
-      storage_options:
-        token: anon
-        access: read_only
       consolidated: True
       urlpath: 'gcs://pangeo-data/CMIP6_3hr/IPSL-CM6A-LR/historical/r5i1p1f1/tas/'
 
@@ -403,9 +319,6 @@ sources:
         - model
     driver: zarr
     args:
-      storage_options:
-        token: anon
-        access: read_only
       consolidated: True
       urlpath: 'gcs://pangeo-data/CMIP6_3hr/IPSL-CM6A-LR/historical/r6i1p1f1/huss/'
 
@@ -417,9 +330,6 @@ sources:
         - model
     driver: zarr
     args:
-      storage_options:
-        token: anon
-        access: read_only
       consolidated: True
       urlpath: 'gcs://pangeo-data/CMIP6_3hr/IPSL-CM6A-LR/historical/r6i1p1f1/pr/'
 
@@ -431,9 +341,6 @@ sources:
         - model
     driver: zarr
     args:
-      storage_options:
-        token: anon
-        access: read_only
       consolidated: True
       urlpath: 'gcs://pangeo-data/CMIP6_3hr/IPSL-CM6A-LR/historical/r6i1p1f1/tas/'
 
@@ -445,9 +352,6 @@ sources:
         - model
     driver: zarr
     args:
-      storage_options:
-        token: anon
-        access: read_only
       consolidated: True
       urlpath: 'gcs://pangeo-data/CMIP6_3hr/IPSL-CM6A-LR/historical/r7i1p1f1/huss/'
 
@@ -459,9 +363,6 @@ sources:
         - model
     driver: zarr
     args:
-      storage_options:
-        token: anon
-        access: read_only
       consolidated: True
       urlpath: 'gcs://pangeo-data/CMIP6_3hr/IPSL-CM6A-LR/historical/r7i1p1f1/pr/'
 
@@ -473,9 +374,6 @@ sources:
         - model
     driver: zarr
     args:
-      storage_options:
-        token: anon
-        access: read_only
       consolidated: True
       urlpath: 'gcs://pangeo-data/CMIP6_3hr/IPSL-CM6A-LR/historical/r7i1p1f1/tas/'
 
