@@ -74,6 +74,20 @@ sources:
       storage_options:
         requester_pays: True
 
+  GFDL_CM2_6_control_ocean_budgets:
+    description: "GFDL CM2.6 climate model control run monthly ocean budgets fields"
+    metadata:
+      url: 'https://www.gfdl.noaa.gov/cm2-6/'
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      urlpath: gs://pangeo-gfdl-cm26/control/ocean_budgets
+      consolidated: True
+      storage_options:
+        requester_pays: True
+
   GFDL_CM2_6_one_percent_ocean:
     description: "GFDL CM2.6 climate model one-percent CO2 increase run monthly ocean fields"
     metadata:
@@ -140,6 +154,20 @@ sources:
     driver: zarr
     args:
       urlpath: gs://pangeo-gfdl-cm26/one_percent/ocean_boundary
+      consolidated: True
+      storage_options:
+        requester_pays: True
+
+GFDL_CM2_6_one_percent_ocean_budgets:
+    description: "GFDL CM2.6 climate model one-percent CO2 increase monthly ocean budgets fields"
+    metadata:
+      url: 'https://www.gfdl.noaa.gov/cm2-6/'
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      urlpath: gs://pangeo-gfdl-cm26/one_percent/ocean_budgets
       consolidated: True
       storage_options:
         requester_pays: True
