@@ -74,7 +74,7 @@ sources:
       storage_options:
         requester_pays: True
 
-GFDL_CM2_6_control_ocean_budgets:
+  GFDL_CM2_6_control_ocean_budgets:
     description: "GFDL CM2.6 climate model control run monthly ocean budgets fields"
     metadata:
       url: 'https://www.gfdl.noaa.gov/cm2-6/'
