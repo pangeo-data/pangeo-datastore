@@ -8,15 +8,11 @@ def get_master_catalog():
                          '../intake-catalogs/master.yaml')
     return intake.Catalog(fname)
 
+ALL_ENTRIES = list(get_master_catalog().walk(depth=10))
+
 @pytest.fixture(scope="module")
 def catalog(request):
     return get_master_catalog()
-
-def test_open_master_catalog(catalog):
-    pass
-
-ALL_ENTRIES = list(get_master_catalog().walk(depth=10))
-print(ALL_ENTRIES)
 
 @pytest.fixture(scope="module", params=ALL_ENTRIES, ids=ALL_ENTRIES)
 def dataset_name(request):
@@ -24,11 +20,12 @@ def dataset_name(request):
 
 def test_get_intake_source(catalog, dataset_name):
     item = catalog[dataset_name]
-
-@pytest.mark.skip(reason="need to resolve credentials issue for requester-pays data")
-def test_intake_dataset_to_dask(catalog, dataset_name):
-    item = catalog[dataset_name]
-    try:
-        ds = item.to_dask()
-    except NotImplementedError:
-        pytest.skip(f"Item {item} can't be loaded with `.to_dask()`")
+    if item.container == "catalog":
+        item.reload()   
+    else:
+        if item._driver in ["csv", "rasterio", "zarr"]:
+            pytest.skip("need to resolve credentials issue for requester-pays data")
+            # ds = item.to_dask()
+        elif item._driver == "intake_esm.esm_datastore":
+            pytest.skip("need to resolve credentials issue for requester-pays data")
+            # col = item.get()
