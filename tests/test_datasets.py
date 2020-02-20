@@ -22,7 +22,7 @@ def test_get_intake_source(catalog, dataset_name):
     item = catalog[dataset_name]
     if item.container == "catalog":
         item.reload()   
-    elif item.container == "xarray:
+    elif item.container == "xarray":
         if item._driver == "zarr":
             pytest.skip("need to resolve credentials issue for requester-pays data")
             # ds = item.to_dask()
