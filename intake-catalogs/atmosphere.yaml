@@ -71,3 +71,18 @@ sources:
       consolidated: True
       storage_options:
         requester_pays: True
+
+  era5_hourly_reanalysis_single_levels_sa:
+    description: "ERA5 hourly estimates of variables on single levels"
+    metadata:
+      url: 'https://cds.climate.copernicus.eu/cdsapp#!/dataset/reanalysis-era5-single-levels'
+      tags:
+      - ocean
+      - model
+      - atmosphere
+    driver: zarr
+    args:
+      urlpath: gs://pangeo-era5/reanalysis/spatial-analysis
+      consolidated: True
+      storage_options:
+        requester_pays: True
