@@ -66,3 +66,46 @@ sources:
       chunks: {'y': 6000, 'x': 6000}
       storage_options:
         requester_pays: True
+
+  soil_grids_single_level:
+    description: Global gridded soil information in COG format
+    parameters:
+      variable:
+        description: soil variable
+        type: str
+        default: TAXNWRB
+    metadata:
+      url: https://soilgrids.org/
+      tags: Soil
+    driver: rasterio
+    args:
+      urlpath: "gs://pangeo-data/soilgrids/{{ variable }}_250m.tif"
+      chunks: {'y': 5120, 'x': 5120}
+      storage_options: {'anon': True}  # TODO: remove, see GH#61
+
+  soil_grids_multi_level:
+    description: Global gridded soil information in COG format
+    parameters:
+      variable:
+        description: soil variable
+        type: str
+        default: AWCh1_M
+      level:
+        description: soil level
+        type: int
+        default: 1
+    metadata:
+      url: https://soilgrids.org/
+      tags: Soil
+    driver: rasterio
+    args:
+      urlpath: "gs://pangeo-data/soilgrids/{{ variable }}_sl{{ '%01d' % level }}_250m.tif"
+      chunks: {'y': 5120, 'x': 5120}
+      storage_options: {'anon': True}  # TODO: remove, see GH#61
+
+  camels:
+    args:
+      path: "{{CATALOG_DIR}}/hydro/camels.yaml"
+    description: 'Pangeo Camels Dataset Catalog'
+    driver: intake.catalog.local.YAMLFileCatalog
+    metadata: {}

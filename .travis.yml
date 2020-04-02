@@ -11,7 +11,7 @@ services:
 sudo: false
 env:
   global:
-    - DOCKER_IMAGE=pangeo/pangeo-notebook:2019.04.19
+    - DOCKER_IMAGE=pangeo/pangeo-notebook:2019.11.15
     - secure:  "oDx29SLKJxzbSg9N9G713DcjLPzsgRbrloLdpt5H+pxCKxxY50h7iLgikcBOzDWFcJlfYopsDeIHVSq4iDQtQuhANKberjUsIp6gWozZVZu5g4wUgftvCaHgVTbzcTUwuWDlSPbY6tdnVOXGewGfy7R5Jz4I+AXwMzX1RM/LP5joEtluwBH7J87YWmUO8rN5sWzT9HdlhTHhwRkPKNSiFqpJYOz4QUyEJ13R3UEe6jxfqT6Vqw3alJdltam7WCYg9tfI3wzv3FS4lD7Ep6HkF/eYI2OJexY3VKPPTigm+qLfMz3RMi7TuT1OvoxCCEDKXWFzJpSd9mTozN0PTEUOb/a4K4n1s1UC/GGJ34sdC+wFx3Qfs89W1rFEA7cc+WeRQHJ8MvCfFkLtzcm/xqA+V7Pv3TTt4HrNFR5DM6/hoqytE2tU2p1P0XZZ29mZVhAVjgVUX0ELSxSfmhoqVzVfFJnqlbzMlz8xzg8LdDYWn4/d9n7Rz3FRN92ACM9TKv6DXbUFrjg4n81wkMX0MG1Zd0kQ9PcuMGS29Wws0iRgG61b7IdmazKjqJ9tj+FaaDCoDaOB11hc1QVE2hr5Y/wvqFMgOEjgdGB6GNw0TIldDsK4OYU2dEWvf/+zlzxZMb/t5IW9HG2yvaLrRc/sjDNPHlGzWCUauXST/gyjYWR45+c="
 
 before_install:
@@ -28,10 +28,3 @@ script:
 - >
    docker exec -it pangeo bash -c
    'py.test --durations=9999 -v tests/*.py'
-- >
-   docker exec -it pangeo bash -c
-   'python build_catalog_rst.py'
-- docker cp pangeo:/home/jovyan/catalog-docs/. docs/
-- set -e
-- cd docs && make html && cd ..
-- doctr deploy . --built-docs docs/_build/html
