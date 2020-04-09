@@ -23,7 +23,7 @@ before_install:
 install:
 - docker cp . pangeo:/home/jovyan/
 - pip install -r docs/requirements.txt
-- pip list
+- conda list
 
 script:
 - >
