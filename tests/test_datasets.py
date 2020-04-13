@@ -29,3 +29,5 @@ def test_get_intake_source(catalog, dataset_name):
         elif item._driver == "intake_esm.esm_datastore":
             pytest.skip("need to resolve credentials issue for requester-pays data")
             # col = item.get()
+        elif item._driver == "parquet":
+            pytest.skip("need to add intake-parquet plugin to handle parquet datasets")
