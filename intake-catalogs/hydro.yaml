@@ -79,7 +79,7 @@ sources:
       tags: Soil
     driver: rasterio
     args:
-      urlpath: "gs://pangeo-data/soilgrids/{{ variable }}_250m.tif"
+      urlpath: "gs://pangeo-ncar-soilgrids/{{ variable }}_250m.tif"
       chunks: {'y': 5120, 'x': 5120}
 
   soil_grids_multi_level:
@@ -98,7 +98,7 @@ sources:
       tags: Soil
     driver: rasterio
     args:
-      urlpath: "gs://pangeo-data/soilgrids/{{ variable }}_sl{{ '%01d' % level }}_250m.tif"
+      urlpath: "gs://pangeo-ncar-soilgrids/{{ variable }}_sl{{ '%01d' % level }}_250m.tif"
       chunks: {'y': 5120, 'x': 5120}
 
   camels:
