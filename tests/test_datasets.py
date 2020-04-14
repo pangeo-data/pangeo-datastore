@@ -31,6 +31,8 @@ def test_get_intake_source(catalog, dataset_name):
                 pytest.skip("need to resolve credentials issue for requester-pays data")
                 # col = item.get()
             elif item._driver == "parquet":
-                pytest.skip("need to add intake-parquet plugin to handle parquet datasets")
+                pytest.skip()
     except KeyError:
         pytest.skip("single file ESM collections need to be addressed with a Docker container bump")
+    except ValueError:
+        pytest.skip("need to add intake-parquet plugin to handle parquet datasets")
