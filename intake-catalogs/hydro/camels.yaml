@@ -17,6 +17,8 @@ sources:
         sep: '\s+'
         header: 3
         parse_dates: {'date': ['Year', 'Mnth', 'Day', 'Hr']}
+      storage_options:
+        requester_pays: True
     metadata:
       origin_url: 'https://ral.ucar.edu/solutions/products/camels'
       
@@ -56,6 +58,8 @@ sources:
         names: ['basin', 'Year', 'Mnth', 'Day', 'QObs', 'flag']
         parse_dates: {'date': ['Year', 'Mnth', 'Day']}
         na_values: -999.0
+      storage_options:
+        requester_pays: True
     metadata:
       origin_url: 'https://ral.ucar.edu/solutions/products/camels'
 
