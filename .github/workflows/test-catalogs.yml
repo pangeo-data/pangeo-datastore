@@ -8,7 +8,7 @@ on:
     paths:
       - 'intake-catalogs/**'
       - 'requirements.txt'
-      - 'tests/'
+      - 'tests/**'
   pull_request:
     branches: [ master ]
     paths:
