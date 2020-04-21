@@ -14,7 +14,7 @@ on:
     paths:
       - 'intake-catalogs/**'
       - 'requirements.txt'
-      - 'tests/'
+      - 'tests/**'
 
 jobs:
   test:
