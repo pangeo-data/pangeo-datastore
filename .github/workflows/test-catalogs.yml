@@ -5,8 +5,16 @@ name: Testing Pangeo catalogs
 on:
   push:
     branches: [ master ]
+    paths:
+      - 'intake-catalogs/**'
+      - 'requirements.txt'
+      - 'tests/'
   pull_request:
     branches: [ master ]
+    paths:
+      - 'intake-catalogs/**'
+      - 'requirements.txt'
+      - 'tests/'
 
 jobs:
   test:
