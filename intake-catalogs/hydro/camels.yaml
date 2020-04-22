@@ -12,11 +12,13 @@ sources:
         default: daymet
     driver: csv
     args:
-      urlpath: 'gs://pangeo-data/camels/basin_dataset_public_v1p2/basin_mean_forcing/{{ source }}/*/{{ basin_id }}_*.txt'
+      urlpath: 'gs://pangeo-ncar-camels/basin_dataset_public_v1p2/basin_mean_forcing/{{ source }}/*/{{ basin_id }}_*.txt'
       csv_kwargs:
         sep: '\s+'
         header: 3
         parse_dates: {'date': ['Year', 'Mnth', 'Day', 'Hr']}
+      storage_options:
+        requester_pays: True
     metadata:
       origin_url: 'https://ral.ucar.edu/solutions/products/camels'
       
@@ -50,12 +52,14 @@ sources:
         default: "05056000"
     driver: csv
     args:
-      urlpath: 'gs://pangeo-data/camels/basin_dataset_public_v1p2/usgs_streamflow/*/{{ basin_id }}_streamflow_qc.txt'
+      urlpath: 'gs://pangeo-ncar-camels/basin_dataset_public_v1p2/usgs_streamflow/*/{{ basin_id }}_streamflow_qc.txt'
       csv_kwargs:
         sep: '\s+'
         names: ['basin', 'Year', 'Mnth', 'Day', 'QObs', 'flag']
         parse_dates: {'date': ['Year', 'Mnth', 'Day']}
         na_values: -999.0
+      storage_options:
+        requester_pays: True
     metadata:
       origin_url: 'https://ral.ucar.edu/solutions/products/camels'
 
