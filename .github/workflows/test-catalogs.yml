@@ -9,12 +9,6 @@ on:
       - 'intake-catalogs/**'
       - 'requirements.txt'
       - 'tests/**'
-  pull_request:
-    branches: [ master ]
-    paths:
-      - 'intake-catalogs/**'
-      - 'requirements.txt'
-      - 'tests/**'
 
 jobs:
   test:
