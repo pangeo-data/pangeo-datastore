@@ -37,3 +37,71 @@ sources:
       consolidated: True
       storage_options:
         requester_pays: True
+        
+  MITgcm_channel_ridge_01km_tracer_snap10D:
+    description: >
+      MITgcm channel ridge simulations at 1km resolution
+      tracer snapshots every 10 days
+    metadata:
+      uploader_github: charlesbluca
+      uploader_email: charles@ldeo.columbia.edu
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      urlpath: gs://pangeo-ldeo-mitgcm/channel_ridge_resolutions/01km/tracer_10day_snap
+      consolidated: True
+      storage_options:
+        requester_pays: True
+              
+  MITgcm_channel_ridge_05km_tracer_snap10D:
+    description: >
+      MITgcm channel ridge simulations at 5km resolution
+      tracer snapshots every 10 days
+    metadata:
+      uploader_github: charlesbluca
+      uploader_email: charles@ldeo.columbia.edu
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      urlpath: gs://pangeo-ldeo-mitgcm/channel_ridge_resolutions/05km/tracer_10day_snap
+      consolidated: True
+      storage_options:
+        requester_pays: True
+        
+  MITgcm_channel_ridge_20km_tracer_snap10D:
+    description: >
+      MITgcm channel ridge simulations at 20km resolution
+      tracer snapshots every 10 days
+    metadata:
+      uploader_github: charlesbluca
+      uploader_email: charles@ldeo.columbia.edu
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      urlpath: gs://pangeo-ldeo-mitgcm/channel_ridge_resolutions/20km/tracer_10day_snap
+      consolidated: True
+      storage_options:
+        requester_pays: True
+        
+  MITgcm_channel_run_tracers_restored:
+    description: >
+      MITgcm channel run tracers restored
+    metadata:
+      uploader_github: charlesbluca
+      uploader_email: charles@ldeo.columbia.edu
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      urlpath: gs://pangeo-ldeo-mitgcm/run_tracers_restored_zarr
+      consolidated: True
+      storage_options:
+        requester_pays: True
+        
