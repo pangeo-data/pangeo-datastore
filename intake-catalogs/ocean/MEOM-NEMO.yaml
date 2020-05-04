@@ -18,7 +18,7 @@ sources:
       storage_options:
         requester_pays: True
 
-   NATL60_horizontal_grid:
+  NATL60_horizontal_grid:
     description: NEMO NATL60 Ocean Simulation Horizontal Grid
     metadata:
       url: https://github.com/meom-configurations/NATL60-CJM165
@@ -32,7 +32,7 @@ sources:
       storage_options:
         requester_pays: True
 
-   NATL60_vertical_grid:
+  NATL60_vertical_grid:
     description: NEMO NATL60 Ocean Simulation Vertical Grid
     metadata:
       url: https://github.com/meom-configurations/NATL60-CJM165
