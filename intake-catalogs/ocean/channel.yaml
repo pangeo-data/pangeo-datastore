@@ -113,7 +113,6 @@ sources:
       storage_options:
         requester_pays: True
         
-        
   channel_ridge_05km_float_run:
     description: >
       MITgcm output from a wind and thermally driven channel with a ridge at 5km resolution (model vars) 
@@ -127,7 +126,7 @@ sources:
         - model
     driver: zarr
     args:
-      urlpath: gs://pangeo-ldeo-mitgcm/channel_floats/channel_model_vars/
+      urlpath: gs://pangeo-ldeo-mitgcm/channel_floats/channel_model_vars
       consolidated: True
       storage_options:
         requester_pays: True
@@ -145,7 +144,7 @@ sources:
         - model
     driver: zarr
     args:
-      urlpath: gs://pangeo-ldeo-mitgcm/channel_floats/channel_float_vars/
+      urlpath: gs://pangeo-ldeo-mitgcm/channel_floats/channel_float_vars
       consolidated: True
       storage_options:
         requester_pays: True
