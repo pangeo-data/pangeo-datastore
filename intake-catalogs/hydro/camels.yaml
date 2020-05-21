@@ -1,0 +1,98 @@
+sources:
+  basin_mean_forcing_gcp:
+    description: Camels Basin Mean Forcing
+    parameters: # User parameters
+      basin_id:
+        description: Basin ID
+        type: str
+        default: "05056000"
+      source:
+        description: Source dataset
+        type: str
+        default: daymet
+    driver: csv
+    args:
+      urlpath: 'gs://pangeo-ncar-camels/basin_dataset_public_v1p2/basin_mean_forcing/{{ source }}/*/{{ basin_id }}_*.txt'
+      csv_kwargs:
+        sep: '\s+'
+        header: 3
+        parse_dates: {'date': ['Year', 'Mnth', 'Day', 'Hr']}
+      storage_options:
+        requester_pays: True
+    metadata:
+      origin_url: 'https://ral.ucar.edu/solutions/products/camels'
+      
+  basin_mean_forcing_aws:
+    description: Camels Basin Mean Forcing
+    parameters: # User parameters
+      basin_id:
+        description: Basin ID
+        type: str
+        default: "05056000"
+      source:
+        description: Source dataset
+        type: str
+        default: daymet
+    driver: csv
+    args:
+      urlpath: 's3://pangeo-camels/basin_timeseries_v1p2_metForcing_obsFlow/basin_dataset_public_v1p2/basin_mean_forcing/{{ source }}/*/{{ basin_id }}_*.txt'
+      csv_kwargs:
+        sep: '\s+'
+        header: 3
+        parse_dates: {'date': ['Year', 'Mnth', 'Day', 'Hr']}
+    metadata:
+      origin_url: 'https://ral.ucar.edu/solutions/products/camels'
+
+  usgs_streamflow_gcp:
+    description: Camels USGS Streamflow
+    parameters: # User parameters
+      basin_id:
+        description: Basin ID
+        type: str
+        default: "05056000"
+    driver: csv
+    args:
+      urlpath: 'gs://pangeo-ncar-camels/basin_dataset_public_v1p2/usgs_streamflow/*/{{ basin_id }}_streamflow_qc.txt'
+      csv_kwargs:
+        sep: '\s+'
+        names: ['basin', 'Year', 'Mnth', 'Day', 'QObs', 'flag']
+        parse_dates: {'date': ['Year', 'Mnth', 'Day']}
+        na_values: -999.0
+      storage_options:
+        requester_pays: True
+    metadata:
+      origin_url: 'https://ral.ucar.edu/solutions/products/camels'
+
+
+  usgs_streamflow_aws:
+    description: Camels USGS Streamflow
+    parameters: # User parameters
+      basin_id:
+        description: Basin ID
+        type: str
+        default: "05056000"
+    driver: csv
+    args:
+      urlpath: 's3://pangeo-camels/basin_timeseries_v1p2_metForcing_obsFlow/basin_dataset_public_v1p2/usgs_streamflow/*/{{ basin_id }}_streamflow_qc.txt'
+      csv_kwargs:
+        sep: '\s+'
+        names: ['basin', 'Year', 'Mnth', 'Day', 'QObs', 'flag']
+        parse_dates: {'date': ['Year', 'Mnth', 'Day']}
+        na_values: -999.0
+    metadata:
+      origin_url: 'https://ral.ucar.edu/solutions/products/camels'
+      
+  attributes_aws:
+    description: Camels Attributes
+    parameters: # User parameters
+      type:
+        description: type of attribute
+        type: str
+        default: "topo"
+    driver: csv
+    args:
+      urlpath: 's3://pangeo-camels/camels_attributes_v2.0/camels_{{ type }}.txt'
+      csv_kwargs:
+        sep: ';'
+    metadata:
+      origin_url: 'https://ral.ucar.edu/solutions/products/camels'

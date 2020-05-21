@@ -1,0 +1,27 @@
+plugins:
+  source:
+    - module: intake_xarray
+    - module: intake_esm
+
+sources:
+
+  cmip6_gcs:
+    args:
+      esmcol_obj: "https://storage.googleapis.com/cmip6/pangeo-cmip6.json"
+    description: 'CMIP6 in Google Cloud Storage'
+    driver: intake_esm.esm_datastore
+    metadata: {}
+   
+  GFDL_CM2_6:
+    args:
+      esmcol_obj: "https://storage.googleapis.com/cmip6/gfdl_cm2_6.json"
+    description: "NOAA-GFDL CM2.6 in Google Cloud Storage"
+    driver: intake_esm.esm_datastore
+    metadata: {}
+    
+  tracmip:
+    args:
+      esmcol_obj: "https://storage.googleapis.com/cmip6/tracmip.json"
+    description: "TRACMIP in Pangeo Google Cloud Storage"
+    driver: intake_esm.esm_datastore
+    metadata: {}

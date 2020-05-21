@@ -15,6 +15,13 @@ sources:
     driver: intake.catalog.local.YAMLFileCatalog
     metadata: {}
 
+  climate:
+    args:
+      path: "{{CATALOG_DIR}}/climate.yaml"
+    description: 'Pangeo Climate Dataset Catalog. Include model ensembles such as CMIP6 and LENS.'
+    driver: intake.catalog.local.YAMLFileCatalog
+    metadata: {}
+
   hydro:
     args:
       path: "{{CATALOG_DIR}}/hydro.yaml"
