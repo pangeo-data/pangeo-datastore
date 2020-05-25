@@ -93,6 +93,13 @@ sources:
       storage_options:
         requester_pays: True
 
+  altimetry:
+    args:
+      path: "{{CATALOG_DIR}}/ocean/altimetry.yaml"
+    description: 'Radar Altimetry Products'
+    driver: intake.catalog.local.YAMLFileCatalog
+    metadata: {}
+
   LLC4320:
     args:
       path: "{{CATALOG_DIR}}/ocean/llc4320.yaml"
