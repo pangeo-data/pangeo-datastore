@@ -113,3 +113,38 @@ sources:
       storage_options:
         requester_pays: True
         
+  channel_ridge_05km_float_run:
+    description: >
+      MITgcm output from a wind and thermally driven channel with a ridge at 5km resolution (model vars) 
+    metadata:
+      time_resolution: 3 day average
+      duration: 5 years
+      uploader_github: cspencerjones
+      uploader_email: spencerj@ldeo.columbia.edu
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      urlpath: gs://pangeo-ldeo-mitgcm/channel_floats/channel_model_vars
+      consolidated: True
+      storage_options:
+        requester_pays: True
+        
+  channel_ridge_05km_floats:
+    description: >
+      MITgcm output from a wind and thermally driven channel with a ridge at 5km resolution (float vars)
+    metadata:
+      time_resolution: 10 day profile snapshots
+      duration: 5 years
+      uploader_github: cspencerjones
+      uploader_email: spencerj@ldeo.columbia.edu
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      urlpath: gs://pangeo-ldeo-mitgcm/channel_floats/channel_float_vars
+      consolidated: True
+      storage_options:
+        requester_pays: True
