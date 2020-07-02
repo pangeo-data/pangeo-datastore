@@ -39,6 +39,31 @@ To explore the whole catalog, you can try
 cat.walk(depth=5)
 ```
 
+### Accessing requester pays data
+
+Several of the datasets within the cloud data catalog are contained in [requester pays](https://cloud.google.com/storage/docs/requester-pays) storage buckets.
+This means that a user requesting data must provide their own billing project (created and authenticated through Google Cloud Platform) to be billed for the charges associated with accessing a dataset.
+To set up an GCP billing project and use it for authentication in applications:
+
+- [Create a project on GCP](https://cloud.google.com/resource-manager/docs/creating-managing-projects#creating_a_project); if this is the first time using GCP, a prompt will appear to choose a Google account to link to all GCP-related activities.
+- [Create a Cloud Billing account](https://cloud.google.com/billing/docs/how-to/manage-billing-account#create_a_new_billing_account) associated with the project and [enable billing for the project](https://cloud.google.com/billing/docs/how-to/modify-project#enable_billing_for_a_project) through this account.
+- Through command line, install the [Google Cloud SDK](https://cloud.google.com/sdk); this can either be through conda:
+
+```
+ conda install -c conda-forge google-cloud-sdk 
+```
+- Initialize the `gcloud` command line interface, logging into the account used to create the aforementioned project and selecting it as the default project:
+```
+gcloud auth login
+gcloud init
+```
+- [Create a service account](https://cloud.google.com/iam/docs/creating-managing-service-accounts#creating) associated with the default project, giving it the **Service Usage Admin** role, which enables it to make billed requests on behalf of the project.
+- [Generate a service account key](https://cloud.google.com/iam/docs/creating-managing-service-account-keys#creating_service_account_keys) for the account (making sure it is JSON-formatted); move this to a secure directory.
+- Set up application credentials (allowing this service account's permissions to be used in applications) by exporting the location of the key file to an environment variable:
+```
+export GOOGLE_APPLICATION_CREDENTIALS=/path/to/key.json
+```
+
 ### Adding Datasets
 
 To suggest adding a new dataset, please [open an issue](https://github.com/pangeo-data/pangeo-datastore/issues).
