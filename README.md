@@ -39,6 +39,29 @@ To explore the whole catalog, you can try
 cat.walk(depth=5)
 ```
 
+### Accessing requester pays data
+
+Several of the datasets within the cloud data catalog are contained in [requester pays](https://cloud.google.com/storage/docs/requester-pays) storage buckets.
+This means that a user requesting data must provide their own billing project (created and authenticated through Google Cloud Platform) to be billed for the charges associated with accessing a dataset.
+To set up an GCP billing project and use it for authentication in applications:
+
+- [Create a project on GCP](https://cloud.google.com/resource-manager/docs/creating-managing-projects#creating_a_project); if this is the first time using GCP, a prompt will appear to choose a Google account to link to all GCP-related activities.
+- [Create a Cloud Billing account](https://cloud.google.com/billing/docs/how-to/manage-billing-account#create_a_new_billing_account) associated with the project and [enable billing for the project](https://cloud.google.com/billing/docs/how-to/modify-project#enable_billing_for_a_project) through this account.
+- Using [Google Cloud IAM](https://cloud.google.com/iam/docs/granting-changing-revoking-access#granting-console), add the **Service Usage Consumer** role to your account, which enables it to make billed requests on the behalf of the project.
+- Through command line, install the [Google Cloud SDK](https://cloud.google.com/sdk); this can be done using conda:
+```
+ conda install -c conda-forge google-cloud-sdk 
+```
+- Initialize the `gcloud` command line interface, logging into the account used to create the aforementioned project and selecting it as the default project; this will allow the project to be used for requester pays access through the command line:
+```
+gcloud auth login
+gcloud init
+```
+- Finally, use `gcloud` to establish application default credentials; this will allow the project to be used for requester pays access through applications:
+```
+gcloud auth application-default login
+```
+
 ### Adding Datasets
 
 To suggest adding a new dataset, please [open an issue](https://github.com/pangeo-data/pangeo-datastore/issues).
