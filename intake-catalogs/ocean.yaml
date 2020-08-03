@@ -17,7 +17,7 @@ sources:
       consolidated: True
       storage_options:
         requester_pays: True
-      
+
   cesm_mom6_example:
     description: CESM MOM6 Ocean Model Example Data
     metadata:
@@ -30,7 +30,7 @@ sources:
     driver: zarr
     args:
       urlpath: gs://pangeo-cesm-mom6
-      consolidated: True   
+      consolidated: True
       storage_options:
         requester_pays: True
 
@@ -77,7 +77,7 @@ sources:
       consolidated: True
       storage_options:
         requester_pays: True
-      
+
   ECCO_layers:
     description: Rerun of Estimating the Circulation and Climate of the Ocean (ECCO) with the layers package
     metadata:
@@ -127,10 +127,97 @@ sources:
     description: 'MITgcm High Resolution Channel Simulations'
     driver: intake.catalog.local.YAMLFileCatalog
     metadata: {}
-    
+
   MEOM_NEMO:
     args:
       path: "{{CATALOG_DIR}}/ocean/MEOM-NEMO.yaml"
     description: 'NEMO North Atlantic Ocean Model simulations produced at MEOM'
+    driver: intake.catalog.local.YAMLFileCatalog
+    metadata: {}
+
+  GISTEMP:
+    description: GISS Surface Temperature Analysis (GISTEMP v4)
+    metadata:
+      url: https://data.giss.nasa.gov/gistemp/
+      doi: 10.1029/2018JD029522
+      tags:
+        - ocean
+        - observations
+        - temperature
+    driver: netcdf
+    args:
+      urlpath: simplecache::https://data.giss.nasa.gov/pub/gistemp/gistemp1200_GHCNv4_ERSSTv5.nc.gz
+      storage_options:
+        simplecache:
+          # compression: gzip
+          same_names: True  # caches gz file as gz file
+      chunks: {'time':'auto'}
+
+  HadISST1:
+    description: Hadley Centre Sea Ice and Sea Surface Temperature data set 1
+    metadata:
+      url: https://www.metoffice.gov.uk/hadobs/hadisst/
+      doi: 10.1029/2002JD002670
+      tags:
+        - ocean
+        - observations
+        - temperature
+        - seaice
+      plots:
+        sst_over_time:
+          title: HadISST1 temperature anomly wrt. 1960-1989
+          kind: contourf
+          z: sst
+          groupby: time
+          cmap: RdBu_r
+          levels: 20
+          # clim: (-10, 10)  # once https://github.com/holoviz/hvplot/pull/492 is merged
+    driver: netcdf
+    args:
+      urlpath: simplecache::https://www.metoffice.gov.uk/hadobs/hadisst/data/HadISST_sst.nc.gz
+      chunks: {'time': -1}
+      storage_options:
+        simplecache:
+          # compression: gzip
+          same_names: True
+      xarray_kwargs:
+        use_cftime: True
+        drop_variables: time_bnds
+
+  HadSST4:
+    description: Met Office Hadley Centre's sea surface temperature data set 4
+    metadata:
+      url: https://www.metoffice.gov.uk/hadobs/hadsst4/
+      doi: 10.1029/2018JD029867
+      tags:
+        - ocean
+        - observations
+        - temperature
+      plots:
+        temperature_anomaly_over_time:
+          title: HadSST4 temperature anomly wrt. 1960-1989
+          kind: contourf
+          z: tos
+          groupby: time
+          cmap: RdBu_r
+          levels: 20
+          # clim: (-10, 10)  # once https://github.com/holoviz/hvplot/pull/492 is merged
+    driver: netcdf
+    parameters:
+      file:
+        description: name of file
+        type: str
+        default: median
+        allowed: [median, total_incertainty, measurement_and_sampling_uncertainty, uncorrelated_measurement_uncertainty, correlated_measurement_uncertainty, number_of_observations, number_of_superobservations, unadjusted, actuals_median, actuals_ensemble]
+    args:
+      urlpath: simplecache::https://www.metoffice.gov.uk/hadobs/hadsst4/data/netcdf/HadSST.4.0.0.0_{{file}}.nc
+      chunks: {'time': -1}
+      xarray_kwargs:
+        use_cftime: True
+
+  biogeochemistry:
+    args:
+      path: "{{CATALOG_DIR}}/ocean/marine_biogeochemistry.yaml"
+    description: 'marine biogeochemical datasets'
     driver: intake.catalog.local.YAMLFileCatalog
     metadata: {}

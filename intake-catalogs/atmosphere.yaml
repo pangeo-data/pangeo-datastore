@@ -36,7 +36,7 @@ sources:
       urlpath: gs://pangeo-vulcan-sam/3d
       storage_options:
         requester_pays: True
-       
+
   sam_ngaqua_qobs_eqx_2d:
     description: 2D fields from a near-global Aquaplanet Simulation with the System for Atmospheric Modeling
     metadata:
@@ -86,3 +86,34 @@ sources:
       consolidated: True
       storage_options:
         requester_pays: True
+
+  HadCRUT4:
+    description: HadCRUT temperature anomalies wrt. 1960-1989
+    metadata:
+      url: https://crudata.uea.ac.uk/cru/data/temperature/
+      doi: 10.1029/2011JD017187
+      tags:
+        - atmosphere
+        - land
+        - ocean
+        - observations
+        - temperature
+        - anomaly
+      plots:
+        temperature_anomaly_over_time:
+          title: HadCRUT4 temperature anomly wrt. 1960-1989
+          kind: contourf
+          x: longitude
+          y: latitude
+          z: temperature_anomaly
+          groupby: time
+          cmap: RdBu_r
+          levels: 20
+          # clim: (-10, 10)  # once https://github.com/holoviz/hvplot/pull/492 is merged
+    driver: netcdf
+    args:
+      urlpath: simplecache::https://crudata.uea.ac.uk/cru/data/temperature/HadCRUT.4.6.0.0.median.nc
+      chunks: {'time': 'auto'}
+      xarray_kwargs:
+        use_cftime: True  # needed for plot.temperature_anomaly_over_time
+        drop_variables: field_status
