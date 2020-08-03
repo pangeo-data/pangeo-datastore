@@ -1,0 +1,88 @@
+plugins:
+  source:
+  - module: intake_xarray
+
+sources:
+  CSIR-ML6:
+    description: Global surface ocean pCO2 from CSIR-ML6
+    metadata:
+      url: https://figshare.com/articles/Global_surface_ocean_pCO2_from_CSIR-ML6_2020a_/12652100/4
+      doi:
+        - 10.5194/gmd-12-5113-2019
+        - 10.6084/m9.figshare.12652100.v4
+      tags:
+        - ocean
+        - observations
+        - spco2
+        - fgco2
+      plots:
+        spco2_over_ensemble_member_and_time:
+          title: CSIR-ML6 spco2 over ensemble and time
+          kind: contourf
+          x: lon
+          y: lat
+          z: spco2_ensemble
+          groupby: ['time','member']
+          cmap: viridis
+          levels: 20
+          # clim: (-10, 10)  # once https://github.com/holoviz/hvplot/pull/492 is merged
+    driver: netcdf
+    args:
+      urlpath: simplecache::https://ndownloader.figshare.com/files/23875943
+      chunks: {'time':'auto'}
+      xarray_kwargs:
+        use_cftime: True
+      storage_options:
+        simplecache:
+          cache_storage: CSIR-ML6
+          same_names: True
+
+  SOM_FFN:
+    description: Global surface ocean pCO2 from SOM_FFN
+    driver: netcdf
+    parameters:
+      version:
+        description: version released in year
+        type: int
+        default: 2020
+        allowed: [2020]  # paths for 2017 and 2018 are formatted slightly different
+    metadata:
+      url: https://www.nodc.noaa.gov/ocads/oceans/SPCO2_1982_present_ETH_SOM_FFN.html
+      doi:
+        - 10.1002/2015GB005359
+        - 10.7289/V5Z899N6
+      tags:
+        - ocean
+        - observations
+        - spco2
+        - fgco2
+      plots:
+        fgco2_over_time:
+          title: SOM-FFN fgco2 over time
+          kind: contourf
+          x: lon
+          y: lat
+          z: fgco2_smoothed
+          groupby: time
+          cmap: RdBu_r
+          levels: 20
+          # clim: (-10, 10)  # once https://github.com/holoviz/hvplot/pull/492 is merged
+        fgco2_timeseries_location:
+          title: fgco2 timeseries at (lon,lat) location
+          kind: line
+          x: time
+          y: fgco2_smoothed
+          groupby: ['lon','lat']
+        fgco2_timeseries_latitude:
+          title: fgco2 timeseries at latitude
+          kind: contourf
+          y: time
+          x: lon
+          z: fgco2_smoothed
+          groupby: lat
+          levels: 20
+    args:
+      urlpath: simplecache::https://data.nodc.noaa.gov/ncei/ocads/data/0160558/MPI_SOM-FFN_v{{version}}/spco2_MPI-SOM_FFN_v{{version}}.nc
+      chunks: {'time':'120'}
+      xarray_kwargs:
+        drop_variables: date
