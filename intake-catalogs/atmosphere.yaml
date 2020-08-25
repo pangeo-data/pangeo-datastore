@@ -86,3 +86,17 @@ sources:
       consolidated: True
       storage_options:
         requester_pays: True
+
+  nasa_ccmp_wind_vectors:
+    description: "gap-free 6-hourly surface wind fields"
+    metadata:
+      url: 'https://podaac.jpl.nasa.gov/MEaSUREs-CCMP?sections=about'
+      tags:
+      - ocean
+      - atmosphere
+    driver: zarr
+    args:
+      urlpath: gs://pangeo-nasa-ccmp/zarr
+      consolidated: True
+      storage_options:
+        requester_pays: True
