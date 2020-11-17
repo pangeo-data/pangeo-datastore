@@ -111,3 +111,51 @@ sources:
     description: 'Pangeo Camels Dataset Catalog'
     driver: intake.catalog.local.YAMLFileCatalog
     metadata: {}
+
+
+  nhd_catchment_attributes:
+    description: "Attributes of nhd catchments aggregated to USGS streamflow gauges"
+    metadata:
+      uploader_github: jsadler2
+      uploader_email: jsadler@usgs.gov
+      url: 'https://www.sciencebase.gov/catalog/item/5669a79ee4b08895842a1d47'
+      tags:
+        - hydrology
+        - streamflow
+    driver: parquet
+    args:
+      urlpath: "s3://pangeo-nhd-catchment-attributes"
+      storage_options:
+        requester_pays: True
+
+
+  nldas_hru_forcing:
+    description: "NLDAS forcing data"
+    metadata:
+      uploader_github: jsadler2
+      uploader_email: jsadler@usgs.gov
+      url: 'https://ldas.gsfc.nasa.gov/nldas/v2/forcing'
+      tags:
+        - hydrology
+        - meteorologic data
+    driver: zarr
+    args:
+      urlpath: "s3://pangeo-nldas-hru-forcing"
+      storage_options:
+        requester_pays: True
+
+  usgs_streamflow_observations:
+    description: "Streamflow observations for CONUS-wide USGS stations"
+    metadata:
+      uploader_github: jsadler2
+      uploader_email: jsadler@usgs.gov
+      url: 'https://waterdata.usgs.gov/nwis/sw'
+      tags:
+        - hydrology
+        - streamflow
+    driver: zarr
+    args:
+      urlpath: "s3://pangeo-usgs-flow-observations"
+      storage_options:
+        requester_pays: True
+
