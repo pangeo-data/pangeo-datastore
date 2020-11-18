@@ -1,0 +1,333 @@
+plugins:
+  source:
+  - module: intake_xarray
+  
+sources:
+
+  al:
+    args:
+      consolidated: true
+      storage_options:
+        requester_pays: True
+      urlpath: gs://pangeo-cnes/alti/al
+    description: Altika Global Ocean Along track CMEMS Sea Surface Height L3 product
+    driver: zarr
+    metadata:
+      tags:
+      - altimetry
+      - ocean
+      - observations
+      url: http://marine.copernicus.eu/services-portfolio/access-to-products/?option=com_csw&view=details&product_id=SEALEVEL_GLO_PHY_L3_REP_OBSERVATIONS_008_062
+      
+  alg:
+    args:
+      consolidated: true
+      storage_options:
+        requester_pays: True
+      urlpath: gs://pangeo-cnes/alti/alg
+    description: Altika Drifting Phase Global Ocean Along track CMEMS Sea Surface
+      Height L3 product
+    driver: zarr
+    metadata:
+      tags:
+      - altimetry
+      - ocean
+      - observations
+      url: http://marine.copernicus.eu/services-portfolio/access-to-products/?option=com_csw&view=details&product_id=SEALEVEL_GLO_PHY_L3_REP_OBSERVATIONS_008_062
+      
+  c2:
+    args:
+      consolidated: true
+      storage_options:
+        requester_pays: True
+      urlpath: gs://pangeo-cnes/alti/c2
+    description: Cryosat-2 Global Ocean Along track CMEMS Sea Surface Height L3 product
+    driver: zarr
+    metadata:
+      tags:
+      - altimetry
+      - ocean
+      - observations
+      url: http://marine.copernicus.eu/services-portfolio/access-to-products/?option=com_csw&view=details&product_id=SEALEVEL_GLO_PHY_L3_REP_OBSERVATIONS_008_062
+      
+  e1:
+    args:
+      consolidated: true
+      storage_options:
+        requester_pays: True
+      urlpath: gs://pangeo-cnes/alti/e1
+    description: ERS-1 Global Ocean Along track CMEMS Sea Surface Height L3 product
+    driver: zarr
+    metadata:
+      tags:
+      - altimetry
+      - ocean
+      - observations
+      url: http://marine.copernicus.eu/services-portfolio/access-to-products/?option=com_csw&view=details&product_id=SEALEVEL_GLO_PHY_L3_REP_OBSERVATIONS_008_062
+      
+  e1g:
+    args:
+      consolidated: true
+      storage_options:
+        requester_pays: True
+      urlpath: gs://pangeo-cnes/alti/e1g
+    description: ERS-1 Geodetic Phase Global Ocean Along track CMEMS Sea Surface Height
+      L3 product
+    driver: zarr
+    metadata:
+      tags:
+      - altimetry
+      - ocean
+      - observations
+      url: http://marine.copernicus.eu/services-portfolio/access-to-products/?option=com_csw&view=details&product_id=SEALEVEL_GLO_PHY_L3_REP_OBSERVATIONS_008_062
+      
+  e2:
+    args:
+      consolidated: true
+      storage_options:
+        requester_pays: True
+      urlpath: gs://pangeo-cnes/alti/e2
+    description: ERS-2 Global Ocean Along track CMEMS Sea Surface Height L3 product
+    driver: zarr
+    metadata:
+      tags:
+      - altimetry
+      - ocean
+      - observations
+      url: http://marine.copernicus.eu/services-portfolio/access-to-products/?option=com_csw&view=details&product_id=SEALEVEL_GLO_PHY_L3_REP_OBSERVATIONS_008_062
+      
+  en:
+    args:
+      consolidated: true
+      storage_options:
+        requester_pays: True
+      urlpath: gs://pangeo-cnes/alti/en
+    description: ENVISAT Global Ocean Along track CMEMS Sea Surface Height L3 product
+    driver: zarr
+    metadata:
+      tags:
+      - altimetry
+      - ocean
+      - observations
+      url: http://marine.copernicus.eu/services-portfolio/access-to-products/?option=com_csw&view=details&product_id=SEALEVEL_GLO_PHY_L3_REP_OBSERVATIONS_008_062
+      
+  enn:
+    args:
+      consolidated: true
+      storage_options:
+        requester_pays: True
+      urlpath: gs://pangeo-cnes/alti/enn
+    description: ENVISAT Extension Phase Global Ocean Along track CMEMS Sea Surface
+      Height L3 product
+    driver: zarr
+    metadata:
+      tags:
+      - altimetry
+      - ocean
+      - observations
+      url: http://marine.copernicus.eu/services-portfolio/access-to-products/?option=com_csw&view=details&product_id=SEALEVEL_GLO_PHY_L3_REP_OBSERVATIONS_008_062
+      
+  g2:
+    args:
+      consolidated: true
+      storage_options:
+        requester_pays: True
+      urlpath: gs://pangeo-cnes/alti/g2
+    description: Geosat Follow On Phase Global Ocean Along track CMEMS Sea Surface
+      Height L3 product
+    driver: zarr
+    metadata:
+      tags:
+      - altimetry
+      - ocean
+      - observations
+      url: http://marine.copernicus.eu/services-portfolio/access-to-products/?option=com_csw&view=details&product_id=SEALEVEL_GLO_PHY_L3_REP_OBSERVATIONS_008_062
+      
+  h2:
+    args:
+      consolidated: true
+      storage_options:
+        requester_pays: True
+      urlpath: gs://pangeo-cnes/alti/h2
+    description: Haiyang-2A Global Ocean Along track CMEMS Sea Surface Height L3 product
+    driver: zarr
+    metadata:
+      tags:
+      - altimetry
+      - ocean
+      - observations
+      url: http://marine.copernicus.eu/services-portfolio/access-to-products/?option=com_csw&view=details&product_id=SEALEVEL_GLO_PHY_L3_REP_OBSERVATIONS_008_062
+  
+  j1:
+    args:
+      consolidated: true
+      storage_options:
+        requester_pays: True
+      urlpath: gs://pangeo-cnes/alti/j1
+    description: Jason-1 Global Ocean Along track CMEMS Sea Surface Height L3 product
+    driver: zarr
+    metadata:
+      tags:
+      - altimetry
+      - ocean
+      - observations
+      url: http://marine.copernicus.eu/services-portfolio/access-to-products/?option=com_csw&view=details&product_id=SEALEVEL_GLO_PHY_L3_REP_OBSERVATIONS_008_062
+  
+  j1g:
+    args:
+      consolidated: true
+      storage_options:
+        requester_pays: True
+      urlpath: gs://pangeo-cnes/alti/j1g
+    description: Jason-1 Geodetic Phase Global Ocean Along track CMEMS Sea Surface
+      Height L3 product
+    driver: zarr
+    metadata:
+      tags:
+      - altimetry
+      - ocean
+      - observations
+      url: http://marine.copernicus.eu/services-portfolio/access-to-products/?option=com_csw&view=details&product_id=SEALEVEL_GLO_PHY_L3_REP_OBSERVATIONS_008_062
+  
+  j1n:
+    args:
+      consolidated: true
+      storage_options:
+        requester_pays: True
+      urlpath: gs://pangeo-cnes/alti/j1n
+    description: Jason-1 Interleaved Global Ocean Along track CMEMS Sea Surface Height
+      L3 product
+    driver: zarr
+    metadata:
+      tags:
+      - altimetry
+      - ocean
+      - observations
+      url: http://marine.copernicus.eu/services-portfolio/access-to-products/?option=com_csw&view=details&product_id=SEALEVEL_GLO_PHY_L3_REP_OBSERVATIONS_008_062
+  
+  j2:
+    args:
+      consolidated: true
+      storage_options:
+        requester_pays: True
+      urlpath: gs://pangeo-cnes/alti/j2
+    description: OSTSM/Jason-2 Global Ocean Along track CMEMS Sea Surface Height L3
+      product
+    driver: zarr
+    metadata:
+      tags:
+      - altimetry
+      - ocean
+      - observations
+      url: http://marine.copernicus.eu/services-portfolio/access-to-products/?option=com_csw&view=details&product_id=SEALEVEL_GLO_PHY_L3_REP_OBSERVATIONS_008_062
+  
+  j2g:
+    args:
+      consolidated: true
+      storage_options:
+        requester_pays: True
+      urlpath: gs://pangeo-cnes/alti/j2g
+    description: OSTSM/Jason-2 Geodetic Phase Global Ocean Along track CMEMS Sea Surface
+      Height L3 product
+    driver: zarr
+    metadata:
+      tags:
+      - altimetry
+      - ocean
+      - observations
+      url: http://marine.copernicus.eu/services-portfolio/access-to-products/?option=com_csw&view=details&product_id=SEALEVEL_GLO_PHY_L3_REP_OBSERVATIONS_008_062
+  
+  j2n:
+    args:
+      consolidated: true
+      storage_options:
+        requester_pays: True
+      urlpath: gs://pangeo-cnes/alti/j2n
+    description: OSTSM/Jason-2 Interleaved Global Ocean Along track CMEMS Sea Surface
+      Height L3 product
+    driver: zarr
+    metadata:
+      tags:
+      - altimetry
+      - ocean
+      - observations
+      url: http://marine.copernicus.eu/services-portfolio/access-to-products/?option=com_csw&view=details&product_id=SEALEVEL_GLO_PHY_L3_REP_OBSERVATIONS_008_062
+  
+  j3:
+    args:
+      consolidated: true
+      storage_options:
+        requester_pays: True
+      urlpath: gs://pangeo-cnes/alti/j3
+    description: Jason-3 Global Ocean Along track CMEMS Sea Surface Height L3 product
+    driver: zarr
+    metadata:
+      tags:
+      - altimetry
+      - ocean
+      - observations
+      url: http://marine.copernicus.eu/services-portfolio/access-to-products/?option=com_csw&view=details&product_id=SEALEVEL_GLO_PHY_L3_REP_OBSERVATIONS_008_062
+  
+  s3a:
+    args:
+      consolidated: true
+      storage_options:
+        requester_pays: True
+      urlpath: gs://pangeo-cnes/alti/s3a
+    description: Sentinel-3A Global Ocean Along track CMEMS Sea Surface Height L3
+      product
+    driver: zarr
+    metadata:
+      tags:
+      - altimetry
+      - ocean
+      - observations
+      url: http://marine.copernicus.eu/services-portfolio/access-to-products/?option=com_csw&view=details&product_id=SEALEVEL_GLO_PHY_L3_REP_OBSERVATIONS_008_062
+  
+  s3b:
+    args:
+      consolidated: true
+      storage_options:
+        requester_pays: True
+      urlpath: gs://pangeo-cnes/alti/s3b
+    description: Sentinel-3B Global Ocean Along track CMEMS Sea Surface Height L3
+      product
+    driver: zarr
+    metadata:
+      tags:
+      - altimetry
+      - ocean
+      - observations
+      url: http://marine.copernicus.eu/services-portfolio/access-to-products/?option=com_csw&view=details&product_id=SEALEVEL_GLO_PHY_L3_REP_OBSERVATIONS_008_062
+  
+  tp:
+    args:
+      consolidated: true
+      storage_options:
+        requester_pays: True
+      urlpath: gs://pangeo-cnes/alti/tp
+    description: Topex/Poseidon Global Ocean Along track CMEMS Sea Surface Height
+      L3 product
+    driver: zarr
+    metadata:
+      tags:
+      - altimetry
+      - ocean
+      - observations
+      url: http://marine.copernicus.eu/services-portfolio/access-to-products/?option=com_csw&view=details&product_id=SEALEVEL_GLO_PHY_L3_REP_OBSERVATIONS_008_062
+  
+  tpn:
+    args:
+      consolidated: true
+      storage_options:
+        requester_pays: True
+      urlpath: gs://pangeo-cnes/alti/tpn
+    description: Topex/Poseidon Interleaved Global Ocean Along track CMEMS Sea Surface
+      Height L3 product
+    driver: zarr
+    metadata:
+      tags:
+      - altimetry
+      - ocean
+      - observations
+      url: http://marine.copernicus.eu/services-portfolio/access-to-products/?option=com_csw&view=details&product_id=SEALEVEL_GLO_PHY_L3_REP_OBSERVATIONS_008_062

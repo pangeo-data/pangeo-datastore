@@ -1,0 +1,188 @@
+plugins:
+  source:
+    - module: intake_xarray
+
+sources:
+
+  NATL60_coord:
+    description: NEMO NATL60 Ocean Simulation Coordinates and Masks
+    metadata:
+      url: https://github.com/meom-configurations/NATL60-CJM165
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      urlpath: gs://pangeo-meom/NATL60-I/NATL60-byte-mask
+      consolidated: True
+      storage_options:
+        requester_pays: True
+
+  NATL60_horizontal_grid:
+    description: NEMO NATL60 Ocean Simulation Horizontal Grid
+    metadata:
+      url: https://github.com/meom-configurations/NATL60-CJM165
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      urlpath: gs://pangeo-meom/NATL60-I/NATL60-mesh-hgr
+      consolidated: True
+      storage_options:
+        requester_pays: True
+
+  NATL60_vertical_grid:
+    description: NEMO NATL60 Ocean Simulation Vertical Grid
+    metadata:
+      url: https://github.com/meom-configurations/NATL60-CJM165
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      urlpath: gs://pangeo-meom/NATL60-I/NATL60-mesh-zgr
+      consolidated: True
+      storage_options:
+        requester_pays: True
+
+  NATL60_SSH:
+    description: Daily outputs of NATL60-CJM165 Sea Surface Height
+    metadata:
+      url: https://github.com/meom-configurations/NATL60-CJM165
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      urlpath: gs://pangeo-meom/NATL60-CJM165-SSH-1h-2D
+      consolidated: True
+      storage_options:
+        requester_pays: True
+
+  NATL60_SSH_1:
+    description: Daily outputs of NATL60-CJM165 Sea Surface Height
+    metadata:
+      url: https://github.com/meom-configurations/NATL60-CJM165
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      urlpath: gs://pangeo-meom/NATL60-CJM165-SSH-1h-1m2deg2deg
+      consolidated: True
+      storage_options:
+        requester_pays: True
+
+  NATL60_SSU:
+    description: Daily outputs of NATL60-CJM165 Sea Surface Zonal Velocity
+    metadata:
+      url: https://github.com/meom-configurations/NATL60-CJM165
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      urlpath: gs://pangeo-meom/NATL60-CJM165-SSU-1h-1m2deg2deg
+      consolidated: True
+      storage_options:
+        requester_pays: True
+
+  NATL60_SSV:
+    description: Daily outputs of NATL60-CJM165 Sea Surface Meridional Velocity
+    metadata:
+      url: https://github.com/meom-configurations/NATL60-CJM165
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      urlpath: gs://pangeo-meom/NATL60-CJM165-SSV-1h-1m2deg2deg
+      consolidated: True
+      storage_options:
+        requester_pays: True
+
+  eNATL60_grid:
+    description: NEMO eNATL60 Ocean Simulation Grid
+    metadata:
+      url: https://mycore.core-cloud.net/index.php/s/zQAcDHWhxiGt1RW#pdfviewer
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      urlpath: gs://pangeo-meom/eNATL60-I/eNATL60-mesh-mask
+      consolidated: True
+      storage_options:
+        requester_pays: True
+
+  eNATL60_BLBT02_SSH:
+    description: Hourly outputs of eNATL60-BLBT02 (with tides) Sea Surface Height
+    metadata:
+      url: https://mycore.core-cloud.net/index.php/s/zQAcDHWhxiGt1RW#pdfviewer
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      urlpath: gs://pangeo-meom/eNATL60-BLBT02-SSH-1h
+      consolidated: True
+      storage_options:
+        requester_pays: True
+
+
+  eNATL60_BLBT02_SSU:
+    description: Hourly outputs of eNATL60-BLBT02 (with tides) Sea Surface Zonal Velocity
+    metadata:
+      url: https://mycore.core-cloud.net/index.php/s/zQAcDHWhxiGt1RW#pdfviewer
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      urlpath: gs://pangeo-meom/eNATL60-BLBT02-SSU-1h
+      consolidated: True
+      storage_options:
+        requester_pays: True
+
+  eNATL60_BLBT02_SSV:
+    description: Hourly outputs of eNATL60-BLBT02 (with tides) Sea Surface Meridional Velocity
+    metadata:
+      url: https://mycore.core-cloud.net/index.php/s/zQAcDHWhxiGt1RW#pdfviewer
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      urlpath: gs://pangeo-meom/eNATL60-BLBT02-SSV-1h
+      consolidated: True
+      storage_options:
+        requester_pays: True
+
+  eNATL60_BLB002_SSU:
+    description: Hourly outputs of eNATL60-BLB002 (no tides) Sea Surface Zonal Velocity
+    metadata:
+      url: https://mycore.core-cloud.net/index.php/s/zQAcDHWhxiGt1RW#pdfviewer
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      urlpath: gs://pangeo-meom/eNATL60-BLB002-SSU-1h
+      consolidated: True
+      storage_options:
+        requester_pays: True
+
+  eNATL60_BLB002_SSV:
+    description: Hourly outputs of eNATL60-BLB002 (no tides) Sea Surface Meridional Velocity
+    metadata:
+      url: https://mycore.core-cloud.net/index.php/s/zQAcDHWhxiGt1RW#pdfviewer
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      urlpath: gs://pangeo-meom/eNATL60-BLB002-SSV-1h
+      consolidated: True
+      storage_options:
+        requester_pays: True

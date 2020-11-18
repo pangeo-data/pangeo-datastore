@@ -181,6 +181,20 @@ def rstjinja(app, docname, source):
 
 # https://pypi.python.org/pypi/sphinx-bootstrap-theme/
 def setup(app):
+    # basic CSS
     app.add_stylesheet("https://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css")
     app.add_stylesheet("catalog-custom.css")
+
+    # papaparse
+    app.add_javascript("https://unpkg.com/papaparse@5.1.0/papaparse.min.js")
+
+    # ag-Grid
+    app.add_javascript("https://unpkg.com/ag-grid-enterprise@21.2.1/dist/ag-grid-enterprise.min.js")
+    app.add_stylesheet("https://unpkg.com/ag-grid-community/dist/styles/ag-theme-balham.css")
+    app.add_stylesheet("https://unpkg.com/ag-grid-community/dist/styles/ag-grid.css")
+
+    # jQuery / json-viewer
+    app.add_javascript("jquery.json-viewer.js")
+    app.add_stylesheet("jquery.json-viewer.css")
+
     app.connect("source-read", rstjinja)

@@ -16,10 +16,10 @@ sources:
         - model
     driver: zarr
     args:
-      urlpath: 'gcs://pangeo-data/takaya/MITgcm-channel-flatbottom-02km-run01/phys-mon'
-      storage_options:
-        token: anon
+      urlpath: gs://pangeo-ldeo-mitgcm/mon
       consolidated: True
+      storage_options:
+        requester_pays: True
 
   MITgcm_channel_flatbottom_02km_run01_phys_snap15D:
     description: >
@@ -33,7 +33,118 @@ sources:
         - model
     driver: zarr
     args:
-      urlpath: 'gcs://pangeo-data/takaya/MITgcm-channel-flatbottom-02km-run01/phys-snap15D'
-      storage_options:
-        token: anon
+      urlpath: gs://pangeo-ldeo-mitgcm/snap15d
       consolidated: True
+      storage_options:
+        requester_pays: True
+        
+  channel_ridge_resolutions_01km:
+    description: >
+      MITgcm output from a wind and thermally driven channel with a ridge at 1km resolution, and surface forced tracer
+    metadata:
+      publication: Submesoscale Vertical Velocities Enhance Tracer Subduction in an Idealized Antarctic Circumpolar Current, Balwada et al 2018 (GRL)
+      time_resolution: 10 day snapshots
+      duration: 1 year 
+      uploader_github: charlesbluca
+      uploader_email: charles@ldeo.columbia.edu
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      urlpath: gs://pangeo-ldeo-mitgcm/channel_ridge_resolutions/01km/tracer_10day_snap
+      consolidated: True
+      storage_options:
+        requester_pays: True
+              
+  channel_ridge_resolutions_05km:
+    description: >
+      MITgcm output from a wind and thermally driven channel with a ridge at 5km resolution, and surface forced tracer
+    metadata:
+      publication: Submesoscale Vertical Velocities Enhance Tracer Subduction in an Idealized Antarctic Circumpolar Current, Balwada et al 2018 (GRL)
+      time_resolution: 10 day snapshots
+      duration: 1 year 
+      uploader_github: charlesbluca
+      uploader_email: charles@ldeo.columbia.edu
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      urlpath: gs://pangeo-ldeo-mitgcm/channel_ridge_resolutions/05km/tracer_10day_snap
+      consolidated: True
+      storage_options:
+        requester_pays: True
+        
+  channel_ridge_resolutions_20km:
+    description: >
+      MITgcm output from a wind and thermally driven channel with a ridge at 20km resolution, and surface forced tracer
+    metadata:
+      publication: Submesoscale Vertical Velocities Enhance Tracer Subduction in an Idealized Antarctic Circumpolar Current, Balwada et al 2018 (GRL)
+      time_resolution: 10 day snapshots
+      duration: 1 year 
+      uploader_github: charlesbluca
+      uploader_email: charles@ldeo.columbia.edu
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      urlpath: gs://pangeo-ldeo-mitgcm/channel_ridge_resolutions/20km/tracer_10day_snap
+      consolidated: True
+      storage_options:
+        requester_pays: True
+        
+  run_tracers_restored_zarr:
+    description: >
+      MITgcm output from a wind and thermally driven channel with a ridge at 5km resolution and interior restored tracers
+    metadata:
+      time_resolution: 3 day snapshots
+      duration: 16.5 years
+      uploader_github: charlesbluca
+      uploader_email: charles@ldeo.columbia.edu
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      urlpath: gs://pangeo-ldeo-mitgcm/run_tracers_restored_zarr
+      consolidated: True
+      storage_options:
+        requester_pays: True
+        
+  channel_ridge_05km_float_run:
+    description: >
+      MITgcm output from a wind and thermally driven channel with a ridge at 5km resolution (model vars) 
+    metadata:
+      time_resolution: 3 day average
+      duration: 5 years
+      uploader_github: cspencerjones
+      uploader_email: spencerj@ldeo.columbia.edu
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      urlpath: gs://pangeo-ldeo-mitgcm/channel_floats/channel_model_vars
+      consolidated: True
+      storage_options:
+        requester_pays: True
+        
+  channel_ridge_05km_floats:
+    description: >
+      MITgcm output from a wind and thermally driven channel with a ridge at 5km resolution (float vars)
+    metadata:
+      time_resolution: 10 day profile snapshots
+      duration: 5 years
+      uploader_github: cspencerjones
+      uploader_email: spencerj@ldeo.columbia.edu
+      tags:
+        - ocean
+        - model
+    driver: zarr
+    args:
+      urlpath: gs://pangeo-ldeo-mitgcm/channel_floats/channel_float_vars
+      consolidated: True
+      storage_options:
+        requester_pays: True
