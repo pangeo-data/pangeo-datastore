@@ -147,4 +147,4 @@ sources:
       urlpath: gs://pangeo-ldeo-mitgcm/channel_floats/channel_float_vars
       consolidated: True
       storage_options:
-        requester_pays: True
+        requester_pays: False
