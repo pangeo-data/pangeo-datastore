@@ -19,7 +19,7 @@ sources:
       urlpath: gs://pangeo-ldeo-mitgcm/mon
       consolidated: True
       storage_options:
-        requester_pays: True
+        requester_pays: False
 
   MITgcm_channel_flatbottom_02km_run01_phys_snap15D:
     description: >
@@ -36,7 +36,7 @@ sources:
       urlpath: gs://pangeo-ldeo-mitgcm/snap15d
       consolidated: True
       storage_options:
-        requester_pays: True
+        requester_pays: False
         
   channel_ridge_resolutions_01km:
     description: >
@@ -55,7 +55,7 @@ sources:
       urlpath: gs://pangeo-ldeo-mitgcm/channel_ridge_resolutions/01km/tracer_10day_snap
       consolidated: True
       storage_options:
-        requester_pays: True
+        requester_pays: False
               
   channel_ridge_resolutions_05km:
     description: >
@@ -74,7 +74,7 @@ sources:
       urlpath: gs://pangeo-ldeo-mitgcm/channel_ridge_resolutions/05km/tracer_10day_snap
       consolidated: True
       storage_options:
-        requester_pays: True
+        requester_pays: False
         
   channel_ridge_resolutions_20km:
     description: >
@@ -93,7 +93,7 @@ sources:
       urlpath: gs://pangeo-ldeo-mitgcm/channel_ridge_resolutions/20km/tracer_10day_snap
       consolidated: True
       storage_options:
-        requester_pays: True
+        requester_pays: False
         
   run_tracers_restored_zarr:
     description: >
@@ -111,7 +111,7 @@ sources:
       urlpath: gs://pangeo-ldeo-mitgcm/run_tracers_restored_zarr
       consolidated: True
       storage_options:
-        requester_pays: True
+        requester_pays: False
         
   channel_ridge_05km_float_run:
     description: >
@@ -129,7 +129,7 @@ sources:
       urlpath: gs://pangeo-ldeo-mitgcm/channel_floats/channel_model_vars
       consolidated: True
       storage_options:
-        requester_pays: True
+        requester_pays: False
         
   channel_ridge_05km_floats:
     description: >
@@ -147,4 +147,4 @@ sources:
       urlpath: gs://pangeo-ldeo-mitgcm/channel_floats/channel_float_vars
       consolidated: True
       storage_options:
-        requester_pays: True
+        requester_pays: False
