@@ -13,6 +13,7 @@ sources:
     driver: zarr
     args:
       urlpath: gs://pangeo-cgiar-pet
+      consolidated: True
       storage_options:
         requester_pays: True
 
