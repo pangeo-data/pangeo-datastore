@@ -25,3 +25,10 @@ sources:
     description: "TRACMIP in Pangeo Google Cloud Storage"
     driver: intake_esm.esm_datastore
     metadata: {}
+    
+  tracmip_s3:
+    args:
+      esmcol_obj: "https://cmip6-pds.s3-us-west-2.amazonaws.com/tracmip.json"
+    description: "TRACMIP in Pangeo Google Cloud Storage"
+    driver: intake_esm.esm_datastore
+    metadata: {}
