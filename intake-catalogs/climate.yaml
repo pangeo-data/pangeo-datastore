@@ -11,10 +11,24 @@ sources:
     description: 'CMIP6 in Google Cloud Storage'
     driver: intake_esm.esm_datastore
     metadata: {}
+    
+  cmip6_s3:
+    args:
+      esmcol_obj: "https://cmip6-pds.s3-us-west-2.amazonaws.com/pangeo-cmip6.json"
+    description: 'CMIP6 in Google Cloud Storage'
+    driver: intake_esm.esm_datastore
+    metadata: {}
    
   GFDL_CM2_6:
     args:
       esmcol_obj: "https://storage.googleapis.com/cmip6/gfdl_cm2_6.json"
+    description: "NOAA-GFDL CM2.6 in Google Cloud Storage"
+    driver: intake_esm.esm_datastore
+    metadata: {}
+    
+  GFDL_CM2_6_s3:
+    args:
+      esmcol_obj: "https://cmip6-pds.s3-us-west-2.amazonaws.com/gfdl_cm2_6.json"
     description: "NOAA-GFDL CM2.6 in Google Cloud Storage"
     driver: intake_esm.esm_datastore
     metadata: {}
