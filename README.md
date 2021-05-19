@@ -30,7 +30,7 @@ To open the catalog and load a dataset from python, you can run the following co
 ```python
 import intake
 cat_url = 'https://raw.githubusercontent.com/pangeo-data/pangeo-datastore/master/intake-catalogs/master.yaml'
-cat = intake.Catalog(cat_url)
+cat = intake.open_catalog(cat_url)
 ds = cat.atmosphere.gmet_v1.to_dask()
 ```
 
