@@ -1,4 +1,4 @@
-dask==2.14.0
+dask==2021.10.0
 distributed==2.14.0
 gcsfs==0.6.1
 intake==0.5.5
