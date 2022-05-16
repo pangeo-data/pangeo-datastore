@@ -1,5 +1,5 @@
 dask==2.14.0
-distributed==2.14.0
+distributed==2021.10.0
 gcsfs==0.6.1
 intake==0.5.5
 intake-esm==2020.3.16.2
